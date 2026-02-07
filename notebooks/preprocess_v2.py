@@ -12,22 +12,6 @@ with open(all_data_path, "r", encoding="utf-8") as f:
     ALL_DATA = json.load(f)
 
 
-# n.3부터 쓰임
-def clean_text(text: str) -> str:
-    """PDF 추출 텍스트에서 노이즈 제거."""
-    # 페이지 번호 (- 1 -, - 23 - 등)
-    text = re.sub(r'^- \d+ -\n?', '', text.strip())
-    # 목차 점선 (···, ……, .... 등)
-    text = re.sub(r'[·.…]{5,}', ' ', text)
-    # 같은 글자 5회 이상 반복 (목   목   목... / 차차차차...)
-    text = re.sub(r'(.)\1{4,}', '', text)
-    # 연속 공백 → 단일 공백
-    text = re.sub(r' {2,}', ' ', text)
-    # 연속 빈줄 → 단일 빈줄
-    text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip()
-
-
 
 def format_table(table: dict) -> str:
     """table_content를 읽기 좋은 텍스트로 변환."""
@@ -83,7 +67,7 @@ def chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[s
             parts.append(f"(p.{page['page'] + 1})")
 
         if page.get("text"):
-            parts.append(clean_text(page["text"]))
+            parts.append(page["text"])
 
         if page.get("table"):
             for t in page["table"]:
@@ -104,3 +88,19 @@ def chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[s
             chunks.append(sec_text[i:i + size])
 
     return chunks
+
+
+def show_sample(docs):
+    test_name = docs[0].name
+    chunks_test = chunk_from_alldata(test_name, ALL_DATA)
+
+    if chunks_test is None:
+        text = extract_text(docs[0])
+        chunks_test = chunk(text)
+
+    print(f"문서: {test_name}")
+    print(f"총 청크 수: {len(chunks_test)}")
+
+    for i in range(min(5, len(chunks_test))):
+        print(f"\n=== 청크 {i} ({len(chunks_test[i])}자) ===")
+        print(chunks_test[i])
