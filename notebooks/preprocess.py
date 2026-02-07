@@ -12,7 +12,7 @@ with open(all_data_path, "r", encoding="utf-8") as f:
     ALL_DATA = json.load(f)
 
 
-# n.2부터 쓰임
+# n.3부터 쓰임
 def clean_text(text: str) -> str:
     """PDF 추출 텍스트에서 노이즈 제거."""
     # 페이지 번호 (- 1 -, - 23 - 등)
