@@ -1,3 +1,9 @@
+"""
+v2: format_table과 단순 메타데이터 삽입
+"""
+
+
+
 import re
 import os
 import json

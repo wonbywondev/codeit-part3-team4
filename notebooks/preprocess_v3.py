@@ -1,3 +1,12 @@
+"""
+v1: format_table, 단순 메타데이터, 텍스트 800자 청크
+v2: format_table과 단순 메타데이터, 섹션 기반 청크
+v3: 메타데이터 텍스트 정제 작업 추가
+"""
+
+
+
+
 import re
 import os
 import json
