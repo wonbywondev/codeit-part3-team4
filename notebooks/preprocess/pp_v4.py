@@ -27,7 +27,7 @@ BASE_DIR = Path.cwd().parent  # /codeit-part3-team4
 RAW_FOLDER = BASE_DIR / "data/raw/files"  # 수정된 경로
 
 all_data_path = os.path.join(BASE_DIR, "data", f"ALL_DATA_v{version}.json")
-index_pages_path = os.path.join(BASE_DIR, "data", "index_pages.json")
+index_pages_path = os.path.join(BASE_DIR, "data", "01_index_pages.json")
 
 with open(all_data_path, "r", encoding="utf-8") as f:
     ALL_DATA = json.load(f)
