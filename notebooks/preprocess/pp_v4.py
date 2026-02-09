@@ -16,7 +16,8 @@ import os
 import json
 from pathlib import Path
 import pdfplumber
-
+from sentence_transformers import SentenceTransformer
+import faiss
 
 version = "4"
 
@@ -54,8 +55,6 @@ def get_pdf_paths(folder_path: Path | str) -> list[Path]:
     folder = Path(folder_path)
     pdf_paths = [p for p in folder.glob("*.pdf")]
     return sorted(pdf_paths)
-
-
 
 
 # v1
