@@ -10,6 +10,7 @@ v4: 이후 추가
 - 이미지 추출
 """
 
+from preprocess.pp_basic import BASE_DIR, RAW_FOLDER, docs
 
 import re
 import os
@@ -21,10 +22,6 @@ import faiss
 
 version = "4"
 
-
-
-BASE_DIR = Path.cwd().parent  # /codeit-part3-team4
-RAW_FOLDER = BASE_DIR / "data/raw/files"  # 수정된 경로
 
 all_data_path = os.path.join(BASE_DIR, "data", f"ALL_DATA_v{version}.json")
 index_pages_path = os.path.join(BASE_DIR, "data", "01_index_pages.json")
@@ -50,11 +47,34 @@ def extract_text(pdf_path: Path | str) -> str:
             texts.append(page.extract_text() or "")
     return "\n".join(texts)
 
-# 폴더에서 PDF 목록 가져오기
-def get_pdf_paths(folder_path: Path | str) -> list[Path]:
-    folder = Path(folder_path)
-    pdf_paths = [p for p in folder.glob("*.pdf")]
-    return sorted(pdf_paths)
+
+
+def build_index(chunks: list[str], embed_model):
+    embs = embed_model.encode(chunks, convert_to_numpy=True, show_progress_bar=False)
+    index = faiss.IndexFlatL2(embs.shape[1])
+    index.add(embs.astype("float32"))
+    return index, chunks
+
+
+def gen_doc_indexes(docs, embed_model):
+
+    doc_indexes = {}
+
+    for doc_path in docs:
+        print(f"처리 중: {doc_path.name}")
+
+        chunks = chunk_from_alldata(doc_path.name, ALL_DATA)
+
+        if chunks is None:
+            text = clean_text(extract_text(doc_path))
+            chunks = chunk(text)
+
+        index, chunks_list = build_index(chunks, embed_model=embed_model)
+        doc_indexes[doc_path] = (index, chunks_list)
+
+    print("모든 문서 인덱싱 완료")
+
+    return doc_indexes
 
 
 # v1
