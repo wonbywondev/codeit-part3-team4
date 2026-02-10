@@ -5,17 +5,21 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "camelot-py>=1.0.9",
+    "docling>=2.72.0",
     "dotenv>=0.9.9",
     "faiss-cpu>=1.13.2",
     "ipykernel>=7.1.0",
-    "numpy>=2.4.2",
+    "numpy<2.0",
     "olefile>=0.47",
     "openai>=2.17.0",
     "openpyxl>=3.1.5",
-    "pandas>=3.0.0",
+    "pandas<3.0",
     "pdfplumber>=0.11.9",
     "python-dotenv>=1.2.1",
     "rapidfuzz>=3.14.3",
     "requests>=2.32.5",
     "sentence-transformers>=5.2.2",
+    "tokenizers>=0.22.2",
+    "transformers>=4.57.6",
 ]

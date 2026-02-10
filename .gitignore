@@ -216,11 +216,5 @@ data/raw/data_list*.csv
 *Zone.Identifier
 data/pdf/
 aa.excalidraw
-data/01_index_pages.json
-data/02_section_words.json
-data/03_text_metadata.json
-data/index_pages.json
-data/section_words.json
-data/text_metadata.json
 uv copy.lock
 pyproject copy.toml
