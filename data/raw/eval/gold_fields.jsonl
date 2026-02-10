@@ -209,9 +209,216 @@
 {"instance_id": "D010_X009", "doc_id": "경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.pdf", "fields": {"personal_pc_usage_allowed": "투입인력 개인 PC 반입을 금함"}}
 {"instance_id": "D010_X010", "doc_id": "경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.pdf", "fields": {"bid_inquiry_contact": "산학협력단 경영지원팀 조재형 선임"}}
 
-
-
-
+{"instance_id": "G_Q001", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"project_name": "사 업 명 : 고양도시관리공사 관산근린공원 다목적구장 회원 통합운영관리 시스템 구축"}}
+{"instance_id": "G_Q001", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"project_name": "사 업 명 : 실시간 통합연구비관리시스템(RCMS) 연계 모듈 변경"}}
+{"instance_id": "G_Q001", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"project_name": "사 업 명 : 학사시스템 기능개선 사업"}}
+{"instance_id": "G_Q001", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"project_name": "사 업 명 : 국가과학기술지식정보서비스 통합정보시스템 고도화 용역"}}
+{"instance_id": "G_Q001", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"project_name": "사 업 명 : 철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역"}}
+{"instance_id": "G_Q001", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"project_name": "사 업 명 국립인천해양박물관 해양자료관리시스템 구축 용역"}}
+{"instance_id": "G_Q001", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"project_name": "사 업 명 : 2024년도 차세대 응급의료 상황관리시스템 구축"}}
+{"instance_id": "G_Q001", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"project_name": "사 업 명 : 2024년 이러닝시스템 운영 용역"}}
+{"instance_id": "G_Q001", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"project_name": "사 업 명 : 사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보완"}}
+{"instance_id": "G_Q001", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"project_name": "사 업 명 : 기록관리시스템 통합 활용 및 보안 환경 구축"}}
+{"instance_id": "G_Q002", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"agency": "발주기관 : 고양도시관리공사"}}
+{"instance_id": "G_Q002", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"agency": "발주기관 : 광주과학기술원"}}
+{"instance_id": "G_Q002", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"agency": "발주기관 : 광주과학기술원"}}
+{"instance_id": "G_Q002", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"agency": "발주기관 : 한국과학기술정보연구원"}}
+{"instance_id": "G_Q002", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"agency": "발주기관 : 국가철도공단"}}
+{"instance_id": "G_Q002", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"agency": "주관기관 국립인천해양박물관"}}
+{"instance_id": "G_Q002", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"agency": "발주기관 : 국립중앙의료원"}}
+{"instance_id": "G_Q002", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"agency": "발주기관 : 국민연금공단"}}
+{"instance_id": "G_Q002", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"agency": "발주기관 : 국민연금공단"}}
+{"instance_id": "G_Q002", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"agency": "발주기관 : 국방과학연구소"}}
+{"instance_id": "G_Q003", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"purpose": "사업목적 : 회원 통합운영관리 시스템 구축"}}
+{"instance_id": "G_Q003", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"purpose": "추진배경 : 연구비 관리 업무의 효율성 제고"}}
+{"instance_id": "G_Q003", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"purpose": "추진배경 : 학사 행정 업무의 효율성 및 사용자 편의성 제고"}}
+{"instance_id": "G_Q003", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"purpose": "사업 목적 : 국가과학기술지식정보서비스의 안정적 운영 및 기능 고도화"}}
+{"instance_id": "G_Q003", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"purpose": "사업 목적 : 철도 인프라 디지털트윈 구축을 위한 중장기 정보화 전략 수립"}}
+{"instance_id": "G_Q003", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"purpose": "영구적 저장 및 체계적인 관리를 위한 웹기반의 해양자료관리시스템 필요"}}
+{"instance_id": "G_Q003", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"purpose": "사업 목적 : 차세대 응급의료 상황관리시스템 구축을 통한 대응체계 고도화"}}
+{"instance_id": "G_Q003", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"purpose": "사업 목적 : 이러닝시스템의 안정적 운영 및 서비스 품질 향상"}}
+{"instance_id": "G_Q003", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"purpose": "사업 목적 : 사회보험료 지원 고시 개정사항의 전산 반영"}}
+{"instance_id": "G_Q003", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"purpose": "사업 목적 : 기록관리시스템의 통합 활용 및 보안 환경 구축"}}
+{"instance_id": "G_Q004", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"budget": ["사업예산 : 금 90", "000", "000원 (부가가치세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"budget": ["추정 금액 : ￦99", "000", "000.-(부가세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"budget": ["추정 금액 : ￦120", "000", "000.-(부가세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"budget": "추정 금액 : 공고문 참조"}}
+{"instance_id": "G_Q004", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"budget": "NOT_FOUND"}}
+{"instance_id": "G_Q004", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"budget": ["다. 사업금액 : 금 137", "000", "000원(부가가치세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"budget": ["사업비 : 금 3", "000", "000", "000원(부가가치세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"budget": ["사업비 : 금 1", "200", "000", "000원(부가가치세 포함)"]}}
+{"instance_id": "G_Q004", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"budget": "사업비 : 공고문 참조"}}
+{"instance_id": "G_Q004", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"budget": "사업비 : 공고문 참조"}}
+{"instance_id": "G_Q005", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"contract_type": "계약방법 : 제한경쟁입찰 (협상에 의한 계약)"}}
+{"instance_id": "G_Q005", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"contract_type": "계약방법 : 제한경쟁입찰"}}
+{"instance_id": "G_Q005", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"contract_type": "계약방법 : 일반경쟁입찰"}}
+{"instance_id": "G_Q005", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"contract_type": "계약방법 : 일반경쟁입찰"}}
+{"instance_id": "G_Q005", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"contract_type": "계약방법 : 일반경쟁입찰"}}
+{"instance_id": "G_Q005", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"contract_type": "라. 계약방법 : 제한경쟁입찰(협상에 의한 계약)"}}
+{"instance_id": "G_Q005", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"contract_type": "계약방법 : 제한경쟁입찰(협상에 의한 계약)"}}
+{"instance_id": "G_Q005", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"contract_type": "계약방법 : 제한경쟁입찰(협상에 의한 계약)"}}
+{"instance_id": "G_Q005", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"contract_type": "계약방법 : 수의계약"}}
+{"instance_id": "G_Q005", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"contract_type": "계약방법 : 제한경쟁입찰(협상에 의한 계약)"}}
+{"instance_id": "G_Q006", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"deadline": "제출일시 : 2024. 9. 11.(수) 10:00 ~ 2024. 9. 19.(목) 17:00"}}
+{"instance_id": "G_Q006", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"deadline": "입찰서 제출 마감일시 : 공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"deadline": "입찰서 제출 마감일시 : 공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"deadline": "입찰서 제출 마감일시 : 공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"deadline": "NOT_FOUND"}}
+{"instance_id": "G_Q006", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"deadline": "- 일시 및 장소 : 입찰공고문 참조하여 온라인 제출"}}
+{"instance_id": "G_Q006", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"deadline": "제안서 제출 마감일시 : 입찰공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"deadline": "입찰(제안서) 제출 마감일시 : 입찰공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"deadline": "입찰(제안서) 제출 마감일시 : 공고문 참조"}}
+{"instance_id": "G_Q006", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"deadline": "입찰(제안서) 제출 마감일시 : 입찰공고문 참조"}}
+{"instance_id": "G_Q007", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"duration": "과업기간 : 착수일로부터 90일 이내"}}
+{"instance_id": "G_Q007", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 6개월"}}
+{"instance_id": "G_Q007", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 8개월"}}
+{"instance_id": "G_Q007", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 12개월"}}
+{"instance_id": "G_Q007", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 8개월"}}
+{"instance_id": "G_Q007", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"duration": "나. 사업기간 : 계약일로부터 6개월"}}
+{"instance_id": "G_Q007", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 12개월"}}
+{"instance_id": "G_Q007", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"duration": "사업기간 : 2024. 1. 1. ~ 2024. 12. 31."}}
+{"instance_id": "G_Q007", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 6개월"}}
+{"instance_id": "G_Q007", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"duration": "사업기간 : 계약체결일로부터 12개월"}}
+{"instance_id": "G_Q008", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"requirements_must": "관리자 접근권한 차등부여 및 개인정보보호·보안 기능 강화"}}
+{"instance_id": "G_Q008", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"requirements_must": "RCMS 연계 모듈 변경 및 기존 시스템과의 연동"}}
+{"instance_id": "G_Q008", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"requirements_must": "학사시스템 기능 개선 및 기존 시스템과의 연계"}}
+{"instance_id": "G_Q008", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"requirements_must": "통합정보시스템 기능 고도화 및 기존 시스템 연계"}}
+{"instance_id": "G_Q008", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"requirements_must": "디지털트윈 구축을 위한 정보화전략계획(ISP) 수립"}}
+{"instance_id": "G_Q008", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"requirements_must": "강화된 클라우드 기반의 전산환경 인프라 구축 필요"}}
+{"instance_id": "G_Q008", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"requirements_must": "응급의료 상황관리 시스템 고도화 및 정보 연계"}}
+{"instance_id": "G_Q008", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"requirements_must": "이러닝시스템 안정적 운영 및 사용자 지원"}}
+{"instance_id": "G_Q008", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"requirements_must": "고시 개정에 따른 사회보험료 지원 기준 시스템 반영"}}
+{"instance_id": "G_Q008", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"requirements_must": "기록관리시스템 통합 및 보안 환경 구축"}}
+{"instance_id": "G_Q009", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"eval_items": ["평가비율 : 기술능력평가(90%)", "가격평가(10%)"]}}
+{"instance_id": "G_Q009", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"eval_items": ["평가항목 : 기술능력평가", "가격평가"]}}
+{"instance_id": "G_Q009", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"eval_items": ["평가항목 : 기술능력평가", "가격평가"]}}
+{"instance_id": "G_Q009", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"eval_items": ["평가항목 : 기술능력평가", "가격평가"]}}
+{"instance_id": "G_Q009", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"eval_items": ["평가항목 : 기술능력평가", "가격평가"]}}
+{"instance_id": "G_Q009", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"eval_items": ["- 평가 비율 : 기술평가(90%)", "가격평가(10%)"]}}
+{"instance_id": "G_Q009", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"eval_items": ["평가비율 : 기술평가 90점", "가격평가 10점"]}}
+{"instance_id": "G_Q009", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"eval_items": ["평가비율 : 기술능력평가 90점", "가격평가 10점"]}}
+{"instance_id": "G_Q009", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"eval_items": "평가항목 : 기술능력평가"}}
+{"instance_id": "G_Q009", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"eval_items": ["평가비율 : 기술능력평가 90점", "가격평가 10점"]}}
+{"instance_id": "G_Q010", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"price_eval": "종합 평가점수 = 기술평가점수 + 입찰가격 평가점수"}}
+{"instance_id": "G_Q010", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"price_eval": "가격평가 방식 : 가격점수 산정"}}
+{"instance_id": "G_Q010", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"price_eval": "가격평가 방식 : 가격점수 산정"}}
+{"instance_id": "G_Q010", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"price_eval": "가격평가 방식 : 가격점수 산정"}}
+{"instance_id": "G_Q010", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"price_eval": "가격평가 방식 : 가격점수 산정"}}
+{"instance_id": "G_Q010", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"price_eval": "- 종합평가점수 산출 = 기술 평가점수 + 입찰가격 평가점수"}}
+{"instance_id": "G_Q010", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"price_eval": "종합평가점수 = 기술평가점수 + 가격평가점수"}}
+{"instance_id": "G_Q010", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"price_eval": "종합평가점수 = 기술평가점수 + 입찰가격 평가점수"}}
+{"instance_id": "G_Q010", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"price_eval": "가격평가 방식 : 적격심사"}}
+{"instance_id": "G_Q010", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"price_eval": "종합평가점수 = 기술평가점수 + 가격평가점수"}}
+{"instance_id": "G_Q011", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"eligibility": "입찰 참가자격 : 공고문 참고"}}
+{"instance_id": "G_Q011", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"eligibility": "입찰 참가자격 : 공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"eligibility": "입찰 참가자격 : 공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"eligibility": "입찰 참가자격 : 공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"eligibility": "NOT_FOUND"}}
+{"instance_id": "G_Q011", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"eligibility": "나라장터(G2B)에 입찰마감일 전일까지 입찰참가자격을 등록한 자"}}
+{"instance_id": "G_Q011", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"eligibility": "입찰 참가자격 : 입찰공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"eligibility": "입찰 참가자격 : 입찰공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"eligibility": "입찰 참가자격 : 입찰공고문 참조"}}
+{"instance_id": "G_Q011", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"eligibility": "입찰 참가자격 : 입찰공고문 참조"}}
+{"instance_id": "D011_X001", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"system": "현재 운영 중인 고양도시관리공사 체육시설 웹예약시스템 및 고객정보통합시스템 등 기존시스템 환경을 100% 이용하여 구현되어야 함"}}
+{"instance_id": "D011_X002", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"integration": ["외부시스템(PG결제", "SMS발송 등)과 안정적이고 유연한 연계"]}}
+{"instance_id": "D011_X003", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"facility": "무인발권기 구매 및 설치(2SET)"}}
+{"instance_id": "D011_X004", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"facility": "입퇴장 출입통제시스템 구매 및 설치(2SET)"}}
+{"instance_id": "D011_X005", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"operation": "무인발권기 및 출입통제시스템과 연계한 운영환경 구축"}}
+{"instance_id": "D011_X006", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"fact": "㈜혁산정보시스템"}}
+{"instance_id": "D011_X007", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"scope": "회원 정보 통합 관리 및 이용 이력 관리"}}
+{"instance_id": "D011_X008", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"procedure": "PPT 자료"}}
+{"instance_id": "D011_X009", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"procedure": "직접 방문제출(우편 및 택배접수 불가)"}}
+{"instance_id": "D011_X010", "doc_id": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf", "fields": {"procedure": ["제안서 9부(원본 1부", "사본 8부)"]}}
+{"instance_id": "D012_X001", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"cause": "국가연구개발혁신법 시행(2021.1.1.)에 따라 연구 비목 및 세목이 변경됨으로써 연계 전송의 오류 발생"}}
+{"instance_id": "D012_X002", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"operation": "ZEUS-RCMS간 연계 타입 구모듈에 대한 최신 모듈 적용으로 행정절차 간소화 필요"}}
+{"instance_id": "D012_X003", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"function": "부가세 연구과제 관리를 위한 연계 전송 기능 개선 필요"}}
+{"instance_id": "D012_X004", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"scope": ["총 75개 과제", "6개 부처(11개 전문기관)"]}}
+{"instance_id": "D012_X005", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"problem": "RCMS 이체 전송 오류 건에 대한 수정작업의 중복 업무 해소"}}
+{"instance_id": "D012_X006", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"problem": "연구비 집행 건에 대한 세부사항 연계전송 개선사항 반영 필요"}}
+{"instance_id": "D012_X007", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"effect": "현재 운영중인 시스템의 프레임워크 재사용으로 유지와 보수의 용이성 증대"}}
+{"instance_id": "D012_X008", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"effect": "RCMS의 안정적인 운영을 통한 업무서비스 품질 제고"}}
+{"instance_id": "D012_X009", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"impact": "자료 없음"}}
+{"instance_id": "D012_X010", "doc_id": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf", "fields": {"security": "암호화 프로그램(KSIGN)"}}
+{"instance_id": "D013_X001", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"scope": "학사 조직개편에 따른 시스템 개선"}}
+{"instance_id": "D013_X002", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"function": "학위연계과정 시스템 구축"}}
+{"instance_id": "D013_X003", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"system": "DB Oracle 11g Enterprise Edition"}}
+{"instance_id": "D013_X004", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"security": "암호화 프로그램(KSIGN)"}}
+{"instance_id": "D013_X005", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"function": "학사관리- 학적관리/수강관리/성적관리/졸업관리"}}
+{"instance_id": "D013_X006", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"function": "장학관리- 장학생관리/납입금관리/학자금관리/조교관리"}}
+{"instance_id": "D013_X007", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"scope": "연구행정연구과제관리- 과제신청/과제관리/연구노트"}}
+{"instance_id": "D013_X008", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"procedure": "입시행정학부입시- 원서접수/서류전형/면접전형/등록/학적이관"}}
+{"instance_id": "D013_X009", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"security": "권한관리- 권한관리/업무별관리/사용자별관리"}}
+{"instance_id": "D013_X010", "doc_id": "광주과학기술원_학사시스템 기능개선 사업.pdf", "fields": {"integration": "포틀릿서비스/SSO연계/관리자서비스"}}
+{"instance_id": "D014_X001", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"scope": "기관생명윤리위원회(IRB) 업무프로세스 구축"}}
+{"instance_id": "D014_X002", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"function": ["임상연구 심의", "심의결과 통보", "변경신청관리", "결과보고서 관리"]}}
+{"instance_id": "D014_X003", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"procedure": ["동물실험계획심의", "승인", "실험계획변경", "실험동물반입", "종료보고서 관리", "사체처리결과서"]}}
+{"instance_id": "D014_X004", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"operation": "사전 회의 개최(안) 신청 및 지급신청 연계"}}
+{"instance_id": "D014_X005", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"function": ["구매전용카드 신청 및 관리", "전자세금계산서 발행 요청"]}}
+{"instance_id": "D014_X006", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"scope": "자료 없음"}}
+{"instance_id": "D014_X007", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"design": "기존 통합정보시스템과의 상호 연계를 고려한 신규 시스템 설계"}}
+{"instance_id": "D014_X008", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"design": "사용자 편의성을 고려한 맞춤형 UI/UX 시스템 구현"}}
+{"instance_id": "D014_X009", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"role": "사업추진 전담(총무전산팀)"}}
+{"instance_id": "D014_X010", "doc_id": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf", "fields": {"role": "사업수행팀(사업수행사)"}}
+{"instance_id": "D015_X001", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"goal": ["디지털 전환을 기회로", "디지털 경쟁력 조기 확보에 공단·민·관의 역량을 결집하여", "철도 산업 생태계의 새로운 성장동력 마련"]}}
+{"instance_id": "D015_X002", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"scope": "국내·외 디지털트윈 현황 및 환경 분석"}}
+{"instance_id": "D015_X003", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"standard": ["ISO 16739", "19650", "29481 등 BIM관련 국제표준 동향 파악"]}}
+{"instance_id": "D015_X004", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"integration": ["공단 내부 기존 시스템(ERP SAP", "RAFIS", "EPMS", "CPMS 등)"]}}
+{"instance_id": "D015_X005", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"design": "디지털트윈 데이터 기반의 협업 방안과 플랫폼 시스템 구축 방안 수립"}}
+{"instance_id": "D015_X006", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"planning": "철도인프라 디지털트윈 구축을 위한 핵심과제 도출 및 우선순위 결정"}}
+{"instance_id": "D015_X007", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"procedure": "국내·외 디지털트윈 현황 및 환경 분석"}}
+{"instance_id": "D015_X008", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"function": "openBIM기반 철도인프라 디지털트윈 플랫폼 구축 방안 수립"}}
+{"instance_id": "D015_X009", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"procedure": "CSR-000"}}
+{"instance_id": "D015_X010", "doc_id": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf", "fields": {"security": "보안 요구사항(Security Requirement)"}}
+{"instance_id": "D016_X001", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"system": "기존 데이터베이스관리시스템(DBMS)인 Oracle을 클라우드 환경에 적합한 Mysql로 전환"}}
+{"instance_id": "D016_X002", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"security": "위협탐지 결과를 VPN 등을 이용하여 해양수산사이버안전센터로 전송"}}
+{"instance_id": "D016_X003", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"data": ["약 7", "000여점의 소장자료 목록과 명세서 등의 소장자료DB 및 사진자료(jpg)등을 시스템으로 이전"]}}
+{"instance_id": "D016_X004", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"function": ["소장자료DB를 엑셀(xlsx)", "한글(hwp)", "PDF 등의 출력물로 변환이 가능한 시스템 구축"]}}
+{"instance_id": "D016_X005", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"access_control": "메뉴 및 권한 관리"}}
+{"instance_id": "D016_X006", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"audit": "접속이력 관리"}}
+{"instance_id": "D016_X007", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"search": "미등록자료 검색"}}
+{"instance_id": "D016_X008", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"governance": "정기보고 : 주간보고"}}
+{"instance_id": "D016_X009", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"qa": "최종검수는 완료계 접수일로부터 14일 이내에 실시한다."}}
+{"instance_id": "D016_X010", "doc_id": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf", "fields": {"deliverable": "완료보고ㅇ완료보고서ㅇ사용자 매뉴얼ㅇ운영자 매뉴얼ㅇ시험결과보고서"}}
+{"instance_id": "D017_X001", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"problem": "응급실 뺑뺑이 사건 등 병원 전 단계에서 치료 가능한 응급실 섭외 지연 문제 발생"}}
+{"instance_id": "D017_X002", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"problem": "중증응급환자의 전원 수용병원 결정을 위해 수차례의 수용 요청이 필요"}}
+{"instance_id": "D017_X003", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"metric": "평균 9.3개의 의료기관에 전원의뢰"}}
+{"instance_id": "D017_X004", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"system": "IP기반 콜센터 구축"}}
+{"instance_id": "D017_X005", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"infrastructure": ["도입장비: CTI", "교환기", "IP녹취 및 관련 솔루션"]}}
+{"instance_id": "D017_X006", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"integration": "중앙상황실 ⇄ 광역상황실간 전원 지원 서비스 구현"}}
+{"instance_id": "D017_X007", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"data": "가용병상현황의 응급의료자원정보를 수집·관리·제공"}}
+{"instance_id": "D017_X008", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"function": ["재난 시 응급의료자원 확보 및 동원", "실시간 정보전파"]}}
+{"instance_id": "D017_X009", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"scope": "응급환자 병원 간 전원 조정 등 응급환자의 전체적인 흐름을 관리"}}
+{"instance_id": "D017_X010", "doc_id": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf", "fields": {"operation": "광역응급의료상황실 병원선정 및 전원접수 처리를 위한 시스템 구축"}}
+{"instance_id": "D018_X001", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"operation": "사이버(모바일)연수원 구축"}}
+{"instance_id": "D018_X002", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"function": "교육과정 운영 및 컨텐츠 관리"}}
+{"instance_id": "D018_X003", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"data": "자료 없음"}}
+{"instance_id": "D018_X004", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"incident_response": "자료 없음"}}
+{"instance_id": "D018_X005", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"scope": ["K-MOOC", "KOCW", "통계교육원", "법제처"]}}
+{"instance_id": "D018_X006", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"scope": "소셜러닝 고도화 운영"}}
+{"instance_id": "D018_X007", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"fact": ["대처 매뉴얼", "전담인력 편성"]}}
+{"instance_id": "D018_X008", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"security": "공단 보유 프로그램 및 데이터 이전 방안 제시"}}
+{"instance_id": "D018_X009", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"procedure": "QUR-001"}}
+{"instance_id": "D018_X010", "doc_id": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf", "fields": {"procedure": "5개"}}
+{"instance_id": "D019_X001", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "연금보험료 지원 등에 관한 고시 개정 사항 시스템 개발 및 유지보수"}}
+{"instance_id": "D019_X002", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "시스템 안정화 및 업무처리 효율화 도모"}}
+{"instance_id": "D019_X003", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "정보지원실과 가입지원실의 긴밀한 협업"}}
+{"instance_id": "D019_X004", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "사업장 사회보험료 지원의 소득 관련 시스템 개발 및 보완"}}
+{"instance_id": "D019_X005", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "고시 개정 및 법·지침 기준을 반영한 소득 관련 가입자 지원 제외 및 검증시스템 개발 및 보완"}}
+{"instance_id": "D019_X006", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "사업장 사회보험료 지원 실태조사 시스템 개발 및 보완"}}
+{"instance_id": "D019_X007", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "사회보험료 지원 관련 안내문 통합발송"}}
+{"instance_id": "D019_X008", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": ["모바일", "카카오", "MMS", "국민 비서알림 서비스"]}}
+{"instance_id": "D019_X009", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "차세대 통합플랫폼에 신규 및 보완사항 적기 반영"}}
+{"instance_id": "D019_X010", "doc_id": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf", "fields": {"fact": "정보화사업 프로세스 절차를 준수"}}
+{"instance_id": "D020_X001", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"as_is": "분산 구축된 연구소 기록관리시스템(3개*) 운영(~2023) 및 통합(2024~)"}}
+{"instance_id": "D020_X002", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"goal": ["이용자 페이지 전면 개편", "활용 및 보안 기능 개발", "성능 개량 등을 통해 기록관리시스템의 통합 활용 및 보안 환경 구현"]}}
+{"instance_id": "D020_X003", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"scope": "기록관리시스템 이용자 페이지 전면 개편 : 메인/서브 페이지 구축"}}
+{"instance_id": "D020_X004", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"search": "기록물 통합 활용 환경 구축 : 검색엔진/색인 최적화"}}
+{"instance_id": "D020_X005", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"viewer": "기록물 통합 활용 환경 구축 : 문서 뷰어 구현"}}
+{"instance_id": "D020_X006", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"access_control": "기록물 통합 보안 환경 구축 : 권한체계 구현"}}
+{"instance_id": "D020_X007", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"audit": "기록물 통합 보안 환경 구축 : 감사증적 기능 구현"}}
+{"instance_id": "D020_X008", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"monitoring": "성능 개량 및 기타 기능 개발 : 성능 모니터링 환경 구현"}}
+{"instance_id": "D020_X009", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"security_effect": "기록물/사용자/시스템(메뉴) 권한체계 개편으로 안전한 기록물 활용 보장"}}
+{"instance_id": "D020_X010", "doc_id": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf", "fields": {"follow_up": "사업에서 도출한 데이터 표준화 결과를 연계하여 추진해야 함"}}
 
 {"instance_id":"G_Q001","doc_id":"국방과학연구소_대용량 자료전송시스템 고도화.pdf","fields":{"project_name":"대용량 자료전송시스템 고도화"}}
 {"instance_id":"G_Q002","doc_id":"국방과학연구소_대용량 자료전송시스템 고도화.pdf","fields":{"agency":"국방과학연구소"}}
