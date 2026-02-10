@@ -10,7 +10,7 @@ v4: 이후 추가
 - 이미지 추출
 """
 
-from preprocess.pp_basic import BASE_DIR, RAW_FOLDER, docs
+from preprocess.pp_basic import BASE_DIR, RAW_DIR, docs
 
 import re
 import os
@@ -56,6 +56,19 @@ def build_index(chunks: list[str], embed_model):
     return index, chunks
 
 
+def gen_input(doc_path, embed_model):
+    chunks = chunk_from_alldata(doc_path.name, ALL_DATA)
+
+    if chunks is None:
+        text = clean_text(extract_text(doc_path))
+        chunks = chunk(text)
+
+    index, chunks = build_index(chunks, embed_model)
+
+    return index, chunks
+
+
+
 def gen_doc_indexes(docs, embed_model):
 
     doc_indexes = {}
@@ -69,7 +82,7 @@ def gen_doc_indexes(docs, embed_model):
             text = clean_text(extract_text(doc_path))
             chunks = chunk(text)
 
-        index, chunks_list = build_index(chunks, embed_model=embed_model)
+        index, chunks_list = build_index(chunks, embed_model)
         doc_indexes[doc_path] = (index, chunks_list)
 
     print("모든 문서 인덱싱 완료")
