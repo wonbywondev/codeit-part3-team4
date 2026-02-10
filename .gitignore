@@ -214,3 +214,6 @@ data/raw/files
 data/raw/data_list*.xlsx
 data/raw/data_list*.csv
 *Zone.Identifier
+
+# generated data
+data/*.json
