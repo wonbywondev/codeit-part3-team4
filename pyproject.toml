@@ -3,10 +3,9 @@ name = "codeit-part3-team4"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.11.*"
+requires-python = ">=3.11"
 dependencies = [
     "dotenv>=0.9.9",
-    "img2table>=1.4.2",
     "faiss-cpu>=1.13.2",
     "ipykernel>=7.1.0",
     "numpy>=2.4.2",
@@ -19,5 +18,4 @@ dependencies = [
     "rapidfuzz>=3.14.3",
     "requests>=2.32.5",
     "sentence-transformers>=5.2.2",
-    "accelerate>=1.12.0",
 ]
