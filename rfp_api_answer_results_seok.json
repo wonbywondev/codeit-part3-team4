@@ -2,14 +2,15 @@
   "(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf": {
     "project_name": "NOT_FOUND",
     "agency": "NOT_FOUND",
-    "purpose": "복수의결권 및 스톡옵션 시스템 고도화 추진",
-    "budget": "NOT_FOUND",
+    "purpose": "복수의결권 및 스톡옵션 시스템 고도화",
+    "budget": "20억원 미만",
     "contract_type": "협상에 의한 계약",
     "deadline": "2024년 3월",
     "duration": "NOT_FOUND",
-    "requirements_must": "개발장비, 통제 및 리스크 계획",
-    "eval_items": "기술평가(90%), 가격평가(10%)",
-    "price_eval": "NOT_FOUND"
+    "requirements_must": "NOT_FOUND",
+    "eval_items": "개발장비, 통제 및 리스크 계획",
+    "price_eval": "기술평가(90%), 가격평가(10%)",
+    "eligibility": "최저가"
   },
   "(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.pdf": {
     "project_name": "BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급 사업",
@@ -59,8 +60,8 @@
     "deadline": "2024년 월 일",
     "duration": "NOT_FOUND",
     "requirements_must": "시스템 활용, 하드웨어 및 소프트웨어 요구사항, 도메인 및 자원 통합, 개발 공통 요구 사항, 디자인 공통 요구사항, 보안 요구사항, 성능 요구사항, 인터페이스 요구사항, 데이터 요구사항, 테스트 요구사항, 품질 요구사항",
-    "eval_items": "기술능력 평가(90점) + 가격 평가(10점)",
+    "eval_items": "기술능력평가(90점) + 가격평가(10점)",
     "price_eval": "입찰가격",
-    "eligibility": "중소 소프트웨어사업자만 입찰 참여 가능, 대기업 및 중견기업은 입찰 참여 불가"
+    "eligibility": "중소 소프트웨어사업자만 입찰에 참여할 수 있으며, 대기업 및 중견기업은 입찰에 참여할 수 없습니다."
   }
 }
