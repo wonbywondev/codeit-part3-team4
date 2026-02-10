@@ -1,0 +1,66 @@
+{
+  "(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf": {
+    "project_name": "NOT_FOUND",
+    "agency": "NOT_FOUND",
+    "purpose": "복수의결권 및 스톡옵션 시스템 고도화 추진",
+    "budget": "NOT_FOUND",
+    "contract_type": "협상에 의한 계약",
+    "deadline": "2024년 3월",
+    "duration": "NOT_FOUND",
+    "requirements_must": "개발장비, 통제 및 리스크 계획",
+    "eval_items": "기술평가(90%), 가격평가(10%)",
+    "price_eval": "NOT_FOUND"
+  },
+  "(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.pdf": {
+    "project_name": "BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급 사업",
+    "agency": "부산국제영화제",
+    "purpose": "웹 표준, 웹 접근성 및 웹 UI에 대한 기능개선으로 사용자 중심의 웹서비스를 제공한다.",
+    "budget": "금243,000,000원(금이억사천삼백만 원) (VAT 포함)",
+    "contract_type": "협상에 의한 계약",
+    "deadline": "2024. 7. 2(화) 16:00까지",
+    "duration": "계약체결일 ~ 2025. 05. 31.",
+    "requirements_must": "NOT_FOUND",
+    "eval_items": "NOT_FOUND",
+    "price_eval": "NOT_FOUND",
+    "eligibility": "NOT_FOUND"
+  },
+  "(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf": {
+    "project_name": "KUSF 체육특기자 경기기록 관리시스템 개발",
+    "agency": "한국대학스포츠협의회",
+    "purpose": "현행 대입 체육특기자 선발에 경기실적으로만 당락을 결정하는 문제 해결을 위한 가이드라인 및 권고 발표",
+    "budget": "1억 5천만 원(부가가치세 포함)",
+    "contract_type": "협상에 의한 계약",
+    "deadline": "계약체결 후 2024년 12월 31일까지",
+    "duration": "NOT_FOUND",
+    "requirements_must": "다양한 사용자(학생선수, 대학, 종목단체, KUSF 관리자 등)의 요구사항 분석 방법 제시, 체육특기자 경기력 평가지표 지침 수용, 기존 KUSF 운영 포털 및 유관 시스템과 연계 고려",
+    "eval_items": "기술능력 90% / 가격 10%",
+    "price_eval": "가격평가(10%)는 조달청 나라장터를 통해 실시",
+    "eligibility": "NOT_FOUND"
+  },
+  "(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.pdf": {
+    "project_name": "2024 시각예술 정보시스템 운영 유지보수",
+    "agency": "재단법인 예술경영지원센터",
+    "purpose": "미술진흥법 제23조에 의거 통합미술정보시스템 구축‧운영",
+    "budget": "50,000,000(금 오천만원/VAT포함)",
+    "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+    "deadline": "2024년 04월 25일",
+    "duration": "계약체결일로부터 ~ 2024년 11월 29일",
+    "requirements_must": "NOT_FOUND",
+    "eval_items": "기술 및 가격평가(수요기관 평가/발표평가)",
+    "price_eval": "협상에 의한 계약",
+    "eligibility": "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드: 1468)으로 입찰참가자격을 등록한 자, 소기업자 또는 소상공인 확인서 소지자"
+  },
+  "2025 구미 아시아육상경기선수권대회 조직위원회_2025 구미아시아육상경.pdf": {
+    "project_name": "구미아시아육상경기선수권대회 종합정보시스템 및 홈페이지 등 구축 용역",
+    "agency": "구미아시아육상경기선수권대회 조직위원회",
+    "purpose": "NOT_FOUND",
+    "budget": "NOT_FOUND",
+    "contract_type": "협상에 의한 계약",
+    "deadline": "2024년 월 일",
+    "duration": "NOT_FOUND",
+    "requirements_must": "시스템 활용, 하드웨어 및 소프트웨어 요구사항, 도메인 및 자원 통합, 개발 공통 요구 사항, 디자인 공통 요구사항, 보안 요구사항, 성능 요구사항, 인터페이스 요구사항, 데이터 요구사항, 테스트 요구사항, 품질 요구사항",
+    "eval_items": "기술능력 평가(90점) + 가격 평가(10점)",
+    "price_eval": "입찰가격",
+    "eligibility": "중소 소프트웨어사업자만 입찰 참여 가능, 대기업 및 중견기업은 입찰 참여 불가"
+  }
+}

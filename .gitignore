@@ -208,4 +208,9 @@ __marimo__/
 
 
 #
-data/raw/
+data/raw/files
+
+# data lists (do not track)
+data/raw/data_list*.xlsx
+data/raw/data_list*.csv
+*Zone.Identifier
