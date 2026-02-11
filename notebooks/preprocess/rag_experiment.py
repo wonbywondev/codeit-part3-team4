@@ -1,14 +1,17 @@
 # preprocess/rag_experiment.py
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Optional
 
 import gc
+import json
+import unicodedata
+
 import numpy as np
 import pandas as pd
-import unicodedata
 
 import faiss
 import pdfplumber
@@ -26,45 +29,36 @@ from preprocess.pp_v4 import ALL_DATA, clean_text, extract_text, chunk_from_alld
 # Config / Prompt
 # -------------------------
 CONFIG = {
-    "chunk_length": 800,     # C1 baseline
+    "chunk_length": 800,          # C1 baseline
     "top_k": 15,
-    "max_tokens": 2000,
-    "max_completion_tokens": 2000,
-    "temperature": 0.1,
-    "alpha": 0.7,            # hybrid weight for vector score
+    "max_tokens": 2000,           # non gpt-5
+    "max_completion_tokens": 2000,  # gpt-5
+    "temperature": 0.1,           # non gpt-5
+    "alpha": 0.7,                 # hybrid weight for vector score
+    "max_context_chars": 4000,    # context hard cap (chars)
 }
 
+# JSON-only prompt (태그 방식 제거)
 RFP_PROMPT = """
 너는 정부·공공기관 제안요청서(RFP)를 분석하는 전문가다.
 아래 컨텍스트는 하나의 정부 RFP 문서에서 추출된 내용이다.
 
-[분석 규칙]
-- 추측 금지, 문서에 명시된 내용만 사용
-- 문서에 없으면 반드시 NOT_FOUND
-- 질문 개수만큼 답변을 반드시 모두 출력
-- 각 답변은 반드시 지정된 태그로 감싸서 출력
-- 태그 밖에는 어떤 문자(설명/번호/공백/개행 포함)도 출력하지 말 것
+[규칙]
+- 추측 금지, 컨텍스트에 명시된 내용만 사용
+- 컨텍스트에 없으면 값은 반드시 "NOT_FOUND"
+- 출력은 반드시 JSON만 출력 (설명/번호/여분 텍스트 금지)
+- JSON의 key는 질문의 key(type)이며, value는 답변 문자열이다.
+- 아래 질문 목록에 있는 모든 key에 대해 빠짐없이 포함하라.
 
-[출력 형식(필수)]
-- i번째 질문의 답변은 반드시 정확히 아래 형식으로만 출력:
-  <A{{i}}>답변</A{{i}}>
-- 답이 없으면:
-  <A{{i}}>NOT_FOUND</A{{i}}>
-
-[질문 목록]
-{questions}
+[질문 목록(JSON)]
+{questions_json}
 
 [컨텍스트]
 {context}
 
-지금부터 질문 순서대로 답변만 출력하라.
-반드시 아래 예시와 동일한 “태그만 있는 형태”로 출력하라.
-
-[예시 — 형식만 참고]
-<A1>NOT_FOUND</A1>
-<A2>2024년</A2>
-<A3>352,000,000</A3>
+지금부터 JSON만 출력하라.
 """.strip()
+
 
 # -------------------------
 # Baseline-compatible utils
@@ -72,12 +66,26 @@ RFP_PROMPT = """
 def load_questions_df() -> pd.DataFrame:
     return pd.read_csv(EVAL_DIR / "questions.csv")
 
+
 def get_queries_for_doc(doc_name: str, questions_df: pd.DataFrame) -> List[Tuple[str, str]]:
-    """returns [(field, question), ...] ; field == type column in questions.csv (baseline)"""
+    """
+    returns [(type, question), ...]
+    - doc_id == "*" rows are common questions
+    - doc_id == doc_name rows are per-doc questions
+    - if 'type' duplicates exist, keep last (per-doc overrides common)
+    """
     common = questions_df[questions_df["doc_id"] == "*"][["type", "question"]]
     per_doc = questions_df[questions_df["doc_id"] == doc_name][["type", "question"]]
     merged = pd.concat([common, per_doc], ignore_index=True)
-    return list(zip(merged["type"], merged["question"]))
+
+    merged["type"] = merged["type"].astype(str)
+    merged["question"] = merged["question"].astype(str)
+
+    # 중복 type이 있으면 뒤(per_doc) 우선
+    merged = merged.drop_duplicates(subset=["type"], keep="last")
+
+    return list(zip(merged["type"].tolist(), merged["question"].tolist()))
+
 
 def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[str]) -> Dict[str, float]:
     hit_rank = None
@@ -89,14 +97,20 @@ def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[s
                 break
     return {"recall": 1.0 if hit_rank else 0.0, "mrr": (1.0 / hit_rank) if hit_rank else 0.0}
 
+
 def eval_gen(pred: str, gold: Optional[str], threshold: int = 80) -> Dict[str, float]:
     pred = (pred or "").strip()
-    fill = 1.0 if pred and pred.lower() not in {"", "없음", "NOT_FOUND", "not_found"} else 0.0
+
+    # 기존 정의 유지(원하면 NOT_FOUND 제외로 바꿀 수 있음)
+    fill = 1.0 if pred and pred.lower() not in {"", "없음"} else 0.0
+
     if gold is None or str(gold).strip() == "":
         return {"fill": fill, "match": np.nan, "sim": np.nan}
+
     gold = str(gold).strip()
     sim = fuzz.token_set_ratio(pred, gold)
     return {"fill": fill, "match": 1.0 if sim >= threshold else 0.0, "sim": float(sim)}
+
 
 def build_gold_anchor_map(gold_evidence_df: pd.DataFrame) -> Dict[str, List[str]]:
     m: Dict[str, List[str]] = {}
@@ -116,6 +130,7 @@ class BaseChunker(ABC):
     def chunk(self, doc_path: Path) -> List[str]:
         ...
 
+
 class BaseRetriever(ABC):
     @abstractmethod
     def build_index(self, chunks: List[str]) -> Any:
@@ -125,9 +140,14 @@ class BaseRetriever(ABC):
     def retrieve(self, index: Any, query_texts: List[str], top_k: int) -> List[int]:
         ...
 
+
 class BaseGenerator(ABC):
     @abstractmethod
-    def generate(self, questions: List[str], context: str) -> List[str]:
+    def generate(self, queries: List[Tuple[str, str]], context: str) -> Dict[str, str]:
+        """
+        queries: [(type_key, question_text), ...]
+        returns: {type_key: answer_string}
+        """
         ...
 
 
@@ -144,6 +164,7 @@ class C1FixedChunker(BaseChunker):
         s = self.size
         return [text[i:i+s] for i in range(0, len(text), s)]
 
+
 class C2PageChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
         chunks: List[str] = []
@@ -154,9 +175,9 @@ class C2PageChunker(BaseChunker):
                     chunks.append(f"[페이지 {i+1}]\n{page_text}")
         return chunks
 
+
 class C3SectionChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
-        # If ALL_DATA doesn't have this doc, fallback to baseline C1 to avoid None issues
         chunks = chunk_from_alldata(doc_path.name, ALL_DATA, size=CONFIG["chunk_length"])
         if chunks is None:
             text = clean_text(extract_text(doc_path))
@@ -179,6 +200,7 @@ class R1BM25Retriever(BaseRetriever):
         top = np.argsort(scores)[::-1][:top_k]
         return top.astype(int).tolist()
 
+
 class R2VectorRetriever(BaseRetriever):
     """Baseline vector: KoE5 embeddings + FAISS IndexFlatL2"""
     def __init__(self, embed_model: SentenceTransformer):
@@ -196,6 +218,7 @@ class R2VectorRetriever(BaseRetriever):
         _, I = index.search(q_mean.astype("float32"), top_k)
         return [int(i) for i in I[0]]
 
+
 class R3HybridRetriever(BaseRetriever):
     """Hybrid: BM25 + Vector, combine scores only for candidate subset to avoid huge RAM/time"""
     def __init__(self, embed_model: SentenceTransformer, bm25_candidates: int = 200):
@@ -207,7 +230,7 @@ class R3HybridRetriever(BaseRetriever):
         embs = self.embed_model.encode(chunks, convert_to_numpy=True, show_progress_bar=False)
         faiss_index = faiss.IndexFlatL2(embs.shape[1])
         faiss_index.add(embs.astype("float32"))
-        return {"bm25": bm25, "faiss": faiss_index, "chunks": chunks}
+        return {"bm25": bm25, "faiss": faiss_index, "chunks": chunks, "bm25_embs": embs}
 
     def retrieve(self, index: Any, query_texts: List[str], top_k: int) -> List[int]:
         bm25 = index["bm25"]
@@ -215,31 +238,24 @@ class R3HybridRetriever(BaseRetriever):
         chunks = index["chunks"]
 
         q_text = " ".join(query_texts)
-        # 1) BM25 candidates (cheap)
+
         bm25_scores = bm25.get_scores(q_text.split())
         cand_n = min(self.bm25_candidates, len(chunks))
         cand_idxs = np.argsort(bm25_scores)[::-1][:cand_n].astype(int)
 
-        # 2) Vector distances only for those candidates
         q_embs = self.embed_model.encode(query_texts, convert_to_numpy=True, show_progress_bar=False)
         q_mean = q_embs.mean(axis=0, keepdims=True).astype("float32")
 
-        # Search top_k over full index is fine too, but we want hybrid rerank:
-        # We'll compute vector score for candidate idxs by reconstructing vectors from FAISS is hard for IndexFlatL2.
-        # Instead: do FAISS top_k first, then union with BM25 candidates.
         _, vec_I = faiss_index.search(q_mean, min(max(top_k, cand_n), len(chunks)))
         vec_idxs = vec_I[0].astype(int)
 
         union = np.unique(np.concatenate([cand_idxs, vec_idxs]))
-        # Build hybrid score on this union only
-        # BM25: higher better
+
         bm = bm25_scores[union]
 
-        # Vector: we need distances for union -> easiest: do faiss search for len(union)?? not possible by ids directly.
-        # Practical compromise: use rank-based score from vec result.
         vec_rank_score = np.zeros(len(chunks), dtype=np.float32)
         for rank, idx in enumerate(vec_idxs, start=1):
-            vec_rank_score[idx] = 1.0 / rank  # higher better
+            vec_rank_score[idx] = 1.0 / rank
 
         vv = vec_rank_score[union]
         hybrid = CONFIG["alpha"] * vv + (1.0 - CONFIG["alpha"]) * bm
@@ -255,49 +271,81 @@ class OpenAIGenerator(BaseGenerator):
     def __init__(self, model: str, client: Optional[OpenAI] = None):
         self.client = client or OpenAI()
         self.model = model
-    
-    def generate(self, questions: List[str], context: str) -> List[str]:
-        # RFP_PROMPT가 이미 (태그 출력 규칙 포함) 형식 강제를 하고 있다고 가정.
-        # 여기서는 prompt 조립 + 모델별 파라미터 호환 + 태그 파싱만 담당.
 
-        q_block = "\n".join(f"{i}. {q}" for i, q in enumerate(questions, start=1))
-        prompt = RFP_PROMPT.format(questions=q_block, context=context)
+        # debug fields
+        self.last_raw_text: str = ""
+        self.last_resp_dump: Optional[Dict[str, Any]] = None
+        self.last_debug: Dict[str, Any] = {}
 
-        is_gpt5 = str(self.model).startswith("gpt-5")
+    def generate(self, queries: List[Tuple[str, str]], context: str) -> Dict[str, str]:
+        # context hardcap
+        MAX_CTX_CHARS = CONFIG.get("max_context_chars", 4000)
+        context = (context or "")[:MAX_CTX_CHARS]
 
-        create_kwargs = {
+        # questions payload (type -> question)
+        q_payload = [{"key": k, "question": q} for k, q in queries]
+        questions_json = json.dumps(q_payload, ensure_ascii=False)
+
+        prompt = RFP_PROMPT.format(questions_json=questions_json, context=context)
+
+        # debug init
+        self.last_raw_text = ""
+        self.last_resp_dump = None
+        self.last_debug = {
             "model": self.model,
-            "messages": [
-                {"role": "system", "content": "RFP 전문 분석가. 형식 엄수."},
-                {"role": "user", "content": prompt},
-            ],
+            "n_questions": len(queries),
+            "context_len": len(context or ""),
+            "max_context_chars": MAX_CTX_CHARS,
+            "prompt_len": len(prompt),
+            "response_status": None,
+            "output_tokens": None,
+            "output_text_repr": None,
+            "exception": None,
         }
 
-        # gpt-5 계열: max_completion_tokens 사용, temperature는 기본값(1)만 허용되는 케이스가 있어 미전달 [web:85][web:101]
-        if is_gpt5:
-            create_kwargs["max_completion_tokens"] = CONFIG["max_completion_tokens"]
-        else:
-            create_kwargs["max_tokens"] = CONFIG["max_tokens"]
-            create_kwargs["temperature"] = CONFIG["temperature"]
+        def fallback_notfound() -> Dict[str, str]:
+            return {k: "NOT_FOUND" for k, _ in queries}
 
-        resp = self.client.chat.completions.create(**create_kwargs)
-        text = (resp.choices[0].message.content or "")
+        try:
+            # Use Responses API (chat.completions returned empty content in your environment)
+            resp = self.client.responses.create(
+                model=self.model,
+                input=prompt,
+                max_output_tokens=CONFIG.get("max_completion_tokens", 1000),
+                reasoning={"effort": "minimal"},
+            )
 
-        # (권장) RFP_PROMPT가 <A1>...</A1> 태그를 강제하는 경우: 태그 파싱
-        answers: List[str] = []
-        n = len(questions)
-        for i in range(1, n + 1):
-            start_tag = f"<A{i}>"
-            end_tag = f"</A{i}>"
-            s = text.find(start_tag)
-            e = text.find(end_tag)
-            if s != -1 and e != -1 and e > s:
-                ans = text[s + len(start_tag): e].strip()
-                answers.append(ans if ans else "NOT_FOUND")
-            else:
-                answers.append("NOT_FOUND")
+            self.last_resp_dump = resp.model_dump() if hasattr(resp, "model_dump") else None
+            self.last_debug["response_status"] = getattr(resp, "status", None)
 
-        return answers
+            usage = getattr(resp, "usage", None)
+            self.last_debug["output_tokens"] = getattr(usage, "output_tokens", None)
+
+            text = (getattr(resp, "output_text", "") or "").strip()
+            self.last_raw_text = text
+            self.last_debug["output_text_repr"] = repr(text[:200])
+
+            if not text:
+                return fallback_notfound()
+
+            # Parse JSON (strict)
+            try:
+                obj = json.loads(text)
+            except Exception:
+                return fallback_notfound()
+
+            # Ensure all keys exist
+            out: Dict[str, str] = {}
+            for k, _q in queries:
+                v = obj.get(k, "NOT_FOUND")
+                v = (v or "").strip()
+                out[k] = v if v else "NOT_FOUND"
+            return out
+
+        except Exception as e:
+            self.last_debug["exception"] = repr(e)
+            self.last_raw_text = ""
+            return fallback_notfound()
 
 # -------------------------
 # Experiment runner
@@ -308,6 +356,7 @@ class ExperimentSpec:
     chunker: str
     retriever: str
     generator: str
+
 
 def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, client: OpenAI):
     # chunker
@@ -340,13 +389,14 @@ def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, clie
 
     return chunker, retriever, gen
 
+
 class RAGExperiment:
     def __init__(self, chunker: BaseChunker, retriever: BaseRetriever, generator: BaseGenerator, questions_df: pd.DataFrame):
         self.chunker = chunker
         self.retriever = retriever
         self.generator = generator
         self.questions_df = questions_df
-    
+
     def run_single_doc_metrics(
         self,
         doc_path: Path,
@@ -356,48 +406,68 @@ class RAGExperiment:
         sim_threshold: int = 80,
         warn_on_mismatch: bool = True,
     ) -> Dict[str, Any]:
-        import gc
-
         doc_name = unicodedata.normalize("NFC", doc_path.name)
 
-        # 1) 질문 로드 ([(field, question), ...])
+        # 1) 질문 로드: [(type, question), ...]
         queries = get_queries_for_doc(doc_name, self.questions_df)
-        q_texts = [q for _, q in queries]
+        q_texts = [q for _t, q in queries]
+        type_keys = [t for t, _q in queries]
 
-        # 2) 청킹 → 인덱스 → 검색
+        # 2) chunk -> index -> retrieve
         chunks = self.chunker.chunk(doc_path)
         index = self.retriever.build_index(chunks)
         idxs = self.retriever.retrieve(index, q_texts, top_k=top_k)
 
-        # 3) 컨텍스트 구성
-        context = "".join(chunks[i] for i in idxs if 0 <= int(i) < len(chunks))
+        # 3) context
+        context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
 
-        # 4) 생성
-        answers = self.generator.generate(q_texts, context)
+        # 4) generate: returns dict {type: answer}
+        pred_map = self.generator.generate(queries, context)
+
+        # list answers in the same order as queries (for baseline-like eval)
+        answers = [pred_map.get(t, "NOT_FOUND") for t in type_keys]
 
         expected_answer_count = len(q_texts)
         answer_count = len(answers)
-
         if warn_on_mismatch and answer_count != expected_answer_count:
             print(
                 f"WARN answer_count mismatch | doc={doc_name} | "
                 f"expected={expected_answer_count} got={answer_count}"
             )
 
-        # --- evaluation (baseline style) ---
+        # --- evaluation ---
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
-
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
 
-        # 5) Generation 평가: 질문(field) 순서대로 답변 매핑
+        # debug meta
+        answers_preview = [str(x) for x in (answers[:5] if answers else [])]
+        n_nonempty_answers = int(sum(1 for a in (answers or []) if str(a).strip()))
+        n_notfound_answers = int(sum(1 for a in (answers or []) if str(a).strip().lower() in {"notfound", "not_found", "없음"}))
+
+        raw_text = getattr(self.generator, "last_raw_text", None)
+        raw_text_len = None if raw_text is None else int(len(str(raw_text).strip()))
+        raw_text_preview = None if raw_text is None else str(raw_text)[:200]
+
+        # 5) generation eval
         g_list: List[Dict[str, float]] = []
+        preds: List[str] = []
+
         for i, (field, _q) in enumerate(queries):
             gold_row = qdf[qdf["field"].astype(str) == str(field)]
             gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
-            pred = answers[i] if i < len(answers) else ""
-            g_list.append(eval_gen(pred, gold, threshold=sim_threshold))
 
-        # 6) Retrieval 평가: instance_id 기준(베이스라인 방식)
+            pred = answers[i] if i < len(answers) else ""
+            pred_s = (pred or "").strip()
+            preds.append(pred_s)
+
+            g = eval_gen(pred_s, gold, threshold=sim_threshold)
+            g_list.append(g)
+
+        pred_preview = preds[:5]
+        n_nonempty_preds = int(sum(1 for p in preds if str(p).strip()))
+        n_notfound_preds = int(sum(1 for p in preds if str(p).strip().lower() in {"notfound", "not_found", "없음"}))
+
+        # 6) retrieval eval
         r_list: List[Dict[str, float]] = []
         for _, row in qdf.iterrows():
             iid = str(row["instance_id"])
@@ -410,13 +480,26 @@ class RAGExperiment:
         metrics: Dict[str, Any] = {
             "doc_id": doc_name,
 
-            # 디버그/검증용
-            "expected_answer_count": expected_answer_count,
-            "answer_count": answer_count,
+            # debug/validation
+            "expected_answer_count": int(expected_answer_count),
+            "answer_count": int(answer_count),
 
             "n_questions": int(len(qdf)),
             "chunk_count": int(len(chunks)),
             "context_length": int(len(context)),
+
+            # generator debug
+            "raw_text_len": raw_text_len,
+            "raw_text_preview": raw_text_preview,
+            "answers_preview": answers_preview,
+            "n_nonempty_answers": n_nonempty_answers,
+            "n_notfound_answers": n_notfound_answers,
+            "pred_preview": pred_preview,
+            "n_nonempty_preds": n_nonempty_preds,
+            "n_notfound_preds": n_notfound_preds,
+
+            # NEW: json-style outputs
+            "pred_map": pred_map,  # type->answer dict (원하면 저장/JSON dump에 바로 사용)
 
             "ret_recall": float(np.nanmean([x["recall"] for x in r_list])),
             "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])),
@@ -426,8 +509,8 @@ class RAGExperiment:
             "gen_sim": float(np.nanmean([x["sim"] for x in g_list])),
         }
 
-        # 7) 큰 객체 해제(노트북에서 반복 실행 시 중요)
-        del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR
+        # cleanup
+        del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR, preds, pred_map
         gc.collect()
 
         return metrics
