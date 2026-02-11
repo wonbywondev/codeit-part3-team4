@@ -29,6 +29,7 @@ CONFIG = {
     "chunk_length": 800,     # C1 baseline
     "top_k": 15,
     "max_tokens": 2000,
+    "max_completion_tokens": 2000,
     "temperature": 0.1,
     "alpha": 0.7,            # hybrid weight for vector score
 }
@@ -39,10 +40,16 @@ RFP_PROMPT = """
 
 [분석 규칙]
 - 추측 금지, 문서에 명시된 내용만 사용
-- 문서에 없으면 반드시 "NOT_FOUND"
-- 출력은 질문 개수와 동일한 줄 수
-- 각 줄에는 답변 텍스트만 작성
-- 번호, 질문 문장, '답:', 기호, 설명을 절대 포함하지 말 것
+- 문서에 없으면 반드시 NOT_FOUND
+- 질문 개수만큼 답변을 반드시 모두 출력
+- 각 답변은 반드시 지정된 태그로 감싸서 출력
+- 태그 밖에는 어떤 문자(설명/번호/공백/개행 포함)도 출력하지 말 것
+
+[출력 형식(필수)]
+- i번째 질문의 답변은 반드시 정확히 아래 형식으로만 출력:
+  <A{{i}}>답변</A{{i}}>
+- 답이 없으면:
+  <A{{i}}>NOT_FOUND</A{{i}}>
 
 [질문 목록]
 {questions}
@@ -50,9 +57,14 @@ RFP_PROMPT = """
 [컨텍스트]
 {context}
 
-질문 순서대로 답변만 한 줄씩 출력하라.
-""".strip()
+지금부터 질문 순서대로 답변만 출력하라.
+반드시 아래 예시와 동일한 “태그만 있는 형태”로 출력하라.
 
+[예시 — 형식만 참고]
+<A1>NOT_FOUND</A1>
+<A2>2024년</A2>
+<A3>352,000,000</A3>
+""".strip()
 
 # -------------------------
 # Baseline-compatible utils
@@ -243,14 +255,14 @@ class OpenAIGenerator(BaseGenerator):
     def __init__(self, model: str, client: Optional[OpenAI] = None):
         self.client = client or OpenAI()
         self.model = model
-
+    
     def generate(self, questions: List[str], context: str) -> List[str]:
-        # 질문 블록(베이스라인 포맷)
+        # RFP_PROMPT가 이미 (태그 출력 규칙 포함) 형식 강제를 하고 있다고 가정.
+        # 여기서는 prompt 조립 + 모델별 파라미터 호환 + 태그 파싱만 담당.
+
         q_block = "\n".join(f"{i}. {q}" for i, q in enumerate(questions, start=1))
         prompt = RFP_PROMPT.format(questions=q_block, context=context)
 
-        # gpt-5 계열은 max_tokens 미지원 -> max_completion_tokens 사용,
-        # temperature는 기본값(1)만 지원하는 경우가 있어(0.1 등) 아예 보내지 않음. [web:85][web:101]
         is_gpt5 = str(self.model).startswith("gpt-5")
 
         create_kwargs = {
@@ -261,17 +273,31 @@ class OpenAIGenerator(BaseGenerator):
             ],
         }
 
+        # gpt-5 계열: max_completion_tokens 사용, temperature는 기본값(1)만 허용되는 케이스가 있어 미전달 [web:85][web:101]
         if is_gpt5:
-            create_kwargs["max_completion_tokens"] = CONFIG["max_tokens"]
-            # temperature 미전달(=서버 기본값 사용)
+            create_kwargs["max_completion_tokens"] = CONFIG["max_completion_tokens"]
         else:
             create_kwargs["max_tokens"] = CONFIG["max_tokens"]
             create_kwargs["temperature"] = CONFIG["temperature"]
 
         resp = self.client.chat.completions.create(**create_kwargs)
+        text = (resp.choices[0].message.content or "")
 
-        text = (resp.choices[0].message.content or "").strip()
-        return [line.strip() for line in text.splitlines() if line.strip()]
+        # (권장) RFP_PROMPT가 <A1>...</A1> 태그를 강제하는 경우: 태그 파싱
+        answers: List[str] = []
+        n = len(questions)
+        for i in range(1, n + 1):
+            start_tag = f"<A{i}>"
+            end_tag = f"</A{i}>"
+            s = text.find(start_tag)
+            e = text.find(end_tag)
+            if s != -1 and e != -1 and e > s:
+                ans = text[s + len(start_tag): e].strip()
+                answers.append(ans if ans else "NOT_FOUND")
+            else:
+                answers.append("NOT_FOUND")
+
+        return answers
 
 # -------------------------
 # Experiment runner
