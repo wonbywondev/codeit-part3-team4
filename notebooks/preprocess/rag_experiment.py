@@ -39,24 +39,27 @@ CONFIG = {
 }
 
 # JSON-only prompt (태그 방식 제거)
-RFP_PROMPT = """
-너는 정부·공공기관 제안요청서(RFP)를 분석하는 전문가다.
-아래 컨텍스트는 하나의 정부 RFP 문서에서 추출된 내용이다.
+RFP_PROMPT = """역할: 너는 RFP/입찰 공고 문서(CONTEXT 발췌)에서 정보를 추출한다.
 
-[규칙]
-- 추측 금지, 컨텍스트에 명시된 내용만 사용
-- 컨텍스트에 없으면 값은 반드시 "NOT_FOUND"
-- 출력은 반드시 JSON만 출력 (설명/번호/여분 텍스트 금지)
-- JSON의 key는 질문의 key(type)이며, value는 답변 문자열이다.
-- 아래 질문 목록에 있는 모든 key에 대해 빠짐없이 포함하라.
+절대 규칙:
+1) 근거는 CONTEXT에 있는 문자열만 사용한다(추측 금지).
+2) 출력은 JSON 객체 1개만. 코드블록/설명/추가 텍스트 금지.
+3) 키는 QUESTIONS의 key를 정확히 그대로 사용한다(키 추가/삭제/변경 금지).
+4) 값은 모두 string으로 출력한다.
+5) CONTEXT에 관련 단서(부분일치, 유사표현, 숫자, 기관명 후보)가 1개라도 있으면 가능한 범위에서 채워라.
+6) "NOT_FOUND"는 정말로 근거가 전혀 없을 때만 사용한다.
+7) 모든 값을 "NOT_FOUND"로 채우는 출력은 금지한다. (최소 1개는 CONTEXT에서 발췌해 채워라)
 
-[질문 목록(JSON)]
+작업 방법(반드시 따름):
+- 먼저 CONTEXT에서 다음 유형의 신호를 찾아라: 사업명/용역명, 금액(원), 기간(일/개월), 기관명, 마감일, 평가(기술/가격).
+- 찾은 신호가 있으면 해당 key에 매핑해 값을 채워라.
+- 확실한 매핑이 불가능하면 NOT_FOUND.
+
+QUESTIONS(JSON array):
 {questions_json}
 
-[컨텍스트]
+CONTEXT:
 {context}
-
-지금부터 JSON만 출력하라.
 """.strip()
 
 
@@ -276,16 +279,22 @@ class OpenAIGenerator(BaseGenerator):
         self.last_raw_text: str = ""
         self.last_resp_dump: Optional[Dict[str, Any]] = None
         self.last_debug: Dict[str, Any] = {}
-
+    
     def generate(self, queries: List[Tuple[str, str]], context: str) -> Dict[str, str]:
-        # context hardcap
+        """
+        Returns dict: {type_key: answer}
+        Sentinel policy:
+        - NOT_FOUND: 컨텍스트에 근거해 없다고 판단(정상 부재) 또는 key 자체 누락
+        - GEN_FAIL: 모델 무응답/비정상(빈 출력, JSON 파싱 실패, key는 있는데 값이 공백/None 등)
+        """
+        NOT_FOUND = "NOT_FOUND"
+        GEN_FAIL = "GEN_FAIL"
+
         MAX_CTX_CHARS = CONFIG.get("max_context_chars", 4000)
         context = (context or "")[:MAX_CTX_CHARS]
 
-        # questions payload (type -> question)
         q_payload = [{"key": k, "question": q} for k, q in queries]
         questions_json = json.dumps(q_payload, ensure_ascii=False)
-
         prompt = RFP_PROMPT.format(questions_json=questions_json, context=context)
 
         # debug init
@@ -301,20 +310,19 @@ class OpenAIGenerator(BaseGenerator):
             "output_tokens": None,
             "output_text_repr": None,
             "exception": None,
+            "parse_error": None,
         }
 
-        def fallback_notfound() -> Dict[str, str]:
-            return {k: "NOT_FOUND" for k, _ in queries}
+        def all_sentinel(s: str) -> Dict[str, str]:
+            return {k: s for k, _ in queries}
 
         try:
-            # Use Responses API (chat.completions returned empty content in your environment)
             resp = self.client.responses.create(
                 model=self.model,
                 input=prompt,
                 max_output_tokens=CONFIG.get("max_completion_tokens", 1000),
                 reasoning={"effort": "minimal"},
             )
-
             self.last_resp_dump = resp.model_dump() if hasattr(resp, "model_dump") else None
             self.last_debug["response_status"] = getattr(resp, "status", None)
 
@@ -325,27 +333,42 @@ class OpenAIGenerator(BaseGenerator):
             self.last_raw_text = text
             self.last_debug["output_text_repr"] = repr(text[:200])
 
+            # 모델이 아예 무응답(빈 출력)
             if not text:
-                return fallback_notfound()
+                return all_sentinel(GEN_FAIL)
 
-            # Parse JSON (strict)
+            # JSON 파싱 실패 = 생성 실패로 간주
             try:
                 obj = json.loads(text)
-            except Exception:
-                return fallback_notfound()
+            except Exception as e:
+                self.last_debug["parse_error"] = repr(e)
+                return all_sentinel(GEN_FAIL)
 
-            # Ensure all keys exist
+            # JSON이 dict가 아니면 실패 취급
+            if not isinstance(obj, dict):
+                self.last_debug["parse_error"] = f"non-dict-json: {type(obj)}"
+                return all_sentinel(GEN_FAIL)
+
             out: Dict[str, str] = {}
             for k, _q in queries:
-                v = obj.get(k, "NOT_FOUND")
-                v = (v or "").strip()
-                out[k] = v if v else "NOT_FOUND"
+                # key 자체가 없으면(모델이 누락) -> NOT_FOUND로 둬서 "부재"로 기록
+                # (원하면 이것도 GEN_FAIL로 바꿀 수 있음)
+                if k not in obj:
+                    out[k] = NOT_FOUND
+                    continue
+
+                v_raw = obj.get(k)
+
+                # key는 있는데 값이 None/공백이면 -> GEN_FAIL (모델이 답을 비워둔 것)
+                v = (v_raw or "").strip()
+                out[k] = v if v else GEN_FAIL
+
             return out
 
         except Exception as e:
             self.last_debug["exception"] = repr(e)
             self.last_raw_text = ""
-            return fallback_notfound()
+            return all_sentinel(GEN_FAIL)
 
 # -------------------------
 # Experiment runner
