@@ -9,6 +9,10 @@ v4: 이후 추가
 - 타이틀(프로젝트 이름) 완벽하게 가져오기
 - 이미지 추출
 v5: pdf 파서 교체(-> docling)
+- 의미 기반 청킹 (section_path 단위)
+- 표 복원 (table_row → 하나의 블록)
+- chunk() 문장 경계 분할
+- 함수 정리 (중복 제거)
 """
 
 from preprocess.pp_basic import BASE_DIR, RAW_DIR, docs
@@ -18,15 +22,14 @@ import os
 import json
 from pathlib import Path
 import pdfplumber
-from sentence_transformers import SentenceTransformer
 import faiss
 
 
 pp_version = "5"
 
 
+# ── 데이터 로딩 (1회) ──
 all_data_path = os.path.join(BASE_DIR, "data", f"ALL_DATA_v{pp_version}.json")
-
 
 with open(all_data_path, "r", encoding="utf-8") as f:
     _raw = json.load(f)
@@ -38,50 +41,24 @@ if isinstance(_raw, list):
         if doc:
             ALL_DATA.setdefault(doc, []).append(item)
 else:
-    ALL_DATA = _raw  # 기존 포맷 그대로
-
-# index_pages_path = os.path.join(BASE_DIR, "data", "01_index_pages.json")
-
-# with open(index_pages_path, "r", encoding="utf-8") as f:
-#     index_pages = json.load(f)
+    ALL_DATA = _raw
 
 
+# ── 내부 함수 ──
 
-# 기본 함수
-# Chunking
-def chunk(text: str, size: int = 800) -> list[str]:
-    """길이 기반 청킹. 문장 경계에서 끊어서 size 이내로 분할."""
-    sentences = re.split(r'(?<=[.다함음임됨짐림nim]\.?\s)', text)
-    
-    chunks = []
-    buffer = ""
-    
-    for sent in sentences:
-        sent = sent.strip()
-        if not sent:
-            continue
-        
-        if len(buffer) + len(sent) + 1 <= size:
-            buffer = f"{buffer} {sent}" if buffer else sent
-        else:
-            if buffer:
-                chunks.append(buffer.strip())
-            # 문장 자체가 size보다 크면 강제 분할
-            if len(sent) > size:
-                for i in range(0, len(sent), size):
-                    chunks.append(sent[i:i + size].strip())
-                buffer = ""
-            else:
-                buffer = sent
-    
-    if buffer:
-        chunks.append(buffer.strip())
-    
-    return chunks
+def clean_text(text: str) -> str:
+    """PDF 추출 텍스트에서 노이즈 제거."""
+    text = re.sub(r'^- \d+ -\n?', '', text.strip())
+    text = re.sub(r'((\S)\s+){3,}\2', '', text)
+    text = re.sub(r'(.)\1{4,}', '', text)
+    text = re.sub(r'[·.…]{5,}', ' ', text)
+    text = re.sub(r' {2,}', ' ', text)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
 
 
-# PDF to text
-def extract_text(pdf_path: Path | str) -> str:
+def _extract_text(pdf_path: Path | str) -> str:
+    """pdfplumber로 PDF 텍스트 추출. ALL_DATA에 없는 문서용 fallback."""
     texts = []
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
@@ -89,56 +66,44 @@ def extract_text(pdf_path: Path | str) -> str:
     return "\n".join(texts)
 
 
+def _chunk_by_sentence(text: str, size: int = 800) -> list[str]:
+    """문장 경계 기반 청킹. ALL_DATA에 없는 문서용 fallback."""
+    sentences = re.split(r'(?<=[.!?])\s+|(?<=다\.)\s|(?<=함\.)\s|(?<=음\.)\s|(?<=됨\.)\s', text)
 
-def build_index(chunks: list[str], embed_model):
-    embs = embed_model.encode(chunks, convert_to_numpy=True, show_progress_bar=False)
-    index = faiss.IndexFlatL2(embs.shape[1])
-    index.add(embs.astype("float32"))
-    return index, chunks
+    chunks = []
+    buffer = ""
 
+    for sent in sentences:
+        sent = sent.strip()
+        if not sent:
+            continue
 
-def gen_input(doc_path, embed_model):
-    chunks = chunk_from_alldata(doc_path.name, ALL_DATA)
+        if len(buffer) + len(sent) + 1 <= size:
+            buffer = f"{buffer} {sent}" if buffer else sent
+        else:
+            if buffer:
+                chunks.append(buffer.strip())
+            if len(sent) > size:
+                for i in range(0, len(sent), size):
+                    chunks.append(sent[i:i + size].strip())
+                buffer = ""
+            else:
+                buffer = sent
 
-    if chunks is None:
-        text = clean_text(extract_text(doc_path))
-        chunks = chunk(text)
+    if buffer:
+        chunks.append(buffer.strip())
 
-    index, chunks = build_index(chunks, embed_model)
-
-    return index, chunks
-
-
-
-def gen_doc_indexes(docs, embed_model):
-
-    doc_indexes = {}
-
-    for doc_path in docs:
-        print(f"처리 중: {doc_path.name}")
-
-        chunks = chunk_from_alldata(doc_path.name, ALL_DATA)
-
-        if chunks is None:
-            text = clean_text(extract_text(doc_path))
-            chunks = chunk(text)
-
-        index, chunks_list = build_index(chunks, embed_model)
-        doc_indexes[doc_path] = (index, chunks_list)
-
-    print("모든 문서 인덱싱 완료")
-
-    return doc_indexes
+    return chunks
 
 
-def format_table(table: dict) -> str:
-    """table_content를 읽기 좋은 텍스트로 변환."""
+def _format_table(table: dict) -> str:
+    """table_content를 읽기 좋은 텍스트로 변환. _chunk_legacy 전용."""
     tc = table.get("table_content", {})
     cols = tc.get("columns", [])
     rows = tc.get("data", [])
     if not cols and not rows:
         return ""
-    
+
     lines = []
     title = table.get("table_title", "")
     if title:
@@ -149,47 +114,8 @@ def format_table(table: dict) -> str:
     return "\n".join(lines)
 
 
-def clean_text(text: str) -> str:
-    """PDF 추출 텍스트에서 노이즈 제거."""
-    # 페이지 번호 (- 1 -, - 23 - 등)
-    text = re.sub(r'^- \d+ -\n?', '', text.strip())
-    # 같은 글자가 공백 끼고 반복 (목   목   목...)
-    text = re.sub(r'((\S)\s+){3,}\2', '', text)
-    # 같은 글자 연속 5회+ (차차차차차...)
-    text = re.sub(r'(.)\1{4,}', '', text)
-    # 목차 점선 (···, ……, .... 등)
-    text = re.sub(r'[·.…]{5,}', ' ', text)
-    # 같은 글자 5회 이상 반복 (목   목   목... / 차차차차...)
-    text = re.sub(r'(.)\1{4,}', '', text)
-    # 연속 공백 → 단일 공백
-    text = re.sub(r' {2,}', ' ', text)
-    # 연속 빈줄 → 단일 빈줄
-    text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip()
-
-
-
-
-def chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[str] | None:
-    """ALL_DATA에서 문서별 청크 생성. Docling/기존 포맷 자동 감지."""
-    if doc_name not in all_data:
-        return None
-
-    data = all_data[doc_name]
-
-    # Docling 포맷 감지: 리스트 + 각 항목에 "content" 키
-    if isinstance(data, list) and len(data) > 0 and "content" in data[0]:
-        return _chunk_docling(data, size)
-    
-    # 기존 포맷: {"metadata": [...]}
-    if isinstance(data, dict) and "metadata" in data:
-        return _chunk_legacy(data, size)
-
-    return None
-
-
 def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
-    """기존 포맷 청킹 (원래 chunk_from_alldata 로직)."""
+    """기존 포맷 청킹 (v4 이하 ALL_DATA 호환)."""
     pages = data["metadata"]
 
     sections = []
@@ -221,7 +147,7 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
 
         if page.get("table"):
             for t in page["table"]:
-                table_text = format_table(t)
+                table_text = _format_table(t)
                 if table_text:
                     parts.append(table_text)
 
@@ -238,7 +164,6 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
     return chunks
 
 
-# v5
 def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     """Docling 포맷 의미 기반 청킹: section_path + 표 복원."""
 
@@ -272,7 +197,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
             all_items.append(item)
 
     # 3) 의미 단위(segment) 구성: section_path가 바뀌면 새 세그먼트
-    segments = []  # [(section_label, text)]
+    segments = []
     current_path = None
     current_parts = []
 
@@ -285,7 +210,6 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
         label = meta.get("label", "")
         path = meta.get("section_path", "") or ""
         page = meta.get("page", 0)
-        sec2 = meta.get("section_level_2", "") or ""
 
         # 노이즈 필터링
         if len(content) <= 3 and label != "section_header":
@@ -311,14 +235,11 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     buffer = ""
 
     for seg in segments:
-        # 버퍼 + 현재 세그먼트가 size 이내면 합침
         if len(buffer) + len(seg) + 1 <= size:
             buffer = f"{buffer}\n{seg}" if buffer else seg
         else:
-            # 버퍼에 내용 있으면 저장
             if buffer:
                 chunks.append(buffer.strip())
-            # 현재 세그먼트가 size보다 크면 분할
             if len(seg) > size:
                 for i in range(0, len(seg), size):
                     chunks.append(seg[i:i + size].strip())
@@ -332,20 +253,59 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     return chunks
 
 
+def _chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[str] | None:
+    """ALL_DATA에서 문서별 청크 생성. Docling/기존 포맷 자동 감지."""
+    if doc_name not in all_data:
+        return None
+
+    data = all_data[doc_name]
+
+    if isinstance(data, list) and len(data) > 0 and "content" in data[0]:
+        return _chunk_docling(data, size)
+
+    if isinstance(data, dict) and "metadata" in data:
+        return _chunk_legacy(data, size)
+
+    return None
 
 
+def _build_index(chunks: list[str], embed_model):
+    """FAISS 인덱스 생성."""
+    embs = embed_model.encode(chunks, convert_to_numpy=True, show_progress_bar=False)
+    index = faiss.IndexFlatL2(embs.shape[1])
+    index.add(embs.astype("float32"))
+    return index, chunks
 
-def show_sample(docs):
+
+# ── 공개 API (notebook에서 호출) ──
+
+def gen_input(doc_path, embed_model):
+    """문서 1개 → (FAISS index, chunks). notebook의 유일한 진입점."""
+    chunks = _chunk_from_alldata(doc_path.name, ALL_DATA)
+
+    if chunks is None:
+        text = clean_text(_extract_text(doc_path))
+        chunks = _chunk_by_sentence(text)
+
+    index, chunks = _build_index(chunks, embed_model)
+    return index, chunks
+
+
+def show_sample(docs, n=5):
+    """디버깅용: 첫 문서의 청크 샘플 출력."""
     test_name = docs[0].name
-    chunks_test = chunk_from_alldata(test_name, ALL_DATA)
+    chunks_test = _chunk_from_alldata(test_name, ALL_DATA)
 
     if chunks_test is None:
-        text = clean_text(extract_text(docs[0]))
-        chunks_test = chunk(text)
+        text = clean_text(_extract_text(docs[0]))
+        chunks_test = _chunk_by_sentence(text)
 
     print(f"문서: {test_name}")
     print(f"총 청크 수: {len(chunks_test)}")
 
-    for i in range(min(5, len(chunks_test))):
+    if n == "all":
+        n = len(chunks_test)
+
+    for i in range(min(n, len(chunks_test))):
         print(f"\n=== 청크 {i} ({len(chunks_test[i])}자) ===")
         print(chunks_test[i])
