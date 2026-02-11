@@ -230,7 +230,40 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     if current_parts:
         segments.append("\n".join(current_parts))
 
-    # 4) 세그먼트 → 청크: 작은 건 합치고, 큰 건 분할
+    # # 4.1) 세그먼트 → 청크: 작은 건 합치고, 큰 건 분할
+    # chunks = []
+    # buffer = ""
+
+    # for seg in segments:
+    #     if len(buffer) + len(seg) + 1 <= size:
+    #         buffer = f"{buffer}\n{seg}" if buffer else seg
+    #     else:
+    #         if buffer:
+    #             chunks.append(buffer.strip())
+    #         if len(seg) > size:
+    #             for i in range(0, len(seg), size):
+    #                 chunks.append(seg[i:i + size].strip())
+    #             buffer = ""
+    #         else:
+    #             buffer = seg
+
+
+    # # 4.2) 세그먼트 → 청크: 작은 건 합치되, 큰 세그먼트는 통째로 유지
+    # chunks = []
+    # buffer = ""
+
+    # for seg in segments:
+    #     if len(buffer) + len(seg) + 1 <= size:
+    #         buffer = f"{buffer}\n{seg}" if buffer else seg
+    #     else:
+    #         if buffer:
+    #             chunks.append(buffer.strip())
+    #         # 큰 세그먼트도 그냥 통째로 넣기
+    #         chunks.append(seg.strip())
+    #         buffer = ""
+
+
+    # 4.3) 세그먼트 → 청크: 표는 통째로, 텍스트만 문장 경계 분할
     chunks = []
     buffer = ""
 
@@ -240,12 +273,17 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
         else:
             if buffer:
                 chunks.append(buffer.strip())
-            if len(seg) > size:
-                for i in range(0, len(seg), size):
-                    chunks.append(seg[i:i + size].strip())
+
+            if seg.startswith("[표]") or len(seg) <= size * 2:
+                # 표이거나 size의 2배 이내면 통째로
+                chunks.append(seg.strip())
                 buffer = ""
             else:
-                buffer = seg
+                # 긴 텍스트만 문장 단위 분할
+                sub_chunks = _chunk_by_sentence(seg, size)
+                chunks.extend(sub_chunks)
+                buffer = ""
+
 
     if buffer:
         chunks.append(buffer.strip())
