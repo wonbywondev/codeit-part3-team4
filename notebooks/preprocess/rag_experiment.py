@@ -91,7 +91,7 @@ def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[s
 
 def eval_gen(pred: str, gold: Optional[str], threshold: int = 80) -> Dict[str, float]:
     pred = (pred or "").strip()
-    fill = 1.0 if pred and pred.lower() not in {"", "없음"} else 0.0
+    fill = 1.0 if pred and pred.lower() not in {"", "없음", "NOT_FOUND", "not_found"} else 0.0
     if gold is None or str(gold).strip() == "":
         return {"fill": fill, "match": np.nan, "sim": np.nan}
     gold = str(gold).strip()
@@ -346,7 +346,7 @@ class RAGExperiment:
         self.retriever = retriever
         self.generator = generator
         self.questions_df = questions_df
-
+    
     def run_single_doc_metrics(
         self,
         doc_path: Path,
@@ -354,33 +354,51 @@ class RAGExperiment:
         gold_evidence_df: pd.DataFrame,
         top_k: int = 15,
         sim_threshold: int = 80,
+        warn_on_mismatch: bool = True,
     ) -> Dict[str, Any]:
+        import gc
+
         doc_name = unicodedata.normalize("NFC", doc_path.name)
-        queries = get_queries_for_doc(doc_name, self.questions_df)  # [(field, question)]
+
+        # 1) 질문 로드 ([(field, question), ...])
+        queries = get_queries_for_doc(doc_name, self.questions_df)
         q_texts = [q for _, q in queries]
 
+        # 2) 청킹 → 인덱스 → 검색
         chunks = self.chunker.chunk(doc_path)
         index = self.retriever.build_index(chunks)
         idxs = self.retriever.retrieve(index, q_texts, top_k=top_k)
 
-        context = "".join(chunks[i] for i in idxs if 0 <= i < len(chunks))
+        # 3) 컨텍스트 구성
+        context = "".join(chunks[i] for i in idxs if 0 <= int(i) < len(chunks))
+
+        # 4) 생성
         answers = self.generator.generate(q_texts, context)
+
+        expected_answer_count = len(q_texts)
+        answer_count = len(answers)
+
+        if warn_on_mismatch and answer_count != expected_answer_count:
+            print(
+                f"WARN answer_count mismatch | doc={doc_name} | "
+                f"expected={expected_answer_count} got={answer_count}"
+            )
 
         # --- evaluation (baseline style) ---
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
 
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
 
-        # generation score per gold field row
-        g_list = []
+        # 5) Generation 평가: 질문(field) 순서대로 답변 매핑
+        g_list: List[Dict[str, float]] = []
         for i, (field, _q) in enumerate(queries):
             gold_row = qdf[qdf["field"].astype(str) == str(field)]
             gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
             pred = answers[i] if i < len(answers) else ""
             g_list.append(eval_gen(pred, gold, threshold=sim_threshold))
 
-        # retrieval score per instance_id (same as baseline notebook you had)
-        r_list = []
+        # 6) Retrieval 평가: instance_id 기준(베이스라인 방식)
+        r_list: List[Dict[str, float]] = []
         for _, row in qdf.iterrows():
             iid = str(row["instance_id"])
             anchors = GOLD_ANCHOR.get(iid, [])
@@ -389,11 +407,16 @@ class RAGExperiment:
             else:
                 r_list.append({"recall": np.nan, "mrr": np.nan})
 
-        metrics = {
+        metrics: Dict[str, Any] = {
             "doc_id": doc_name,
-            "n_questions": len(qdf),
-            "chunk_count": len(chunks),
-            "context_length": len(context),
+
+            # 디버그/검증용
+            "expected_answer_count": expected_answer_count,
+            "answer_count": answer_count,
+
+            "n_questions": int(len(qdf)),
+            "chunk_count": int(len(chunks)),
+            "context_length": int(len(context)),
 
             "ret_recall": float(np.nanmean([x["recall"] for x in r_list])),
             "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])),
@@ -403,8 +426,8 @@ class RAGExperiment:
             "gen_sim": float(np.nanmean([x["sim"] for x in g_list])),
         }
 
-        # free big objects ASAP (important in notebooks)
-        del chunks, index, context, answers
+        # 7) 큰 객체 해제(노트북에서 반복 실행 시 중요)
+        del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR
         gc.collect()
 
         return metrics
