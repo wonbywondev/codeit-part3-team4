@@ -57,6 +57,17 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
+def fix_line_break_splits(text: str) -> str:
+    """PDF 줄바꿈으로 인한 단어 분리 복원."""
+    # 1. 한글-줄바꿈-한글: 이어붙임
+    text = re.sub(r'(?<=[\uAC00-\uD7A3])\n(?=[\uAC00-\uD7A3])', '', text)
+    
+    # 2. 한글-공백+줄바꿈-한글: 이어붙임 (trailing space 케이스)
+    text = re.sub(r'(?<=[\uAC00-\uD7A3]) *\n(?=[\uAC00-\uD7A3])', '', text)
+    
+    return text
+
+
 def _extract_text(pdf_path: Path | str) -> str:
     """pdfplumber로 PDF 텍스트 추출. ALL_DATA에 없는 문서용 fallback."""
     texts = []
@@ -143,7 +154,7 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
             parts.append(f"(p.{page['page'] + 1})")
 
         if page.get("text"):
-            parts.append(clean_text(page["text"]))
+            parts.append(clean_text(fix_line_break_splits(page["text"])))
 
         if page.get("table"):
             for t in page["table"]:
@@ -225,7 +236,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
         if label == "section_header":
             current_parts.append(f"\n## {content} (p.{page})")
         else:
-            current_parts.append(clean_text(content))
+            current_parts.append(clean_text(fix_line_break_splits(content)))
 
     if current_parts:
         segments.append("\n".join(current_parts))
@@ -322,7 +333,8 @@ def gen_input(doc_path, embed_model):
     chunks = _chunk_from_alldata(doc_path.name, ALL_DATA)
 
     if chunks is None:
-        text = clean_text(_extract_text(doc_path))
+        text = fix_line_break_splits(_extract_text(doc_path))
+        text = clean_text(text)
         chunks = _chunk_by_sentence(text)
 
     index, chunks = _build_index(chunks, embed_model)
@@ -335,7 +347,8 @@ def show_sample(docs, n=5):
     chunks_test = _chunk_from_alldata(test_name, ALL_DATA)
 
     if chunks_test is None:
-        text = clean_text(_extract_text(docs[0]))
+        text = fix_line_break_splits(_extract_text(docs[0]))
+        text = clean_text(text)
         chunks_test = _chunk_by_sentence(text)
 
     print(f"문서: {test_name}")
