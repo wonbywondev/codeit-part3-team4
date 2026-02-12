@@ -219,3 +219,4 @@ aa.excalidraw
 uv copy.lock
 pyproject copy.toml
 notebooks/edit_all_search_index_json.ipynb
+outputs/

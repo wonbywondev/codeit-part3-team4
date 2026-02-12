@@ -46,7 +46,7 @@ else:
 
 # ── 내부 함수 ──
 
-def clean_text(text: str) -> str:
+def _clean_text(text: str) -> str:
     """PDF 추출 텍스트에서 노이즈 제거."""
     text = re.sub(r'^- \d+ -\n?', '', text.strip())
     text = re.sub(r'((\S)\s+){3,}\2', '', text)
@@ -57,7 +57,7 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
-def fix_line_break_splits(text: str) -> str:
+def _fix_line_break_splits(text: str) -> str:
     """PDF 줄바꿈으로 인한 단어 분리 복원."""
     # 1. 한글-줄바꿈-한글: 이어붙임
     text = re.sub(r'(?<=[\uAC00-\uD7A3])\n(?=[\uAC00-\uD7A3])', '', text)
@@ -154,7 +154,7 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
             parts.append(f"(p.{page['page'] + 1})")
 
         if page.get("text"):
-            parts.append(clean_text(fix_line_break_splits(page["text"])))
+            parts.append(_clean_text(_fix_line_break_splits(page["text"])))
 
         if page.get("table"):
             for t in page["table"]:
@@ -236,15 +236,17 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
         if label == "section_header":
             current_parts.append(f"\n## {content} (p.{page})")
         else:
-            current_parts.append(clean_text(fix_line_break_splits(content)))
+            current_parts.append(_clean_text(_fix_line_break_splits(content)))
 
     if current_parts:
         segments.append("\n".join(current_parts))
 
-    # # 4.1) 세그먼트 → 청크: 작은 건 합치고, 큰 건 분할
-    # chunks = []
-    # buffer = ""
 
+    # 4) 세그먼트 → 청크 
+    chunks = []
+    buffer = ""
+
+    # # 4.1) 작은 건 합치고, 큰 건 분할
     # for seg in segments:
     #     if len(buffer) + len(seg) + 1 <= size:
     #         buffer = f"{buffer}\n{seg}" if buffer else seg
@@ -259,10 +261,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     #             buffer = seg
 
 
-    # # 4.2) 세그먼트 → 청크: 작은 건 합치되, 큰 세그먼트는 통째로 유지
-    # chunks = []
-    # buffer = ""
-
+    # # 4.2) 작은 건 합치되, 큰 세그먼트는 통째로 유지
     # for seg in segments:
     #     if len(buffer) + len(seg) + 1 <= size:
     #         buffer = f"{buffer}\n{seg}" if buffer else seg
@@ -274,10 +273,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     #         buffer = ""
 
 
-    # 4.3) 세그먼트 → 청크: 표는 통째로, 텍스트만 문장 경계 분할
-    chunks = []
-    buffer = ""
-
+    # 4.3) 표는 통째로, 텍스트만 문장 경계 분할
     for seg in segments:
         if len(buffer) + len(seg) + 1 <= size:
             buffer = f"{buffer}\n{seg}" if buffer else seg
@@ -333,8 +329,8 @@ def gen_input(doc_path, embed_model):
     chunks = _chunk_from_alldata(doc_path.name, ALL_DATA)
 
     if chunks is None:
-        text = fix_line_break_splits(_extract_text(doc_path))
-        text = clean_text(text)
+        text = _fix_line_break_splits(_extract_text(doc_path))
+        text = _clean_text(text)
         chunks = _chunk_by_sentence(text)
 
     index, chunks = _build_index(chunks, embed_model)
@@ -347,8 +343,8 @@ def show_sample(docs, n=5):
     chunks_test = _chunk_from_alldata(test_name, ALL_DATA)
 
     if chunks_test is None:
-        text = fix_line_break_splits(_extract_text(docs[0]))
-        text = clean_text(text)
+        text = _fix_line_break_splits(_extract_text(docs[0]))
+        text = _clean_text(text)
         chunks_test = _chunk_by_sentence(text)
 
     print(f"문서: {test_name}")
@@ -360,3 +356,28 @@ def show_sample(docs, n=5):
     for i in range(min(n, len(chunks_test))):
         print(f"\n=== 청크 {i} ({len(chunks_test[i])}자) ===")
         print(chunks_test[i])
+
+
+__all__ = [
+    "ALL_DATA",
+    "clean_text",
+    "fix_line_break_splits",
+    "extract_text",
+    "chunk_from_alldata",
+    "chunk_docling",
+]
+
+def clean_text(text: str) -> str:
+    return _clean_text(text)
+
+def fix_line_break_splits(text: str) -> str:
+    return _fix_line_break_splits(text)
+
+def extract_text(pdf_path: Path | str) -> str:
+    return _extract_text(pdf_path)
+
+def chunk_from_alldata(doc_name: str, size: int = 800) -> list[str] | None:
+    return _chunk_from_alldata(doc_name, ALL_DATA, size)
+
+def chunk_docling(items: list[dict], size: int = 800) -> list[str]:
+    return _chunk_docling(items, size)
