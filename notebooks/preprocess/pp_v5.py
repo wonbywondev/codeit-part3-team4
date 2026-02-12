@@ -310,6 +310,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
 def _chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[str] | None:
     """ALL_DATA에서 문서별 청크 생성. Docling/기존 포맷 자동 감지."""
     if doc_name not in all_data:
+        print(f"찾는 문서 없음: {doc_name}")
         return None
 
     data = all_data[doc_name]
