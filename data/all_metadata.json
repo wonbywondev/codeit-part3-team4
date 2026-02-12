@@ -1,0 +1,3314 @@
+{
+  "사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업": {
+    "filename": "사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업.pdf",
+    "metadata": {
+      "filename": "사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업",
+      "total_pages": 119,
+      "total_sections": 135,
+      "max_level": 4,
+      "total_texts": 890,
+      "total_tables": 158,
+      "total_images": 11
+    },
+    "statistics": {
+      "search_items_original": 2058,
+      "search_items_cleaned": 1308,
+      "noise_removal_rate": "36.4%",
+      "text_labels": {
+        "section_header": 135,
+        "text": 203,
+        "list_item": 395,
+        "page_footer": 114,
+        "caption": 6,
+        "footnote": 7,
+        "checkbox_unselected": 23,
+        "page_header": 5,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 35,
+        "3": 55,
+        "4": 43
+      }
+    }
+  },
+  "국가과학기술지식정보서비스_통합정보시스템 고도화 용역": {
+    "filename": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역.pdf",
+    "metadata": {
+      "filename": "국가과학기술지식정보서비스_통합정보시스템 고도화 용역",
+      "total_pages": 83,
+      "total_sections": 115,
+      "max_level": 4,
+      "total_texts": 1084,
+      "total_tables": 84,
+      "total_images": 97
+    },
+    "statistics": {
+      "search_items_original": 1872,
+      "search_items_cleaned": 931,
+      "noise_removal_rate": "50.3%",
+      "text_labels": {
+        "text": 629,
+        "section_header": 115,
+        "page_footer": 75,
+        "page_header": 14,
+        "list_item": 230,
+        "checkbox_unselected": 15,
+        "footnote": 6
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 34,
+        "3": 64,
+        "4": 14
+      }
+    }
+  },
+  "나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스": {
+    "filename": "나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스.pdf",
+    "metadata": {
+      "filename": "나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스",
+      "total_pages": 69,
+      "total_sections": 77,
+      "max_level": 4,
+      "total_texts": 1414,
+      "total_tables": 128,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2392,
+      "search_items_cleaned": 903,
+      "noise_removal_rate": "62.2%",
+      "text_labels": {
+        "section_header": 77,
+        "text": 983,
+        "page_header": 66,
+        "list_item": 150,
+        "page_footer": 133,
+        "caption": 4,
+        "checkbox_unselected": 1
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "3": 60,
+        "2": 6,
+        "4": 10
+      }
+    }
+  },
+  "부산관광공사_경영정보시스템 기능개선": {
+    "filename": "부산관광공사_경영정보시스템 기능개선.pdf",
+    "metadata": {
+      "filename": "부산관광공사_경영정보시스템 기능개선",
+      "total_pages": 103,
+      "total_sections": 182,
+      "max_level": 4,
+      "total_texts": 1919,
+      "total_tables": 94,
+      "total_images": 12
+    },
+    "statistics": {
+      "search_items_original": 2527,
+      "search_items_cleaned": 1330,
+      "noise_removal_rate": "47.4%",
+      "text_labels": {
+        "section_header": 182,
+        "text": 1013,
+        "page_footer": 101,
+        "list_item": 590,
+        "caption": 1,
+        "page_header": 24,
+        "checkbox_unselected": 3,
+        "formula": 1,
+        "footnote": 4
+      },
+      "hierarchy_levels": {
+        "1": 11,
+        "2": 55,
+        "4": 72,
+        "3": 44
+      }
+    }
+  },
+  "축산물품질평가원_축산물이력관리시스템 개선(정보화 사업)": {
+    "filename": "축산물품질평가원_축산물이력관리시스템 개선(정보화 사업).pdf",
+    "metadata": {
+      "filename": "축산물품질평가원_축산물이력관리시스템 개선(정보화 사업)",
+      "total_pages": 87,
+      "total_sections": 146,
+      "max_level": 4,
+      "total_texts": 1210,
+      "total_tables": 173,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2235,
+      "search_items_cleaned": 1133,
+      "noise_removal_rate": "49.3%",
+      "text_labels": {
+        "page_header": 6,
+        "section_header": 146,
+        "caption": 3,
+        "text": 662,
+        "list_item": 297,
+        "page_footer": 84,
+        "footnote": 4,
+        "checkbox_unselected": 8
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "3": 105,
+        "2": 18,
+        "4": 22
+      }
+    }
+  },
+  "재단법인스포츠윤리센터_스포츠윤리센터 LMS(학습지원시스템) 기능개선": {
+    "filename": "재단법인스포츠윤리센터_스포츠윤리센터 LMS(학습지원시스템) 기능개선.pdf",
+    "metadata": {
+      "filename": "재단법인스포츠윤리센터_스포츠윤리센터 LMS(학습지원시스템) 기능개선",
+      "total_pages": 104,
+      "total_sections": 144,
+      "max_level": 4,
+      "total_texts": 1505,
+      "total_tables": 115,
+      "total_images": 12
+    },
+    "statistics": {
+      "search_items_original": 2340,
+      "search_items_cleaned": 1026,
+      "noise_removal_rate": "56.2%",
+      "text_labels": {
+        "text": 858,
+        "section_header": 144,
+        "list_item": 371,
+        "page_footer": 102,
+        "checkbox_unselected": 1,
+        "caption": 3,
+        "page_header": 22,
+        "footnote": 4
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 43,
+        "3": 77,
+        "4": 23
+      }
+    }
+  },
+  "한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 ": {
+    "filename": "한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 .pdf",
+    "metadata": {
+      "filename": "한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 ",
+      "total_pages": 87,
+      "total_sections": 108,
+      "max_level": 4,
+      "total_texts": 656,
+      "total_tables": 80,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1499,
+      "search_items_cleaned": 839,
+      "noise_removal_rate": "44.0%",
+      "text_labels": {
+        "text": 157,
+        "section_header": 108,
+        "list_item": 292,
+        "page_footer": 84,
+        "footnote": 5,
+        "page_header": 2,
+        "checkbox_selected": 1,
+        "checkbox_unselected": 7
+      },
+      "hierarchy_levels": {
+        "1": 7,
+        "3": 45,
+        "2": 25,
+        "4": 31
+      }
+    }
+  },
+  "대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고": {
+    "filename": "대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고.pdf",
+    "metadata": {
+      "filename": "대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고",
+      "total_pages": 75,
+      "total_sections": 109,
+      "max_level": 4,
+      "total_texts": 1178,
+      "total_tables": 94,
+      "total_images": 1
+    },
+    "statistics": {
+      "search_items_original": 2029,
+      "search_items_cleaned": 1004,
+      "noise_removal_rate": "50.5%",
+      "text_labels": {
+        "section_header": 109,
+        "text": 699,
+        "list_item": 288,
+        "page_footer": 74,
+        "checkbox_unselected": 3,
+        "code": 1,
+        "formula": 3,
+        "footnote": 1
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "2": 17,
+        "3": 68,
+        "4": 19
+      }
+    }
+  },
+  "한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성": {
+    "filename": "한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성.pdf",
+    "metadata": {
+      "filename": "한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성",
+      "total_pages": 55,
+      "total_sections": 169,
+      "max_level": 4,
+      "total_texts": 1462,
+      "total_tables": 9,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1511,
+      "search_items_cleaned": 939,
+      "noise_removal_rate": "37.9%",
+      "text_labels": {
+        "text": 451,
+        "section_header": 169,
+        "page_header": 1,
+        "list_item": 786,
+        "page_footer": 53,
+        "caption": 2
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 4,
+        "3": 116,
+        "4": 48
+      }
+    }
+  },
+  "세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공": {
+    "filename": "세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공.pdf",
+    "metadata": {
+      "filename": "세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공",
+      "total_pages": 99,
+      "total_sections": 144,
+      "max_level": 4,
+      "total_texts": 1675,
+      "total_tables": 90,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 2306,
+      "search_items_cleaned": 1062,
+      "noise_removal_rate": "53.9%",
+      "text_labels": {
+        "section_header": 144,
+        "text": 968,
+        "list_item": 450,
+        "page_footer": 96,
+        "page_header": 10,
+        "caption": 5,
+        "footnote": 2
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 42,
+        "3": 79,
+        "4": 22
+      }
+    }
+  },
+  "서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축": {
+    "filename": "서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축.pdf",
+    "metadata": {
+      "filename": "서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축",
+      "total_pages": 100,
+      "total_sections": 119,
+      "max_level": 4,
+      "total_texts": 1378,
+      "total_tables": 97,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 2169,
+      "search_items_cleaned": 1029,
+      "noise_removal_rate": "52.6%",
+      "text_labels": {
+        "text": 773,
+        "section_header": 119,
+        "list_item": 362,
+        "page_footer": 99,
+        "footnote": 3,
+        "page_header": 13,
+        "checkbox_unselected": 6,
+        "caption": 3
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 34,
+        "3": 69,
+        "4": 13
+      }
+    }
+  },
+  "파주도시관광공사_종량제봉투 판매관리 전산시스템 개선사업": {
+    "filename": "파주도시관광공사_종량제봉투 판매관리 전산시스템 개선사업.pdf",
+    "metadata": {
+      "filename": "파주도시관광공사_종량제봉투 판매관리 전산시스템 개선사업",
+      "total_pages": 114,
+      "total_sections": 198,
+      "max_level": 4,
+      "total_texts": 2004,
+      "total_tables": 90,
+      "total_images": 14
+    },
+    "statistics": {
+      "search_items_original": 3110,
+      "search_items_cleaned": 1487,
+      "noise_removal_rate": "52.2%",
+      "text_labels": {
+        "section_header": 198,
+        "page_footer": 112,
+        "list_item": 462,
+        "text": 1204,
+        "footnote": 6,
+        "page_header": 6,
+        "caption": 4,
+        "checkbox_unselected": 10,
+        "checkbox_selected": 2
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 43,
+        "3": 103,
+        "4": 48
+      }
+    }
+  },
+  "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용": {
+    "filename": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.pdf",
+    "metadata": {
+      "filename": "국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용",
+      "total_pages": 74,
+      "total_sections": 122,
+      "max_level": 4,
+      "total_texts": 974,
+      "total_tables": 83,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1657,
+      "search_items_cleaned": 842,
+      "noise_removal_rate": "49.2%",
+      "text_labels": {
+        "text": 342,
+        "section_header": 122,
+        "list_item": 427,
+        "page_footer": 71,
+        "page_header": 6,
+        "caption": 1,
+        "footnote": 5
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "3": 80,
+        "2": 29,
+        "4": 8
+      }
+    }
+  },
+  "경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업": {
+    "filename": "경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.pdf",
+    "metadata": {
+      "filename": "경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업",
+      "total_pages": 119,
+      "total_sections": 184,
+      "max_level": 4,
+      "total_texts": 1388,
+      "total_tables": 107,
+      "total_images": 122
+    },
+    "statistics": {
+      "search_items_original": 2017,
+      "search_items_cleaned": 1205,
+      "noise_removal_rate": "40.3%",
+      "text_labels": {
+        "section_header": 184,
+        "text": 393,
+        "page_header": 121,
+        "list_item": 562,
+        "page_footer": 116,
+        "footnote": 5,
+        "caption": 5,
+        "checkbox_unselected": 1,
+        "code": 1
+      },
+      "hierarchy_levels": {
+        "2": 38,
+        "1": 15,
+        "3": 72,
+        "4": 59
+      }
+    }
+  },
+  "경기도사회서비스원_2024년 통합사회정보시스템 운영지원": {
+    "filename": "경기도사회서비스원_2024년 통합사회정보시스템 운영지원.pdf",
+    "metadata": {
+      "filename": "경기도사회서비스원_2024년 통합사회정보시스템 운영지원",
+      "total_pages": 121,
+      "total_sections": 108,
+      "max_level": 4,
+      "total_texts": 1307,
+      "total_tables": 127,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 2431,
+      "search_items_cleaned": 1066,
+      "noise_removal_rate": "56.1%",
+      "text_labels": {
+        "section_header": 108,
+        "text": 795,
+        "list_item": 264,
+        "page_footer": 108,
+        "footnote": 2,
+        "page_header": 13,
+        "checkbox_unselected": 15,
+        "checkbox_selected": 2
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 52,
+        "3": 44,
+        "4": 11
+      }
+    }
+  },
+  "한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역": {
+    "filename": "한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역.pdf",
+    "metadata": {
+      "filename": "한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역",
+      "total_pages": 72,
+      "total_sections": 209,
+      "max_level": 4,
+      "total_texts": 2259,
+      "total_tables": 42,
+      "total_images": 16
+    },
+    "statistics": {
+      "search_items_original": 2653,
+      "search_items_cleaned": 1400,
+      "noise_removal_rate": "47.2%",
+      "text_labels": {
+        "section_header": 209,
+        "text": 1451,
+        "list_item": 509,
+        "page_footer": 70,
+        "caption": 4,
+        "checkbox_unselected": 14,
+        "page_header": 1,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 56,
+        "2": 9,
+        "3": 46,
+        "4": 98
+      }
+    }
+  },
+  "한국원자력연구원_한국원자력연구원 선량평가시스템 고도화": {
+    "filename": "한국원자력연구원_한국원자력연구원 선량평가시스템 고도화.pdf",
+    "metadata": {
+      "filename": "한국원자력연구원_한국원자력연구원 선량평가시스템 고도화",
+      "total_pages": 69,
+      "total_sections": 129,
+      "max_level": 4,
+      "total_texts": 706,
+      "total_tables": 57,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 1092,
+      "search_items_cleaned": 714,
+      "noise_removal_rate": "34.6%",
+      "text_labels": {
+        "page_header": 10,
+        "section_header": 129,
+        "list_item": 292,
+        "page_footer": 70,
+        "text": 198,
+        "footnote": 1,
+        "caption": 2,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "2": 13,
+        "3": 93,
+        "4": 22,
+        "1": 1
+      }
+    }
+  },
+  "서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) ": {
+    "filename": "서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) .pdf",
+    "metadata": {
+      "filename": "서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) ",
+      "total_pages": 77,
+      "total_sections": 146,
+      "max_level": 4,
+      "total_texts": 1198,
+      "total_tables": 75,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1690,
+      "search_items_cleaned": 898,
+      "noise_removal_rate": "46.9%",
+      "text_labels": {
+        "page_header": 11,
+        "section_header": 146,
+        "list_item": 506,
+        "text": 442,
+        "footnote": 4,
+        "page_footer": 75,
+        "caption": 6,
+        "checkbox_unselected": 8
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 15,
+        "4": 65,
+        "3": 63
+      }
+    }
+  },
+  "(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 ": {
+    "filename": "(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf",
+    "metadata": {
+      "filename": "(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 ",
+      "total_pages": 131,
+      "total_sections": 150,
+      "max_level": 4,
+      "total_texts": 1546,
+      "total_tables": 172,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 2796,
+      "search_items_cleaned": 1386,
+      "noise_removal_rate": "50.4%",
+      "text_labels": {
+        "section_header": 150,
+        "list_item": 485,
+        "text": 757,
+        "page_footer": 129,
+        "page_header": 11,
+        "footnote": 4,
+        "caption": 5,
+        "checkbox_unselected": 5
+      },
+      "hierarchy_levels": {
+        "3": 79,
+        "1": 9,
+        "2": 28,
+        "4": 34
+      }
+    }
+  },
+  "한국철도공사 (용역)_모바일오피스 시스템 고도화 용역(총체 및 1차)": {
+    "filename": "한국철도공사 (용역)_모바일오피스 시스템 고도화 용역(총체 및 1차).pdf",
+    "metadata": {
+      "filename": "한국철도공사 (용역)_모바일오피스 시스템 고도화 용역(총체 및 1차)",
+      "total_pages": 181,
+      "total_sections": 169,
+      "max_level": 4,
+      "total_texts": 2493,
+      "total_tables": 181,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 4021,
+      "search_items_cleaned": 1988,
+      "noise_removal_rate": "50.6%",
+      "text_labels": {
+        "section_header": 169,
+        "text": 1457,
+        "page_footer": 180,
+        "page_header": 21,
+        "list_item": 656,
+        "footnote": 4,
+        "caption": 2,
+        "formula": 1,
+        "checkbox_unselected": 3
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "3": 117,
+        "2": 26,
+        "4": 22
+      }
+    }
+  },
+  "한국수출입은행_(긴급) 모잠비크 마푸토 지능형교통시스템(ITS) 구축사업": {
+    "filename": "한국수출입은행_(긴급) 모잠비크 마푸토 지능형교통시스템(ITS) 구축사업.pdf",
+    "metadata": {
+      "filename": "한국수출입은행_(긴급) 모잠비크 마푸토 지능형교통시스템(ITS) 구축사업",
+      "total_pages": 92,
+      "total_sections": 227,
+      "max_level": 4,
+      "total_texts": 2537,
+      "total_tables": 58,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 2928,
+      "search_items_cleaned": 1473,
+      "noise_removal_rate": "49.7%",
+      "text_labels": {
+        "text": 1176,
+        "section_header": 227,
+        "list_item": 1019,
+        "page_footer": 90,
+        "footnote": 6,
+        "caption": 2,
+        "checkbox_unselected": 16,
+        "page_header": 1
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 29,
+        "3": 110,
+        "4": 86
+      }
+    }
+  },
+  "대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 ": {
+    "filename": "대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 .pdf",
+    "metadata": {
+      "filename": "대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 ",
+      "total_pages": 66,
+      "total_sections": 101,
+      "max_level": 4,
+      "total_texts": 552,
+      "total_tables": 78,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1098,
+      "search_items_cleaned": 594,
+      "noise_removal_rate": "45.9%",
+      "text_labels": {
+        "section_header": 101,
+        "text": 180,
+        "list_item": 193,
+        "page_footer": 63,
+        "page_header": 11,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "2": 35,
+        "3": 62,
+        "4": 2,
+        "1": 2
+      }
+    }
+  },
+  "대전대학교_대전대학교 2024학년도 다층적 융합 학습경험 플랫폼(MILE) 전": {
+    "filename": "대전대학교_대전대학교 2024학년도 다층적 융합 학습경험 플랫폼(MILE) 전.pdf",
+    "metadata": {
+      "filename": "대전대학교_대전대학교 2024학년도 다층적 융합 학습경험 플랫폼(MILE) 전",
+      "total_pages": 72,
+      "total_sections": 168,
+      "max_level": 4,
+      "total_texts": 1381,
+      "total_tables": 44,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1739,
+      "search_items_cleaned": 1026,
+      "noise_removal_rate": "41.0%",
+      "text_labels": {
+        "section_header": 168,
+        "caption": 7,
+        "page_header": 52,
+        "page_footer": 79,
+        "text": 488,
+        "list_item": 583,
+        "footnote": 3,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 7,
+        "2": 25,
+        "3": 65,
+        "4": 71
+      }
+    }
+  },
+  "전북대학교_JST 공유대학(원) xAPI기반 LRS시스템 구축": {
+    "filename": "전북대학교_JST 공유대학(원) xAPI기반 LRS시스템 구축.pdf",
+    "metadata": {
+      "filename": "전북대학교_JST 공유대학(원) xAPI기반 LRS시스템 구축",
+      "total_pages": 80,
+      "total_sections": 110,
+      "max_level": 4,
+      "total_texts": 843,
+      "total_tables": 97,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1321,
+      "search_items_cleaned": 735,
+      "noise_removal_rate": "44.4%",
+      "text_labels": {
+        "section_header": 110,
+        "text": 162,
+        "list_item": 481,
+        "page_footer": 78,
+        "footnote": 3,
+        "caption": 1,
+        "page_header": 8
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 31,
+        "3": 67,
+        "4": 11
+      }
+    }
+  },
+  "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보": {
+    "filename": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보.pdf",
+    "metadata": {
+      "filename": "국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보",
+      "total_pages": 81,
+      "total_sections": 123,
+      "max_level": 4,
+      "total_texts": 943,
+      "total_tables": 73,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1618,
+      "search_items_cleaned": 795,
+      "noise_removal_rate": "50.9%",
+      "text_labels": {
+        "section_header": 123,
+        "text": 342,
+        "list_item": 379,
+        "page_footer": 79,
+        "page_header": 9,
+        "footnote": 6,
+        "caption": 1,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "4": 25,
+        "3": 51,
+        "2": 45
+      }
+    }
+  },
+  "한국수자원공사_건설통합시스템(CMS) 고도화": {
+    "filename": "한국수자원공사_건설통합시스템(CMS) 고도화.pdf",
+    "metadata": {
+      "filename": "한국수자원공사_건설통합시스템(CMS) 고도화",
+      "total_pages": 86,
+      "total_sections": 249,
+      "max_level": 4,
+      "total_texts": 3390,
+      "total_tables": 62,
+      "total_images": 12
+    },
+    "statistics": {
+      "search_items_original": 3935,
+      "search_items_cleaned": 1570,
+      "noise_removal_rate": "60.1%",
+      "text_labels": {
+        "text": 2633,
+        "section_header": 249,
+        "page_footer": 84,
+        "list_item": 393,
+        "caption": 1,
+        "formula": 1,
+        "checkbox_unselected": 24,
+        "checkbox_selected": 4,
+        "footnote": 1
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "2": 24,
+        "3": 23,
+        "4": 197
+      }
+    }
+  },
+  "(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발": {
+    "filename": "(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",
+    "metadata": {
+      "filename": "(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발",
+      "total_pages": 80,
+      "total_sections": 101,
+      "max_level": 4,
+      "total_texts": 743,
+      "total_tables": 142,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1636,
+      "search_items_cleaned": 790,
+      "noise_removal_rate": "51.7%",
+      "text_labels": {
+        "text": 288,
+        "section_header": 101,
+        "page_footer": 79,
+        "list_item": 266,
+        "caption": 2,
+        "page_header": 3,
+        "footnote": 4
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "3": 60,
+        "2": 22,
+        "4": 18
+      }
+    }
+  },
+  "대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역 ": {
+    "filename": "대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역 .pdf",
+    "metadata": {
+      "filename": "대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역 ",
+      "total_pages": 71,
+      "total_sections": 95,
+      "max_level": 4,
+      "total_texts": 869,
+      "total_tables": 93,
+      "total_images": 50
+    },
+    "statistics": {
+      "search_items_original": 1448,
+      "search_items_cleaned": 689,
+      "noise_removal_rate": "52.4%",
+      "text_labels": {
+        "text": 425,
+        "section_header": 95,
+        "list_item": 267,
+        "page_footer": 68,
+        "footnote": 8,
+        "page_header": 1,
+        "checkbox_unselected": 3,
+        "caption": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 29,
+        "3": 43,
+        "4": 21
+      }
+    }
+  },
+  "을지대학교_을지대학교 비교과시스템 개발": {
+    "filename": "을지대학교_을지대학교 비교과시스템 개발.pdf",
+    "metadata": {
+      "filename": "을지대학교_을지대학교 비교과시스템 개발",
+      "total_pages": 105,
+      "total_sections": 128,
+      "max_level": 4,
+      "total_texts": 867,
+      "total_tables": 109,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1652,
+      "search_items_cleaned": 1070,
+      "noise_removal_rate": "35.2%",
+      "text_labels": {
+        "text": 221,
+        "section_header": 128,
+        "page_footer": 106,
+        "list_item": 383,
+        "formula": 1,
+        "page_header": 12,
+        "footnote": 7,
+        "checkbox_unselected": 6,
+        "caption": 3
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 43,
+        "3": 50,
+        "4": 32
+      }
+    }
+  },
+  "기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역": {
+    "filename": "기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf",
+    "metadata": {
+      "filename": "기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역",
+      "total_pages": 49,
+      "total_sections": 139,
+      "max_level": 4,
+      "total_texts": 868,
+      "total_tables": 35,
+      "total_images": 21
+    },
+    "statistics": {
+      "search_items_original": 1081,
+      "search_items_cleaned": 765,
+      "noise_removal_rate": "29.2%",
+      "text_labels": {
+        "section_header": 139,
+        "text": 285,
+        "caption": 14,
+        "list_item": 370,
+        "page_header": 8,
+        "checkbox_unselected": 20,
+        "checkbox_selected": 1,
+        "page_footer": 28,
+        "footnote": 3
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "2": 49,
+        "3": 77,
+        "4": 7
+      }
+    }
+  },
+  "경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정": {
+    "filename": "경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.pdf",
+    "metadata": {
+      "filename": "경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정",
+      "total_pages": 52,
+      "total_sections": 80,
+      "max_level": 4,
+      "total_texts": 574,
+      "total_tables": 42,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 868,
+      "search_items_cleaned": 556,
+      "noise_removal_rate": "35.9%",
+      "text_labels": {
+        "page_header": 52,
+        "text": 131,
+        "section_header": 80,
+        "list_item": 261,
+        "page_footer": 46,
+        "footnote": 1,
+        "checkbox_unselected": 2,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 7,
+        "3": 36,
+        "4": 35
+      }
+    }
+  },
+  "국민연금공단_2024년 이러닝시스템 운영 용역": {
+    "filename": "국민연금공단_2024년 이러닝시스템 운영 용역.pdf",
+    "metadata": {
+      "filename": "국민연금공단_2024년 이러닝시스템 운영 용역",
+      "total_pages": 68,
+      "total_sections": 124,
+      "max_level": 4,
+      "total_texts": 853,
+      "total_tables": 48,
+      "total_images": 137
+    },
+    "statistics": {
+      "search_items_original": 1330,
+      "search_items_cleaned": 608,
+      "noise_removal_rate": "54.3%",
+      "text_labels": {
+        "page_header": 59,
+        "section_header": 124,
+        "text": 261,
+        "list_item": 328,
+        "footnote": 15,
+        "page_footer": 66
+      },
+      "hierarchy_levels": {
+        "2": 27,
+        "4": 27,
+        "3": 70
+      }
+    }
+  },
+  "(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시": {
+    "filename": "(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.pdf",
+    "metadata": {
+      "filename": "(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시",
+      "total_pages": 63,
+      "total_sections": 104,
+      "max_level": 4,
+      "total_texts": 668,
+      "total_tables": 99,
+      "total_images": 16
+    },
+    "statistics": {
+      "search_items_original": 1409,
+      "search_items_cleaned": 907,
+      "noise_removal_rate": "35.6%",
+      "text_labels": {
+        "section_header": 104,
+        "text": 148,
+        "page_footer": 64,
+        "list_item": 317,
+        "footnote": 4,
+        "caption": 2,
+        "checkbox_unselected": 16,
+        "formula": 2,
+        "page_header": 11
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "4": 57,
+        "2": 18,
+        "3": 27
+      }
+    }
+  },
+  "서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육": {
+    "filename": "서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육.pdf",
+    "metadata": {
+      "filename": "서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육",
+      "total_pages": 118,
+      "total_sections": 151,
+      "max_level": 4,
+      "total_texts": 1665,
+      "total_tables": 160,
+      "total_images": 11
+    },
+    "statistics": {
+      "search_items_original": 2732,
+      "search_items_cleaned": 1467,
+      "noise_removal_rate": "46.3%",
+      "text_labels": {
+        "section_header": 151,
+        "text": 835,
+        "list_item": 561,
+        "page_footer": 115,
+        "caption": 1,
+        "page_header": 2
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 56,
+        "3": 54,
+        "4": 40
+      }
+    }
+  },
+  "수협중앙회_강릉어선안전조업국 상황관제시스템 구축": {
+    "filename": "수협중앙회_강릉어선안전조업국 상황관제시스템 구축.pdf",
+    "metadata": {
+      "filename": "수협중앙회_강릉어선안전조업국 상황관제시스템 구축",
+      "total_pages": 68,
+      "total_sections": 98,
+      "max_level": 4,
+      "total_texts": 628,
+      "total_tables": 98,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1276,
+      "search_items_cleaned": 638,
+      "noise_removal_rate": "50.0%",
+      "text_labels": {
+        "text": 247,
+        "section_header": 98,
+        "list_item": 205,
+        "page_footer": 66,
+        "footnote": 5,
+        "caption": 1,
+        "page_header": 3,
+        "checkbox_unselected": 1,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 24,
+        "3": 47,
+        "4": 25
+      }
+    }
+  },
+  "남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사": {
+    "filename": "남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사.pdf",
+    "metadata": {
+      "filename": "남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사",
+      "total_pages": 95,
+      "total_sections": 181,
+      "max_level": 4,
+      "total_texts": 2143,
+      "total_tables": 79,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 2781,
+      "search_items_cleaned": 1291,
+      "noise_removal_rate": "53.6%",
+      "text_labels": {
+        "section_header": 181,
+        "text": 1389,
+        "list_item": 466,
+        "page_footer": 91,
+        "caption": 2,
+        "page_header": 8,
+        "footnote": 3,
+        "checkbox_unselected": 3
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "3": 98,
+        "2": 47,
+        "4": 33
+      }
+    }
+  },
+  "그랜드코리아레저(주)_2024년도 GKL  그룹웨어 시스템 구축 용역": {
+    "filename": "그랜드코리아레저(주)_2024년도 GKL  그룹웨어 시스템 구축 용역.pdf",
+    "metadata": {
+      "filename": "그랜드코리아레저(주)_2024년도 GKL  그룹웨어 시스템 구축 용역",
+      "total_pages": 181,
+      "total_sections": 165,
+      "max_level": 4,
+      "total_texts": 1404,
+      "total_tables": 303,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 3387,
+      "search_items_cleaned": 2120,
+      "noise_removal_rate": "37.4%",
+      "text_labels": {
+        "section_header": 165,
+        "text": 520,
+        "list_item": 442,
+        "page_footer": 178,
+        "checkbox_unselected": 76,
+        "footnote": 3,
+        "caption": 3,
+        "page_header": 15,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 9,
+        "2": 28,
+        "3": 96,
+        "4": 32
+      }
+    }
+  },
+  "한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아": {
+    "filename": "한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아.pdf",
+    "metadata": {
+      "filename": "한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아",
+      "total_pages": 135,
+      "total_sections": 211,
+      "max_level": 4,
+      "total_texts": 2068,
+      "total_tables": 139,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 3141,
+      "search_items_cleaned": 1562,
+      "noise_removal_rate": "50.3%",
+      "text_labels": {
+        "text": 1001,
+        "section_header": 211,
+        "page_footer": 132,
+        "list_item": 672,
+        "caption": 5,
+        "footnote": 4,
+        "page_header": 9,
+        "checkbox_unselected": 31,
+        "formula": 3
+      },
+      "hierarchy_levels": {
+        "2": 31,
+        "3": 112,
+        "4": 67,
+        "1": 1
+      }
+    }
+  },
+  "한국로봇산업진흥원_한국로봇산업진흥원 사업관리시스템 온라인평가 ": {
+    "filename": "한국로봇산업진흥원_한국로봇산업진흥원 사업관리시스템 온라인평가 .pdf",
+    "metadata": {
+      "filename": "한국로봇산업진흥원_한국로봇산업진흥원 사업관리시스템 온라인평가 ",
+      "total_pages": 78,
+      "total_sections": 116,
+      "max_level": 4,
+      "total_texts": 820,
+      "total_tables": 66,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1464,
+      "search_items_cleaned": 846,
+      "noise_removal_rate": "42.2%",
+      "text_labels": {
+        "section_header": 116,
+        "caption": 1,
+        "page_footer": 77,
+        "list_item": 332,
+        "text": 289,
+        "footnote": 1,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 30,
+        "3": 73,
+        "4": 10
+      }
+    }
+  },
+  "사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스": {
+    "filename": "사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스.pdf",
+    "metadata": {
+      "filename": "사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스",
+      "total_pages": 77,
+      "total_sections": 158,
+      "max_level": 4,
+      "total_texts": 1426,
+      "total_tables": 53,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1830,
+      "search_items_cleaned": 824,
+      "noise_removal_rate": "55.0%",
+      "text_labels": {
+        "text": 733,
+        "section_header": 158,
+        "page_header": 2,
+        "list_item": 438,
+        "page_footer": 74,
+        "footnote": 2,
+        "formula": 4,
+        "checkbox_unselected": 14,
+        "caption": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 21,
+        "3": 100,
+        "4": 34
+      }
+    }
+  },
+  "한국재정정보원_e나라도움 업무시스템 웹 접근성 컨설팅": {
+    "filename": "한국재정정보원_e나라도움 업무시스템 웹 접근성 컨설팅.pdf",
+    "metadata": {
+      "filename": "한국재정정보원_e나라도움 업무시스템 웹 접근성 컨설팅",
+      "total_pages": 99,
+      "total_sections": 164,
+      "max_level": 4,
+      "total_texts": 1524,
+      "total_tables": 103,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 2239,
+      "search_items_cleaned": 1070,
+      "noise_removal_rate": "52.2%",
+      "text_labels": {
+        "section_header": 164,
+        "page_footer": 98,
+        "list_item": 467,
+        "text": 778,
+        "page_header": 3,
+        "formula": 2,
+        "caption": 2,
+        "footnote": 7,
+        "checkbox_unselected": 3
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 47,
+        "3": 88,
+        "4": 25
+      }
+    }
+  },
+  "인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 ": {
+    "filename": "인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 .pdf",
+    "metadata": {
+      "filename": "인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 ",
+      "total_pages": 95,
+      "total_sections": 153,
+      "max_level": 4,
+      "total_texts": 1147,
+      "total_tables": 116,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1976,
+      "search_items_cleaned": 964,
+      "noise_removal_rate": "51.2%",
+      "text_labels": {
+        "section_header": 153,
+        "list_item": 383,
+        "text": 491,
+        "page_footer": 87,
+        "page_header": 21,
+        "footnote": 5,
+        "checkbox_unselected": 4,
+        "formula": 2,
+        "caption": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 48,
+        "3": 84,
+        "4": 18
+      }
+    }
+  },
+  "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축": {
+    "filename": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.pdf",
+    "metadata": {
+      "filename": "국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축",
+      "total_pages": 125,
+      "total_sections": 213,
+      "max_level": 4,
+      "total_texts": 2249,
+      "total_tables": 168,
+      "total_images": 14
+    },
+    "statistics": {
+      "search_items_original": 3435,
+      "search_items_cleaned": 1926,
+      "noise_removal_rate": "43.9%",
+      "text_labels": {
+        "section_header": 213,
+        "text": 1393,
+        "page_footer": 125,
+        "page_header": 24,
+        "list_item": 488,
+        "caption": 1,
+        "checkbox_unselected": 1,
+        "footnote": 2,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 10,
+        "3": 110,
+        "2": 40,
+        "4": 53
+      }
+    }
+  },
+  "고려대학교_차세대 포털·학사 정보시스템 구축사업": {
+    "filename": "고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf",
+    "metadata": {
+      "filename": "고려대학교_차세대 포털·학사 정보시스템 구축사업",
+      "total_pages": 297,
+      "total_sections": 182,
+      "max_level": 4,
+      "total_texts": 2661,
+      "total_tables": 334,
+      "total_images": 340
+    },
+    "statistics": {
+      "search_items_original": 4413,
+      "search_items_cleaned": 2832,
+      "noise_removal_rate": "35.8%",
+      "text_labels": {
+        "section_header": 182,
+        "text": 907,
+        "page_footer": 296,
+        "list_item": 1261,
+        "caption": 4,
+        "checkbox_unselected": 5,
+        "footnote": 5,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 8,
+        "2": 58,
+        "3": 41,
+        "4": 75
+      }
+    }
+  },
+  "조선대학교_(재공고)2024 조선대학교 SW중심대학 사업관리시스템(WeHub) 구": {
+    "filename": "조선대학교_(재공고)2024 조선대학교 SW중심대학 사업관리시스템(WeHub) 구.pdf",
+    "metadata": {
+      "filename": "조선대학교_(재공고)2024 조선대학교 SW중심대학 사업관리시스템(WeHub) 구",
+      "total_pages": 52,
+      "total_sections": 121,
+      "max_level": 4,
+      "total_texts": 791,
+      "total_tables": 62,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1234,
+      "search_items_cleaned": 930,
+      "noise_removal_rate": "24.6%",
+      "text_labels": {
+        "section_header": 121,
+        "text": 108,
+        "list_item": 495,
+        "page_footer": 52,
+        "footnote": 6,
+        "formula": 3,
+        "page_header": 4,
+        "caption": 2
+      },
+      "hierarchy_levels": {
+        "1": 7,
+        "2": 25,
+        "3": 61,
+        "4": 28
+      }
+    }
+  },
+  "한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축": {
+    "filename": "한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축.pdf",
+    "metadata": {
+      "filename": "한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축",
+      "total_pages": 96,
+      "total_sections": 152,
+      "max_level": 4,
+      "total_texts": 1076,
+      "total_tables": 63,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1619,
+      "search_items_cleaned": 923,
+      "noise_removal_rate": "43.0%",
+      "text_labels": {
+        "section_header": 152,
+        "caption": 2,
+        "list_item": 526,
+        "text": 275,
+        "page_footer": 92,
+        "footnote": 3,
+        "formula": 2,
+        "page_header": 9,
+        "checkbox_unselected": 15
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 37,
+        "3": 84,
+        "4": 29
+      }
+    }
+  },
+  "한국건강가정진흥원_2025년 아이돌봄인력 인적성 검사 정보시스템 운영": {
+    "filename": "한국건강가정진흥원_2025년 아이돌봄인력 인적성 검사 정보시스템 운영.pdf",
+    "metadata": {
+      "filename": "한국건강가정진흥원_2025년 아이돌봄인력 인적성 검사 정보시스템 운영",
+      "total_pages": 85,
+      "total_sections": 133,
+      "max_level": 4,
+      "total_texts": 834,
+      "total_tables": 97,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 1493,
+      "search_items_cleaned": 892,
+      "noise_removal_rate": "40.3%",
+      "text_labels": {
+        "section_header": 133,
+        "text": 243,
+        "list_item": 356,
+        "page_footer": 85,
+        "page_header": 13,
+        "caption": 1,
+        "footnote": 3
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 41,
+        "3": 64,
+        "4": 24
+      }
+    }
+  },
+  "한국연구재단_2024년 기초학문자료센터 시스템 운영 및 연구성과물 DB구": {
+    "filename": "한국연구재단_2024년 기초학문자료센터 시스템 운영 및 연구성과물 DB구.pdf",
+    "metadata": {
+      "filename": "한국연구재단_2024년 기초학문자료센터 시스템 운영 및 연구성과물 DB구",
+      "total_pages": 91,
+      "total_sections": 150,
+      "max_level": 4,
+      "total_texts": 1130,
+      "total_tables": 61,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 1623,
+      "search_items_cleaned": 896,
+      "noise_removal_rate": "44.8%",
+      "text_labels": {
+        "text": 329,
+        "section_header": 150,
+        "caption": 5,
+        "page_footer": 90,
+        "list_item": 531,
+        "footnote": 4,
+        "page_header": 17,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 28,
+        "3": 92,
+        "4": 29
+      }
+    }
+  },
+  "한국어촌어항공단_한국어촌어항공단 경영관리시스템(ERP·GW) 기능 고도": {
+    "filename": "한국어촌어항공단_한국어촌어항공단 경영관리시스템(ERP·GW) 기능 고도.pdf",
+    "metadata": {
+      "filename": "한국어촌어항공단_한국어촌어항공단 경영관리시스템(ERP·GW) 기능 고도",
+      "total_pages": 111,
+      "total_sections": 151,
+      "max_level": 4,
+      "total_texts": 1131,
+      "total_tables": 120,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1992,
+      "search_items_cleaned": 1079,
+      "noise_removal_rate": "45.8%",
+      "text_labels": {
+        "section_header": 151,
+        "list_item": 450,
+        "text": 396,
+        "page_footer": 107,
+        "caption": 4,
+        "footnote": 4,
+        "page_header": 14,
+        "checkbox_unselected": 5
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 44,
+        "3": 83,
+        "4": 20
+      }
+    }
+  },
+  "중앙선거관리위원회_2025년도 행정정보시스템 위탁운영사업": {
+    "filename": "중앙선거관리위원회_2025년도 행정정보시스템 위탁운영사업.pdf",
+    "metadata": {
+      "filename": "중앙선거관리위원회_2025년도 행정정보시스템 위탁운영사업",
+      "total_pages": 105,
+      "total_sections": 216,
+      "max_level": 4,
+      "total_texts": 1428,
+      "total_tables": 103,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 2285,
+      "search_items_cleaned": 1323,
+      "noise_removal_rate": "42.1%",
+      "text_labels": {
+        "section_header": 216,
+        "text": 422,
+        "list_item": 661,
+        "page_footer": 103,
+        "caption": 2,
+        "page_header": 16,
+        "footnote": 2,
+        "formula": 2,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "2": 38,
+        "3": 138,
+        "1": 7,
+        "4": 33
+      }
+    }
+  },
+  "한국발명진흥회 입찰공고_2024년 건설기술에 관한 특허·실용신안 활용실": {
+    "filename": "한국발명진흥회 입찰공고_2024년 건설기술에 관한 특허·실용신안 활용실.pdf",
+    "metadata": {
+      "filename": "한국발명진흥회 입찰공고_2024년 건설기술에 관한 특허·실용신안 활용실",
+      "total_pages": 86,
+      "total_sections": 120,
+      "max_level": 4,
+      "total_texts": 981,
+      "total_tables": 111,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1818,
+      "search_items_cleaned": 925,
+      "noise_removal_rate": "49.1%",
+      "text_labels": {
+        "section_header": 120,
+        "text": 469,
+        "list_item": 293,
+        "page_footer": 83,
+        "caption": 3,
+        "page_header": 8,
+        "footnote": 2,
+        "checkbox_selected": 1,
+        "checkbox_unselected": 2
+      },
+      "hierarchy_levels": {
+        "1": 10,
+        "3": 73,
+        "2": 18,
+        "4": 19
+      }
+    }
+  },
+  "한국생산기술연구원_2세대 전자조달시스템  기반구축사업": {
+    "filename": "한국생산기술연구원_2세대 전자조달시스템  기반구축사업.pdf",
+    "metadata": {
+      "filename": "한국생산기술연구원_2세대 전자조달시스템  기반구축사업",
+      "total_pages": 97,
+      "total_sections": 136,
+      "max_level": 4,
+      "total_texts": 981,
+      "total_tables": 117,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1729,
+      "search_items_cleaned": 1115,
+      "noise_removal_rate": "35.5%",
+      "text_labels": {
+        "section_header": 136,
+        "text": 360,
+        "page_footer": 96,
+        "list_item": 364,
+        "caption": 3,
+        "checkbox_unselected": 4,
+        "footnote": 4,
+        "formula": 3,
+        "page_header": 10,
+        "code": 1
+      },
+      "hierarchy_levels": {
+        "2": 42,
+        "3": 42,
+        "4": 50,
+        "1": 2
+      }
+    }
+  },
+  "대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교": {
+    "filename": "대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교.pdf",
+    "metadata": {
+      "filename": "대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교",
+      "total_pages": 77,
+      "total_sections": 109,
+      "max_level": 4,
+      "total_texts": 1357,
+      "total_tables": 78,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1975,
+      "search_items_cleaned": 801,
+      "noise_removal_rate": "59.4%",
+      "text_labels": {
+        "section_header": 109,
+        "text": 780,
+        "page_footer": 75,
+        "list_item": 364,
+        "footnote": 7,
+        "caption": 2,
+        "checkbox_unselected": 13,
+        "checkbox_selected": 1,
+        "page_header": 6
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "3": 57,
+        "2": 28,
+        "4": 22
+      }
+    }
+  },
+  "서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센": {
+    "filename": "서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센.pdf",
+    "metadata": {
+      "filename": "서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센",
+      "total_pages": 139,
+      "total_sections": 192,
+      "max_level": 4,
+      "total_texts": 2611,
+      "total_tables": 132,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 3721,
+      "search_items_cleaned": 1864,
+      "noise_removal_rate": "49.9%",
+      "text_labels": {
+        "section_header": 192,
+        "list_item": 715,
+        "text": 1532,
+        "page_footer": 136,
+        "page_header": 16,
+        "caption": 2,
+        "footnote": 6,
+        "checkbox_unselected": 11,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 8,
+        "3": 71,
+        "2": 56,
+        "4": 57
+      }
+    }
+  },
+  "울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역": {
+    "filename": "울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역.pdf",
+    "metadata": {
+      "filename": "울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역",
+      "total_pages": 129,
+      "total_sections": 150,
+      "max_level": 4,
+      "total_texts": 1276,
+      "total_tables": 137,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 2377,
+      "search_items_cleaned": 1187,
+      "noise_removal_rate": "50.1%",
+      "text_labels": {
+        "text": 475,
+        "section_header": 150,
+        "page_footer": 130,
+        "list_item": 480,
+        "caption": 6,
+        "page_header": 8,
+        "footnote": 3,
+        "formula": 2,
+        "checkbox_unselected": 15,
+        "checkbox_selected": 7
+      },
+      "hierarchy_levels": {
+        "2": 30,
+        "1": 3,
+        "3": 90,
+        "4": 27
+      }
+    }
+  },
+  "한국지식재산보호원_IP-NAVI  해외지식재산센터 사업관리 시스템 기능개": {
+    "filename": "한국지식재산보호원_IP-NAVI  해외지식재산센터 사업관리 시스템 기능개.pdf",
+    "metadata": {
+      "filename": "한국지식재산보호원_IP-NAVI  해외지식재산센터 사업관리 시스템 기능개",
+      "total_pages": 70,
+      "total_sections": 151,
+      "max_level": 4,
+      "total_texts": 1354,
+      "total_tables": 67,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1935,
+      "search_items_cleaned": 1031,
+      "noise_removal_rate": "46.7%",
+      "text_labels": {
+        "section_header": 151,
+        "text": 734,
+        "list_item": 374,
+        "page_footer": 68,
+        "page_header": 5,
+        "caption": 1,
+        "footnote": 2,
+        "checkbox_unselected": 18,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "3": 73,
+        "2": 24,
+        "4": 50
+      }
+    }
+  },
+  "한국보육진흥원_연차별 자율 품질관리 시스템 기능개선": {
+    "filename": "한국보육진흥원_연차별 자율 품질관리 시스템 기능개선.pdf",
+    "metadata": {
+      "filename": "한국보육진흥원_연차별 자율 품질관리 시스템 기능개선",
+      "total_pages": 78,
+      "total_sections": 83,
+      "max_level": 4,
+      "total_texts": 737,
+      "total_tables": 122,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1507,
+      "search_items_cleaned": 833,
+      "noise_removal_rate": "44.7%",
+      "text_labels": {
+        "section_header": 83,
+        "text": 284,
+        "list_item": 275,
+        "checkbox_unselected": 4,
+        "page_footer": 78,
+        "footnote": 6,
+        "page_header": 6,
+        "caption": 1
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 23,
+        "3": 53,
+        "4": 6
+      }
+    }
+  },
+  "한국연구재단_2024년 대학산학협력활동 실태조사 시스템(UICC) 기능개선": {
+    "filename": "한국연구재단_2024년 대학산학협력활동 실태조사 시스템(UICC) 기능개선.pdf",
+    "metadata": {
+      "filename": "한국연구재단_2024년 대학산학협력활동 실태조사 시스템(UICC) 기능개선",
+      "total_pages": 100,
+      "total_sections": 140,
+      "max_level": 4,
+      "total_texts": 1001,
+      "total_tables": 114,
+      "total_images": 104
+    },
+    "statistics": {
+      "search_items_original": 1851,
+      "search_items_cleaned": 1071,
+      "noise_removal_rate": "42.1%",
+      "text_labels": {
+        "text": 329,
+        "section_header": 140,
+        "caption": 1,
+        "page_footer": 100,
+        "list_item": 421,
+        "page_header": 4,
+        "footnote": 5,
+        "checkbox_unselected": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 37,
+        "3": 82,
+        "4": 18
+      }
+    }
+  },
+  "재단법인충북연구원_GIS통계 기반 재난안전데이터 분석ㆍ관리 시스템 구": {
+    "filename": "재단법인충북연구원_GIS통계 기반 재난안전데이터 분석ㆍ관리 시스템 구.pdf",
+    "metadata": {
+      "filename": "재단법인충북연구원_GIS통계 기반 재난안전데이터 분석ㆍ관리 시스템 구",
+      "total_pages": 65,
+      "total_sections": 110,
+      "max_level": 4,
+      "total_texts": 584,
+      "total_tables": 78,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 1129,
+      "search_items_cleaned": 753,
+      "noise_removal_rate": "33.3%",
+      "text_labels": {
+        "section_header": 110,
+        "list_item": 244,
+        "text": 149,
+        "page_footer": 62,
+        "footnote": 2,
+        "page_header": 12,
+        "caption": 1,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "1": 13,
+        "2": 13,
+        "3": 59,
+        "4": 25
+      }
+    }
+  },
+  "한국수자원조사기술원_수문자료정보관리시스템(HDIMS) 재구축 용역(3단계": {
+    "filename": "한국수자원조사기술원_수문자료정보관리시스템(HDIMS) 재구축 용역(3단계.pdf",
+    "metadata": {
+      "filename": "한국수자원조사기술원_수문자료정보관리시스템(HDIMS) 재구축 용역(3단계",
+      "total_pages": 92,
+      "total_sections": 145,
+      "max_level": 4,
+      "total_texts": 1209,
+      "total_tables": 115,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 2271,
+      "search_items_cleaned": 1094,
+      "noise_removal_rate": "51.8%",
+      "text_labels": {
+        "section_header": 145,
+        "list_item": 376,
+        "text": 578,
+        "page_footer": 89,
+        "footnote": 1,
+        "caption": 2,
+        "page_header": 6,
+        "checkbox_unselected": 12
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "3": 71,
+        "2": 48,
+        "4": 25
+      }
+    }
+  },
+  "서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용": {
+    "filename": "서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용.pdf",
+    "metadata": {
+      "filename": "서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용",
+      "total_pages": 75,
+      "total_sections": 168,
+      "max_level": 4,
+      "total_texts": 1369,
+      "total_tables": 119,
+      "total_images": 22
+    },
+    "statistics": {
+      "search_items_original": 2584,
+      "search_items_cleaned": 1620,
+      "noise_removal_rate": "37.3%",
+      "text_labels": {
+        "text": 493,
+        "section_header": 168,
+        "page_footer": 147,
+        "list_item": 540,
+        "caption": 10,
+        "footnote": 2,
+        "page_header": 9
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "3": 72,
+        "2": 15,
+        "4": 79
+      }
+    }
+  },
+  "한국보건산업진흥원_의료기기산업 종합정보시스템(정보관리기관) 기능": {
+    "filename": "한국보건산업진흥원_의료기기산업 종합정보시스템(정보관리기관) 기능.pdf",
+    "metadata": {
+      "filename": "한국보건산업진흥원_의료기기산업 종합정보시스템(정보관리기관) 기능",
+      "total_pages": 97,
+      "total_sections": 128,
+      "max_level": 4,
+      "total_texts": 1116,
+      "total_tables": 109,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 2013,
+      "search_items_cleaned": 1146,
+      "noise_removal_rate": "43.1%",
+      "text_labels": {
+        "section_header": 128,
+        "text": 496,
+        "list_item": 384,
+        "page_footer": 94,
+        "page_header": 4,
+        "footnote": 2,
+        "caption": 3,
+        "checkbox_unselected": 3,
+        "checkbox_selected": 2
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "3": 73,
+        "4": 22,
+        "2": 27
+      }
+    }
+  },
+  "한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조": {
+    "filename": "한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조.pdf",
+    "metadata": {
+      "filename": "한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조",
+      "total_pages": 74,
+      "total_sections": 128,
+      "max_level": 4,
+      "total_texts": 1140,
+      "total_tables": 35,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1420,
+      "search_items_cleaned": 765,
+      "noise_removal_rate": "46.1%",
+      "text_labels": {
+        "section_header": 128,
+        "text": 380,
+        "list_item": 542,
+        "page_footer": 72,
+        "footnote": 9,
+        "page_header": 7,
+        "checkbox_unselected": 2
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 26,
+        "3": 77,
+        "4": 22
+      }
+    }
+  },
+  "2025 구미 아시아육상경기선수권대회 조직위원회_2025 구미아시아육상경": {
+    "filename": "2025 구미 아시아육상경기선수권대회 조직위원회_2025 구미아시아육상경.pdf",
+    "metadata": {
+      "filename": "2025 구미 아시아육상경기선수권대회 조직위원회_2025 구미아시아육상경",
+      "total_pages": 63,
+      "total_sections": 96,
+      "max_level": 4,
+      "total_texts": 757,
+      "total_tables": 69,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 1157,
+      "search_items_cleaned": 505,
+      "noise_removal_rate": "56.4%",
+      "text_labels": {
+        "section_header": 96,
+        "text": 243,
+        "list_item": 271,
+        "page_footer": 64,
+        "checkbox_unselected": 56,
+        "page_header": 17,
+        "footnote": 6,
+        "checkbox_selected": 4
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "2": 43,
+        "3": 44,
+        "4": 4
+      }
+    }
+  },
+  "한국교육과정평가원_국가교육과정정보센터(NCIC) 시스템 운영 및 개선": {
+    "filename": "한국교육과정평가원_국가교육과정정보센터(NCIC) 시스템 운영 및 개선.pdf",
+    "metadata": {
+      "filename": "한국교육과정평가원_국가교육과정정보센터(NCIC) 시스템 운영 및 개선",
+      "total_pages": 63,
+      "total_sections": 103,
+      "max_level": 4,
+      "total_texts": 764,
+      "total_tables": 61,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1283,
+      "search_items_cleaned": 673,
+      "noise_removal_rate": "47.5%",
+      "text_labels": {
+        "text": 230,
+        "section_header": 103,
+        "page_footer": 62,
+        "list_item": 343,
+        "footnote": 4,
+        "page_header": 5,
+        "caption": 2,
+        "checkbox_unselected": 14,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "3": 23,
+        "2": 28,
+        "4": 49
+      }
+    }
+  },
+  "한국철도공사 (용역)_예약발매시스템 개량 ISMP 용역": {
+    "filename": "한국철도공사 (용역)_예약발매시스템 개량 ISMP 용역.pdf",
+    "metadata": {
+      "filename": "한국철도공사 (용역)_예약발매시스템 개량 ISMP 용역",
+      "total_pages": 107,
+      "total_sections": 147,
+      "max_level": 4,
+      "total_texts": 1311,
+      "total_tables": 87,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2035,
+      "search_items_cleaned": 1157,
+      "noise_removal_rate": "43.1%",
+      "text_labels": {
+        "section_header": 147,
+        "text": 492,
+        "page_footer": 104,
+        "page_header": 27,
+        "list_item": 528,
+        "footnote": 5,
+        "checkbox_unselected": 7,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "3": 93,
+        "2": 27,
+        "4": 24
+      }
+    }
+  },
+  "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변": {
+    "filename": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변.pdf",
+    "metadata": {
+      "filename": "국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변",
+      "total_pages": 94,
+      "total_sections": 135,
+      "max_level": 4,
+      "total_texts": 1141,
+      "total_tables": 89,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1762,
+      "search_items_cleaned": 923,
+      "noise_removal_rate": "47.6%",
+      "text_labels": {
+        "text": 483,
+        "section_header": 135,
+        "caption": 3,
+        "page_header": 19,
+        "list_item": 407,
+        "page_footer": 92,
+        "footnote": 1,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 15,
+        "3": 67,
+        "2": 26,
+        "4": 27
+      }
+    }
+  },
+  "BioIN_의료기기산업 종합정보시스템(정보관리기관) 기능개선 사업(2차)": {
+    "filename": "BioIN_의료기기산업 종합정보시스템(정보관리기관) 기능개선 사업(2차).pdf",
+    "metadata": {
+      "filename": "BioIN_의료기기산업 종합정보시스템(정보관리기관) 기능개선 사업(2차)",
+      "total_pages": 97,
+      "total_sections": 128,
+      "max_level": 4,
+      "total_texts": 1116,
+      "total_tables": 109,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 2013,
+      "search_items_cleaned": 1146,
+      "noise_removal_rate": "43.1%",
+      "text_labels": {
+        "section_header": 128,
+        "text": 496,
+        "list_item": 384,
+        "page_footer": 94,
+        "page_header": 4,
+        "footnote": 2,
+        "caption": 3,
+        "checkbox_unselected": 3,
+        "checkbox_selected": 2
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "3": 73,
+        "4": 22,
+        "2": 27
+      }
+    }
+  },
+  "한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고": {
+    "filename": "한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고.pdf",
+    "metadata": {
+      "filename": "한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고",
+      "total_pages": 128,
+      "total_sections": 174,
+      "max_level": 4,
+      "total_texts": 1515,
+      "total_tables": 151,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2700,
+      "search_items_cleaned": 1453,
+      "noise_removal_rate": "46.2%",
+      "text_labels": {
+        "section_header": 174,
+        "list_item": 413,
+        "text": 781,
+        "page_footer": 124,
+        "page_header": 3,
+        "footnote": 5,
+        "caption": 5,
+        "checkbox_unselected": 9,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "3": 108,
+        "2": 40,
+        "4": 21
+      }
+    }
+  },
+  "인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역": {
+    "filename": "인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역.pdf",
+    "metadata": {
+      "filename": "인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역",
+      "total_pages": 85,
+      "total_sections": 164,
+      "max_level": 4,
+      "total_texts": 1088,
+      "total_tables": 75,
+      "total_images": 12
+    },
+    "statistics": {
+      "search_items_original": 1576,
+      "search_items_cleaned": 750,
+      "noise_removal_rate": "52.4%",
+      "text_labels": {
+        "section_header": 164,
+        "text": 410,
+        "list_item": 423,
+        "page_footer": 83,
+        "page_header": 4,
+        "footnote": 2,
+        "caption": 2
+      },
+      "hierarchy_levels": {
+        "3": 123,
+        "1": 1,
+        "2": 23,
+        "4": 17
+      }
+    }
+  },
+  "재단법인 한국장애인문화예술원_2024년 장애인문화예술정보시스템 이음": {
+    "filename": "재단법인 한국장애인문화예술원_2024년 장애인문화예술정보시스템 이음.pdf",
+    "metadata": {
+      "filename": "재단법인 한국장애인문화예술원_2024년 장애인문화예술정보시스템 이음",
+      "total_pages": 66,
+      "total_sections": 106,
+      "max_level": 4,
+      "total_texts": 575,
+      "total_tables": 86,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 1159,
+      "search_items_cleaned": 691,
+      "noise_removal_rate": "40.4%",
+      "text_labels": {
+        "section_header": 106,
+        "text": 150,
+        "list_item": 243,
+        "page_footer": 64,
+        "caption": 3,
+        "footnote": 1,
+        "checkbox_unselected": 8
+      },
+      "hierarchy_levels": {
+        "2": 24,
+        "3": 46,
+        "4": 33,
+        "1": 3
+      }
+    }
+  },
+  "문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자": {
+    "filename": "문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자.pdf",
+    "metadata": {
+      "filename": "문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자",
+      "total_pages": 83,
+      "total_sections": 141,
+      "max_level": 4,
+      "total_texts": 1364,
+      "total_tables": 101,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 2111,
+      "search_items_cleaned": 932,
+      "noise_removal_rate": "55.9%",
+      "text_labels": {
+        "section_header": 141,
+        "page_footer": 82,
+        "text": 762,
+        "list_item": 355,
+        "page_header": 10,
+        "caption": 4,
+        "footnote": 8,
+        "checkbox_unselected": 2
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "3": 66,
+        "2": 42,
+        "4": 30
+      }
+    }
+  },
+  "재단법인경기도일자리재단_2025년 통합접수시스템 운영": {
+    "filename": "재단법인경기도일자리재단_2025년 통합접수시스템 운영.pdf",
+    "metadata": {
+      "filename": "재단법인경기도일자리재단_2025년 통합접수시스템 운영",
+      "total_pages": 137,
+      "total_sections": 152,
+      "max_level": 4,
+      "total_texts": 1588,
+      "total_tables": 166,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2823,
+      "search_items_cleaned": 1673,
+      "noise_removal_rate": "40.7%",
+      "text_labels": {
+        "section_header": 152,
+        "text": 656,
+        "list_item": 611,
+        "page_footer": 135,
+        "caption": 1,
+        "footnote": 4,
+        "page_header": 16,
+        "checkbox_unselected": 12,
+        "formula": 1
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 38,
+        "3": 98,
+        "4": 14
+      }
+    }
+  },
+  "KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 ": {
+    "filename": "KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .pdf",
+    "metadata": {
+      "filename": "KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 ",
+      "total_pages": 154,
+      "total_sections": 196,
+      "max_level": 4,
+      "total_texts": 2418,
+      "total_tables": 206,
+      "total_images": 20
+    },
+    "statistics": {
+      "search_items_original": 3849,
+      "search_items_cleaned": 1930,
+      "noise_removal_rate": "49.9%",
+      "text_labels": {
+        "text": 1338,
+        "page_footer": 151,
+        "list_item": 675,
+        "section_header": 196,
+        "caption": 15,
+        "footnote": 4,
+        "formula": 4,
+        "page_header": 4,
+        "checkbox_unselected": 21,
+        "checkbox_selected": 10
+      },
+      "hierarchy_levels": {
+        "3": 50,
+        "4": 122,
+        "1": 7,
+        "2": 17
+      }
+    }
+  },
+  "인천광역시_도시계획위원회 통합관리시스템 구축용역": {
+    "filename": "인천광역시_도시계획위원회 통합관리시스템 구축용역.pdf",
+    "metadata": {
+      "filename": "인천광역시_도시계획위원회 통합관리시스템 구축용역",
+      "total_pages": 89,
+      "total_sections": 114,
+      "max_level": 4,
+      "total_texts": 979,
+      "total_tables": 107,
+      "total_images": 95
+    },
+    "statistics": {
+      "search_items_original": 1702,
+      "search_items_cleaned": 990,
+      "noise_removal_rate": "41.8%",
+      "text_labels": {
+        "section_header": 114,
+        "text": 468,
+        "list_item": 304,
+        "page_footer": 87,
+        "checkbox_unselected": 1,
+        "caption": 1,
+        "footnote": 2,
+        "page_header": 2
+      },
+      "hierarchy_levels": {
+        "3": 55,
+        "1": 5,
+        "2": 36,
+        "4": 18
+      }
+    }
+  },
+  "한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역": {
+    "filename": "한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역.pdf",
+    "metadata": {
+      "filename": "한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역",
+      "total_pages": 119,
+      "total_sections": 163,
+      "max_level": 4,
+      "total_texts": 1499,
+      "total_tables": 157,
+      "total_images": 20
+    },
+    "statistics": {
+      "search_items_original": 2433,
+      "search_items_cleaned": 1452,
+      "noise_removal_rate": "40.3%",
+      "text_labels": {
+        "section_header": 163,
+        "text": 728,
+        "list_item": 477,
+        "page_footer": 115,
+        "page_header": 8,
+        "caption": 3,
+        "footnote": 3,
+        "checkbox_unselected": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "3": 89,
+        "2": 51,
+        "4": 21
+      }
+    }
+  },
+  "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영": {
+    "filename": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.pdf",
+    "metadata": {
+      "filename": "고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영",
+      "total_pages": 95,
+      "total_sections": 145,
+      "max_level": 4,
+      "total_texts": 1024,
+      "total_tables": 118,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1680,
+      "search_items_cleaned": 950,
+      "noise_removal_rate": "43.5%",
+      "text_labels": {
+        "section_header": 145,
+        "text": 292,
+        "list_item": 473,
+        "page_footer": 93,
+        "caption": 2,
+        "footnote": 5,
+        "page_header": 11,
+        "checkbox_unselected": 3
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "3": 34,
+        "2": 44,
+        "4": 65
+      }
+    }
+  },
+  "경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역": {
+    "filename": "경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.pdf",
+    "metadata": {
+      "filename": "경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역",
+      "total_pages": 92,
+      "total_sections": 167,
+      "max_level": 4,
+      "total_texts": 1347,
+      "total_tables": 75,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1886,
+      "search_items_cleaned": 943,
+      "noise_removal_rate": "50.0%",
+      "text_labels": {
+        "section_header": 167,
+        "text": 591,
+        "list_item": 474,
+        "page_footer": 92,
+        "checkbox_unselected": 9,
+        "page_header": 8,
+        "caption": 3,
+        "footnote": 3
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "2": 57,
+        "3": 64,
+        "4": 40
+      }
+    }
+  },
+  "한국산업단지공단_산단 안전정보시스템 1차 구축 용역": {
+    "filename": "한국산업단지공단_산단 안전정보시스템 1차 구축 용역.pdf",
+    "metadata": {
+      "filename": "한국산업단지공단_산단 안전정보시스템 1차 구축 용역",
+      "total_pages": 126,
+      "total_sections": 136,
+      "max_level": 4,
+      "total_texts": 1637,
+      "total_tables": 135,
+      "total_images": 11
+    },
+    "statistics": {
+      "search_items_original": 2847,
+      "search_items_cleaned": 1380,
+      "noise_removal_rate": "51.5%",
+      "text_labels": {
+        "section_header": 136,
+        "caption": 10,
+        "list_item": 339,
+        "text": 997,
+        "page_footer": 123,
+        "footnote": 6,
+        "checkbox_unselected": 8,
+        "page_header": 14,
+        "formula": 1,
+        "checkbox_selected": 3
+      },
+      "hierarchy_levels": {
+        "1": 7,
+        "2": 13,
+        "3": 105,
+        "4": 11
+      }
+    }
+  },
+  "한국한의학연구원_통합정보시스템 고도화 용역": {
+    "filename": "한국한의학연구원_통합정보시스템 고도화 용역.pdf",
+    "metadata": {
+      "filename": "한국한의학연구원_통합정보시스템 고도화 용역",
+      "total_pages": 83,
+      "total_sections": 115,
+      "max_level": 4,
+      "total_texts": 1084,
+      "total_tables": 84,
+      "total_images": 97
+    },
+    "statistics": {
+      "search_items_original": 1872,
+      "search_items_cleaned": 931,
+      "noise_removal_rate": "50.3%",
+      "text_labels": {
+        "text": 629,
+        "section_header": 115,
+        "page_footer": 75,
+        "page_header": 14,
+        "list_item": 230,
+        "checkbox_unselected": 15,
+        "footnote": 6
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 34,
+        "3": 64,
+        "4": 14
+      }
+    }
+  },
+  "(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅": {
+    "filename": "(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.pdf",
+    "metadata": {
+      "filename": "(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅",
+      "total_pages": 59,
+      "total_sections": 120,
+      "max_level": 4,
+      "total_texts": 829,
+      "total_tables": 63,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1318,
+      "search_items_cleaned": 669,
+      "noise_removal_rate": "49.2%",
+      "text_labels": {
+        "section_header": 120,
+        "list_item": 337,
+        "text": 302,
+        "page_footer": 51,
+        "caption": 3,
+        "page_header": 14,
+        "footnote": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 25,
+        "4": 40,
+        "3": 53
+      }
+    }
+  },
+  "한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역": {
+    "filename": "한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역.pdf",
+    "metadata": {
+      "filename": "한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역",
+      "total_pages": 143,
+      "total_sections": 180,
+      "max_level": 4,
+      "total_texts": 1783,
+      "total_tables": 146,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2937,
+      "search_items_cleaned": 1519,
+      "noise_removal_rate": "48.3%",
+      "text_labels": {
+        "section_header": 180,
+        "text": 937,
+        "page_footer": 147,
+        "list_item": 504,
+        "caption": 2,
+        "footnote": 5,
+        "page_header": 2,
+        "checkbox_unselected": 4,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 20,
+        "3": 101,
+        "4": 57
+      }
+    }
+  },
+  "수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입": {
+    "filename": "수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입.pdf",
+    "metadata": {
+      "filename": "수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입",
+      "total_pages": 89,
+      "total_sections": 137,
+      "max_level": 4,
+      "total_texts": 1057,
+      "total_tables": 74,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1534,
+      "search_items_cleaned": 911,
+      "noise_removal_rate": "40.6%",
+      "text_labels": {
+        "section_header": 137,
+        "text": 359,
+        "list_item": 449,
+        "page_footer": 79,
+        "page_header": 12,
+        "footnote": 1,
+        "checkbox_unselected": 16,
+        "caption": 1,
+        "formula": 3
+      },
+      "hierarchy_levels": {
+        "1": 5,
+        "3": 63,
+        "2": 52,
+        "4": 17
+      }
+    }
+  },
+  "한국철도공사 (용역)_[재공고][긴급][협상형]운행정보기록 자동분석시스": {
+    "filename": "한국철도공사 (용역)_[재공고][긴급][협상형]운행정보기록 자동분석시스.pdf",
+    "metadata": {
+      "filename": "한국철도공사 (용역)_[재공고][긴급][협상형]운행정보기록 자동분석시스",
+      "total_pages": 153,
+      "total_sections": 169,
+      "max_level": 4,
+      "total_texts": 1372,
+      "total_tables": 135,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 2425,
+      "search_items_cleaned": 1463,
+      "noise_removal_rate": "39.7%",
+      "text_labels": {
+        "section_header": 169,
+        "page_footer": 152,
+        "text": 406,
+        "list_item": 603,
+        "footnote": 1,
+        "page_header": 31,
+        "caption": 1,
+        "formula": 1,
+        "checkbox_unselected": 7,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 32,
+        "3": 111,
+        "4": 25
+      }
+    }
+  },
+  "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축": {
+    "filename": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.pdf",
+    "metadata": {
+      "filename": "국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축",
+      "total_pages": 70,
+      "total_sections": 113,
+      "max_level": 4,
+      "total_texts": 1187,
+      "total_tables": 90,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1880,
+      "search_items_cleaned": 872,
+      "noise_removal_rate": "53.6%",
+      "text_labels": {
+        "section_header": 113,
+        "text": 632,
+        "page_footer": 70,
+        "list_item": 370,
+        "checkbox_unselected": 1,
+        "page_header": 1
+      },
+      "hierarchy_levels": {
+        "1": 1,
+        "2": 24,
+        "3": 30,
+        "4": 58
+      }
+    }
+  },
+  "재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발": {
+    "filename": "재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발.pdf",
+    "metadata": {
+      "filename": "재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발",
+      "total_pages": 100,
+      "total_sections": 164,
+      "max_level": 4,
+      "total_texts": 1464,
+      "total_tables": 125,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 2355,
+      "search_items_cleaned": 1043,
+      "noise_removal_rate": "55.7%",
+      "text_labels": {
+        "text": 854,
+        "section_header": 164,
+        "list_item": 338,
+        "page_footer": 98,
+        "caption": 1,
+        "page_header": 4,
+        "footnote": 1,
+        "checkbox_unselected": 3,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "2": 53,
+        "3": 61,
+        "4": 47,
+        "1": 3
+      }
+    }
+  },
+  "한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도": {
+    "filename": "한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도.pdf",
+    "metadata": {
+      "filename": "한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도",
+      "total_pages": 58,
+      "total_sections": 73,
+      "max_level": 4,
+      "total_texts": 516,
+      "total_tables": 97,
+      "total_images": 3
+    },
+    "statistics": {
+      "search_items_original": 1107,
+      "search_items_cleaned": 633,
+      "noise_removal_rate": "42.8%",
+      "text_labels": {
+        "text": 169,
+        "section_header": 73,
+        "page_header": 18,
+        "list_item": 201,
+        "page_footer": 54,
+        "footnote": 1
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 26,
+        "3": 29,
+        "4": 16
+      }
+    }
+  },
+  "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업": {
+    "filename": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업.pdf",
+    "metadata": {
+      "filename": "광주과학기술원_실시간통합연구비관리시스템(RCMS)  연계 모듈 변경 사업",
+      "total_pages": 81,
+      "total_sections": 161,
+      "max_level": 4,
+      "total_texts": 1195,
+      "total_tables": 83,
+      "total_images": 23
+    },
+    "statistics": {
+      "search_items_original": 1828,
+      "search_items_cleaned": 858,
+      "noise_removal_rate": "53.1%",
+      "text_labels": {
+        "section_header": 161,
+        "list_item": 474,
+        "text": 462,
+        "page_footer": 74,
+        "page_header": 20,
+        "caption": 1,
+        "formula": 1,
+        "checkbox_selected": 1,
+        "footnote": 1
+      },
+      "hierarchy_levels": {
+        "1": 3,
+        "2": 12,
+        "4": 72,
+        "3": 74
+      }
+    }
+  },
+  "한영대학_한영대학교 특성화 맞춤형 교육환경 구축 - 트랙운영 학사정보": {
+    "filename": "한영대학_한영대학교 특성화 맞춤형 교육환경 구축 - 트랙운영 학사정보.pdf",
+    "metadata": {
+      "filename": "한영대학_한영대학교 특성화 맞춤형 교육환경 구축 - 트랙운영 학사정보",
+      "total_pages": 61,
+      "total_sections": 108,
+      "max_level": 4,
+      "total_texts": 600,
+      "total_tables": 77,
+      "total_images": 64
+    },
+    "statistics": {
+      "search_items_original": 1173,
+      "search_items_cleaned": 795,
+      "noise_removal_rate": "32.2%",
+      "text_labels": {
+        "text": 149,
+        "section_header": 108,
+        "list_item": 276,
+        "page_footer": 58,
+        "footnote": 8,
+        "page_header": 1
+      },
+      "hierarchy_levels": {
+        "1": 8,
+        "2": 27,
+        "3": 32,
+        "4": 41
+      }
+    }
+  },
+  "재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스": {
+    "filename": "재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스.pdf",
+    "metadata": {
+      "filename": "재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스",
+      "total_pages": 88,
+      "total_sections": 138,
+      "max_level": 4,
+      "total_texts": 1280,
+      "total_tables": 78,
+      "total_images": 9
+    },
+    "statistics": {
+      "search_items_original": 1783,
+      "search_items_cleaned": 907,
+      "noise_removal_rate": "49.1%",
+      "text_labels": {
+        "section_header": 138,
+        "list_item": 544,
+        "page_footer": 85,
+        "text": 474,
+        "footnote": 6,
+        "checkbox_unselected": 16,
+        "checkbox_selected": 4,
+        "page_header": 12,
+        "caption": 1
+      },
+      "hierarchy_levels": {
+        "1": 7,
+        "3": 66,
+        "4": 26,
+        "2": 39
+      }
+    }
+  },
+  "서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차": {
+    "filename": "서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차.pdf",
+    "metadata": {
+      "filename": "서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차",
+      "total_pages": 149,
+      "total_sections": 241,
+      "max_level": 4,
+      "total_texts": 1873,
+      "total_tables": 145,
+      "total_images": 12
+    },
+    "statistics": {
+      "search_items_original": 2914,
+      "search_items_cleaned": 1885,
+      "noise_removal_rate": "35.3%",
+      "text_labels": {
+        "section_header": 241,
+        "text": 696,
+        "list_item": 743,
+        "page_footer": 146,
+        "caption": 12,
+        "page_header": 13,
+        "checkbox_unselected": 18,
+        "footnote": 3,
+        "checkbox_selected": 1
+      },
+      "hierarchy_levels": {
+        "2": 83,
+        "1": 13,
+        "3": 111,
+        "4": 34
+      }
+    }
+  },
+  "케빈랩 주식회사_평택시 강소형 스마트시티 AI 기반의 영상감시 시스템 ": {
+    "filename": "케빈랩 주식회사_평택시 강소형 스마트시티 AI 기반의 영상감시 시스템 .pdf",
+    "metadata": {
+      "filename": "케빈랩 주식회사_평택시 강소형 스마트시티 AI 기반의 영상감시 시스템 ",
+      "total_pages": 88,
+      "total_sections": 149,
+      "max_level": 4,
+      "total_texts": 1050,
+      "total_tables": 90,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 1624,
+      "search_items_cleaned": 869,
+      "noise_removal_rate": "46.5%",
+      "text_labels": {
+        "section_header": 149,
+        "text": 510,
+        "page_footer": 85,
+        "list_item": 266,
+        "caption": 5,
+        "footnote": 7,
+        "page_header": 26,
+        "checkbox_unselected": 2
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 41,
+        "3": 69,
+        "4": 35
+      }
+    }
+  },
+  "국방과학연구소_대용량 자료전송시스템 고도화": {
+    "filename": "국방과학연구소_대용량 자료전송시스템 고도화.pdf",
+    "metadata": {
+      "filename": "국방과학연구소_대용량 자료전송시스템 고도화",
+      "total_pages": 95,
+      "total_sections": 108,
+      "max_level": 4,
+      "total_texts": 1002,
+      "total_tables": 112,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 1710,
+      "search_items_cleaned": 834,
+      "noise_removal_rate": "51.2%",
+      "text_labels": {
+        "section_header": 108,
+        "caption": 2,
+        "text": 495,
+        "list_item": 284,
+        "page_footer": 92,
+        "footnote": 7,
+        "checkbox_unselected": 8,
+        "page_header": 6
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "3": 50,
+        "2": 25,
+        "4": 27
+      }
+    }
+  },
+  "광주과학기술원_학사시스템 기능개선 사업": {
+    "filename": "광주과학기술원_학사시스템 기능개선 사업.pdf",
+    "metadata": {
+      "filename": "광주과학기술원_학사시스템 기능개선 사업",
+      "total_pages": 66,
+      "total_sections": 138,
+      "max_level": 4,
+      "total_texts": 748,
+      "total_tables": 72,
+      "total_images": 4
+    },
+    "statistics": {
+      "search_items_original": 1290,
+      "search_items_cleaned": 594,
+      "noise_removal_rate": "54.0%",
+      "text_labels": {
+        "section_header": 138,
+        "text": 165,
+        "list_item": 358,
+        "page_footer": 58,
+        "page_header": 21,
+        "footnote": 1,
+        "caption": 2,
+        "formula": 1,
+        "checkbox_unselected": 4
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 9,
+        "3": 62,
+        "4": 65
+      }
+    }
+  },
+  "전북특별자치도 정읍시_정읍체육트레이닝센터 통합운영관리시스템 구": {
+    "filename": "전북특별자치도 정읍시_정읍체육트레이닝센터 통합운영관리시스템 구.pdf",
+    "metadata": {
+      "filename": "전북특별자치도 정읍시_정읍체육트레이닝센터 통합운영관리시스템 구",
+      "total_pages": 131,
+      "total_sections": 187,
+      "max_level": 4,
+      "total_texts": 1705,
+      "total_tables": 137,
+      "total_images": 10
+    },
+    "statistics": {
+      "search_items_original": 2539,
+      "search_items_cleaned": 1352,
+      "noise_removal_rate": "46.8%",
+      "text_labels": {
+        "section_header": 187,
+        "list_item": 624,
+        "text": 739,
+        "page_footer": 130,
+        "footnote": 6,
+        "checkbox_unselected": 9,
+        "page_header": 5,
+        "caption": 3,
+        "checkbox_selected": 2
+      },
+      "hierarchy_levels": {
+        "1": 8,
+        "2": 54,
+        "3": 105,
+        "4": 20
+      }
+    }
+  },
+  "인천공항운영서비스(주)_인천공항운영서비스㈜ 차세대 ERP시스템 구축 ": {
+    "filename": "인천공항운영서비스(주)_인천공항운영서비스㈜ 차세대 ERP시스템 구축 .pdf",
+    "metadata": {
+      "filename": "인천공항운영서비스(주)_인천공항운영서비스㈜ 차세대 ERP시스템 구축 ",
+      "total_pages": 70,
+      "total_sections": 72,
+      "max_level": 4,
+      "total_texts": 773,
+      "total_tables": 129,
+      "total_images": 7
+    },
+    "statistics": {
+      "search_items_original": 1477,
+      "search_items_cleaned": 829,
+      "noise_removal_rate": "43.9%",
+      "text_labels": {
+        "section_header": 72,
+        "text": 446,
+        "list_item": 174,
+        "page_footer": 68,
+        "page_header": 7,
+        "footnote": 4,
+        "caption": 2
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 21,
+        "4": 8,
+        "3": 39
+      }
+    }
+  },
+  "경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업(협상)(긴급)": {
+    "filename": "경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업(협상)(긴급).pdf",
+    "metadata": {
+      "filename": "경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업(협상)(긴급)",
+      "total_pages": 86,
+      "total_sections": 122,
+      "max_level": 4,
+      "total_texts": 884,
+      "total_tables": 94,
+      "total_images": 11
+    },
+    "statistics": {
+      "search_items_original": 1476,
+      "search_items_cleaned": 753,
+      "noise_removal_rate": "49.0%",
+      "text_labels": {
+        "text": 257,
+        "section_header": 122,
+        "page_footer": 85,
+        "list_item": 413,
+        "page_header": 3,
+        "formula": 2,
+        "footnote": 2
+      },
+      "hierarchy_levels": {
+        "1": 2,
+        "2": 29,
+        "3": 73,
+        "4": 18
+      }
+    }
+  },
+  "축산물품질평가원_꿀 품질평가 전산시스템 기능개선 사업": {
+    "filename": "축산물품질평가원_꿀 품질평가 전산시스템 기능개선 사업.pdf",
+    "metadata": {
+      "filename": "축산물품질평가원_꿀 품질평가 전산시스템 기능개선 사업",
+      "total_pages": 87,
+      "total_sections": 136,
+      "max_level": 4,
+      "total_texts": 681,
+      "total_tables": 165,
+      "total_images": 5
+    },
+    "statistics": {
+      "search_items_original": 1686,
+      "search_items_cleaned": 977,
+      "noise_removal_rate": "42.1%",
+      "text_labels": {
+        "section_header": 136,
+        "caption": 7,
+        "list_item": 282,
+        "text": 155,
+        "page_footer": 84,
+        "checkbox_unselected": 7,
+        "page_header": 5,
+        "footnote": 5
+      },
+      "hierarchy_levels": {
+        "3": 82,
+        "1": 1,
+        "2": 19,
+        "4": 34
+      }
+    }
+  },
+  "한국전기안전공사_전기안전 관제시스템 보안 모듈 개발 용역": {
+    "filename": "한국전기안전공사_전기안전 관제시스템 보안 모듈 개발 용역.pdf",
+    "metadata": {
+      "filename": "한국전기안전공사_전기안전 관제시스템 보안 모듈 개발 용역",
+      "total_pages": 74,
+      "total_sections": 113,
+      "max_level": 4,
+      "total_texts": 1118,
+      "total_tables": 84,
+      "total_images": 6
+    },
+    "statistics": {
+      "search_items_original": 1670,
+      "search_items_cleaned": 886,
+      "noise_removal_rate": "46.9%",
+      "text_labels": {
+        "section_header": 113,
+        "page_header": 2,
+        "list_item": 296,
+        "text": 616,
+        "page_footer": 71,
+        "caption": 2,
+        "checkbox_unselected": 14,
+        "footnote": 2,
+        "formula": 2
+      },
+      "hierarchy_levels": {
+        "1": 6,
+        "3": 49,
+        "2": 36,
+        "4": 22
+      }
+    }
+  },
+  "한국가스공사_[재공고]차세대 통합정보시스템(ERP) 구축": {
+    "filename": "한국가스공사_[재공고]차세대 통합정보시스템(ERP) 구축.pdf",
+    "metadata": {
+      "filename": "한국가스공사_[재공고]차세대 통합정보시스템(ERP) 구축",
+      "total_pages": 97,
+      "total_sections": 102,
+      "max_level": 4,
+      "total_texts": 2349,
+      "total_tables": 130,
+      "total_images": 8
+    },
+    "statistics": {
+      "search_items_original": 3383,
+      "search_items_cleaned": 1673,
+      "noise_removal_rate": "50.5%",
+      "text_labels": {
+        "section_header": 102,
+        "text": 1744,
+        "list_item": 405,
+        "page_footer": 97,
+        "page_header": 1
+      },
+      "hierarchy_levels": {
+        "1": 4,
+        "2": 26,
+        "3": 8,
+        "4": 64
+      }
+    }
+  }
+}

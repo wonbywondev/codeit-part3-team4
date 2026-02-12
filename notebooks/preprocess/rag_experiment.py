@@ -22,7 +22,16 @@ import rank_bm25
 from rapidfuzz import fuzz
 
 from preprocess.pp_basic import EVAL_DIR
-from preprocess.pp_v4 import ALL_DATA, clean_text, extract_text, chunk_from_alldata
+
+try:
+    from preprocess import pp_v5 as pp
+except ImportError:  # v5 배포 전 백업
+    from preprocess import pp_v4 as pp
+
+ALL_DATA = pp.ALL_DATA
+clean_text = pp.clean_text
+extract_text = pp.extract_text
+chunk_from_alldata = getattr(pp, "chunk_from_alldata")
 
 
 # -------------------------
@@ -181,11 +190,20 @@ class C2PageChunker(BaseChunker):
 
 class C3SectionChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
-        chunks = chunk_from_alldata(doc_path.name, ALL_DATA, size=CONFIG["chunk_length"])
+        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
         if chunks is None:
             text = clean_text(extract_text(doc_path))
             s = CONFIG["chunk_length"]
             return [text[i:i+s] for i in range(0, len(text), s)]
+        return chunks
+
+
+class C4DoclingChunker(BaseChunker):
+    """Docling section_path 청킹을 강제 사용하고 싶을 때 선택"""
+    def chunk(self, doc_path: Path) -> List[str]:
+        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
+        if chunks is None:
+            return C1FixedChunker(size=CONFIG["chunk_length"]).chunk(doc_path)
         return chunks
 
 
@@ -389,6 +407,8 @@ def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, clie
         chunker = C2PageChunker()
     elif spec.chunker == "C3":
         chunker = C3SectionChunker()
+    elif spec.chunker == "C4":
+        chunker = C4DoclingChunker()
     else:
         raise ValueError(spec.chunker)
 
