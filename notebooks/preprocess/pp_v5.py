@@ -28,7 +28,16 @@ import faiss
 pp_version = "5"
 
 
+
+
+
 # ── 데이터 로딩 (1회) ──
+index_pages_path = os.path.join(BASE_DIR, "data", "01_index_pages.json")
+
+with open(index_pages_path, "r", encoding="utf-8") as f:
+    index_pages = json.load(f)
+
+
 all_data_path = os.path.join(BASE_DIR, "data", f"ALL_DATA_v{pp_version}.json")
 
 with open(all_data_path, "r", encoding="utf-8") as f:
