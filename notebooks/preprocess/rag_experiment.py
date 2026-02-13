@@ -23,15 +23,18 @@ from rapidfuzz import fuzz
 
 from preprocess.pp_basic import EVAL_DIR
 
+# ✅ ImportError만 fallback (pp_v5가 "없을 때"만 pp_v4 사용)
 try:
     from preprocess import pp_v5 as pp
-except ImportError:  # v5 배포 전 백업
+except ImportError as e:  # v5 배포 전/백업
+    print("[WARN] pp_v5 import 실패(ImportError), pp_v4로 fallback:", repr(e))
     from preprocess import pp_v4 as pp
 
-ALL_DATA = pp.ALL_DATA
+ALL_DATA = getattr(pp, "ALL_DATA", None)
 clean_text = pp.clean_text
 extract_text = pp.extract_text
-chunk_from_alldata = getattr(pp, "chunk_from_alldata")
+
+chunk_from_alldata = getattr(pp, "chunk_from_alldata", None)
 
 
 # -------------------------
@@ -40,14 +43,13 @@ chunk_from_alldata = getattr(pp, "chunk_from_alldata")
 CONFIG = {
     "chunk_length": 1200,          # C1 baseline
     "top_k": 20,
-    "max_tokens": 2000,           # non gpt-5
-    "max_completion_tokens": 2000,  # gpt-5
-    "temperature": 0.1,           # non gpt-5
-    "alpha": 0.7,                 # hybrid weight for vector score
-    "max_context_chars": 6000,    # context hard cap (chars)
+    "max_tokens": 2000,            # non gpt-5 (현재 코드에서는 미사용)
+    "max_completion_tokens": 2000, # gpt-5
+    "temperature": 0.1,            # non gpt-5 (현재 코드에서는 미사용)
+    "alpha": 0.7,                  # hybrid weight for vector score
+    "max_context_chars": 6000,     # context hard cap (chars)
 }
 
-# JSON-only prompt (태그 방식 제거)
 RFP_PROMPT = """역할: 너는 RFP/입찰 공고 문서(CONTEXT 발췌)에서 정보를 추출한다.
 
 절대 규칙:
@@ -58,11 +60,6 @@ RFP_PROMPT = """역할: 너는 RFP/입찰 공고 문서(CONTEXT 발췌)에서 �
 5) CONTEXT에 관련 단서(부분일치, 유사표현, 숫자, 기관명 후보)가 1개라도 있으면 가능한 범위에서 채워라.
 6) "NOT_FOUND"는 정말로 근거가 전혀 없을 때만 사용한다.
 7) 모든 값을 "NOT_FOUND"로 채우는 출력은 금지한다. (최소 1개는 CONTEXT에서 발췌해 채워라)
-
-작업 방법(반드시 따름):
-- 먼저 CONTEXT에서 다음 유형의 신호를 찾아라: 사업명/용역명, 금액(원), 기간(일/개월), 기관명, 마감일, 평가(기술/가격).
-- 찾은 신호가 있으면 해당 key에 매핑해 값을 채워라.
-- 확실한 매핑이 불가능하면 NOT_FOUND.
 
 QUESTIONS(JSON array):
 {questions_json}
@@ -80,12 +77,6 @@ def load_questions_df() -> pd.DataFrame:
 
 
 def get_queries_for_doc(doc_name: str, questions_df: pd.DataFrame) -> List[Tuple[str, str]]:
-    """
-    returns [(type, question), ...]
-    - doc_id == "*" rows are common questions
-    - doc_id == doc_name rows are per-doc questions
-    - if 'type' duplicates exist, keep last (per-doc overrides common)
-    """
     common = questions_df[questions_df["doc_id"] == "*"][["type", "question"]]
     per_doc = questions_df[questions_df["doc_id"] == doc_name][["type", "question"]]
     merged = pd.concat([common, per_doc], ignore_index=True)
@@ -93,9 +84,7 @@ def get_queries_for_doc(doc_name: str, questions_df: pd.DataFrame) -> List[Tuple
     merged["type"] = merged["type"].astype(str)
     merged["question"] = merged["question"].astype(str)
 
-    # 중복 type이 있으면 뒤(per_doc) 우선
     merged = merged.drop_duplicates(subset=["type"], keep="last")
-
     return list(zip(merged["type"].tolist(), merged["question"].tolist()))
 
 
@@ -112,8 +101,6 @@ def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[s
 
 def eval_gen(pred: str, gold: Optional[str], threshold: int = 80) -> Dict[str, float]:
     pred = (pred or "").strip()
-
-    # 기존 정의 유지(원하면 NOT_FOUND 제외로 바꿀 수 있음)
     fill = 1.0 if pred and pred.lower() not in {"", "없음"} else 0.0
 
     if gold is None or str(gold).strip() == "":
@@ -156,18 +143,13 @@ class BaseRetriever(ABC):
 class BaseGenerator(ABC):
     @abstractmethod
     def generate(self, queries: List[Tuple[str, str]], context: str) -> Dict[str, str]:
-        """
-        queries: [(type_key, question_text), ...]
-        returns: {type_key: answer_string}
-        """
         ...
-
+        
 
 # -------------------------
 # Chunkers
 # -------------------------
 class C1FixedChunker(BaseChunker):
-    """Baseline chunk: 800 chars, no overlap"""
     def __init__(self, size: int = 800):
         self.size = size
 
@@ -190,21 +172,23 @@ class C2PageChunker(BaseChunker):
 
 class C3SectionChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
-        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
-        if chunks is None:
-            text = clean_text(extract_text(doc_path))
-            s = CONFIG["chunk_length"]
-            return [text[i:i+s] for i in range(0, len(text), s)]
-        return chunks
+        if callable(chunk_from_alldata):
+            chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
+            if chunks is not None:
+                return chunks
+
+        text = clean_text(extract_text(doc_path))
+        s = CONFIG["chunk_length"]
+        return [text[i:i+s] for i in range(0, len(text), s)]
 
 
 class C4DoclingChunker(BaseChunker):
-    """Docling section_path 청킹을 강제 사용하고 싶을 때 선택"""
     def chunk(self, doc_path: Path) -> List[str]:
-        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
-        if chunks is None:
-            return C1FixedChunker(size=CONFIG["chunk_length"]).chunk(doc_path)
-        return chunks
+        if callable(chunk_from_alldata):
+            chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
+            if chunks is not None:
+                return chunks
+        return C1FixedChunker(size=CONFIG["chunk_length"]).chunk(doc_path)
 
 
 # -------------------------
@@ -223,7 +207,6 @@ class R1BM25Retriever(BaseRetriever):
 
 
 class R2VectorRetriever(BaseRetriever):
-    """Baseline vector: KoE5 embeddings + FAISS IndexFlatL2"""
     def __init__(self, embed_model: SentenceTransformer):
         self.embed_model = embed_model
 
@@ -241,7 +224,6 @@ class R2VectorRetriever(BaseRetriever):
 
 
 class R3HybridRetriever(BaseRetriever):
-    """Hybrid: BM25 + Vector, combine scores only for candidate subset to avoid huge RAM/time"""
     def __init__(self, embed_model: SentenceTransformer, bm25_candidates: int = 200):
         self.embed_model = embed_model
         self.bm25_candidates = bm25_candidates
@@ -293,18 +275,11 @@ class OpenAIGenerator(BaseGenerator):
         self.client = client or OpenAI()
         self.model = model
 
-        # debug fields
         self.last_raw_text: str = ""
         self.last_resp_dump: Optional[Dict[str, Any]] = None
         self.last_debug: Dict[str, Any] = {}
-    
+
     def generate(self, queries: List[Tuple[str, str]], context: str) -> Dict[str, str]:
-        """
-        Returns dict: {type_key: answer}
-        Sentinel policy:
-        - NOT_FOUND: 컨텍스트에 근거해 없다고 판단(정상 부재) 또는 key 자체 누락
-        - GEN_FAIL: 모델 무응답/비정상(빈 출력, JSON 파싱 실패, key는 있는데 값이 공백/None 등)
-        """
         NOT_FOUND = "NOT_FOUND"
         GEN_FAIL = "GEN_FAIL"
 
@@ -315,7 +290,6 @@ class OpenAIGenerator(BaseGenerator):
         questions_json = json.dumps(q_payload, ensure_ascii=False)
         prompt = RFP_PROMPT.format(questions_json=questions_json, context=context)
 
-        # debug init
         self.last_raw_text = ""
         self.last_resp_dump = None
         self.last_debug = {
@@ -351,33 +325,26 @@ class OpenAIGenerator(BaseGenerator):
             self.last_raw_text = text
             self.last_debug["output_text_repr"] = repr(text[:200])
 
-            # 모델이 아예 무응답(빈 출력)
             if not text:
                 return all_sentinel(GEN_FAIL)
 
-            # JSON 파싱 실패 = 생성 실패로 간주
             try:
                 obj = json.loads(text)
             except Exception as e:
                 self.last_debug["parse_error"] = repr(e)
                 return all_sentinel(GEN_FAIL)
 
-            # JSON이 dict가 아니면 실패 취급
             if not isinstance(obj, dict):
                 self.last_debug["parse_error"] = f"non-dict-json: {type(obj)}"
                 return all_sentinel(GEN_FAIL)
 
             out: Dict[str, str] = {}
             for k, _q in queries:
-                # key 자체가 없으면(모델이 누락) -> NOT_FOUND로 둬서 "부재"로 기록
-                # (원하면 이것도 GEN_FAIL로 바꿀 수 있음)
                 if k not in obj:
                     out[k] = NOT_FOUND
                     continue
 
                 v_raw = obj.get(k)
-
-                # key는 있는데 값이 None/공백이면 -> GEN_FAIL (모델이 답을 비워둔 것)
                 v = (v_raw or "").strip()
                 out[k] = v if v else GEN_FAIL
 
@@ -387,6 +354,7 @@ class OpenAIGenerator(BaseGenerator):
             self.last_debug["exception"] = repr(e)
             self.last_raw_text = ""
             return all_sentinel(GEN_FAIL)
+
 
 # -------------------------
 # Experiment runner
@@ -400,7 +368,6 @@ class ExperimentSpec:
 
 
 def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, client: OpenAI):
-    # chunker
     if spec.chunker == "C1":
         chunker = C1FixedChunker(size=CONFIG["chunk_length"])
     elif spec.chunker == "C2":
@@ -412,7 +379,6 @@ def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, clie
     else:
         raise ValueError(spec.chunker)
 
-    # retriever
     if spec.retriever == "R1":
         retriever = R1BM25Retriever()
     elif spec.retriever == "R2":
@@ -422,7 +388,6 @@ def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, clie
     else:
         raise ValueError(spec.retriever)
 
-    # generator
     if spec.generator == "G1":
         gen = OpenAIGenerator(model="gpt-5-mini", client=client)
     elif spec.generator == "G2":
@@ -440,6 +405,65 @@ class RAGExperiment:
         self.generator = generator
         self.questions_df = questions_df
 
+    def run_single_doc_metrics_singleq(
+        self,
+        doc_path: Path,
+        gold_fields_df: pd.DataFrame,
+        gold_evidence_df: pd.DataFrame,
+        top_k: int = 20,
+        sim_threshold: int = 80,
+    ) -> Dict[str, Any]:
+        doc_name = unicodedata.normalize("NFC", doc_path.name)
+
+        queries = get_queries_for_doc(doc_name, self.questions_df)
+        chunks = self.chunker.chunk(doc_path)
+        index = self.retriever.build_index(chunks)
+
+        qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
+        GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
+
+        pred_map: Dict[str, str] = {}
+        g_list: List[Dict[str, float]] = []
+        r_list: List[Dict[str, float]] = []
+
+        for field, question in queries:
+            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
+            context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
+
+            one_pred = self.generator.generate([(field, question)], context)
+            pred = (one_pred.get(field) or "").strip()
+            pred_map[field] = pred
+
+            gold_row = qdf[qdf["field"].astype(str) == str(field)]
+            gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
+            g_list.append(eval_gen(pred, gold, threshold=sim_threshold))
+
+            for _, row in qdf[qdf["field"].astype(str) == str(field)].iterrows():
+                iid = str(row["instance_id"])
+                anchors = GOLD_ANCHOR.get(iid, [])
+                if anchors:
+                    r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
+                else:
+                    r_list.append({"recall": np.nan, "mrr": np.nan})
+
+        metrics: Dict[str, Any] = {
+            "doc_id": doc_name,
+            "n_questions": int(len(qdf)),
+            "chunk_count": int(len(chunks)),
+            "pred_map": pred_map,
+
+            "ret_recall": float(np.nanmean([x["recall"] for x in r_list])) if r_list else np.nan,
+            "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])) if r_list else np.nan,
+
+            "gen_fill": float(np.nanmean([x["fill"] for x in g_list])) if g_list else np.nan,
+            "gen_match": float(np.nanmean([x["match"] for x in g_list])) if g_list else np.nan,
+            "gen_sim": float(np.nanmean([x["sim"] for x in g_list])) if g_list else np.nan,
+        }
+
+        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
+        gc.collect()
+        return metrics
+
     def run_single_doc_metrics(
         self,
         doc_path: Path,
@@ -451,23 +475,17 @@ class RAGExperiment:
     ) -> Dict[str, Any]:
         doc_name = unicodedata.normalize("NFC", doc_path.name)
 
-        # 1) 질문 로드: [(type, question), ...]
         queries = get_queries_for_doc(doc_name, self.questions_df)
         q_texts = [q for _t, q in queries]
         type_keys = [t for t, _q in queries]
 
-        # 2) chunk -> index -> retrieve
         chunks = self.chunker.chunk(doc_path)
         index = self.retriever.build_index(chunks)
         idxs = self.retriever.retrieve(index, q_texts, top_k=top_k)
 
-        # 3) context
         context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
-
-        # 4) generate: returns dict {type: answer}
         pred_map = self.generator.generate(queries, context)
 
-        # list answers in the same order as queries (for baseline-like eval)
         answers = [pred_map.get(t, "NOT_FOUND") for t in type_keys]
 
         expected_answer_count = len(q_texts)
@@ -478,11 +496,9 @@ class RAGExperiment:
                 f"expected={expected_answer_count} got={answer_count}"
             )
 
-        # --- evaluation ---
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
 
-        # debug meta
         answers_preview = [str(x) for x in (answers[:5] if answers else [])]
         n_nonempty_answers = int(sum(1 for a in (answers or []) if str(a).strip()))
         n_notfound_answers = int(sum(1 for a in (answers or []) if str(a).strip().lower() in {"notfound", "not_found", "없음"}))
@@ -491,7 +507,6 @@ class RAGExperiment:
         raw_text_len = None if raw_text is None else int(len(str(raw_text).strip()))
         raw_text_preview = None if raw_text is None else str(raw_text)[:200]
 
-        # 5) generation eval
         g_list: List[Dict[str, float]] = []
         preds: List[str] = []
 
@@ -510,7 +525,6 @@ class RAGExperiment:
         n_nonempty_preds = int(sum(1 for p in preds if str(p).strip()))
         n_notfound_preds = int(sum(1 for p in preds if str(p).strip().lower() in {"notfound", "not_found", "없음"}))
 
-        # 6) retrieval eval
         r_list: List[Dict[str, float]] = []
         for _, row in qdf.iterrows():
             iid = str(row["instance_id"])
@@ -522,8 +536,6 @@ class RAGExperiment:
 
         metrics: Dict[str, Any] = {
             "doc_id": doc_name,
-
-            # debug/validation
             "expected_answer_count": int(expected_answer_count),
             "answer_count": int(answer_count),
 
@@ -531,7 +543,6 @@ class RAGExperiment:
             "chunk_count": int(len(chunks)),
             "context_length": int(len(context)),
 
-            # generator debug
             "raw_text_len": raw_text_len,
             "raw_text_preview": raw_text_preview,
             "answers_preview": answers_preview,
@@ -541,8 +552,7 @@ class RAGExperiment:
             "n_nonempty_preds": n_nonempty_preds,
             "n_notfound_preds": n_notfound_preds,
 
-            # NEW: json-style outputs
-            "pred_map": pred_map,  # type->answer dict (원하면 저장/JSON dump에 바로 사용)
+            "pred_map": pred_map,
 
             "ret_recall": float(np.nanmean([x["recall"] for x in r_list])),
             "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])),
@@ -552,8 +562,6 @@ class RAGExperiment:
             "gen_sim": float(np.nanmean([x["sim"] for x in g_list])),
         }
 
-        # cleanup
         del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR, preds, pred_map
         gc.collect()
-
         return metrics
