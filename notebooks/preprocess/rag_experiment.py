@@ -24,9 +24,12 @@ from rapidfuzz import fuzz
 from preprocess.pp_basic import EVAL_DIR
 
 try:
-    from preprocess import pp_v5 as pp
-except ImportError:  # v5 배포 전 백업
-    from preprocess import pp_v4 as pp
+    from preprocess import pp_v6 as pp
+except ImportError:
+    try:
+        from preprocess import pp_v5 as pp
+    except ImportError:  # v5/v6 미배포 전 백업
+        from preprocess import pp_v4 as pp
 
 ALL_DATA = pp.ALL_DATA
 clean_text = pp.clean_text
