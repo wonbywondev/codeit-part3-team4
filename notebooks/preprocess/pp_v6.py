@@ -127,13 +127,14 @@ def _format_table(table: dict) -> str:
     return "\n".join(lines)
 
 
-def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
-    """기존 포맷 청킹 (v4 이하 ALL_DATA 호환)."""
+def _chunk_legacy_records(data: dict, size: int = 800) -> list[dict]:
+    """기존 포맷 청킹 (v4 이하 ALL_DATA 호환) + metadata."""
     pages = data["metadata"]
 
     sections = []
     current_sec = None
     current_parts = []
+    current_page = None
 
     for page in pages:
         sec = page.get("section")
@@ -145,9 +146,11 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
             sec_str = ""
 
         if sec_str != current_sec and current_parts:
-            sections.append((current_sec, "\n".join(current_parts)))
+            sections.append((current_sec, current_page, "\n".join(current_parts)))
             current_parts = []
         current_sec = sec_str
+        if current_page is None:
+            current_page = page.get("page", 0) + 1
 
         parts = []
         if sec_str:
@@ -167,14 +170,27 @@ def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
         current_parts.append("\n".join(parts))
 
     if current_parts:
-        sections.append((current_sec, "\n".join(current_parts)))
+        sections.append((current_sec, current_page, "\n".join(current_parts)))
 
-    chunks = []
-    for sec_name, sec_text in sections:
+    records = []
+    for sec_name, sec_page, sec_text in sections:
         for i in range(0, len(sec_text), size):
-            chunks.append(sec_text[i:i + size])
+            records.append(
+                {
+                    "content": sec_text[i:i + size],
+                    "metadata": {
+                        "section_path": sec_name or "",
+                        "page": sec_page or 0,
+                        "source": "legacy",
+                    },
+                }
+            )
 
-    return chunks
+    return records
+
+
+def _chunk_legacy(data: dict, size: int = 800) -> list[str]:
+    return [r["content"] for r in _chunk_legacy_records(data, size)]
 
 
 _TABLE_TITLE_PATTERN = re.compile(r"(별표\s*\d+|표\s*\d+(?:[.\-]\d+)*)")
@@ -218,8 +234,8 @@ def _find_table_title(items: list[dict], anchor_idx: int, page: int) -> str:
     return ""
 
 
-def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
-    """Docling 포맷 의미 기반 청킹: section_path + 표 복원."""
+def _chunk_docling_records(items: list[dict], size: int = 800) -> list[dict]:
+    """Docling 포맷 의미 기반 청킹: section_path + 표 복원 + metadata."""
 
     # 1) 표 복원: table_id별로 행을 합침
     tables = {}
@@ -279,6 +295,7 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     segments = []
     current_path = None
     current_parts = []
+    current_meta = None
 
     for item in all_items:
         content = item.get("content", "").strip()
@@ -298,16 +315,29 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
 
         # section_path 전환 → 새 세그먼트
         if path != current_path and current_parts:
-            segments.append("\n".join(current_parts))
+            segments.append({"content": "\n".join(current_parts), "metadata": current_meta or {}})
             current_parts = []
+            current_meta = None
         current_path = path
 
         if is_table_block:
             # 표는 본문과 합치지 않고 독립 세그먼트로 유지
             if current_parts:
-                segments.append("\n".join(current_parts))
+                segments.append({"content": "\n".join(current_parts), "metadata": current_meta or {}})
                 current_parts = []
-            segments.append(content)
+                current_meta = None
+            segments.append(
+                {
+                    "content": content,
+                    "metadata": {
+                        "section_path": meta.get("section_path", "") or "",
+                        "page": page,
+                        "label": "table",
+                        "type": "table",
+                        "table_id": meta.get("table_id"),
+                    },
+                }
+            )
             continue
 
         # section_header는 제목으로 표시
@@ -315,14 +345,22 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
             current_parts.append(f"\n## {content} (p.{page})")
         else:
             current_parts.append(_clean_text(_fix_line_break_splits(content)))
+        if current_meta is None:
+            current_meta = {
+                "section_path": path,
+                "page": page,
+                "label": label,
+                "type": meta.get("type", "text"),
+            }
 
     if current_parts:
-        segments.append("\n".join(current_parts))
+        segments.append({"content": "\n".join(current_parts), "metadata": current_meta or {}})
 
 
     # 4) 세그먼트 → 청크 
-    chunks = []
+    chunk_records = []
     buffer = ""
+    buffer_meta = None
 
     # # 4.1) 작은 건 합치고, 큰 건 분할
     # for seg in segments:
@@ -352,35 +390,46 @@ def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
 
 
     # 4.3) 표는 항상 독립 청크, 텍스트만 문장 경계 분할
-    for seg in segments:
+    for seg_item in segments:
+        seg = seg_item["content"]
+        seg_meta = seg_item.get("metadata", {})
         if seg.startswith("[표]"):
             if buffer:
-                chunks.append(buffer.strip())
+                chunk_records.append({"content": buffer.strip(), "metadata": buffer_meta or {}})
                 buffer = ""
-            chunks.append(seg.strip())
+                buffer_meta = None
+            chunk_records.append({"content": seg.strip(), "metadata": seg_meta})
             continue
 
         if len(buffer) + len(seg) + 1 <= size:
             buffer = f"{buffer}\n{seg}" if buffer else seg
+            if buffer_meta is None:
+                buffer_meta = seg_meta
         else:
             if buffer:
-                chunks.append(buffer.strip())
+                chunk_records.append({"content": buffer.strip(), "metadata": buffer_meta or {}})
+                buffer_meta = None
 
             if len(seg) <= size * 2:
                 # 표이거나 size의 2배 이내면 통째로
-                chunks.append(seg.strip())
+                chunk_records.append({"content": seg.strip(), "metadata": seg_meta})
                 buffer = ""
             else:
                 # 긴 텍스트만 문장 단위 분할
                 sub_chunks = _chunk_by_sentence(seg, size)
-                chunks.extend(sub_chunks)
+                for sub in sub_chunks:
+                    chunk_records.append({"content": sub, "metadata": seg_meta})
                 buffer = ""
 
 
     if buffer:
-        chunks.append(buffer.strip())
+        chunk_records.append({"content": buffer.strip(), "metadata": buffer_meta or {}})
 
-    return chunks
+    return chunk_records
+
+
+def _chunk_docling(items: list[dict], size: int = 800) -> list[str]:
+    return [r["content"] for r in _chunk_docling_records(items, size)]
 
 
 def _chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[str] | None:
@@ -397,6 +446,18 @@ def _chunk_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[
     if isinstance(data, dict) and "metadata" in data:
         return _chunk_legacy(data, size)
 
+    return None
+
+
+def _chunk_records_from_alldata(doc_name: str, all_data: dict, size: int = 800) -> list[dict] | None:
+    if doc_name not in all_data:
+        return None
+
+    data = all_data[doc_name]
+    if isinstance(data, list) and len(data) > 0 and "content" in data[0]:
+        return _chunk_docling_records(data, size)
+    if isinstance(data, dict) and "metadata" in data:
+        return _chunk_legacy_records(data, size)
     return None
 
 
@@ -423,15 +484,17 @@ def gen_input(doc_path, embed_model):
     return index, chunks
 
 
-def show_sample(docs, n=5, show_table_summary=True):
+def show_sample(docs, n=5, show_table_summary=True, show_metadata=True):
     """디버깅용: 첫 문서의 청크 샘플 출력."""
     test_name = docs[0].name
-    chunks_test = _chunk_from_alldata(test_name, ALL_DATA)
+    chunk_records = _chunk_records_from_alldata(test_name, ALL_DATA)
+    chunks_test = [r.get("content", "") for r in chunk_records] if chunk_records is not None else None
 
     if chunks_test is None:
         text = _fix_line_break_splits(_extract_text(docs[0]))
         text = _clean_text(text)
         chunks_test = _chunk_by_sentence(text)
+        chunk_records = [{"content": c, "metadata": {}} for c in chunks_test]
 
     print(f"문서: {test_name}")
     print(f"총 청크 수: {len(chunks_test)}")
@@ -448,6 +511,16 @@ def show_sample(docs, n=5, show_table_summary=True):
 
     for i in range(min(n, len(chunks_test))):
         print(f"\n=== 청크 {i} ({len(chunks_test[i])}자) ===")
+        if show_metadata and chunk_records is not None and i < len(chunk_records):
+            meta = chunk_records[i].get("metadata", {}) or {}
+            section_path = meta.get("section_path", "")
+            page = meta.get("page", "")
+            label = meta.get("label", "")
+            table_id = meta.get("table_id", "")
+            print(
+                f"[meta] section_path={section_path} | page={page} | "
+                f"label={label} | table_id={table_id}"
+            )
         print(chunks_test[i])
 
 
@@ -457,6 +530,7 @@ __all__ = [
     "fix_line_break_splits",
     "extract_text",
     "chunk_from_alldata",
+    "chunk_records_from_alldata",
     "chunk_docling",
 ]
 
@@ -469,8 +543,37 @@ def fix_line_break_splits(text: str) -> str:
 def extract_text(pdf_path: Path | str) -> str:
     return _extract_text(pdf_path)
 
-def chunk_from_alldata(doc_name: str, size: int = 800) -> list[str] | None:
-    return _chunk_from_alldata(doc_name, ALL_DATA, size)
+def _attach_meta_prefix(content: str, meta: dict) -> str:
+    section_path = str(meta.get("section_path", "") or "").strip()
+    page = meta.get("page", "")
+    label = str(meta.get("label", "") or "").strip()
+    table_id = meta.get("table_id", None)
+
+    tags = []
+    if section_path:
+        tags.append(f"section_path={section_path}")
+    if page != "":
+        tags.append(f"page={page}")
+    if label:
+        tags.append(f"label={label}")
+    if table_id is not None:
+        tags.append(f"table_id={table_id}")
+    if not tags:
+        return content
+    return f"[meta] {' | '.join(tags)}\n{content}"
+
+
+def chunk_from_alldata(doc_name: str, size: int = 800, include_meta: bool = False) -> list[str] | None:
+    if not include_meta:
+        return _chunk_from_alldata(doc_name, ALL_DATA, size)
+
+    records = _chunk_records_from_alldata(doc_name, ALL_DATA, size)
+    if records is None:
+        return None
+    return [_attach_meta_prefix(r.get("content", ""), r.get("metadata", {})) for r in records]
+
+def chunk_records_from_alldata(doc_name: str, size: int = 800) -> list[dict] | None:
+    return _chunk_records_from_alldata(doc_name, ALL_DATA, size)
 
 def chunk_docling(items: list[dict], size: int = 800) -> list[str]:
     return _chunk_docling(items, size)
