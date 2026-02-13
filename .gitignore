@@ -220,3 +220,13 @@ uv copy.lock
 pyproject copy.toml
 notebooks/edit_all_search_index_json.ipynb
 outputs/
+data/ALL_DATA_v5_mac.json
+data/raw/eval/gold_evidence.csv
+data/raw/eval/gold_fields.jsonl
+data/raw/eval/questions.csv
+data/raw/eval/gold_evidence.csv
+data/raw/eval/gold_fields.jsonl
+data/raw/eval/questions.csv
+data/raw/eval/gold_evidence.csv
+data/raw/eval/gold_fields.jsonl
+data/raw/eval/questions.csv
