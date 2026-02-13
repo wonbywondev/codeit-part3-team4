@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "대한적십자사 의료원",
+  "purpose": "병원 정보의 재해복구 체계 부재 해소 및 진료연속성 확보를 위한 재해복구 시스템 구축",
+  "budget": "500000000",
+  "contract_type": "제한경쟁 , 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "6 개월",
+  "requirements_must": "시스템 장비 구성 요구사항, 기능 요구사항, 성능 요구사항, 인터페이스 요구사항, 데이터 요구사항, 테스트 요구사항, 보안 요구사항, 품질 요구사항, 제약사항, 프로젝트 관리 요구사항, 프로젝트 지원 요구사항에 관한 충족",
+  "eval_items": "기술 요구사항, 가격 요구사항 및 기타 제약사항에 따른 평가",
+  "price_eval": "협상에 의한 평가",
+  "eligibility": "입찰 참가자는 경쟁 입찰 자격을 갖춘 자, 부정당업자 제재를 받지 않은 업체, 20억원 미만 사업에 따른 중소 소프트웨어사업자 지침 준수",
+  "scope_custom": "재해복구시스템 구축, 데이터베이스 마이그레이션, 재해복구 절차 교육 및 지원",
+  "target_hospitals": "주 센터: 서울적십자병원; 재해복구센터: 서울적십자병원(재해복구센터 설치)",
+  "hw_spec": "데이터베이스 서버 1식, DBMS 4식, 데이터복제 SW 12식",
+  "replication_qty": "12 식",
+  "install_location": "주센터 및 재해복구센터 설치",
+  "migration_requirement": "데이터베이스 이관 시 주센터 이관 및 DBMS 버전 업그레이드 반영, 실시간 복제 구성",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "상호출자제한기업월 1회 이상 보안 점검 의무",
+  "availability": "도입 장비의 가용성 보장 요구사항, 24시간 무중단 운영 포함"
+}

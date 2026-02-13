@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path.cwd().parent  # /codeit-part3-team4
+BASE_DIR = Path(__file__).resolve().parents[2]  # /codeit-part3-team4
 RAW_DIR = BASE_DIR / "data/raw/files"  # 수정된 경로
 DATA_DIR = BASE_DIR / "data"  # 수정된 경로
 EVAL_DIR = BASE_DIR / "data/raw/eval"

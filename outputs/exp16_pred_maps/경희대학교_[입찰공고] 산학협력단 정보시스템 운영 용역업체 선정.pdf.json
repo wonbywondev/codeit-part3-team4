@@ -1,0 +1,23 @@
+{
+  "project_name": "산학협력단 정보시스템 운영 용역업체 선정",
+  "agency": "경희대학교 산학협력단",
+  "purpose": "정보시스템 운영 효율화 및 안정적인 서비스 제공을 위한 시스템의 최적상태 유지 및 장애/사고 대응",
+  "budget": "400000000",
+  "contract_type": "협상에 의한 계약 ( 기술평가 + 가격평가 )",
+  "deadline": "NOT_FOUND",
+  "duration": "2024.04.30 ~ 2026.04.30 ( 1 차년도 2025.04.30, 2 차년도 2026.04.30 )",
+  "requirements_must": "정보시스템 운영 및 유지관리; 인포 21 연구행정시스템 및 공통관리시스템 연계 포함; 데이터 보안성 및 정확성, UI/기능 개선",
+  "eval_items": "기술평가 + 가격평가",
+  "price_eval": "협상에 의한 계약",
+  "eligibility": "제안참가자격: 경희대학교 산학협력단의 제안요청에 이의 없음 확인, 유자격자 및 하도급 불허",
+  "project_phases": "1 차년도 계약체결일 ~ 2025.04.30, 2 차년도 2025.05.01 ~ 2026.04.30; 1 차년도 평가에 따라 2 차년도 계속진행 여부 결정",
+  "NaN": "NOT_FOUND",
+  "incident_response": "문의사항: 031-201-3529",
+  "key_personnel_qualification": "PM/PL 자격 요건은 제안요청서에 따라 명시될 예정",
+  "post_contract_security": "계약 종료 후 보안 조치는 제안요청서 및 계약 조건에 따름(구체 내용 미기재)",
+  "continuous_operation_requirement": "NOT_FOUND",
+  "bid_invalid_conditions": "입찰참가자격 및 임의의 이의 여부 확인, 공동수급 불허",
+  "work_location": "NOT_FOUND",
+  "personal_pc_usage_allowed": "NOT_FOUND",
+  "bid_inquiry_contact": "산학협력단 경영지원 팀 조재형 선임 [031-201-3529], 제안서 관련 문의 조규호 [031-201-3560 / khcho@khu.ac.kr]"
+}

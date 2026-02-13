@@ -1,0 +1,23 @@
+{
+  "project_name": "2025 구미아시아육상경기선수권대회 종합정보시스템 및 홈페이지 등 구축 용역",
+  "agency": "구미아시아육상경기선수권대회 조직위원회",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "조달청 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "발주처가 현재 운영 중인 시스템(서버, 네트워크, 상용솔루션을 포함한 SW등)을 활용하여 구축해야 하며, 필요시 기존 자원 재조정 및 재설치 작업을 수행해야 함",
+  "eval_items": "정성평가 70점(세부: 사업이해도, 전략 및 방법론, 기술능력 등), 가격평가 10점, 정량평가 20점(사업수행실적 등)",
+  "price_eval": "입찰가격 평가식(예정가격의 80% 이상: 배점한도×(최저입찰가격/해당입찰가격), 80% 미만 별도식 적용)",
+  "eligibility": "최근 3년간 관련 용역 수행실적 및 신용평가등급 등 증빙서류 제출(사업수행실적 증빙서류 첨부)",
+  "system_function": "NOT_FOUND",
+  "system_interface": "발주처 시스템 환경에 적합하게 개발 및 보유 보안장비와 연계",
+  "nan": "NOT_FOUND",
+  "operation_staff": "NOT_FOUND",
+  "staffing": "10명 이상 등 인원수에 따른 평가(배점 기준 제시)",
+  "security": "정보누출금지대상 정보 누출금지, 개인정보보호 및 데이터 암호화, 보안정책 및 지침 준수, 수행업체 보안 준수사항",
+  "performance": "평균 응답 시간 요구사항 항목 존재(PER-002)",
+  "maintenance": "하자 및 유지보수(요구사항 존재, 기간명시 없음)",
+  "eligibility_large_company": "NOT_FOUND",
+  "subcontracting_policy": "NOT_FOUND"
+}

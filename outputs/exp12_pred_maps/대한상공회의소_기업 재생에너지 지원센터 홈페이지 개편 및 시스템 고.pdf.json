@@ -1,0 +1,23 @@
+{
+  "project_name": "기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화 사업",
+  "agency": "NOT_FOUND",
+  "purpose": "재생에너지 거래를 위한 수요기업과 공급기업간 매칭시스템 고도화 • ‘기업 재생에너지 지원센터’ 사업 홍보 및 홈페이지 콘텐츠 보강",
+  "budget": "57000000",
+  "contract_type": "일반경쟁입찰에 의한 우선협상대상자 선정 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 6개월 이내",
+  "requirements_must": "개인정보보호 요구사항 준수; 시스템 사용, 유지보수 및 지원; 콘텐츠 추가‧보강; 홈페이지 디자인 개선; 관리자 기능 강화 및 통계 시스템 구축",
+  "eval_items": "구매자 및 판매자 정보 통계, 구매/판매 수요 물량 정보 통계, 매칭 후 계약 절차진행 현황 통계 등; 각 메뉴 이용에 대한 데이터 관리 및 통계분석 기능; 보고서 출력 기능",
+  "price_eval": "최저가/협상 등",
+  "eligibility": "SFR/PER/DAR/SER 등 요구사항 및 기술평가점수 반영; 우선협상대상자 요건 85점 이상(100점 만점 기준)",
+  "matching_enhancement": "REC/PPA 선택에 따른 세부 입력 메뉴 개발; 채팅/댓글 등의 소통 창구 마련; 매칭 후 거래 진행 상태 표출; 재생에너지 계약 지원 콘텐츠 업로드 게시판 신설",
+  "self_diagnosis": "재생에너지 사용 자가진단 툴 온라인 구현; 자가진단 결과 화면 디자인 고도화; 오류 수정(창 축소 시 보이지 않는 부분 등)",
+  "response_time": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "admin_statistics": "재생에너지 매칭 지원 게시판 통계 구축; 데이터 관리 및 통계분석 기능; 보고서 출력 기능; DB 구축 및 업데이트",
+  "privacy_protection": "개인정보보호 요구사항 준수; SER-002 보안 관리 관련 항목 포함",
+  "web_standards": "NOT_FOUND",
+  "maintenance_support": "시스템 사용, 유지보수 및 지원; 유지보수는 1년",
+  "content_enhancement": "메인페이지 공시정보 추가‧확대(REC 거래가격, RPS REC 거래가격, LCOE, SMP, 산업용 전기요금, 배출권가격 정보 등); 공급망 재생e사용요구 관련 게시판 신설; 컨설팅 우수사례 게시판 신설; 자료실 게시판 및 동영상 업로드 기능 추가",
+  "security_penalty": "NOT_FOUND"
+}

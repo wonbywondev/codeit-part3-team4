@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "나노종합기술원",
+  "purpose": "나노 반도체 국가 성장 동력 강화를 위한 나노 반도체 생태계 혁신기반 마련 및 나노 반도체 공정/장비 데이터의 공공 데이터화 및 데이터 활용 기반 마련",
+  "budget": "2,349,130,320 원 (VAT포함)",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "보안정책 및 가이드라인 준수; 사용자인증 및 개인정보보호; 시스템 접근 및 권한관리; 자료 보안관리; 전송 및 구간 암호화; 소프트웨어 개발보안(시큐어 코딩) 준수",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "기술원 보유 장비 설비온라인 시스템, 분석장비 분석결과 파일 관리, 공정관리시스템 연계 인터페이스, 연계 데이터 모니터링 개선, 연계 장애시 오류 처리 등",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "1차 오픈(2024. 9월 까지): SECS/GEM 대상 장비의 기본 온라인화 완료; 2차 오픈(사업종료 전까지): SECS/GEM 대상 장비의 안정화 및 PC-File 대상 장비의 온라인화 완료",
+  "lot_tracking": "Carrier ID 인식 장치(BCAR)를 통한 LoT Tracking 관련 내용은 CONTEXT에 명시적 기능 설명 없음; 다만 LoT Tracking 온라인 환경 구현 포함",
+  "subcontract_limit": "하도급 관리(관련 있음) — 구체 퍼센트 수치는 CONTEXT에 없음",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "평균 응답시간(PER-002) 요구사항 존재 — 구체 수치는 CONTEXT에 없음",
+  "security_encryption": "전송 및 구간 암호화 및 암호자재·정보보호시스템 도입·운용 현황 요구",
+  "interface_method": "공정관리시스템 연계 인터페이스(INR-001) 및 연계 데이터 모니터링 개선(INR-002), 연계시스템 연동 테스트 수행",
+  "maintenance_rate": "NOT_FOUND"
+}

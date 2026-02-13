@@ -1,0 +1,14 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁, 협상에 의한 계약체결 기준 적용",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "요구사항 총괄표, 기능 요구사항, 성능 요구사항, 시스템 인터페이스 요구사항, 데이터 요구사항, 테스트 요구사항, 보완 요구사항, 품질 요구사항, 제약사항, 프로젝트관리 요구사항, 프로젝트 지원 요구사항",
+  "eval_items": "정량적 평가 및 정성적 평가 항목, 소프트웨어 기술 평가 및 가격 평가, 종합 평가 점수 산출 방식",
+  "price_eval": "가격 평가 방식 협상에 의한 계약 체결 기준에 따라 시행",
+  "eligibility": "입찰 참가 자격은 제안 자격 요건에 따라 공단의 자격 요건 충족 필요",
+  "fact": "제안요청 내용(요구사항 표, 개발요청, 테스트 요구사항 등) 및 보안·공개 관련 지침 준수"
+}

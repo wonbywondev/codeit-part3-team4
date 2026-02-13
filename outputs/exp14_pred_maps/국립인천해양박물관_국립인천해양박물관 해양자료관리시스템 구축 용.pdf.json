@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "협상에 의한 계약(기술평가90% + 가격평가10%)",
+  "eligibility": "NOT_FOUND",
+  "system": "NOT_FOUND",
+  "security": "보안관제 연계를 위해 위협탐지 결과를 VPN 등을 이용하여 해양수산사이버안전, 중간보고, 완료보고",
+  "data": "NOT_FOUND",
+  "function": "소장자료DB를 엑셀(xlsx), 한글(hwp), PDF 등의 출력물로 변환이 가능한 시스템 구축",
+  "access_control": "NOT_FOUND",
+  "audit": "NOT_FOUND",
+  "search": "NOT_FOUND",
+  "governance": "정기보고 : 주간보고, 단계별 보고 : 착수보고 : 제한경쟁입찰(협상에 의한 계약)",
+  "qa": "NOT_FOUND",
+  "deliverable": "착수계, 착수보고서, 계약직후 10일 이내, 사업수행계획서, 서약서 및 각서 등, 착수계 제출시, [별표5~10], 기술적용계획표, 착수계 제출시, [자유양식], 정기 및 주간보고서, 주 1회(서면보고), 수시보고서, 수시 보고사항 발생시, 시험결과보고서, 테스트 후 14일 이내, 완료계, 완료보고서, 용역 완료일까지, 기술적용결과표, 완료계 제출시 인쇄물, 완료보고서 [자유양식], 산출물 보안 확약서, 완료계 제출시 USB 저장파일, [별표9], 운영자 매뉴얼, 검수완료 후 10일 이내, 사용자 매뉴얼"
+}

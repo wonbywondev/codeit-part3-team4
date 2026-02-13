@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화 사업",
+  "agency": "경상북도 봉화군",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약체결",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "프로젝트 관리방법론(품질보증 방안, 프로젝트관리, 진행방법 및 절차, 산출물 등), 산출물 제출(보안서약서 등), 원격지 개발 시 보안요구사항 충족",
+  "eval_items": "기술능력평가 제안서 등 기술평가 항목 존재(제안서 평가 기준 별도 명시)",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "소프트웨어사업자(업종코드:1468), 정보통신공사업(업종코드:0036), 중소기업 또는 소상공인(중소기업확인서 보유), 직접생산증명서(정보시스템개발서비스, 동보장치)",
+  "legal_basis": "지방자치단체를 당사자로 하는 계약에 관한 법률 시행령 제43조 및 44조, 동법 시행령 제13조 등",
+  "blind_spot_solution": "NOT_FOUND",
+  "security_policy": "관리적·물리적 분야 전반의 보안대책 수립, 인원·문서·장비 보안관리 계획 수립, 누출금지 대상정보 보호 및 관련법령(국가 정보보안 기본지침 등) 준수",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "NOT_FOUND",
+  "subcontracting_policy": "하도급 및 공동수급 허용(공동수급은 대표사 포함 5개 이하, 구성원별 최소지분율 5% 이상)",
+  "remote_control_target": "NOT_FOUND",
+  "mobile_app_viewable_results": "NOT_FOUND",
+  "task_start_deadline_after_contract": "계약 후 14일 이내에 사업수행계획서 제출(착수계 제출)",
+  "required_documents_for_execution": "계약시 제출 각종 보안서약서, 계약후 14일 이내 사업수행계획서, 착수보고서 및 보안서약서 등 산출물(보안확약서 포함)"
+}

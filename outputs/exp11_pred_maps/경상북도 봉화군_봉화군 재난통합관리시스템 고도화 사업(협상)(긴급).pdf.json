@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화 사업",
+  "agency": "봉화군(안전건설과)",
+  "purpose": "인명 및 재산 피해를 최소화하고 군민의 안전을 도모하기 위함; 재난통합관리시스템을 고도화하여 다양한 재난 관련 정보를 수집, 통합관리 및 운영",
+  "budget": "900,000,000원(부가세 포함)",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "착수일로부터 7개월(210일)",
+  "requirements_must": "본 사업 수행도중 발생하는 제반안전사고의 책임 및 행정적·기술적 제반 비용과 문제처리는 제안사가 부담; 제안서에 기재된 기술자는 관련 자격사항 포함; 계약 후 14일 이내 사업수행계획서 작성·제출; 과업 완료 후 1년 이내 하자 발생 시 수정·보완",
+  "eval_items": "정량적 제안서 항목: 경영상태(기업신용평가등급), 사업수행실적(실적 증명서), 보유기술인력(참여기술인력 현황), 사회적 책임·성실성 등",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "소프트웨어사업자(컴퓨터관련 서비스사업, 업종코드:1468), 정보통신공사업(업종코드:0036), 입찰일 전일까지 나라장터 입찰참가자격 등록 필수, 중소기업제품 직접생산증명서(정보시스템개발서비스 및 동보장치)",
+  "legal_basis": "｢재난 및 안전관리기본법｣ 제38조의2; ｢지방자치단체를 당사자로 하는 계약에 관한 법률 시행령｣ 제43조 및 44조; ｢지방자치단체를 당사자로 하는 계약에 관한 법률｣ 시행령 제13조 및 시행규칙 제14조",
+  "blind_spot_solution": "NOT_FOUND",
+  "security_policy": "NOT_FOUND",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "NOT_FOUND",
+  "subcontracting_policy": "본 사업은 하도급을 불허함",
+  "remote_control_target": "NOT_FOUND",
+  "mobile_app_viewable_results": "NOT_FOUND",
+  "task_start_deadline_after_contract": "계약 후 14일 이내에 사업수행계획서 작성·제출 (관련 조치 요구됨)",
+  "required_documents_for_execution": "계약서, 제안요청서, 제안서, 사업수행계획서; 사업수행 실적 증명서; 참여기술인력 현황; 기업신용평가등급 확인서; 중소기업제품 직접생산증명서 (해당 시)"
+}

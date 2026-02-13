@@ -1,0 +1,23 @@
+{
+  "project_name": "KUSF 체육특기자 경기기록 관리시스템 개발",
+  "agency": "한국대학스포츠협의회 (KUSF)",
+  "purpose": "체육특기자 대입 선발 관련 객관적인 지표를 제공하여 입시 공정성 확보 및 경기력을 평가할 수 있는 자료 제공",
+  "budget": "1 억 5 천만 원",
+  "contract_type": "협상에 의한 계약체결 기준 준용 및 제안서 제출 방식은 온라인 제출, 오프라인 평가",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결 후 2024년 12월 31일 까지",
+  "requirements_must": "서비스 개인정보 관련 데이터 관리 및 정보보안 지원, 서비스 인프라 환경 관리, 오류 모니터링 및 수정, 시스템 운영 기술지원",
+  "eval_items": "기술능력평가 및 가격평가; 기술능력평가 90% / 가격평가 10%",
+  "price_eval": "협상에 의한 계약체결 기준에 따라 기술능력평가 점수와 가격평가 점수를 합산",
+  "eligibility": "NOT_FOUND",
+  "presentation": "제안서 발표회 진행; 발표자는 PM이 발표하는 것을 원칙으로 하며 발표자료를 PDF로 제출",
+  "presentation_time": "약 20분 발표 및 20분 질의응답",
+  "NaN": "NOT_FOUND",
+  "performance_evaluation_metrics": "경기력 합성지표 및 산출변수에 가중치를 부여한 지표 구성; 경기력 평가지표 구성 요소 정의 및 산출지표",
+  "proposal_writing_guidelines": "제안서는 제안서 제출 메뉴얼에 따라 온라인 제출; 기명/무기명 파일 구성 및 관련 서류 제출",
+  "working_hours": "NOT_FOUND",
+  "staff_change_policy": "NOT_FOUND",
+  "deliverable_copyright": "NOT_FOUND",
+  "deliverables": "인터페이스 정의서, 프로세스 정의서, 엔티티 목록 및 정의서, 테이블 목록 및 정의서, 데이터 코드 목록",
+  "organization_founding_year": "NOT_FOUND"
+}

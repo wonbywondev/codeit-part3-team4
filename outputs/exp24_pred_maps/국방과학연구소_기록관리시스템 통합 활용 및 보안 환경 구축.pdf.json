@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "입찰공고문 참조",
+  "contract_type": "제한공개경쟁입찰 / 협상에 의한 계약체결",
+  "deadline": "NOT_FOUND",
+  "duration": "사업기간 : 계약일로부터 7개월 이내",
+  "requirements_must": "권한체계 구현; 감사증적 기능 구현; 부가 기능 구현; 기록관리시스템 이용자 페이지 전면 개편 및 기록물 이관/평가 기능",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "as_is": "연구소 기록관리시스템 운영 ~2023 및 2024년 통합/이전/취합 완료",
+  "goal": "NOT_FOUND",
+  "scope": "NOT_FOUND",
+  "search": "NOT_FOUND",
+  "viewer": "문서 뷰어 구현; 영상 뷰어 구현",
+  "access_control": "권한체계 구현",
+  "audit": "감사증적 기능 구현",
+  "monitoring": "NOT_FOUND",
+  "security_effect": "NOT_FOUND",
+  "follow_up": "NOT_FOUND"
+}

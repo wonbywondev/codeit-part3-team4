@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "대한적십자사 의료원",
+  "purpose": "적십자병원 병원정보 재해복구시스템 구축",
+  "budget": "500,000,000 원",
+  "contract_type": "제한경쟁 , 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "데이터베이스 서버, DBMS, 데이터복제 솔루션 등 시스템 구성 및 설치, 재해복구센터 설치, 보안 및 안정성 요구사항 반영",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "가격 10% 및 기술 90% 구성",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "재해복구시스템 구축, 데이터베이스 마이그레이션, 재해복구 절차 교육 및 지원",
+  "target_hospitals": "NOT_FOUND",
+  "hw_spec": "NOT_FOUND",
+  "replication_qty": "데이터복제 솔루션 도입 12식",
+  "install_location": "주 센터 및 재해복구센터 설치",
+  "migration_requirement": "데이터베이스 이관 시 업무중단 최소화 방안 요구",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "보안 요구사항 포함",
+  "availability": "NOT_FOUND"
+}

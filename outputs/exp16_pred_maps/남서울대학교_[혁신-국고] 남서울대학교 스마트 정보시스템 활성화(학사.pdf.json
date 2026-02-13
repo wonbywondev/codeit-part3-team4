@@ -1,0 +1,23 @@
+{
+  "project_name": "혁신 - 국고 스마트 정보시스템 활성화 ( 학사행정 암호화 )",
+  "agency": "발주기관 정보 미상",
+  "purpose": "학사행정 암호화 시스템 개발 및 보안 준수사항 제시",
+  "budget": "70,000,000 원 (VAT 포함 )",
+  "contract_type": "협상에 의한 계약 ( 제한경쟁입찰 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 3 개월",
+  "requirements_must": "본 사업의 보안 요구사항 및 암호화 관련 가이드 준수, 제안요청 내용의 충실한 반영, 전자정부지 원사업 관리방안 준수 등",
+  "eval_items": "제안요청서에 명시된 검토 기준 및 조견표를 통한 평가",
+  "price_eval": "협상에 의한 계약 방식에 따른 평가",
+  "eligibility": "공개된 자격 요건은 제시되지 않음",
+  "scope": "학사행정 암호화 소프트웨어 개발 및 관련 산출물",
+  "encryption_target": "학사행정 암호화 대상 및 관련 문서/시스템",
+  "security_requirements": "암호화 솔루션 적용 및 보안 준수 사항, 암호화 가이드 준수",
+  "file_encryption_method": "암호화/복호화 처리 방식에 대한 상세 기술은 제시되지 않음",
+  "warranty_period": "NOT_FOUND",
+  "subcontract_policy": "하도급 제한 및 관련 제약사항(COR-009 등) 명시",
+  "joint_bidding": "공동수급 허용 여부 NOT_FOUND",
+  "deliverables": "정보화사업 산출물 및 사용자 지침서 등 디지털 형태로 제작/관리",
+  "project_manager_requirement": "PMR-001 등 프로젝트 관리 조직 요건 명시",
+  "testing_requirements": "시스템 시험 및 품질보증 계획 포함"
+}

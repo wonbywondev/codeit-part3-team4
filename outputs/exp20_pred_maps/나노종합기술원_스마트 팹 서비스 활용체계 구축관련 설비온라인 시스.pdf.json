@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "budget": "2349130320",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "18개월",
+  "requirements_must": "SECS/ Non-SECS Data 수집 및 로트 트래킹, Carrier ID 인식 장치 설계/설치/인터페이스, HMI/ SECS/ PLC 통신 프로토콜 및 데이터 수집 체계 구축, 공정관리시스템 연계 포함",
+  "eval_items": "기술/가격 평가 항목 구성에 대한 구체적 언급은 CONTEXT에 명시되어 있지 않으므로 NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역; SECS/Non-SECS 데이터 수집, LoT Tracking, CarrierID 인식 장치 및 인터페이스 구축, HMI 및 데이터 연계, 미래 설비자동화 및 데이터 분석 모델 설계 포함",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "NOT_FOUND",
+  "lot_tracking": "Carrier ID 인식 장치(BCAR)를 통한 LoT Tracking의 주요 기능은 설비 간 Carrier 인식 및 공정 이동/투입/완료 데이터 수집과 MES 연계",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "NOT_FOUND",
+  "interface_method": "공정관리시스템과의 데이터 연계 방식은 인터페이스 구축 및 데이터 수집 체계 마련",
+  "maintenance_rate": "NOT_FOUND"
+}

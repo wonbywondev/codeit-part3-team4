@@ -33,16 +33,16 @@ D002_X008,X008,"(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비�
 D002_X009,X009,"(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.pdf",협상 적격자는 어떤 기준으로 선정되는가?,negotiation_criteria
 D002_X010,X010,"(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.pdf",보안/개인정보 요구사항(인증/ISMS 등)은 무엇인가?,security
 
-D003_X001,X001,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",제안 발표(PT/발표평가)가 있는가?,presentation
-D003_X002,X002,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",발표 시간 및 질의응답 시간은 얼마나 주어지는가?,presentation_time
-D003_X003,X003,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",KUSF 회원은 몇 개의 대학교가 있는가?kusf_member_university_count
-D003_X004,X004,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",체육특기자 경기력 평가지표의 구성은 어떻게 되는가?,performance_evaluation_metrics
-D003_X005,X005,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",제안서 작성시 주의사항은 무엇인가?,proposal_writing_guidelines
-D003_X006,X006,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",계약시 근무시간은 어떻게 되나?,working_hours
-D003_X007,X007,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",투입 인력 변경사항에 해서는 어떻게 진행되는가?,staff_change_policy
-D003_X008,X008,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",산출물의 저작권은 어떻게 되는가?,deliverable_copyright
-D003_X009,X009,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",산출물은 어떤게 있을까?,deliverables
-D003_X010,X010,"(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",KUSF의 설립 연도는?,organization_founding_year
+D003_X001,X001,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",제안 발표(PT/발표평가)가 있는가?,presentation
+D003_X002,X002,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",발표 시간 및 질의응답 시간은 얼마나 주어지는가?,presentation_time
+D003_X003,X003,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",KUSF 회원은 몇 개의 대학교가 있는가?kusf_member_university_count
+D003_X004,X004,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",체육특기자 경기력 평가지표의 구성은 어떻게 되는가?,performance_evaluation_metrics
+D003_X005,X005,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",제안서 작성시 주의사항은 무엇인가?,proposal_writing_guidelines
+D003_X006,X006,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",계약시 근무시간은 어떻게 되나?,working_hours
+D003_X007,X007,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",투입 인력 변경사항에 해서는 어떻게 진행되는가?,staff_change_policy
+D003_X008,X008,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",산출물의 저작권은 어떻게 되는가?,deliverable_copyright
+D003_X009,X009,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",산출물은 어떤게 있을까?,deliverables
+D003_X010,X010,"(사）한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.pdf",KUSF의 설립 연도는?,organization_founding_year
 
 D004_X001,X001,"(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.pdf",심사일은 언제인가?,evaluation_date
 D004_X002,X002,"(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.pdf",한국 미술시장 정보 시스템의 주소는?,system_url

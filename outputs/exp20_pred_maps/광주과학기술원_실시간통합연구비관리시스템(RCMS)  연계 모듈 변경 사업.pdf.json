@@ -1,0 +1,21 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "광주과학기술원",
+  "purpose": "NOT_FOUND",
+  "budget": "54450000",
+  "contract_type": "제한경쟁 입찰 ( 협상에 의한 계약 체결",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 3 개월 이내",
+  "requirements_must": "부가세 연구과제 전송 개선, ZEUS-RCMS 연계 모듈 변경 및 기능 개선, RCMS 와의 직접 연계를 통한 업무 편의성",
+  "eval_items": "평가항목 및 평가기준은 표에 기재되어 있으며, 적용기술과 확장성 평가 포함",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "해당 사항 없음(NOT_FOUND)",
+  "cause": "NOT_FOUND",
+  "operation": "NOT_FOUND",
+  "function": "NOT_FOUND",
+  "scope": "RCMS 연계 관련 사업으로 RCMS 연계 모듈 변경 및 부가세 연구과제 전송 개선",
+  "problem": "RCMS 전송 및 이체 관련 오류 개선 필요",
+  "effect": "업무 편의성 증대 및 행정효율화",
+  "impact": "NOT_FOUND",
+  "security": "NOT_FOUND"
+}

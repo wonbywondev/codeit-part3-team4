@@ -1,0 +1,23 @@
+{
+  "project_name": "시 버스정보시스템(BIS) 구축사업 용역",
+  "agency": "평택시 안전건설교통국 대중교통과",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "입찰공고 참조",
+  "duration": "3개월",
+  "requirements_must": "시스템은 365일 무중단 서비스, 백업환경 구축 및 주기적 백업, 장애정보 관리자 전달 및 신속 복구, 관리자·장애인·고령자 접근성 준수, 시스템 업그레이드·릴리즈 자동화, 하자보수기간 1년, 기존시스템과 완벽한 호환성(이식성), 국토교통부 BIS 및 ITS 기술기준 적용",
+  "eval_items": "기술평가(정성적 항목 다수) 및 가격평가(20점)로 구성, 세부 기술평가는 시스템 개요·설계목표·설계개념도, 전산장비·네트워크·소프트웨어·BIT·통신·전기 등 및 사업관리·운영·유지보수·시험운영 등 포함(기술총점 80, 가격20, 합계100)",
+  "price_eval": "가격평가(20점)",
+  "eligibility": "신용평가등급(기업신용평가등급·회사채 기준) 및 최근2년 내 행정처분·부정당업자 제재 여부 제출 필요, 공동수급 시 대표업체 기준",
+  "scope_area": "NOT_FOUND",
+  "center_system_functions": "센터 NVR 2중화 구성, Bis 운영 S/W(기 구축시스템과 호환 및 연계)",
+  "quantity_change": "공급물량의 5% 수준에서 예비품·세트 단위로 발주처와 협의하여 주요장비로 변경 가능",
+  "field_test_timing": "단위공정 완료 시점에 발주기관 입회하에 수행하며 단위시스템 구축 완료 후 전반적 성능평가 실시",
+  "objection_policy": "NOT_FOUND",
+  "proposal_omission": "NOT_FOUND",
+  "subcontracting_policy": "NOT_FOUND",
+  "failure_recovery": "장애 발생 시 관리자에게 장애정보 전달하고 신속하게 복구되어야 함",
+  "warranty_period": "1년",
+  "test_run_end": "시험운영 후 준공 1개월"
+}

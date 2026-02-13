@@ -1,0 +1,23 @@
+{
+  "project_name": "2024년도 평택시 버스정보시스템(BIS) 구축사업 용역",
+  "agency": "평택시청 대중교통과(대중교통정책팀)",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "지방계약법 및 동법 관련규정에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "착수계 제출(계약일로부터 7일 이내), 현장대리인계(사업관리자 및 핵심기술자 명단), 사업수행계획서(전체 예정공정표 포함), 사업수행조직도, 보안각서, 하도급 사전승인(사전승인 필요, 하도급비율 50% 초과 불가), 보안유지(설치계와 보안각서 제출), 무상 하자보수 의무",
+  "eval_items": "기술제안서 80%, 가격제안서 20%로 배분·평가",
+  "price_eval": "가격제안서 20% 반영(종합배점: 기술 80% / 가격 20%)",
+  "eligibility": "NOT_FOUND",
+  "scope_area": "버스정보시스템(BIS) 구축사업(평택시)",
+  "center_system_functions": "NOT_FOUND",
+  "quantity_change": "NOT_FOUND",
+  "field_test_timing": "NOT_FOUND",
+  "objection_policy": "제안업체는 기술제안서 평가결과에 대해 어떠한 이의도 제기할 수 없다",
+  "proposal_omission": "제안서에 누락된 내용은 발주기관의 요구에 의해 수정 또는 추가될 수 있으며 그 내용은 제안서와 동일한 효력을 가진다",
+  "subcontracting_policy": "하도급은 소프트웨어 진흥법 시행규칙 및 소프트웨어사업 계약 및 관리감독 지침에 따라 사전승인 필요, 하도급계획서 제출, 하도급 적정성 판단에서 평가점수 85점 이상인 경우 승인 가능",
+  "failure_recovery": "장애 발생 시 운영자가 상황판단 후 응급조치 가능토록 상세한 장애대책을 작성·제출하고 비상연락망 및 비상연락체계 항시 유지",
+  "warranty_period": "하자보수기간 동안 무상 하자보수(기간 길이 명시 없음)",
+  "test_run_end": "NOT_FOUND"
+}

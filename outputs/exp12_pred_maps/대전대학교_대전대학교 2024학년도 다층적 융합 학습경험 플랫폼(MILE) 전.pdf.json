@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "다층적 융합 학습경험 플랫폼(MILE) 구축 제안요청서",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "PER-성능-001 평균 처리시간: 시스템은 정상 상태에서 건별 요청에 대한 처리를 5초 이내 처리; 응답 지연 시간 0.1초 미만 ~ 10초 이상 구간 제시",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "monitoring_components": "융합교육 전담 모니터링(MILE 모니터링) 화면 구축; 융합 교육 운영 현황 모니터링 화면 구축; 융합 교육 교수 모니터링 화면 구축; 융합 교육 코디네이터 모니터링 화면 구축",
+  "degree_enhancement": "나노/마이크로디그리 관련 화면 고도화; 디그리 과정 신청(학생) 개선; 디그리과정대상자관리, 미신청이수가능자조회; 나노/마이크로디그리출력 화면 고도화; 졸업자가진단 비교과 인증 추가 및 관련 자료 업로드",
+  "response_time": "5초 이내",
+  "warranty_period": "본 사업 최종 검수 완료일로부터 최소 12개월 이상",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "제안서 기술평가 항목 및 배점에 관한 구체적 내용은 제시되지 않음",
+  "faculty_assessment": "NOT_FOUND",
+  "required_documents": "NOT_FOUND",
+  "act_certification": "NOT_FOUND"
+}

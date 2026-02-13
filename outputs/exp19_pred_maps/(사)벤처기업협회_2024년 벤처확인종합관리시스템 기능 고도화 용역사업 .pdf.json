@@ -1,0 +1,23 @@
+{
+  "project_name": "벤처확인종합관리시스템 기능 고도화 (복수의결권, 스톡옵션, 성과조건부주식)",
+  "agency": "벤처기업확인기관",
+  "purpose": "벤처확인 연계를 통한 복수의결권 및 스톡옵션 시스템 고도화 / 복수의결권주식, 스톡옵션 업무시스템 구축, 스톡옵션 데이터 이관, 신청접수 및 처리 결과 알림 One-Stop Service",
+  "budget": "추정 금액 20 억원 미만",
+  "contract_type": "제43조의2에 따른 협상에 의한 계약(우선 적용) / 제한경쟁입찰",
+  "deadline": "NOT_FOUND",
+  "duration": "과업 시작일로부터 10일 이내 착수(과업수행기간 상세기간은 NOT_FOUND)",
+  "requirements_must": "피부여자 취소·철회 신고 통보 기능 및 알림 기능 구현; My페이지를 통한 스톡옵션 부여현황 및 행사 정보 확인 기능; 과업수행계획서 등 제출",
+  "eval_items": "기술평가 90%, 가격평가 10% (기술성 평가기준표에 의함)",
+  "price_eval": "가격평가 10% (협상에 의한 계약체결 기준에 따름)",
+  "eligibility": "국가계약법 시행령 제12조 입찰참가자격 충족업체; 직접생산증명서(정보시스템개발서비스) 보유업체; 대기업·상호출자제한기업집단 등 참여제한 적용",
+  "project_start_deadline": "과업 시작일로부터 10일 이내 착수 / 계약체결일로부터 10일 이내 관련서류 제출",
+  "post_contract_submission_docs": "착수계, 책임기술자 선임계, 책임기술자 이력서 및 기술자격증 사본, 참여기술자 이력서 및 기술자격증 사본, 보안각서 및 보안대책, 과업수행계획서, 기타 필요사항",
+  "joint_venture_member_limit": "공동수급체 구성원은 5개 이하",
+  "joint_venture_min_share_ratio": "구성원별 계약참여 최소 지분율은 10% 이상",
+  "subcontracting_requirements": "하도급은 발주기관의 사전 승인을 받아야 함; 하도급 비율 제한 및 재하도급 금지(예외 규정 있음)",
+  "web_standard_compliance_items": "NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "직접생산증명서(정보시스템개발서비스)",
+  "performance_response_time": "NOT_FOUND"
+}

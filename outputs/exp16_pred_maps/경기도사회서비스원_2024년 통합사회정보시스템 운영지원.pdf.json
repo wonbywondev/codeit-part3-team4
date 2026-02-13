@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "133,812,000원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 24.12.31",
+  "requirements_must": "보안 요구사항, 품질 요구사항, 유지보수 인력 요구사항 등 제시",
+  "eval_items": "기술능력 90% / 가격평가 10% 점수 합산",
+  "price_eval": "협상적격자 선정",
+  "eligibility": "NOT_FOUND",
+  "contact_department": "NOT_FOUND",
+  "maintenance_target": "통합사회정보시스템 운영 및 유지보수",
+  "incident_response_policy": "정기 예방점검 및 신속한 장애 대응",
+  "data_recovery_policy": "NOT_FOUND",
+  "regular_inspection": "정기 예방점검",
+  "performance_management": "서비스 개선 및 성능/기능 개선",
+  "manpower_grade": "PM 6년 이상; PM 4년 이상 6년 미만 등급 표기",
+  "pm_replacement_policy": "PM 임의 교체 여부 미기재",
+  "manpower_change": "유지보수 인력 교체 시 필요 절차 미기재",
+  "emergency_contact": "NOT_FOUND"
+}

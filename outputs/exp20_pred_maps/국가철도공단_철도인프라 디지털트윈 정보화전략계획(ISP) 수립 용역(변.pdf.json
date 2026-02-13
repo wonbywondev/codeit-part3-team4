@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "689,480,000 원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 , 기술 90%, 가격 10%)",
+  "deadline": "NOT_FOUND",
+  "duration": "8",
+  "requirements_must": "공단 내부 시스템( SAP ERP, RAFIS, EPMS, CPMS, 전자조달 등 ) 운용 현황 분석 및 BIM 기반 통합플랫폼 개발 사업 성과물 검토 및 수준 분석",
+  "eval_items": "요구사항명칭 및 세부사항 분석 포함된 컨설팅 요구사항/ 데이터 요구사항/ 보안 요구사항/ 품질 요구사항/ 제약사항/ 프로젝트 지원 요구사항 등",
+  "price_eval": "최저가/협상 등 언급 없음",
+  "eligibility": "공단 내부 시스템 운용 현황 분석 및 BIM 기반 통합플랫폼 개발 관련 경험 요구사항 포함",
+  "goal": "NOT_FOUND",
+  "scope": "NOT_FOUND",
+  "standard": "국내 표준정보체계 검토, openBIM 기반 디지털트윈, BIM 국제표준 동향 도출 및 도입 방안",
+  "integration": "공단 내부 시스템( SAP ERP, RAFIS, EPMS, CPMS, 전자조달 등 ) 연계성 도출",
+  "design": "디지털트윈 데이터 활용 협업 방식 제시 및 플랫폼 구축 방안",
+  "planning": "핵심과제 도출 및 우선순위 결정, 단계별 세부추진계획(기간/예산/조직) 수립",
+  "function": "openBIM 기반 디지털트윈 플랫폼 구축과 관련한 주요 수행 과업 제시",
+  "procedure": "CSR-006 ~ CSR-009 등 컨설팅 요구사항의 ID 부여 규칙 명시",
+  "security": "보안 요구사항은 보안 요구사항(SecurityRequirements) 항목으로 분류"
+}

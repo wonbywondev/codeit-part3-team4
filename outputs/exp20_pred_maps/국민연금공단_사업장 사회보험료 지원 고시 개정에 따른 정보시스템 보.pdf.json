@@ -1,0 +1,14 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁, 협상에 의한 계약체결 기준에 따른 협상적격자 선정",
+  "deadline": "NOT_FOUND",
+  "duration": "사업기간 명시 되어 있음, 구체적 기간 미제시",
+  "requirements_must": "정성적 평 가항목, 기능/성능/보안 등 요구사항 및 제약사항 포함",
+  "eval_items": "기술 평가 + 가격 평가(합산)",
+  "price_eval": "가격 평가 10점, 기술 평가 90점으로 구성",
+  "eligibility": "입찰 참가 자격 요건: 국가를 당사자로 하는 계약에 관한 법률 시행령 제12조·시행규칙 제14조, 제27조 및 나라장터 등록 요건",
+  "fact": "공동수급 허용(5개 이하), 하도급 불허, 낙찰자 결정 방법은 협상에 의한 계약"
+}

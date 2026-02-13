@@ -1,0 +1,23 @@
+{
+  "project_name": "벤처확인종합관리시스템 기능 고도화 (복수의결권, 스톡옵션, 성과조건부주식)",
+  "agency": "중소벤처기업부",
+  "purpose": "벤처확인 연계를 통한 복수의결권 및 스톡옵션 시스템 고도화, 복수의결권주식·스톡옵션 업무시스템 구축 및 신청접수 및 처리 결과 알림 One-Stop Service",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "보안기능 준수(식별 및 인증, 암호지원, 정보 흐름 통제, 접근 통제, 전송데이터 보호, 감사 기록 등), 소프트웨어 하자담보책임기간 1년, 보안확약서 및 보안서약서 제출, 웹 취약점(예: SQL인젝션, XSS, 웹쉘 등) 제거, PKI 기반 인증 또는 SSL 적용",
+  "eval_items": "기술평가(90%) 및 가격평가(10%), 기술평가는 정성평가(100점) 기준으로 세부항목 합산, 기술평가 시 최고·최저 점수 제외 후 산술평균하여 90점 만점으로 환산",
+  "price_eval": "「협상에 의한 계약체결 기준」에 따름; 가격평가 비중 10%",
+  "eligibility": "조건으로서 대기업 참여 제한: 사업금액 20억원 미만 계약은 대기업 참여 제한 (해당 시)",
+  "project_start_deadline": "NOT_FOUND",
+  "post_contract_submission_docs": "하도급 사업수행 계획서(하도급 금액 산출내역서 및 사업추진 일정표 포함), 물품 공급확약서 등(하도급 계획서 관련 서류)",
+  "joint_venture_member_limit": "NOT_FOUND",
+  "joint_venture_min_share_ratio": "NOT_FOUND",
+  "subcontracting_requirements": "하도급 예정계획 명시(수급인이 공동수급체인 경우 구성원별 하도급 예정계획 명시), 하도급 예정액 비율 관련 규정(하도급 예정액 비율 합계 50% 초과 예외사유 명시)",
+  "web_standard_compliance_items": "중소벤처24 개발가이드 및 UX/UI 가이드 적용, 중소벤처24 연계(SSO, 간편로그인), 웹 응용 프로그램에서 접근통제 취약점·부적절한 파라미터 사용·XSS 고려 및 시큐어 코딩",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "SSL을 사용한 암호화 통신 적용 및 PKI 기반 인증로그인 방식 권장",
+  "pre_deadline_required_certificates": "대표자용 보안확약서 및 참여자용 보안서약서(사업 착수 시 제출)",
+  "performance_response_time": "NOT_FOUND"
+}

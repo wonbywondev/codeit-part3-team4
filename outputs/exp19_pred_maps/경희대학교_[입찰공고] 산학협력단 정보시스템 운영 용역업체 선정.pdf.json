@@ -1,0 +1,23 @@
+{
+  "project_name": "인포21 연구행정시스템 운영/유지관리",
+  "agency": "산학협력단",
+  "purpose": "정보시스템의 상시 운영·유지보수 및 연계시스템 지원·개발, 시스템 최적화·모니터링 등 연구행정시스템 운영·유지관리",
+  "budget": "사업예산 20억 미만",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "주·월·연 단위 업무보고서 작성 및 제출 필수; 산학협력단의 보안 요청 준수; 낙찰자 이후 하청·재하청 불가; 사업수행에 필요한 모든 비용은 가격입찰금액에 포함",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "project_phases": "NOT_FOUND",
+  "NaN": "NOT_FOUND",
+  "incident_response": "연계시스템 장애 발생 시 공동 장애 대응; 선제적 예방 조치 및 상시 모니터링(구체 시간기준 언급 없음)",
+  "key_personnel_qualification": "참여인력은 분야별 책임자 명시; 분야별 기술자 기재 순서는 직위 순으로 기재(세부 자격기준 미기재)",
+  "post_contract_security": "계약 종료 후에도 산학협력단의 누출금지정보 보호 및 지식재산권은 산학협력단 귀속(구체 보안조치 명시 없음)",
+  "continuous_operation_requirement": "정보시스템 상시 운영/유지보수 및 연동업무 관련 상시운영/유지보수 요구",
+  "bid_invalid_conditions": "제안서의 내용이 사실과 다른 경우; 입찰참여자격이 없는 자가 한 경우; 입찰보증금 미납; 낙찰자가 기일 내 계약체결하지 아니한 경우; 동일인이 2통 이상 제출한 경우",
+  "work_location": "NOT_FOUND",
+  "personal_pc_usage_allowed": "NOT_FOUND",
+  "bid_inquiry_contact": "산학협력단 경영지원 팀 조재형 (031-201-3529); 산학협력단 경영지원 팀 조규호 (031-201-3560 / khcho@khu.ac.kr)"
+}

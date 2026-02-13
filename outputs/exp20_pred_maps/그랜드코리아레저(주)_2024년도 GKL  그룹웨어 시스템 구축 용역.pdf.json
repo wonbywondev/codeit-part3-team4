@@ -1,0 +1,23 @@
+{
+  "project_name": "GKL 그룹웨어 시스템 구축사업",
+  "agency": "NOT_FOUND",
+  "purpose": "정부권장정책 적용 및 웹기반 시스템 구축으로 노후화된 그룹웨어 및 기록물관리, 사내 SNS, 메신저 시스템 개선 필요",
+  "budget": "1,515,000 천원 ( 부가세 포함 )",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "시스템 연동 및 보안 요구사항 포함, 정부 가이드에 따른 신규 시스템 구성 및 개발, 결재처리 및 연계문서 관리 기능, 모듈별 요구사항에 따른 개발 산출물 제공",
+  "eval_items": "기술평가 (90%)/ 가격평가 (10%)",
+  "price_eval": "협상에 의한 계약",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "GKL 그룹웨어 시스템 구축사업으로 그룹웨어, 기록물관리 시스템, 업무용 메신저, 전자결재 시스템 연계 및 이관, 커스터마이징, 데이터 마이그레이션 포함",
+  "migration_scope": "기존 기록물 신 규 시스템으로 마이그레이션 및 이관",
+  "mobile_requirements": "NOT_FOUND",
+  "approval_system": "NOT_FOUND",
+  "security_auth": "NOT_FOUND",
+  "search_engine": "NOT_FOUND",
+  "web_editor": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "cooperation_score": "NOT_FOUND",
+  "web_standard": "NOT_FOUND"
+}

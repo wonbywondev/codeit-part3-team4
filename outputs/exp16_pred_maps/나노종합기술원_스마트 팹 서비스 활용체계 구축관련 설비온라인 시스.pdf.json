@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "NOT_FOUND",
+  "purpose": "나노 반도체 분야의 국가 공공 보유 인프라 공정정보 데이터 확보 및 분석 활용 기반 필요",
+  "budget": "2,349,130,320 원",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "18개월",
+  "requirements_must": "설비온라인화 2 단계 추진계획 수립 기술지원요구 사항 상세 설명; 기술이전요구 사항 상세 설명; 교육 지원 요구사항 상세 설명; 관리자 매뉴얼 요구사항 상세 설명; 사용자 매뉴얼 요구사항 상세 설명",
+  "eval_items": "기술/가격",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "설비 온라인 시스템 구축 및 SECS/Non-SECS Data 수집 시스템 구축, LoT Tracking 환경 구축, 공정관리시스템 연계",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "1 차 오픈(2024.9월까지): SECS/GEM 대상 장비의 기본 온라인화 완료; 2 차 오픈(사업종료 전까지): SECS/GEM 대상 장비의 안정화 및 PC-File 대상 장비의 온라인화 완료",
+  "lot_tracking": "Carrier ID 인식 장치 설계 및 설치, 연동 인터페이스 마련, Carrier 정보 표시 및 작업자 인터페이스 화면 구성, Carrier 정보 기반 공정관리시스템 인터페이스 구축",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "보안 요구사항에 대한 구체 항목은 제안요청서 및 보안 조치 표에 명시",
+  "interface_method": "SECS/GEM 연계 및 데이터 연동 인터페이스 구축",
+  "maintenance_rate": "NOT_FOUND"
+}

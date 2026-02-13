@@ -1,0 +1,23 @@
+{
+  "project_name": "기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화 사업",
+  "agency": "대한상공회의소",
+  "purpose": "재생에너지 거래를 위한 수요기업과 공급기업간 매칭시스템 고도화",
+  "budget": "57,000,000 원",
+  "contract_type": "일반경쟁입찰에 의한 우선협상대상자 선정 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약기간 : 계약체결일로부터 6 개월 이내",
+  "requirements_must": "개인정보보호 요구사항 준수; 시스템 사용, 유지보수 및 지원; 재생 e 매칭 지원 및 재생에너지 사용 자가진단 고도화 등",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "matching_enhancement": "재생 e 매칭 지원 기능 고도화(채팅/댓글 소통 창구 마련, 매칭 후 거래 진행 상태 표출, 콘텐츠 업로드 게시판 신설 등)",
+  "self_diagnosis": "재생에너지 사용 자가진단 기능 고도화(자가진단 툴 온라인 구현 및 디자인 고도화)",
+  "response_time": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "admin_statistics": "재생에너지 매칭 지원 게시판 통계 구축 및 데이터 관리/통계분석 기능",
+  "privacy_protection": "개인정보보호 요구사항 준수; 자가진단 체크리스트 및 보안 점검; 웹 표준 및 데이터 보안 정책 준수",
+  "web_standards": "웹 표준 개발 가이드 준수; 데이터 보안 정책 준수",
+  "maintenance_support": "홈페이지 사용, 유지보수 및 지원; 개편 후 1년간 지속적 관리 및 유지보수 지원",
+  "content_enhancement": "콘텐츠 추가‧보강; 자료실/게시판 등 콘텐츠 업로드 기능 추가; 협의 후 정보제공 변화 가능",
+  "security_penalty": "NOT_FOUND"
+}

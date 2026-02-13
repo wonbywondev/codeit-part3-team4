@@ -1,0 +1,23 @@
+{
+  "project_name": "대용량 자료전송시스템 고도화",
+  "agency": "NOT_FOUND",
+  "purpose": "연구데이터 용량 증가에 따른 자료전송 용량 및 방안 개선, 안전메일 서비스 이용 절차 간소화로 사용성 향상, 감사기록 및 계정관리 등 보안기능 보강, 노후 인프라 교체로 인한 재연동 및 데이터 이관 필요",
+  "budget": "입찰공고문 참조",
+  "contract_type": "제한경쟁입찰, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 5 개월 이내",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "기술능력 평가 및 입찰가격 평가를 통한 종합평가(기술능력·가격평가 10%) 및 기술성 평가기준에 따른 정량평가(10)",
+  "price_eval": "협상에 의한 계약 체결기준에 따라 기술능력 및 입찰가격 평가점수로 종합평가",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "신규 자료송수신체계 인프라 연동모듈 재개발 및 데이터 이관, 대용량자료 수집을 위한 자료전송(반입) 기능 개발, 안전메일/자료반입·반출 용량 확대 및 전송프로세스 개선, 사용자 편의기능 및 보안기능 개선",
+  "improvement_email": "안전메일 간소화, 대용량 메일 및 대용량 자료전송 기능 개선, 안전메일 다운로드 링크 폐기 등 전송프로세스 개선",
+  "response_time": "NOT_FOUND",
+  "security": "감사기록 및 계정관리 등 보안기능 보강 필요 및 국방부 훈령·보안대책 요구사항이 적용된 안전한 시스템 구축",
+  "warranty_duration": "NOT_FOUND",
+  "restriction": "NOT_FOUND",
+  "eval_ratio": "기술능력·가격평가 10% (문서에서 명시된 비율)",
+  "development_methodology": "웹브라우저 기반 서비스 제공 방식 개발 및 최소한의 형상변경으로 추진 (제안서 작성 지침 내 상세방법론은 문서 참조)",
+  "max_transfer": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND"
+}

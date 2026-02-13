@@ -1,0 +1,23 @@
+{
+  "project_name": "예약시스템 구축",
+  "agency": "안양시",
+  "purpose": "업무 효율성 증가 및 신뢰성 있는 서비스 및 데이터 통계 자료 제공",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁 입찰 후 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 120일간",
+  "requirements_must": "생성되는 모든 로그(접속 기록, 에러 기록 등) 1년 이상 저장; 제안요청서에 기재되지 않은 정보보안 관련사항은 관련법령·지침 준수; 무상 하자보수 아님(과업종료 시 폐기 또는 반납)",
+  "eval_items": "기술평가(90%) = 정량적 평가(20점)+정성적 평가(70점), 가격평가(10%); 정량 항목: 경영상태, 사업수행실적, SW 기술인력 보유상태, 사회적 책임; 정성 항목: 전략 및 방법론, 기술 및 기능, 성능 및 품질, 프로젝트 관리, 프로젝트 지원",
+  "price_eval": "입찰가격 평점산식에 의한 평가(가격평가 10%)",
+  "eligibility": "조달청 전자입찰 참가자격 등록업체이어야 함; 공동수급(분담이행방식) 불허",
+  "budget_vat": "NOT_FOUND",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "NOT_FOUND",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "단위 및 통합 테스트 실시(횟수 명시 없음)",
+  "failure_response": "하자보수 기간 내 시스템의 하자가 발생될 경우 즉시 보완",
+  "training_target": "발주자의 관리자 및 담당자",
+  "training_cost": "교육교재, 기자재, 출장비 등 교육에 소요되는 제반비용은 사업자가 부담",
+  "log_retention": "생성되는 모든 로그(접속 기록, 에러 기록 등) 1년 이상 저장해야 한다."
+}

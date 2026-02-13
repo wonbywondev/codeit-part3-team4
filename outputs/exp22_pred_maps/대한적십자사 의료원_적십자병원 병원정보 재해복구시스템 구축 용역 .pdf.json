@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "NOT_FOUND",
+  "purpose": "자연재해 , 사이버 공격 등의 재해 요인으로부터 적십자병원이 보유한 진료정보 및 중요 데이터의 보존을 위해 원격지에 재해복구 시스템 구축 필요",
+  "budget": "500,000,000",
+  "contract_type": "제한경쟁 , 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "6 개월",
+  "requirements_must": "도입 목록에 제시된 시스템 장비 구성 요구사항, 기능 요구사항, 보안 요구사항 등 제안요청서의 각 항목에 명시된 요구사항 충족",
+  "eval_items": "기술 / 가격",
+  "price_eval": "협상에 의한 계약 중 가격 항목 포함 여부 명시",
+  "eligibility": "입찰 참가자격 및 안내에 따라 관련 법령 및 제재 여부 충족",
+  "scope_custom": "재해복구시스템 구축, 데이터베이스 마이그레이션, 재해복구 절차 교육 및 지원",
+  "target_hospitals": "서울적십자병원, 인천적십자병원, 상주적십자병원, 통영적십자병원, 거창적십자병원, 경인권역재활병원, 영주적십자병원",
+  "hw_spec": "데이터베이스 서버 1식, DBMS 4식, 데이터복제 SW 12식",
+  "replication_qty": "12 식",
+  "install_location": "주센터 및 재해복구센터 설치",
+  "migration_requirement": "주센터/재해복구센터 간 실시간 복제 구성, DBMS 버전 업그레이드 반영",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "상호출자제한기업월 1 회 이상 보안 점검 실시",
+  "availability": "도입 장비의 가용성 보장 요구사항(24시간 무중단 운영 등)"
+}

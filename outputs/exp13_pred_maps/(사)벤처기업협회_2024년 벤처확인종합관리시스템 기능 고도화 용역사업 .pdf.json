@@ -1,0 +1,23 @@
+{
+  "project_name": "2024년 「벤처확인종합관리시스템 기능 고도화」 용역사업 -복수의결권주식 , 스톡옵션 , 성과조건부주식교부 기능 구축 및 고도화",
+  "agency": "벤처기업확인기관",
+  "purpose": "벤처기업법 관련 복수의결권주식, 스톡옵션, 성과조건부주식교부 계약 등의 기능 고도화 및 이관, 신규 구축",
+  "budget": "352,000,000 원 (부가가치세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 150 일",
+  "requirements_must": "시스템 기능 고도화 완료 후 기능 확장성 고려; 전산시스템 운용 및 유지관리 대응 기술이전·교육계획 및 지원계획 제시; 정보화 표준 준용하여 개발; 보안사고 발생 시 민형사상 책임 및 배상",
+  "eval_items": "기술평가 90%, 가격평가 10% (기술성 평가 항목은 '기술성 평가 기준표'에 따름)",
+  "price_eval": "협상에 의한 계약체결 기준에 따름; 가격평가 비중 10%",
+  "eligibility": "국가계약법 시행령 제12조에 의한 입찰참가자격; 중소기업제품 직접생산증명서(정보시스템개발서비스) 소지; 사업금액 20억원 미만으로 대기업·중견기업·상호출자제한기업집단 소속기업 참여제한; 공동수급체는 구성원 모두 자격 보유",
+  "project_start_deadline": "과업 시작일로부터 10 일 이내 착수",
+  "post_contract_submission_docs": "착수계; 책임기술자 선임계; 책임기술자 이력서 및 기술자격 증 사본; 참여기술자 이력서 및 기술자격 증 사본; 보안 각 서 및 보안대책; 과업수행계획서; 기타 필요사항",
+  "joint_venture_member_limit": "5 개 이하",
+  "joint_venture_min_share_ratio": "구성원별 계약 참여 최소 지분율 은 10% 이상",
+  "subcontracting_requirements": "하도급은 발주기관의 사전 승인 필요; 하도급 비율 제한(단, 예외 경우 제외); 재하도급 금지",
+  "web_standard_compliance_items": "NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "NOT_FOUND",
+  "performance_response_time": "NOT_FOUND"
+}

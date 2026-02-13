@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "대한적십자사 의료원",
+  "purpose": "NOT_FOUND",
+  "budget": "금500,000,000원(금오억원) ··· 부가가치세 포함",
+  "contract_type": "제한경쟁, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6개월 이내",
+  "requirements_must": "제조사 정품공급 및 기술지원 확인서 제출; 하드웨어 및 소프트웨어 통합 납품; 전원 및 쿨링 팬 이중화 구성; OEM 및 ODM 제품 제외; DB 설치가 2시간 이내 GUI 또는 마법사 기반 설치 가능",
+  "eval_items": "기술 90%, 가격(비율 명시됨)",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "병원정보시스템 재해복구 DB 서버 및 DBMS, 데이터복제 솔루션 도입 포함; 데이터베이스 서버 운영 및 관리 환경(소프트웨어 등) 구축 포함",
+  "target_hospitals": "주센터: 강원도 원주시 대한적십자사 혈액관리본부 4층 서버실; 재해복구센터: 경기도 안산시; 서울적십자병원(서울특별시); 인천적십자병원(인천광역시); 상주적십자병원(경상북도 상주시); 통영적십자병원(경상남도 통영시); 거창적십자병원(경상남도 거창군); 경인권역재활병원(인천광역시); 영주적십자병원(경상북도 영주시)",
+  "hw_spec": "CPU: 인텔 제온 2.4GHz 16Core *2EA 이상; 메모리: 512GB 이상(최대 1TB 확장 가능)",
+  "replication_qty": "데이터복제 솔루션: 12식(주 센터와 재해복구센터 설치)",
+  "install_location": "주센터: 강원도 원주시 대한적십자사 혈액관리본부 4층 서버실; 재해복구센터: 경기도 안산시",
+  "migration_requirement": "기존 서버에서 운영하는 서비스 이관 작업 지원; 데이터베이스 및 설치가 2시간 이내 GUI 또는 마법사 기반의 설치 및 구성 가능할 것",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "SER 03 보안 교육 (항목 존재) — 구체적 주기 언급 없음",
+  "availability": "QUR 02 가용성 보장 (항목으로 요구됨)"
+}

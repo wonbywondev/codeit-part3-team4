@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "KUSF",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "제안서 제출 마감일(구체적 일시) NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "요구사항 구분 설명에 따른 기능요구사항 21개 및 납품장비에 대한 검사 완료까지 소요되는 제반 경비는 본사업에 포함",
+  "eval_items": "기술평가 90% / 가격평가 10%; 기술능력평가 및 가격평가를 통한 우선협상대상자 선정; 기술평가 세부항목 포함(사업 이해도, 추진전략 등)",
+  "price_eval": "조달청 나라장터를 통해 실시(가격평가 10%)",
+  "eligibility": "자격기준 미달, 제출 서류 허위, 구비서류 미충족, 제안서 내용 극도로 불성실한 경우 PT심사에서 제외; 발표자(PM)는 입찰공고일 전부터 해당업체 재직 중임을 재직증명서 및 국민연금 가입증명 또는 건강보험자격득실확인서로 증빙",
+  "presentation": "있음(PT심사 진행, 제안발표)",
+  "presentation_time": "약 20분 발표 및 20분 질의응답; 발표자료 40페이지 이내",
+  "nan": "NOT_FOUND",
+  "performance_evaluation_metrics": "NOT_FOUND",
+  "proposal_writing_guidelines": "제시된 목차 및 작성지침 준용; 발표자료 40쪽 이내; 발표자료는 무기명(회사명·실명 삭제), 제안서(기명)는 회사명·실명 기입; 모호한 표현 금지(계량화 요구); 각 페이지 하단 중앙 일련번호 표기; 한글 작성 원칙 및 약어표 제공",
+  "working_hours": "NOT_FOUND",
+  "staff_change_policy": "낙찰자 결정 이후 컨소시엄 구성원 변경 불가; 제안서 인력은 컨소시엄 구성원의 자사인력으로 구성; 채용 예정인력은 별도 명기하고 계약체결 전까지 채용 완료",
+  "deliverable_copyright": "산출물 저작권은 KUSF와 사업자가 공동으로 소유함을 원칙(세부사항은 협의)",
+  "deliverables": "개발 요구사항 분석 보고서, 소스코드, 시스템 설계 문서, 관리자/사용자 매뉴얼(설치·운영·사용 매뉴얼 등), 단위/통합 테스트 결과 보고서, 소프트웨어 개발보안/취약점 점검 결과 및 조치결과서, 인터페이스 정의서, 프로세스 정의서, 엔티티 목록 및 정의서, 테이블 목록 및 정의서, 데이터코드 목록 등",
+  "organization_founding_year": "NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "2024년 벤처확인종합관리시스템 기능 고도화 용역사업",
+  "agency": "벤처기업확인기관",
+  "purpose": "벤처확인 연계를 통한 복수의결권 및 스톡옵션 시스템 고도화",
+  "budget": "20억원미만",
+  "contract_type": "제한경쟁입찰, 낙찰자 선정방식: 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "전자정부 표준 프레임워크 적용; 하자담보 책임기간: 용역계약일 종료일로부터 1년; 보안각서 및 보안대책 제출(계약체결 후 10일 이내)",
+  "eval_items": "기술평가 90%, 가격평가 10%",
+  "price_eval": "가격평가 10% (협상에 의한 계약체결 방식 우선 적용)",
+  "eligibility": "국가계약법 시행령 제12조 입찰참가자격 및 중소기업제품 직접생산확인서(정보시스템개발서비스) 소지; 대기업 및 특정 기업집단 참여제한(소프트웨어진흥법 등)",
+  "project_start_deadline": "과업 시작일로부터 10일 이내 착수",
+  "post_contract_submission_docs": "착수계, 책임기술자 선임계, 책임기술자 이력서 및 기술자격증 사본, 참여기술자 이력서 및 기술자격증 사본, 보안각서 및 보안대책, 과업수행계획서, 기타 필요사항",
+  "joint_venture_member_limit": "구성원 5개 이하",
+  "joint_venture_min_share_ratio": "구성원별 최소 지분율 10% 이상",
+  "subcontracting_requirements": "하도급은 사전승인 필요(소프트웨어진흥법 제51조), 하도급 비율 제한 및 재하도급 금지",
+  "web_standard_compliance_items": "브라우저 관련 웹표준 준수 항목: NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "제출 마감일 전일까지 요구되는 확인서: NOT_FOUND",
+  "performance_response_time": "웹 페이지의 목표 응답시간 기준은 무엇인가?: NOT_FOUND"
+}

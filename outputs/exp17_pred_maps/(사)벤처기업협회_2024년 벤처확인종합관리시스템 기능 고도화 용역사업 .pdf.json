@@ -1,0 +1,23 @@
+{
+  "project_name": "벤처확인종합관리시스템 기능 고도화 (복수의결권, 스톡옵션, 성과조건부주식)",
+  "agency": "벤처기업확인기관",
+  "purpose": "벤처확인 연계를 통한 복수의결권 및 스톡옵션 시스템 고도화",
+  "budget": "추정 금액 20 억 원 미만",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "과업 시작일로부터 10일 이내 착수(구체 수행기간: NOT_FOUND)",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "기술평가 90%, 가격평가 10%",
+  "price_eval": "협상에 의한 계약체결 기준에 따름 (가격평가 10%)",
+  "eligibility": "국가계약법 시행령 제12조에 의한 입찰 참가자격 보유자; 직접생산증명서(정보시스템개발서비스) 보유; 대기업·상호출자제한기업집단 등 참가제한 규정 적용",
+  "project_start_deadline": "과업 시작일로부터 10일 이내 착수 (계약체결일로부터 10일 이내 서류 제출)",
+  "post_contract_submission_docs": "착수계, 책임기술자 선임계, 책임기술자 이력서 및 기술자격 증 사본, 참여기술자 이력서 및 기술자격 증 사본, 보안 각 서 및 보안대책, 과업수행계획서, 기타 필요사항",
+  "joint_venture_member_limit": "5 개 이하",
+  "joint_venture_min_share_ratio": "구성원별 계약 참여 최소 지분율은 10% 이상",
+  "subcontracting_requirements": "하도급 사전 승인 필요; 하도급 비율 제한; 재하도급 불가",
+  "web_standard_compliance_items": "NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "직접생산증명서 (정보시스템개발서비스)",
+  "performance_response_time": "NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "NOT_FOUND",
+  "purpose": "나노 반도체 국가 성장 동력 강화를 위한 나노 반도체 생태계 혁신기반 조성 및 나노 팹 공정·장비 데이터의 공공 데이터화 및 활용 기반 마련",
+  "budget": "2,349,130,320 원 (VAT포함)",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "실시간 연계(기본적으로 실시간), 평균 응답시간 보장 방안 수립, 가용성(정상상태 매일 24시간 무중단 운영), 전송 및 구간 암호화, PKI/SSO 등 보안장비 적용, 접근 및 권한관리, 자료 보안관리 등 (보안 요구사항 및 성능 요구사항 포함)",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "FAB 내 공정장비의 실시간 모니터링을 위한 설비 통신 온라인 시스템 구축; 설비별 통신 온라인 기준정보 관리; 설비별 상태·리소스 조회, 통신 및 테스트; 로그 분석 및 데이터 확보; 新공정관리시스템 연계를 통한 Recipe 및 이력관리; SECS/Non-SECS 데이터 수집 및 LoT Tracking; Carrier ID 인식 장치 설계·설치·연동; HMI 설비통신·SECS·PLC 통신 프로토콜 및 데이터 수집 체계 구축; 미래 설비자동화 및 데이터 분석 모델 설계",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "1차 오픈: 2024.9월 까지 - SECS/GEM 대상 장비의 기본 온라인화 완료; 2차 오픈: 사업종료 전 까지 - SECS/GEM 대상 장비의 안정화 및 PC-File 대상 장비의 온라인화 완료",
+  "lot_tracking": "Carrier ID 인식 장치 설계 및 설치·연동, Carrier 정보 표시 및 작업자 인터페이스 화면 구성, Carrier 정보 기반 공정관리시스템 인터페이스 구축",
+  "subcontract_limit": "하도급 관련 법률 준수 및 주기적 실태 점검·보고 (구체 퍼센트 표기 없음)",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "평균 응답시간을 일정 수준 이상으로 보장해야 함 (구체 수치 없음)",
+  "security_encryption": "전송 및 구간 암호화 요구; PKI, SSO 등 보안기능 적용 및 보안장비 조치, 국가정보원 가이드라인 준수 (암호화 관련 조치 명시)",
+  "interface_method": "新공정관리시스템 연계(Recipe 관리 및 이력관리), Middleware를 통한 연동(Json, Kafka 3.x.x), SECS/GEM 인터페이스 및 HMI·PLC 통신 프로토콜 마련",
+  "maintenance_rate": "NOT_FOUND"
+}

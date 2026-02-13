@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁입찰, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "기술평가(80%), 가격평가(20%)",
+  "price_eval": "협상에 의한 계약(가격평가 20%)",
+  "eligibility": "NOT_FOUND",
+  "project_phases": "NOT_FOUND",
+  "NaN": "NOT_FOUND",
+  "incident_response": "NOT_FOUND",
+  "key_personnel_qualification": "NOT_FOUND",
+  "post_contract_security": "NOT_FOUND",
+  "continuous_operation_requirement": "NOT_FOUND",
+  "bid_invalid_conditions": "입찰무효 사유: 제안서 내용 사실과 다름, 입찰자격 없음, 입찰보증금 미납, 낙찰자가 기일 내 계약체결 불이행, 동일인 동일사항으로 중복 제출",
+  "work_location": "NOT_FOUND",
+  "personal_pc_usage_allowed": "NOT_FOUND",
+  "bid_inquiry_contact": "NOT_FOUND"
+}

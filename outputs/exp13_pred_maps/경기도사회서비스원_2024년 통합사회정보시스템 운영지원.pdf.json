@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 년 통합사회정보시스템 운영",
+  "agency": "경기도사회서비스원",
+  "purpose": "통합데이터 및 표준화된 업무 프로세스 운영기반 마련; 중단 없는 시스템 운영을 통한 안정적 정보서비스; 정보보안 및 개인정보보호 관리 강화; 업무 효율 제고를 위한 지속적 시스템 개선",
+  "budget": "금133,812,000원(부가세 포함)",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 ’24. 12. 31.",
+  "requirements_must": "연중 무중단 서비스 제공(1일 24시간, 365일 가용성 보장); 정보보안 관리체계 수립 및 주기적 점검·보완; 보안준수 및 보안확약서 제출; 복구·백업 및 장애 대응 대책",
+  "eval_items": "기술능력 90점(정성평가) 및 가격평가 10점; 기술능력 평가는 소수점 2자리까지 산출",
+  "price_eval": "기술능력 90%와 가격평가 10% 점수 합산하여 협상적격자 선정",
+  "eligibility": "NOT_FOUND",
+  "contact_department": "NOT_FOUND",
+  "maintenance_target": "통합사회정보시스템",
+  "incident_response_policy": "정기 예방점검 및 신속한 장애 대응을 통한 시스템 중단 최소화; 장애 시 조치 및 재발방지 보고서 제출; 복구 매뉴얼 적용",
+  "data_recovery_policy": "복구 불가능 판단 시 동종기기 이상의 장비로 임시 대체 운영; (하자담보 관련) 개발기능 하자담보 책임 기간 1년",
+  "regular_inspection": "정기 예방점검(주기 명시 없음)",
+  "performance_management": "성능저하 발생 시 분석 후 개선방안 수립 및 이행; 성능개선 월간보고서 제출",
+  "manpower_grade": "NOT_FOUND",
+  "pm_replacement_policy": "NOT_FOUND",
+  "manpower_change": "투입 인력 교체 시 발주기관 요구에 따라 교체 또는 추가인력 투입에 응해야 함; 착수보고시 제출한 긴급연락체계 변경사항 즉시 제출",
+  "emergency_contact": "비상연락체계 가동(비상연락망 제출) 및 착수보고시 제출된 긴급연락체계 변경 시 즉시 제출"
+}

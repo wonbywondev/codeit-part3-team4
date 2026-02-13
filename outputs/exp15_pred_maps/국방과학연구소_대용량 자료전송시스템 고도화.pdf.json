@@ -1,0 +1,23 @@
+{
+  "project_name": "대용량 자료전송시스템 고도화",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "입찰공고문 참조",
+  "duration": "NOT_FOUND",
+  "requirements_must": "사업관련 자료는 인터넷 웹하드, 웹메일 등 외부에 저장 및 전송 금지; 공급자는 사업 수행 중에 주기적으로 자체 보안교육 실시 및 수요자가 요구하는 보안교육에 참석; 사업 종료 시 ‘대표자용 보안확약서’ 및 ‘참여자용 보안확약서’ 제출",
+  "eval_items": "기술능력 및 입찰가격 평가점수에 대한 종합평가(기술능력, 가격평가)",
+  "price_eval": "협상에 의한 계약 체결기준에 따름; 기술능력 90%, 가격평가 10%",
+  "eligibility": "입찰공고문에 따름; 중소기업제품 구매촉진 및 판로지원에 관한 법률 제6조 및 제9조에 따라 직접생산이 가능한 업체여야 함",
+  "scope_custom": "NOT_FOUND",
+  "improvement_email": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security": "암호화 관련 명시적 문구 없음; 외부 저장 및 전송 금지 등 보안유지 요구",
+  "warranty_duration": "NOT_FOUND",
+  "restriction": "입찰공고문에 따름",
+  "eval_ratio": "기술능력 90%, 가격평가 10%",
+  "development_methodology": "개발 방법론 제시(요구사항 STA-02)",
+  "max_transfer": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND"
+}

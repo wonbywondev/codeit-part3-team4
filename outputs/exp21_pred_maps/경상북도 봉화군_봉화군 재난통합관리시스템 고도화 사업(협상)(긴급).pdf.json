@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화",
+  "agency": "봉화군 (봉화군청)",
+  "purpose": "전국적으로 기상이변에 따른 국지성 호우 및 태풍내습에 의한 대규모 인명 피해 및 재산 피해 발생",
+  "budget": "900,000,000 원 (부가세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "입찰 공고 문 참조",
+  "duration": "착수일로부터 7 개월 (210 일)",
+  "requirements_must": "과업참여자는 과업착수 전에 보안각서를 제출해야 함; 보안 유지 등 보안상 결함이 없도록 해야 함",
+  "eval_items": "기술평가(90 점), 가격평가(10 점); 기술능력평가(정성적) 및 정량적 제안서 점수 구성 있음",
+  "price_eval": "가격평가 비중 10 점 (기술평가와 종합평가로 협상적격자 선정)",
+  "eligibility": "나라장터 입찰참가자격 등록 필수; 소프트웨어 사업자(업종코드:1468), 정보통신공사업(업종코드:0036); 정보시스템개발서비스 및 동보장치 관련 직접생산증명서 필요",
+  "legal_basis": "｢재난 및 안전관리기본법｣ 제 38 조의 2; ｢지방자치단체를 당사자로 하는 계약에 관한 법률 시행령｣ 제43조 및 44조",
+  "blind_spot_solution": "NOT_FOUND",
+  "security_policy": "과업수행자는 보안 유지하여야 하고 과업착수 전에 보안각서 제출해야 함; 보안요구사항 별도 기술(p.28)",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "기능 요구사항 (SFR) 20",
+  "subcontracting_policy": "본 사업은 하도급을 불허함",
+  "remote_control_target": "NOT_FOUND",
+  "mobile_app_viewable_results": "NOT_FOUND",
+  "task_start_deadline_after_contract": "NOT_FOUND",
+  "required_documents_for_execution": "정성적 제안서와 별도 제출 증빙자료(최근년도 기업신용평가등급 확인서 등), 사업수행실적 증명서, 재직증명서 및 4대 보험 가입 증명자료, 보안각서, 입찰참가자격을 증명하는 서류 등"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "대한적십자사 의료원",
+  "purpose": "병원 정보의 재해복구 체계 부재로 인한 진료정보 및 중요 데이터 보존과 진료연속성 확보를 위해 원격지에 재해복구 시스템 구축 및 장애대응 체계 구축",
+  "budget": "금 500,000,000 원 (금오억원) (부가가치세 포함)",
+  "contract_type": "제한경쟁 , 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "신규 도입 하드웨어 및 소프트웨어는 기존 시스템과 호환성 및 안정성 보장, 현행 네트워크 구성 방식 지원, 신규 서버는 검수 완료 후 3년 이내 구성품 단종·교체불가 시 무상 동일 제조사 동일성능 이상 신제품으로 교체, 도입 데이터베이스 서버는 서비스 중단 최소화 방안으로 중앙화 구성",
+  "eval_items": "기술 90%, 가격 10%",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "재해복구시스템 구축: 발주기관의 기존 시스템과 동일 체계·안정적 연계 및 유지관리, 데이터베이스 마이그레이션(주 센터 이관, DBMS 버전업), 주 센터와 재해복구센터 DB의 실시간 복제 구성, 각 병원에서 주 센터 DB로 업무전환 지원, 재해복구 절차 교육 및 지원",
+  "target_hospitals": "적십자병원(및 각 병원 DB)",
+  "hw_spec": "NOT_FOUND",
+  "replication_qty": "데이터복제 솔루션 : 12 식",
+  "install_location": "주 센터와 재해복구센터(재해복구센터에 데이터베이스 서버 1 식 설치)",
+  "migration_requirement": "업무중단 최소화 방안으로 주 센터 자원 최적화 및 도입 데이터베이스 서버는 서비스 중단 최소화 방안으로 중앙화 구성",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "실제적 재해복구 훈련 방안 제시 및 교육 지원 (보안 요구사항 별도 명시)",
+  "availability": "NOT_FOUND"
+}

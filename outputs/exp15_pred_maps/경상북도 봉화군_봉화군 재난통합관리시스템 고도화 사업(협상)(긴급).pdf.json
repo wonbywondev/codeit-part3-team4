@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화 사업",
+  "agency": "경상북도 봉화군",
+  "purpose": "인명 및 재산 피해를 최소화하고 군민의 안전을 도모하기 위함",
+  "budget": "900,000,000원(부가세 포함)",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "착수일로부터 7개월(210일)",
+  "requirements_must": "시스템은 24시간 무중단 운영이 가능해야 함; 무상하자보수 기간은 최종검수 완료 후 12개월; 사업 추진 시 국가표준 및 정보화 기술지원 기관에서 확정한 표준화·보안 관련 법 규정 및 지침 준수",
+  "eval_items": "제안서를 평가한 후 협상절차를 통하여 선정; 제안서 평가 기준(세부내용은 제안요청서 내 제시)",
+  "price_eval": "협상에 의한 계약(제안서를 평가한 후 협상절차)",
+  "eligibility": "입찰참가자격(세부사항은 제안요청서 내 입찰참가자격 항목에 따름)",
+  "legal_basis": "「재난 및 안전관리기본법」 제38조의2",
+  "blind_spot_solution": "NOT_FOUND",
+  "security_policy": "행정기관 및 공공기관 정보시스템의 구축·운영지침(행정안전부), 소프트웨어 개발보안 가이드(행정안전부), 전자정부 웹사이트 품질관리 지침(행정안전부고시 제2021-19호) 등 준수",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "NOT_FOUND",
+  "subcontracting_policy": "하도급 사항 관련 내용 존재(세부사항은 제안요청서 내 '하도급 사항' 항목에 따름)",
+  "remote_control_target": "원격지 개발을 요청하는 경우 원격지 보안관리대책을 제시해야 함",
+  "mobile_app_viewable_results": "NOT_FOUND",
+  "task_start_deadline_after_contract": "계약 후 14일 이내에 사업수행계획서 작성·제출(계약 후 14일 이내 착수계 제출 관련 서류 제출)",
+  "required_documents_for_execution": "계약서, 제안요청서, 제안서, 사업수행계획서, 보안서약서 등(착수계 관련서류)"
+}

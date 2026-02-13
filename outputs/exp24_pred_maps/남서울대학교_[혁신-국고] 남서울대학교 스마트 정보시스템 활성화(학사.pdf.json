@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "70000000",
+  "contract_type": "협상에 의한 계약 ( 제한경쟁입찰 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 3 개월",
+  "requirements_must": "파일 암호화 솔루션 적용, 암/복호화 모듈 적용, 보안 강화, 개인정보 유출 방지",
+  "eval_items": "기술/가격",
+  "price_eval": "협상",
+  "eligibility": "NOT_FOUND",
+  "scope": "□ 학사포털 서비스에 파일 암 / 복호화 모듈, 대학원 학사포털 서비스에 파일 암 / 복호화 모듈 적용 등 시스템 전체에 암호화 모듈 적용",
+  "encryption_target": "개인정보와 연관된 파일, 학사포털 서비스의 첨부파일",
+  "security_requirements": "개인정보 암호화 적용, 암호화 모듈 도입 및 관리",
+  "file_encryption_method": "암호화/복호화 모듈 적용",
+  "warranty_period": "NOT_FOUND",
+  "subcontract_policy": "공동 수급 불허, 단 독형태로만입찰에참가",
+  "joint_bidding": "NOT_FOUND",
+  "deliverables": "산출물 목록 및 제출시기 명시",
+  "project_manager_requirement": "PM 요구사항 상세 설명 포함",
+  "testing_requirements": "암호화 검증 방안 및 테스트 요구사항"
+}

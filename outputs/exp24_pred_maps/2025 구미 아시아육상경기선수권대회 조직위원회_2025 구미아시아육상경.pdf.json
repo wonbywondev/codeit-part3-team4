@@ -1,0 +1,23 @@
+{
+  "project_name": "2024. . . 구미아시아육상경기선수권대회 종합정보시스템 구축 용역",
+  "agency": "구미아시아육상경기선수권대회 조직위원회",
+  "purpose": "종합정보시스템 구축을 통한 대회 운영 및 정보화시설 구축 등",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "품질 요구사항 및 보안/비밀 유지 의무; 하자보수 방안; 보안교육·서약서 제출; 현장 IT팀 상주 및 운영; 외부시스템 연동 시험 등",
+  "eval_items": "정량평가(20점): 실적/현황/경영태/책임성·성실성; 정성평가(발표용 PPT): 제안업체 신인도 등",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "제안 자격요건 관련 구체적 내용은 NOT_FOUND, 다만 청렴계약 및 제재 준수 의무 명시",
+  "system_function": "대회 종합정보시스템 S/W 개발; 대회 기본자료 관리 시스템; 경기 운영 시스템; 조 편성/Start List/결과 입력/메달 집계; 인터페이스 관리 시스템; 보고서 관리 시스템; 홈페이지 구축",
+  "system_interface": "내부/외부 시스템(계측기, 전광판, 홈페이지 등) 연동 시험",
+  "NaN": "NOT_FOUND",
+  "operation_staff": "현장상주: 대회 시작 4일전 ~ 종료일까지 경기장 상주",
+  "staffing": "현장 IT팀의 최소 인원 구성은 NOT_FOUND",
+  "security": "비밀 유지 의무 준수; 보안교육 결과서/서약서/보안확약서 제출; 데이터 반출입 관리; 악성코드 점검",
+  "performance": "평균 응답 시간에 대한 구체적 성능요구사항은 NOT_FOUND",
+  "maintenance": "하자보수 기간 및 지원 방안은 분야별/등급별 구분 제시",
+  "eligibility_large_company": "대기업 및 중견기업의 입찰 참여 방법은 NOT_FOUND",
+  "subcontracting_policy": "하도급 수행 가능 여부 NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "평택시",
+  "purpose": "NOT_FOUND",
+  "budget": "￦ 999,494,600 원 ( 부가세 포함 )",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "3 개 월",
+  "requirements_must": "현장테스트 및 성능평가 부문과 관련한 구체적인 계획 제시 필요; 국토교통부 BIS 및 ITS 기술기준 적용 및 검사 필요",
+  "eval_items": "기능점수(FP) 기반 SW 사업 적정 개발기간 산정, 유사사업 자료, 종합의견",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "일반현황/기술능력/신인도 등 관련 요구사항 언급, 참여업체확인서/공동수급 표준협정서 필요 여부 명시",
+  "scope_area": "NOT_FOUND",
+  "center_system_functions": "버스정보안내단말기(BIT) 설치, 센터시스템 운영 S/W 개선·확장, 데이터 정확도 개선, GIS 연계 등",
+  "quantity_change": "BIT 설치물량은 현장조사 및 예산범위 내에서 변동 가능",
+  "field_test_timing": "현장테스트는 단위공정 완료 시 발주기관 입회 하에 수행; 합격 시 다음 공정으로 진행; 불합격 시 보완 후 재시행",
+  "objection_policy": "제안서 평가 결과에 대한 이의 제기 가능 여부 미명시",
+  "proposal_omission": "제안서에 현장테스트 및 성능평가 관련 구체 계획 필요; 피드백 및 보완 요구",
+  "subcontracting_policy": "하도급 관련 절차 언급 필요",
+  "failure_recovery": "현장테스트 및 성능평가 시 피드백 반영 및 보완 필요",
+  "warranty_period": "NOT_FOUND",
+  "test_run_end": "시운전 종료 시점 명시 미확인"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급 용역",
+  "agency": "부산국제영화제 사무국",
+  "purpose": "NOT_FOUND",
+  "budget": "243000000",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "2024.07.02 16:00",
+  "duration": "2025.05.31",
+  "requirements_must": "공식 모바일 앱 4종 공급(영화제 및 마켓 Android, iOS 각 1식) 및 제안서 제출 관련 요구사항",
+  "eval_items": "기술능력평가 및 가격평가",
+  "price_eval": "협상",
+  "eligibility": "입찰참가자격 요건에 따라 소프트웨어사업자 등록 등",
+  "submission_place": "영화의전당 비프힐 3층 부산국제영화제 사무국 회계팀",
+  "submission_docs": "제안요청서 및 첨부서류",
+  "NaN": "NOT_FOUND",
+  "consortium": "허용하지 않음",
+  "scope": "BIFF 공식 웹사이트와 관련하여 수행해야 하는 주요 과업은 제안요청서에 명시되어 있음",
+  "deliverables": "공식 모바일 앱 4종 공급",
+  "staffing": "투입인력 및 이력사항(파견인력 표기) 제시",
+  "technical_eval": "기술능력평가 항목 세부 구성은 제안요청서(p.47~p.48)에 기재",
+  "negotiation_criteria": "협상적격자 선정 기준은 기술능력평가 점수 85% 이상 및 가격평가 점수 반영",
+  "security": "보안요건(보안각서 등) 제출 요구"
+}

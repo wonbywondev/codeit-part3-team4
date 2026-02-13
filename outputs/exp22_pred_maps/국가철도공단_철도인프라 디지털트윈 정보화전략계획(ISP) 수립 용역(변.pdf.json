@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "국가철도공단",
+  "purpose": "NOT_FOUND",
+  "budget": "689,480,000 원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 , 기술 90%, 가격 10%)",
+  "deadline": "NOT_FOUND",
+  "duration": "8",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "입찰공고일 기준 최근 3 년 이내 디지털트윈 관련 실적 및 BIM 관련 실적 보유 업체",
+  "goal": "디지털트윈 기술을 활용한 철도 인프라의 디지털 전환 및 데이터 기반 의사결정 체계 확립",
+  "scope": "국내·외 디지털트윈 현황 및 환경 분석, openBIM 기반 철도인프라 표준정보체계 구축 방안, 공단 내부 시스템 연계성 도출, 디지털트윈 플랫폼 연계성 분석",
+  "standard": "BIM 국제표준 및 철도 표준정보체계 개발 방향 도출",
+  "integration": "SAP ERP, RAFIS, EPMS, CPMS 등 공단 내부 시스템과의 연계성 도출",
+  "design": "디지털트윈 데이터 협업 방식 및 플랫폼 시스탬 구축 방안 수립",
+  "planning": "중장기 로드맵 수립을 위한 핵심과제 도출 및 우선순위 결정, 기간/예산/조직 등 세부추진계획",
+  "function": "openBIM 기반 디지털트윈 플랫폼 구축 과업 도출 및 실현",
+  "procedure": "제안요구사항의 컨설팅 요건 ID 부여 규칙은 CONTEXT에 명시되지 않음",
+  "security": "보안 요구사항은 데이터 운용 현황 분석 및 보안 요구사항 항목으로 구분되며, 공단 내부 시스템과의 연계성 분석 포함"
+}

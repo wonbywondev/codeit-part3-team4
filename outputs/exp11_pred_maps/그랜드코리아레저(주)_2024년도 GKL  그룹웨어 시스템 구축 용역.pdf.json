@@ -1,0 +1,23 @@
+{
+  "project_name": "그룹웨어 시스템 및 기록물관리 시스템 구축",
+  "agency": "GKL",
+  "purpose": "시스템 오픈 당시 관련 법령 및 기관 내규의 내용을 반영하여 범용성 및 확장성 있는 시스템 구축",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "‘24.4.15.(월) 10:30 (제안요청 설명회 일시)",
+  "duration": "NOT_FOUND",
+  "requirements_must": "W3C 웹 표준((X)HTML, CSS) 준수, 비표준기술 배제, 모바일은 별도 플러그인 없이 브라우저만으로 이용 가능, SSL 적용 등 웹 보안 표준 준수, 사용자·그룹별 접근권한 설정",
+  "eval_items": "기술평가(90점: 정량10점, 정성80점) 및 가격평가(10점)",
+  "price_eval": "조달청 국가종합전자조달시스템에서 실시",
+  "eligibility": "제안설명 발표자는 공동수급체 대표자 소속 임직원으로서 1년 이상 재직 중인 정직원",
+  "scope_custom": "웹기안기 설치 및 그룹웨어 연계, 기록물관리시스템 구축 및 연계, 정보공개 시스템 연계, 그룹웨어·기록물관리 문서 이관, 메신저 신규구성, HR·메일·전자문서유통 등 연계 및 커스터마이징",
+  "migration_scope": "기존 기록물의 신규 시스템으로 마이그레이션 및 이관(문서 이관 일별)",
+  "mobile_requirements": "모바일 단말(브라우저)에서 별도 플러그인 없이 웹 브라우저만으로 이용 가능하도록 웹 표준 기술로 구축, 사용자 조회·쪽지전송·대화·파일전송·대화저장 등 메신저 기능",
+  "approval_system": "회계전표 결재문서에 대해 개별시스템 데이터가 존재하고 증빙데이터를 파일 또는 링크 형태로 전산 표시 가능할 경우 자동으로 첨부하는 기능",
+  "security_auth": "SSL 적용 등 웹 보안 표준 준수(2차 인증 방식 명시 없음)",
+  "search_engine": "NOT_FOUND",
+  "web_editor": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "cooperation_score": "NOT_FOUND",
+  "web_standard": "비표준기술 적용 배제(기획단계부터), W3C 웹 표준((X)HTML, CSS) 준수, ‘전자정부 웹사이트 품질관리 지침’ 준수"
+}

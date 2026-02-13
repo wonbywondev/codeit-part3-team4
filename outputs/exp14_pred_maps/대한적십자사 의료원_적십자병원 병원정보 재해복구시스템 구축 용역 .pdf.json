@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "NOT_FOUND",
+  "purpose": "병원정보 재해복구 체계 부재 및 재해복구 시스템 구축 필요",
+  "budget": "500,000,000원",
+  "contract_type": "제한경쟁, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "6개월 이내",
+  "requirements_must": "시스템 장비 구성 요구사항; 데이터베이스 서버 1식; DBMS 4식; 데이터복제 솔루션 12식; 주센터와 재해복구센터 연결 및 보안정책 준수",
+  "eval_items": "기술 90%, 가격 10%",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "데이터베이스 서버 1식 재해복구센터 설치; 데이터베이스 마이그레이션 및 이관",
+  "target_hospitals": "서울적십자병원, 인천적십자병원, 상주적십자병원, 전자의무기록 진료·원무·검사, 통영적십자병원 병원정보시스템(EMR), 거창적십자병원, 경인권역재활병원, 영주적십자병원",
+  "hw_spec": "NOT_FOUND",
+  "replication_qty": "12식(주 센터 포함)",
+  "install_location": "NOT_FOUND",
+  "migration_requirement": "각 병원 DB의 주 센터 이관 시 DBMS 버전검증 및 안정화 방안",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "상세 내용 PSR-02에 3시간 이내 방문 지원",
+  "security_training": "보안 정책 및 가이드라인 준수; 보안 교육 및 보안점검 주기 요구사항 포함",
+  "availability": "도입 장비 가용성 보장 요구사항"
+}

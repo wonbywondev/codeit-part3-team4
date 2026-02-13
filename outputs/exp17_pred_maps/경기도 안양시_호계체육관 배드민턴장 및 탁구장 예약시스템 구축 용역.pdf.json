@@ -1,0 +1,23 @@
+{
+  "project_name": "호계체육관 배드민턴장 및 탁구장 예약 시스템 구축",
+  "agency": "안양시청",
+  "purpose": "고객의 니즈를 시스템에 즉시 반영하기 위한 웹 기반 및 키오스크 예약관리시스템 구축, 이용회원 편의성 및 운영 효율성 제고, 무단이용자 차단 및 개인정보 보호를 위한 시큐어 코딩 적용 등",
+  "budget": "49,500 천원 (부가가치세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약 후 120 (일)",
+  "requirements_must": "시큐어 코딩 적용한 회원관리 프로그램 개발, 반응형 웹 기반 및 키오스크 연계, 국가정보보안기본지침 준수, 신원확인 및 보안서약서 제출 등",
+  "eval_items": "기술평가 (90%), 가격평가 (10%)로 종합평가(100점)",
+  "price_eval": "가격평가 (10%) — 협상에 의한 계약 방식으로 평가 후 협상",
+  "eligibility": "발주기관 요구에 따른 신원확인 및 증빙자료 제출, 보안서약서 제출; 기타 상세 참가자격은 NOT_FOUND",
+  "budget_vat": "부가가치세 포함",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "반응형 웹 기반 (웹 및 모바일)",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "사업자는 검수 전 시스템 정상가동 여부를 테스트해야 함 (최소 횟수 명시 없음)",
+  "failure_response": "NOT_FOUND",
+  "training_target": "발주자의 관리자 및 담당자",
+  "training_cost": "교육교재, 기자재 및 출장비 등 교육에 소요되는 제반비용 일체는 사업자 부담",
+  "log_retention": "입찰서류 관리 목적의 개인정보 보유기간: 5년"
+}

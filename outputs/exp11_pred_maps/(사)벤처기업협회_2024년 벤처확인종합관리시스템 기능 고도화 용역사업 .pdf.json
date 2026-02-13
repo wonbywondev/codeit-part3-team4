@@ -1,0 +1,23 @@
+{
+  "project_name": "본 시스템 기능 고도화 용역사업",
+  "agency": "벤처기업확인기관",
+  "purpose": "NOT_FOUND",
+  "budget": "추정금액 20억원 미만",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "사업 착수 시 대표자용 보안확약서 및 참여자용 보안서약서·보안각서 제출; 용역 수행 전 참여인원에 대한 보안교육 실시; 사업 수행 중 주기적 자체 보안교육 및 주관기관 보안교육 참석; 웹 응용 프로그램 개발 시 주요 보안 취약점(접근통제 취약점, 부적절한 파라미터 사용, XSS 등) 고려 및 시큐어 코딩; 외부 사용자 로그인 페이지에 SSL 적용 또는 PKI 기반 인증로그인; SQL인젝션, XSS, 웹쉘 업로드, 임의 파일 다운로드 등의 웹 취약점 없음; 사용자 인증정보 소스코드 하드코딩 금지",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "대기업 및 상호출자제한기업집단에 속하는 기업은 참여불가; 제출 마감일 전일까지 유효한 중·소기업 또는 소상공인 확인서 보유; 공동수급업체는 모두 입찰 참가자격 구비",
+  "project_start_deadline": "과업 시작일로부터 10일 이내 착수",
+  "post_contract_submission_docs": "착수계, 책임기술자 선임계, 책임기술자 이력서 및 기술자격증 사본, 참여기술자 이력서 및 기술자격증 사본, 보안각서 및 보안대책, 과업수행계획서, 기타 필요사항",
+  "joint_venture_member_limit": "5개 이하",
+  "joint_venture_min_share_ratio": "구성원별 계약 참여 최소 지분율 10% 이상",
+  "subcontracting_requirements": "NOT_FOUND",
+  "web_standard_compliance_items": "웹 페이지 전송 데이터 압축, 이미지 최적화, 중복 또는 미사용 스크립트 제거 등 용량 감축",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "유효기간 내의 중·소기업 또는 소상공인 확인서",
+  "performance_response_time": "웹 페이지 조회 시 사용자가 요청한 시간으로부터 3초 이하로 완전히 디스플레이 되어야 함"
+}

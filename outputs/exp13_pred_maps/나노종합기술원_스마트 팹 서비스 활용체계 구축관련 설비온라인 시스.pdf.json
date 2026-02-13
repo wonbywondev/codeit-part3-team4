@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "나노종합기술원",
+  "purpose": "FAB 내 공정장비의 실시간 모니터링을 위한 설비 통신 온라인 시스템 구축 및 SECS/Non-SECS 데이터 수집 및 LoT Tracking 환경 구축, 기술원의 新공정관리시스템 연계를 통한 공정 데이터 및 Recipe 관리·이력관리 환경 구축",
+  "budget": "2,349,130,320 원 (VAT포함)",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "SECS 통신 지원요구사항, Carrier ID 인식 장치 설계·설치·인터페이스·관리 요구사항, HMI 장치의 설비통신·SECS·PLC 통신 프로토콜 마련, 시스템 접근권한 통제 및 참여인원·자료·장비 보안관리",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "SW 사업정보 제출 의무(기능점수 산정 가능한 전문가 포함), 하도급 사전승인 및 하도급 계획서 제출 요구(소프트웨어진흥법 준수)",
+  "scope": "기술원 보유 장비 설비 온라인 시스템 구축, 설비별 통신 온라인 기준정보 관리, 상태·리소스 조회 및 로그분석·데이터 확보, SECS/Non-SECS 데이터 수집, Carrier ID 인식 장치 설계·설치·연동, 공정관리시스템(MES) 연계",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "NOT_FOUND",
+  "lot_tracking": "Carrier ID(BCAR)를 통한 바코드 인식으로 공정간 이동·공정 투입·완료 데이터 수집, 인식정보(동일성: LotID 등) 발행 및 설비 투입/완료 인식, 설비 데이터와 인식정보 매핑을 통한 Data Collection 및 MES 연계",
+  "subcontract_limit": "하도급 비율제한(구체 수치 NOT_FOUND)",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "대외 보안이 요구되는 자료는 대외 비상 등급으로 작성·수발신 관리 이력 관리 및 사업종료시 관련 자료 완전 파기(암호화 구체 내용 NOT_FOUND)",
+  "interface_method": "기술원의 新공정관리시스템 연계를 위한 인터페이스 통신(미들웨어 Config 및 대상 시스템별 Subject 설정관리), Carrier 정보 기반 공정관리시스템 인터페이스 구축",
+  "maintenance_rate": "NOT_FOUND"
+}

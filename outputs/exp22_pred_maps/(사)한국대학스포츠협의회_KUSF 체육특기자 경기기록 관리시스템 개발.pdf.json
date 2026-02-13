@@ -1,0 +1,23 @@
+{
+  "project_name": "KUSF 체육특기자 경기기록 관리시스템 개발",
+  "agency": "한국대학스포츠협의회(KUSF)",
+  "purpose": "추진배경: 현행 대입 체육특기자 선발에 경기실적으로만 당락을 결정하는 문제 해결을 위한 가이드라인 및 권고 발표; 체육특기자 경기기록 관리시스템 운영을 위한 서비스 운영 및 관리",
+  "budget": "1억 5천만 원(부가가치세 포함)",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결 후 2024년 12월 31일까지",
+  "requirements_must": "제안서 평가에서 기술평가 90% / 가격평가 10% 및 발표자료 제출, 발표자(PM) 자격 요건 충족 등",
+  "eval_items": "기술평가(90%), 가격평가(10%)",
+  "price_eval": "가격평가 10%는 나라장터를 통해 실시",
+  "eligibility": "자격기준 미달 등으로 PT심사에서 제외될 수 있음; 제안 발표자는 PM이 발표해야 하며 재직증명서 및 국민연금가입 증빙/건강보험자격득실확인서 제시 필요",
+  "presentation": "제안 발표는 업체의 총괄책임자(PM)가 발표하는 것을 원칙으로 함; 발표자료는 PPT로 제출",
+  "presentation_time": "제안사별 발표 약 20분 발표 및 20분 질의응답",
+  "NaN": "NOT_FOUND",
+  "performance_evaluation_metrics": "체육특기자 경기력 평가지표 개발 관련 평가(기술평가) 진행; 관련 지표 개발 결과 및 시스템 구현 평가 포함",
+  "proposal_writing_guidelines": "제안서 제출은 온라인 제출, PPT 발표자료 무기명 등 서식 요구; 제안서 제출 매뉴얼 참조",
+  "working_hours": "NOT_FOUND",
+  "staff_change_policy": "NOT_FOUND",
+  "deliverable_copyright": "NOT_FOUND",
+  "deliverables": "사업수행계획서, 사업관리 및 품질관리 문서, 현황보고서(주/월간), 중간보고서, 최종보고서, 매뉴얼 및 인터페이스 정의서 등",
+  "organization_founding_year": "NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "₩ 999,494,600 원 ( 부가세 포함 )",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "3 개 월",
+  "requirements_must": "현장테스트 및 성능평가 부문과 관련한 구체적인 계획 제시 필요; 국토교통부 BIS 및 ITS 기술기준 적용; 검사가 수반되어야 함; 시험운영 및 성능조건 충족; 보안 및 규정 준수",
+  "eval_items": "기능점수(FP) 기반 SW 사업 적정 개발기간 산정표 등; 제안서 목차 포함",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "참가 자격 요건(면허/실적/인증/등급) NOT_FOUND",
+  "scope_area": "NOT_FOUND",
+  "center_system_functions": "센터 시스템 기능개선 및 확장; 운영단말 개선; 데이터 정확도 및 시스템 개선",
+  "quantity_change": "BIT 설치 물량은 현장 및 교통현황조사 후 변동될 수 있으며, 예산범위 내에서만 가능",
+  "field_test_timing": "현장테스트 및 성능평가 계획 수립 및 실시, 합격 시 다음 공정 진행; 불합격 시 재시행",
+  "objection_policy": "제안서 평가 결과 이의 제기 가능 여부 NOT_FOUND",
+  "proposal_omission": "제안서 누락 내용은 피드백 후 보완; 계약상대자의 부담으로 보완 필요",
+  "subcontracting_policy": "하도급 절차 필요; 협력 표준협정서 등 필요 여부 명시",
+  "failure_recovery": "장애 시 복구 시간 기준 NOT_FOUND",
+  "warranty_period": "무상 하자보수 기간 NOT_FOUND",
+  "test_run_end": "시운전 종료 시점 NOT_FOUND"
+}

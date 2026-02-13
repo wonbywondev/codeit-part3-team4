@@ -1,0 +1,23 @@
+{
+  "project_name": "GKL 그룹웨어 시스템 구축사업",
+  "agency": "NOT_FOUND",
+  "purpose": "그룹웨어 및 기록물관리 등 노후화된 시스템 개선, 비표준(ActiveX)·IE 종속성 및 보안취약점 제거, 웹기반 그룹웨어로 연동성 및 업무환경 개선",
+  "budget": "1,515,000 천원 (부가세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "웹기반 시스템 구축, 비표준(ActiveX) 제거·IE 종속성 해소, 전자문서유통 시스템 연계, 기록물관리·전자결재·메일·메신저 등 연계 및 마이그레이션, 보안요건 반영",
+  "eval_items": "기술평가(90%), 가격평가(10%); 평가항목에 전략 및 방법론(사업이해도, 추진전략, 적용기술), 개발방법론, 기술·기능, 제약사항, 일정계획 등 포함",
+  "price_eval": "가격평가(10%)",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "기록물관리 시스템 구축, 업무용 메신저 재구축, 전자결재·기록물관리·통합검색 연계 및 커스터마이징, 전자문서 유통시스템 연계, 기존 전자문서 및 문서 데이터 마이그레이션",
+  "migration_scope": "기존 생산된 전자결재 문서를 포함한 대상 문서의 이관 및 데이터 마이그레이션",
+  "mobile_requirements": "모바일 기능 구현으로 사내 소통 강화 및 업무처리 프로세스 재정립을 통한 사용자 편의 증대",
+  "approval_system": "결재 처리 기능(결재경로·승인부서 지정, 결재완료 연계문서 기록물대장 또는 별도보관함 저장, KEY 값 통한 결재중/결재완료 팝업 조회 등)",
+  "security_auth": "NOT_FOUND",
+  "search_engine": "통합 검색 솔루션 연계 (전자결재·기록물관리 시스템간 연계 포함)",
+  "web_editor": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "cooperation_score": "NOT_FOUND",
+  "web_standard": "비표준(ActiveX) 제거 및 IE 종속성 해소"
+}

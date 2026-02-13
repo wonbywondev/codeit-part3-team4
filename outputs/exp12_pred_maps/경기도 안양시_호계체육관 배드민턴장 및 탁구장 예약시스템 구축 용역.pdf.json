@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "49500000",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "120일",
+  "requirements_must": "시스템은 반응형 웹 기반 예약 시스템 구성, 키오스크 연계, 회원관리/비회원관리/매출관리/입장시간 자동화 등 운영관리 기능 수행, 시큐어 코딩 적용 필요",
+  "eval_items": "기술평가(90%)와 가격평가(10%)로 종합평가",
+  "price_eval": "협상 및 점수 기반 종합평가",
+  "eligibility": "NOT_FOUND",
+  "budget_vat": "NOT_FOUND",
+  "negotiation_threshold": "협상적격자 선정 기준: 제안서 기술평가 점수 85% 이상인 자",
+  "system_platform": "웹 기반 예약 시스템, 반응형 웹 및 키오스크 연계",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "정상상태에서 100명 이상의 동시 로그인 사용자 수용",
+  "test_count": "NOT_FOUND",
+  "failure_response": "NOT_FOUND",
+  "training_target": "NOT_FOUND",
+  "training_cost": "NOT_FOUND",
+  "log_retention": "NOT_FOUND"
+}
