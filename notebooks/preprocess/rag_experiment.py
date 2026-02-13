@@ -24,14 +24,24 @@ from rapidfuzz import fuzz
 from preprocess.pp_basic import EVAL_DIR
 
 try:
-    from preprocess import pp_v5 as pp
-except ImportError:  # v5 배포 전 백업
-    from preprocess import pp_v4 as pp
+    from preprocess import pp_v6 as pp
+except ImportError:
+    try:
+        from preprocess import pp_v5 as pp
+    except ImportError:  # v5/v6 미배포 전 백업
+        from preprocess import pp_v4 as pp
 
 ALL_DATA = pp.ALL_DATA
 clean_text = pp.clean_text
 extract_text = pp.extract_text
 chunk_from_alldata = getattr(pp, "chunk_from_alldata")
+
+
+def _chunk_for_index(doc_name: str, size: int) -> List[str] | None:
+    try:
+        return chunk_from_alldata(doc_name, size=size, include_meta=True)
+    except TypeError:
+        return chunk_from_alldata(doc_name, size=size)
 
 
 # -------------------------
@@ -190,7 +200,7 @@ class C2PageChunker(BaseChunker):
 
 class C3SectionChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
-        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
+        chunks = _chunk_for_index(doc_path.name, size=CONFIG["chunk_length"])
         if chunks is None:
             text = clean_text(extract_text(doc_path))
             s = CONFIG["chunk_length"]
@@ -201,7 +211,7 @@ class C3SectionChunker(BaseChunker):
 class C4DoclingChunker(BaseChunker):
     """Docling section_path 청킹을 강제 사용하고 싶을 때 선택"""
     def chunk(self, doc_path: Path) -> List[str]:
-        chunks = chunk_from_alldata(doc_path.name, size=CONFIG["chunk_length"])
+        chunks = _chunk_for_index(doc_path.name, size=CONFIG["chunk_length"])
         if chunks is None:
             return C1FixedChunker(size=CONFIG["chunk_length"]).chunk(doc_path)
         return chunks
