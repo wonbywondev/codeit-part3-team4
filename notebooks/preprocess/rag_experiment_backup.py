@@ -8,7 +8,6 @@ from typing import Any, Dict, List, Tuple, Optional
 
 import gc
 import json
-import re
 import unicodedata
 
 import numpy as np
@@ -25,7 +24,7 @@ from rapidfuzz import fuzz
 from preprocess.pp_basic import EVAL_DIR
 
 try:
-    from preprocess import pp_chul as pp
+    from preprocess import pp_v6 as pp
 except ImportError:
     try:
         from preprocess import pp_v5 as pp
@@ -69,12 +68,6 @@ RFP_PROMPT = """역할: 너는 RFP/입찰 공고 문서(CONTEXT 발췌)에서 �
 5) CONTEXT에 관련 단서(부분일치, 유사표현, 숫자, 기관명 후보)가 1개라도 있으면 가능한 범위에서 채워라.
 6) "NOT_FOUND"는 정말로 근거가 전혀 없을 때만 사용한다.
 7) 모든 값을 "NOT_FOUND"로 채우는 출력은 금지한다. (최소 1개는 CONTEXT에서 발췌해 채워라)
-8) 날짜는 문서에 나온 형식 그대로 사용한다. 조사/어미 붙이지 말 것. (예: "~까지", "~부터" 금지)
-9) 금액은 문서에 나온 형식 그대로 사용한다. (예: 100,000,000원)
-10) 값은 최대한 짧고 핵심만. 불필요한 수식어/설명 붙이지 말 것.
-11) 라벨/항목명은 값에 포함하지 말 것. (예: "발주기관 : 국민연금공단" → "국민연금공단")
-12) 금액 표기 시 괄호 안 부연설명 붙이지 말 것. 숫자와 단위만. (예: "50,000,000(금 오천만원/VAT포함)" → "50,000,000원")
-
 
 작업 방법(반드시 따름):
 - 먼저 CONTEXT에서 다음 유형의 신호를 찾아라: 사업명/용역명, 금액(원), 기간(일/개월), 기관명, 마감일, 평가(기술/가격).
@@ -127,146 +120,16 @@ def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[s
     return {"recall": 1.0 if hit_rank else 0.0, "mrr": (1.0 / hit_rank) if hit_rank else 0.0}
 
 
-_NOT_FOUND_TOKENS = {"", "없음", "notfound", "not_found", "gen_fail"}
-_MONEY_KEY_HINTS = ("budget", "amount", "cost", "price")
-_DATE_KEY_HINTS = ("deadline", "date", "start", "end")
-_NUMBER_KEY_HINTS = (
-    "count",
-    "ratio",
-    "rate",
-    "time",
-    "year",
-    "users",
-    "score",
-    "threshold",
-    "limit",
-    "day",
-    "month",
-    "hour",
-    "retention",
-    "period",
-    "duration",
-)
-_MONEY_MULTIPLIER = {
-    "원": 1.0,
-    "krw": 1.0,
-    "천원": 1_000.0,
-    "만원": 10_000.0,
-    "백만원": 1_000_000.0,
-    "천만원": 10_000_000.0,
-    "억원": 100_000_000.0,
-    "천": 1_000.0,
-    "만": 10_000.0,
-    "백만": 1_000_000.0,
-    "천만": 10_000_000.0,
-    "억": 100_000_000.0,
-}
-
-
-def _to_float(num_s: str) -> Optional[float]:
-    try:
-        return float(num_s.replace(",", "").strip())
-    except Exception:
-        return None
-
-
-def _infer_eval_mode(field: Optional[str]) -> str:
-    key = str(field or "").lower()
-    if any(h in key for h in _MONEY_KEY_HINTS):
-        return "money"
-    if any(h in key for h in _DATE_KEY_HINTS):
-        return "date"
-    if any(h in key for h in _NUMBER_KEY_HINTS):
-        return "number"
-    return "text"
-
-
-def _extract_money_won(text: str) -> Optional[int]:
-    s = str(text or "")
-    for m in re.finditer(
-        r"(\d[\d,]*(?:\.\d+)?)\s*(억원|천만원|백만원|만원|천원|억|천만|백만|만|천|원|krw)",
-        s,
-        flags=re.IGNORECASE,
-    ):
-        base = _to_float(m.group(1))
-        unit = (m.group(2) or "").lower()
-        if base is None or unit not in _MONEY_MULTIPLIER:
-            continue
-        return int(round(base * _MONEY_MULTIPLIER[unit]))
-
-    # 금액 표기가 단순 숫자인 경우(예: 90000000) fallback
-    nums = _extract_numbers(s)
-    if len(nums) == 1:
-        return int(round(nums[0]))
-    return None
-
-
-def _extract_dates(text: str) -> set[tuple[int, int, int]]:
-    out: set[tuple[int, int, int]] = set()
-    s = str(text or "")
-    for m in re.finditer(r"(20\d{2})[.\-/년\s]+(\d{1,2})[.\-/월\s]+(\d{1,2})", s):
-        y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
-        if 1 <= mo <= 12 and 1 <= d <= 31:
-            out.add((y, mo, d))
-    return out
-
-
-def _extract_numbers(text: str) -> List[float]:
-    out: List[float] = []
-    s = str(text or "")
-    for token in re.findall(r"\d[\d,]*(?:\.\d+)?", s):
-        n = _to_float(token)
-        if n is not None:
-            out.append(n)
-    return out
-
-
-def _has_exact_numeric_overlap(pred_nums: List[float], gold_nums: List[float], tol: float = 1e-9) -> bool:
-    for p in pred_nums:
-        for g in gold_nums:
-            if abs(p - g) <= tol:
-                return True
-    return False
-
-
-def eval_gen(
-    pred: str,
-    gold: Optional[str],
-    threshold: int = 80,
-    field: Optional[str] = None,
-) -> Dict[str, float]:
+def eval_gen(pred: str, gold: Optional[str], threshold: int = 80) -> Dict[str, float]:
     pred = (pred or "").strip()
 
     # 기존 정의 유지(원하면 NOT_FOUND 제외로 바꿀 수 있음)
-    fill = 1.0 if pred and pred.lower() not in _NOT_FOUND_TOKENS else 0.0
+    fill = 1.0 if pred and pred.lower() not in {"", "없음"} else 0.0
 
     if gold is None or str(gold).strip() == "":
         return {"fill": fill, "match": np.nan, "sim": np.nan}
 
     gold = str(gold).strip()
-    mode = _infer_eval_mode(field)
-
-    if mode == "money":
-        pred_money = _extract_money_won(pred)
-        gold_money = _extract_money_won(gold)
-        if pred_money is not None and gold_money is not None:
-            is_match = float(pred_money == gold_money)
-            return {"fill": fill, "match": is_match, "sim": 100.0 if is_match else 0.0}
-
-    if mode == "date":
-        pred_dates = _extract_dates(pred)
-        gold_dates = _extract_dates(gold)
-        if pred_dates and gold_dates:
-            is_match = float(bool(pred_dates & gold_dates))
-            return {"fill": fill, "match": is_match, "sim": 100.0 if is_match else 0.0}
-
-    if mode == "number":
-        pred_nums = _extract_numbers(pred)
-        gold_nums = _extract_numbers(gold)
-        if pred_nums and gold_nums:
-            is_match = float(_has_exact_numeric_overlap(pred_nums, gold_nums))
-            return {"fill": fill, "match": is_match, "sim": 100.0 if is_match else 0.0}
-
     sim = fuzz.token_set_ratio(pred, gold)
     return {"fill": fill, "match": 1.0 if sim >= threshold else 0.0, "sim": float(sim)}
 
@@ -386,25 +249,6 @@ class R2VectorRetriever(BaseRetriever):
         _, I = index.search(q_mean.astype("float32"), top_k)
         return [int(i) for i in I[0]]
 
-class R4RerankerRetriever(BaseRetriever):
-    def __init__(self, embed_model, reranker_model: str = "BAAI/bge-reranker-v2-m3"):
-        self.embed_model = embed_model
-        from FlagEmbedding import FlagReranker
-        self.reranker = FlagReranker(reranker_model, use_fp16=True)
-
-    def build_index(self, chunks):
-        from sentence_transformers import SentenceTransformer
-        embs = self.embed_model.encode(chunks, convert_to_numpy=True, show_progress_bar=False)
-        index = faiss.IndexFlatL2(embs.shape[1])
-        index.add(embs.astype("float32"))
-        return index
-
-    def retrieve(self, index, queries, top_k=20):
-        q_embs = self.embed_model.encode(queries, convert_to_numpy=True, show_progress_bar=False)
-        q_mean = q_embs.mean(axis=0, keepdims=True).astype("float32")
-        _, I = index.search(q_mean, min(top_k * 3, index.ntotal))
-        candidates = I[0].tolist()
-        return candidates[:top_k]
 
 class R3HybridRetriever(BaseRetriever):
     """Hybrid: BM25 + Vector, combine scores only for candidate subset to avoid huge RAM/time"""
@@ -585,8 +429,6 @@ def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, clie
         retriever = R2VectorRetriever(embed_model)
     elif spec.retriever == "R3":
         retriever = R3HybridRetriever(embed_model, bm25_candidates=200)
-    elif spec.retriever == "R4":
-        retriever = R4RerankerRetriever(embed_model)
     else:
         raise ValueError(spec.retriever)
 
@@ -607,67 +449,6 @@ class RAGExperiment:
         self.retriever = retriever
         self.generator = generator
         self.questions_df = questions_df
-
-    def run_single_doc_metrics_singleq(
-        self,
-        doc_path: Path,
-        gold_fields_df: pd.DataFrame,
-        gold_evidence_df: pd.DataFrame,
-        top_k: int = 20,
-        sim_threshold: int = 80,
-    ) -> Dict[str, Any]:
-        doc_name = unicodedata.normalize("NFC", doc_path.name)
-
-        queries = get_queries_for_doc(doc_name, self.questions_df)
-        chunks = self.chunker.chunk(doc_path)
-        index = self.retriever.build_index(chunks)
-
-        qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
-        GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
-
-        pred_map: Dict[str, str] = {}
-        g_list: List[Dict[str, float]] = []
-        r_list: List[Dict[str, float]] = []
-
-        for field, question in queries:
-            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
-            context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
-
-            one_pred = self.generator.generate([(field, question)], context)
-            pred = (one_pred.get(field) or "").strip()
-            pred_map[field] = pred
-
-            gold_row = qdf[qdf["field"].astype(str) == str(field)]
-            gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
-            g_list.append(eval_gen(pred, gold, threshold=sim_threshold, field=field))
-
-            for _, row in qdf[qdf["field"].astype(str) == str(field)].iterrows():
-                iid = str(row["instance_id"])
-                anchors = GOLD_ANCHOR.get(iid, [])
-                if anchors:
-                    r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
-                else:
-                    r_list.append({"recall": np.nan, "mrr": np.nan})
-
-        metrics: Dict[str, Any] = {
-            "doc_id": doc_name,
-            "n_questions": int(len(qdf)),
-            "chunk_count": int(len(chunks)),
-            "pred_map": pred_map,
-
-            "ret_recall": float(np.nanmean([x["recall"] for x in r_list])) if r_list else np.nan,
-            "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])) if r_list else np.nan,
-
-            "gen_fill": float(np.nanmean([x["fill"] for x in g_list])) if g_list else np.nan,
-            "gen_match": float(np.nanmean([x["match"] for x in g_list])) if g_list else np.nan,
-            "gen_sim": float(np.nanmean([x["sim"] for x in g_list])) if g_list else np.nan,
-        }
-
-        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
-        gc.collect()
-        return metrics
-
-
 
     def run_single_doc_metrics(
         self,
@@ -732,7 +513,7 @@ class RAGExperiment:
             pred_s = (pred or "").strip()
             preds.append(pred_s)
 
-            g = eval_gen(pred_s, gold, threshold=sim_threshold, field=field)
+            g = eval_gen(pred_s, gold, threshold=sim_threshold)
             g_list.append(g)
 
         pred_preview = preds[:5]
