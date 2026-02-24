@@ -224,3 +224,7 @@ data/section_words.json
 data/text_metadata.json
 uv copy.lock
 pyproject copy.toml
+
+# outputs
+outputs/*_pred_maps
+outputs_single_doc
