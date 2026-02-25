@@ -50,14 +50,12 @@ def _chunk_for_index(doc_name: str, size: int) -> List[str] | None:
 # -------------------------
 CONFIG = {
     "chunk_length": 800,          # C1 baseline
-    "top_k": 14,
-    "per_question_k": 12,
+    "top_k": 15,
     "max_tokens": 2000,           # non gpt-5
     "max_completion_tokens": 2000,  # gpt-5
     "temperature": 0.1,           # non gpt-5
     "alpha": 0.7,                 # hybrid weight for vector score
-    "max_context_chars": 7000,    # context hard cap (chars)
-    "max_context_chars_per_question": 6000,
+    "max_context_chars": 4000,    # context hard cap (chars)
 }
 
 # JSON-only prompt (태그 방식 제거)
@@ -310,58 +308,11 @@ def _nanmean_safe(values: List[float]) -> float:
     return float(np.nanmean(arr))
 
 
-def _is_section_like_chunker(chunker: Any) -> bool:
-    return type(chunker).__name__ in {"C3SectionChunker", "C4DoclingChunker"}
-
-
-def _sanitize_chunk_for_retrieval(chunk: str, section_mode: bool = False) -> str:
-    s = str(chunk or "")
-    if not section_mode:
-        return re.sub(r"\s+", " ", s).strip()
-
-    out_lines: List[str] = []
-    for raw in s.splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.startswith("[meta]"):
-            continue
-        if line == "[표]":
-            continue
-        if line.startswith("## "):
-            line = line[3:].strip()
-        if re.fullmatch(r"[\|\-_=~·•▪◦□■◆▶▷☞\s]+", line):
-            continue
-        out_lines.append(line)
-
-    cleaned = re.sub(r"\s+", " ", " ".join(out_lines)).strip()
-    if len(cleaned) < 20:
-        return re.sub(r"\s+", " ", s).strip()
-    return cleaned
-
-
-def _sanitize_chunk_for_prompt(chunk: str) -> str:
-    s = str(chunk or "")
-    out_lines: List[str] = []
-    for raw in s.splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.startswith("[meta]"):
-            continue
-        if line == "[표]":
-            continue
-        out_lines.append(line)
-    return "\n".join(out_lines).strip()
-
-
 def _build_context_from_indices(chunks: List[str], idxs: List[int], max_chars: Optional[int] = None) -> str:
     parts: List[str] = []
     for rank, ci in enumerate(idxs, start=1):
         if 0 <= int(ci) < len(chunks):
-            chunk_txt = _sanitize_chunk_for_prompt(chunks[int(ci)])
-            if chunk_txt:
-                parts.append(f"[CHUNK {rank}]\n{chunk_txt}")
+            parts.append(f"[CHUNK {rank}]\n{chunks[int(ci)]}")
     context = "\n\n".join(parts)
     if max_chars is not None and max_chars > 0:
         return context[:max_chars]
@@ -446,246 +397,6 @@ def _rule_based_list_answer(question: str, context: str) -> Optional[str]:
             return items[n - 1]
         return "NOT_FOUND"
     return None
-
-
-def _infer_field_group(field: Optional[str], question: Optional[str] = None) -> str:
-    k = str(field or "").lower()
-    q = str(question or "")
-
-    if (
-        k == "agency"
-        or "agency" in k
-        or any(tok in k for tok in ["기관", "발주", "수요"])
-        or re.search(r"(발주기관|수요기관|기관명|주관기관)", q)
-    ):
-        return "agency"
-    if (
-        k in {"project_name", "project", "title"}
-        or "project" in k
-        or any(tok in k for tok in ["사업명", "용역명", "입찰명", "공고명"])
-        or re.search(r"(사업명|용역명|입찰명|공고명)", q)
-    ):
-        return "project_name"
-    if _infer_eval_mode(k) == "money" or re.search(r"(사업비|예산|추정금액|기초금액)", q):
-        return "budget"
-    if _infer_eval_mode(k) == "date" or re.search(r"(마감일|마감|제출기한|제출마감)", q):
-        return "deadline"
-    if "duration" in k or "period" in k or re.search(r"(기간|소요기간|계약일로부터)", q):
-        return "duration"
-    if (
-        "contract_type" in k
-        or ("contract" in k and "type" in k)
-        or re.search(r"(입찰방식|계약방법|계약형태)", q)
-    ):
-        return "contract_type"
-    return "other"
-
-
-def _build_query_texts_for_field(field: Optional[str], question: str) -> List[str]:
-    group = _infer_field_group(field, question)
-    base = (question or "").strip()
-    if not base:
-        return [""]
-
-    hint_map = {
-        "agency": ["발주기관", "수요기관", "기관명", "주관기관"],
-        "project_name": ["사업명", "용역명", "입찰명", "공고명", "과업명"],
-        "budget": ["사업비", "예산", "추정금액", "기초금액", "입찰금액", "원"],
-        "deadline": ["마감일", "접수마감", "제출마감", "입찰서 제출마감", "기한"],
-        "duration": ["수행기간", "사업기간", "계약기간", "계약일로부터", "개월", "일"],
-        "contract_type": ["입찰방식", "계약방법", "협상에 의한 계약", "제한경쟁"],
-    }
-    hints = hint_map.get(group, [])
-    return [base, " ".join(hints)] if hints else [base]
-
-
-def _resolve_field_top_k(field: Optional[str], question: str, default_top_k: int) -> int:
-    group = _infer_field_group(field, question)
-    if group in {"budget", "deadline", "duration"}:
-        return max(default_top_k, default_top_k + 2)
-    if group in {"agency", "project_name", "contract_type"}:
-        return max(default_top_k, default_top_k + 1)
-    return default_top_k
-
-
-def _resolve_field_max_ctx(field: Optional[str], question: str, default_max_ctx: Optional[int]) -> Optional[int]:
-    if default_max_ctx is None:
-        return default_max_ctx
-    group = _infer_field_group(field, question)
-    if group in {"agency", "project_name", "budget", "deadline", "duration", "contract_type"}:
-        return min(default_max_ctx, 4200)
-    return default_max_ctx
-
-
-def _context_lines(context: str) -> List[str]:
-    out: List[str] = []
-    for raw in str(context or "").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("[CHUNK "):
-            continue
-        out.append(line)
-    return out
-
-
-def _extract_labeled_value(lines: List[str], labels: List[str]) -> Optional[str]:
-    if not lines:
-        return None
-    escaped = "|".join(re.escape(x) for x in labels)
-    p_colon = re.compile(rf"(?:{escaped})\s*[:：]\s*(.+)$")
-    p_plain = re.compile(rf"^(?:{escaped})\s+(.+)$")
-
-    for line in lines:
-        m = p_colon.search(line)
-        if m:
-            v = m.group(1).strip(" -|")
-            if v:
-                return v
-    for line in lines:
-        m = p_plain.search(line)
-        if m:
-            v = m.group(1).strip(" -|")
-            if v:
-                return v
-    return None
-
-
-def _extract_date_strings(text: str) -> List[str]:
-    s = str(text or "")
-    out: List[str] = []
-    p = re.compile(
-        r"(20\d{2}\s*[.\-/년]\s*\d{1,2}\s*[.\-/월]\s*\d{1,2}\s*일?(?:\s*\d{1,2}:\d{2})?)"
-    )
-    for m in p.finditer(s):
-        out.append(re.sub(r"\s+", " ", m.group(1)).strip())
-    return out
-
-
-def _extract_budget_candidate(lines: List[str]) -> Optional[str]:
-    budget_labels = ["사업비", "예산", "추정금액", "기초금액", "입찰금액", "사업예산", "금액"]
-    for line in lines:
-        if not any(lb in line for lb in budget_labels):
-            continue
-        won = _extract_money_won(line)
-        if won is not None:
-            return f"{int(won):,}원"
-    return None
-
-
-def _extract_deadline_candidate(lines: List[str]) -> Optional[str]:
-    dl_labels = ["마감일", "접수마감", "제출마감", "입찰서 제출마감", "제출기한", "입찰마감"]
-    for line in lines:
-        if not any(lb in line for lb in dl_labels):
-            continue
-        ds = _extract_date_strings(line)
-        if ds:
-            return ds[0]
-    return None
-
-
-def _extract_duration_candidate(lines: List[str], context: str) -> Optional[str]:
-    period_labels = ["수행기간", "사업기간", "계약기간", "기간", "용역기간"]
-    v = _extract_labeled_value(lines, period_labels)
-    if v:
-        m = re.search(r"(계약일로부터\s*\d+\s*(?:일|개월|월|년))", v)
-        if m:
-            return m.group(1).strip()
-        m = re.search(r"(\d+\s*(?:일|개월|월|년))", v)
-        if m:
-            return m.group(1).strip()
-        if len(v) <= 80:
-            return v
-
-    m = re.search(r"(계약일로부터\s*\d+\s*(?:일|개월|월|년))", str(context or ""))
-    if m:
-        return m.group(1).strip()
-    return None
-
-
-def _extract_project_candidate(lines: List[str]) -> Optional[str]:
-    v = _extract_labeled_value(lines, ["사업명", "용역명", "입찰명", "공고명", "과업명"])
-    if v:
-        return v
-    for line in lines[:40]:
-        cand = line.strip(" -|")
-        if len(cand) > 120:
-            continue
-        if any(tok in cand for tok in ["용역", "구축", "고도화", "재개발", "시스템", "플랫폼"]):
-            return cand
-    return None
-
-
-def _extract_agency_candidate(lines: List[str]) -> Optional[str]:
-    v = _extract_labeled_value(lines, ["발주기관", "수요기관", "기관명", "주관기관", "발주처", "공고기관"])
-    if v:
-        return v
-    return None
-
-
-def _extract_contract_type_candidate(lines: List[str]) -> Optional[str]:
-    v = _extract_labeled_value(lines, ["입찰방식", "계약방법", "계약형태", "입찰방법"])
-    if v:
-        return v
-    for line in lines:
-        if any(tok in line for tok in ["협상에 의한 계약", "제한경쟁", "일반경쟁", "수의계약"]):
-            return line.strip(" -|")
-    return None
-
-
-def _deterministic_field_candidate(field: Optional[str], question: str, context: str) -> Optional[str]:
-    group = _infer_field_group(field, question)
-    lines = _context_lines(context)
-    if not lines:
-        return None
-
-    if group == "budget":
-        return _extract_budget_candidate(lines)
-    if group == "deadline":
-        return _extract_deadline_candidate(lines)
-    if group == "duration":
-        return _extract_duration_candidate(lines, context)
-    if group == "agency":
-        return _extract_agency_candidate(lines)
-    if group == "project_name":
-        return _extract_project_candidate(lines)
-    if group == "contract_type":
-        return _extract_contract_type_candidate(lines)
-    return None
-
-
-_LABEL_ONLY_TOKENS = {
-    "발주기관",
-    "수요기관",
-    "기관명",
-    "사업명",
-    "용역명",
-    "입찰명",
-    "공고명",
-}
-
-
-def _postprocess_field_value(field: Optional[str], value: str) -> str:
-    v = str(value or "").strip()
-    if not v:
-        return "NOT_FOUND"
-
-    v = re.sub(r"\s+", " ", v).strip()
-    v = re.sub(
-        r"^\s*(?:발주기관|수요기관|기관명|사업명|용역명|입찰명|공고명)\s*[:：]\s*",
-        "",
-        v,
-    ).strip()
-    f = str(field or "").strip().lower()
-
-    if f == "agency" and (v in _LABEL_ONLY_TOKENS or re.fullmatch(r"(?:발주기관|수요기관|기관명)", v)):
-        return "NOT_FOUND"
-
-    if f in {"budget", "amount", "cost", "price"} or any(h in f for h in _MONEY_KEY_HINTS):
-        money = _extract_money_won(v)
-        if money is not None:
-            v = f"{int(money):,}원"
-
-    v = v.strip(" \"'`")
-    return v if v else "NOT_FOUND"
 
 
 def build_gold_anchor_map(gold_evidence_df: pd.DataFrame) -> Dict[str, List[str]]:
@@ -1037,11 +748,7 @@ class RAGExperiment:
 
         queries = get_queries_for_doc(doc_name, self.questions_df)
         chunks = self.chunker.chunk(doc_path)
-        retrieval_chunks = [
-            _sanitize_chunk_for_retrieval(c, section_mode=_is_section_like_chunker(self.chunker))
-            for c in chunks
-        ]
-        index = self.retriever.build_index(retrieval_chunks)
+        index = self.retriever.build_index(chunks)
 
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
@@ -1051,16 +758,11 @@ class RAGExperiment:
         r_list: List[Dict[str, float]] = []
 
         for field, question in queries:
-            per_q_top_k = int(CONFIG.get("per_question_k", top_k) or top_k)
-            per_q_top_k = max(1, min(int(top_k), per_q_top_k))
-            field_top_k = _resolve_field_top_k(field, question, per_q_top_k)
-            query_texts = _build_query_texts_for_field(field, question)
-            idxs = self.retriever.retrieve(index, query_texts, top_k=field_top_k)
+            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
             max_ctx = (
                 CONFIG.get("max_context_chars_per_question")
                 or CONFIG.get("max_context_chars")
             )
-            max_ctx = _resolve_field_max_ctx(field, question, max_ctx)
             context = _build_context_from_indices(chunks, idxs, max_chars=max_ctx)
 
             # 요구사항 n번째/개수 질문은 리스트 라인 규칙 기반으로 우선 처리
@@ -1068,13 +770,8 @@ class RAGExperiment:
             if rule_pred is not None:
                 pred = str(rule_pred).strip()
             else:
-                det_pred = _deterministic_field_candidate(field, question, context)
-                if det_pred is not None:
-                    pred = str(det_pred).strip()
-                else:
-                    one_pred = self.generator.generate([(field, question)], context)
-                    pred = (one_pred.get(field) or "").strip()
-            pred = _postprocess_field_value(field, pred)
+                one_pred = self.generator.generate([(field, question)], context)
+                pred = (one_pred.get(field) or "").strip()
             pred_map[field] = pred
 
             gold_row = qdf[qdf["field"].astype(str) == str(field)]
@@ -1105,7 +802,7 @@ class RAGExperiment:
             "gen_strict_coverage": _nanmean_safe([x["strict_applied"] for x in g_list]),
         }
 
-        del chunks, retrieval_chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
+        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
         gc.collect()
         return metrics
 
@@ -1129,11 +826,7 @@ class RAGExperiment:
 
         # 2) chunk -> index -> retrieve
         chunks = self.chunker.chunk(doc_path)
-        retrieval_chunks = [
-            _sanitize_chunk_for_retrieval(c, section_mode=_is_section_like_chunker(self.chunker))
-            for c in chunks
-        ]
-        index = self.retriever.build_index(retrieval_chunks)
+        index = self.retriever.build_index(chunks)
         idxs = self.retriever.retrieve(index, q_texts, top_k=top_k)
 
         # 3) context
@@ -1179,11 +872,7 @@ class RAGExperiment:
             rule_pred = _rule_based_list_answer(question, context)
             if rule_pred is not None:
                 pred = rule_pred
-            else:
-                det_pred = _deterministic_field_candidate(field, question, context)
-                if det_pred is not None:
-                    pred = det_pred
-            pred_s = _postprocess_field_value(field, pred)
+            pred_s = (pred or "").strip()
             preds.append(pred_s)
             pred_map[field] = pred_s
 
@@ -1239,7 +928,7 @@ class RAGExperiment:
         }
 
         # cleanup
-        del chunks, retrieval_chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR, preds, pred_map
+        del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR, preds, pred_map
         gc.collect()
 
         return metrics
