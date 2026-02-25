@@ -51,11 +51,14 @@ def _chunk_for_index(doc_name: str, size: int) -> List[str] | None:
 CONFIG = {
     "chunk_length": 800,          # C1 baseline
     "top_k": 15,
+    "retrieve_k": 24,             # retrieval eval candidate size
+    "context_k": 8,               # generation context subset size
     "max_tokens": 2000,           # non gpt-5
     "max_completion_tokens": 2000,  # gpt-5
     "temperature": 0.1,           # non gpt-5
     "alpha": 0.7,                 # hybrid weight for vector score
     "max_context_chars": 4000,    # context hard cap (chars)
+    "target_field_max_context_chars": 2200,
 }
 
 # JSON-only prompt (태그 방식 제거)
@@ -127,6 +130,15 @@ def eval_retrieval_by_anchor(chunks: List[str], idxs: List[int], anchors: List[s
     return {"recall": 1.0 if hit_rank else 0.0, "mrr": (1.0 / hit_rank) if hit_rank else 0.0}
 
 
+def find_hit_rank(chunks: List[str], idxs: List[int], anchors: List[str]) -> Optional[int]:
+    for rank, ci in enumerate(idxs, start=1):
+        if 0 <= int(ci) < len(chunks):
+            c = chunks[int(ci)]
+            if any(a in c for a in anchors):
+                return rank
+    return None
+
+
 _NOT_FOUND_TOKENS = {"", "없음", "notfound", "not_found", "gen_fail"}
 _MONEY_KEY_HINTS = ("budget", "amount", "cost", "price")
 _DATE_KEY_HINTS = ("deadline", "date", "start", "end")
@@ -168,6 +180,10 @@ def _to_float(num_s: str) -> Optional[float]:
         return float(num_s.replace(",", "").strip())
     except Exception:
         return None
+
+
+def _is_not_found(text: str) -> bool:
+    return str(text or "").strip().lower() in _NOT_FOUND_TOKENS
 
 
 def _infer_eval_mode(field: Optional[str]) -> str:
@@ -397,6 +413,163 @@ def _rule_based_list_answer(question: str, context: str) -> Optional[str]:
             return items[n - 1]
         return "NOT_FOUND"
     return None
+
+
+_TARGET_TUNED_FIELDS = {
+    "requirements_must",
+    "eligibility",
+    "eval_items",
+    "purpose",
+    "contract_type",
+}
+
+_FIELD_CONTEXT_HINTS: Dict[str, List[str]] = {
+    "requirements_must": ["요구사항", "필수", "준수", "의무", "반드시", "필요", "must"],
+    "eligibility": ["입찰참가자격", "참가자격", "자격", "요건", "조건", "실적", "면허"],
+    "eval_items": ["평가항목", "배점", "점수", "기술평가", "가격평가", "평가기준"],
+    "purpose": ["사업목적", "목적", "배경", "추진", "필요성"],
+    "contract_type": ["계약방법", "입찰방식", "계약형태", "협상에 의한 계약", "제한경쟁", "일반경쟁"],
+}
+
+_NOISY_PRED_HINTS = {"검토항목", "검토의견", "세부 내용", "산출정보", "평가기준", "배점"}
+
+
+def _is_target_tuned_field(field: Optional[str]) -> bool:
+    return str(field or "").strip().lower() in _TARGET_TUNED_FIELDS
+
+
+def _clean_pred_text(text: str) -> str:
+    return re.sub(r"\s+", " ", str(text or "")).strip()
+
+
+def _is_noisy_pred(text: str) -> bool:
+    s = _clean_pred_text(text)
+    if not s:
+        return True
+    if s.count("|") >= 2:
+        return True
+    if len(s) > 220:
+        return True
+    return any(tok in s for tok in _NOISY_PRED_HINTS)
+
+
+def _filter_context_for_field(field: Optional[str], context: str) -> str:
+    f = str(field or "").strip().lower()
+    if f not in _FIELD_CONTEXT_HINTS:
+        return context
+
+    lines = str(context or "").splitlines()
+    hints = _FIELD_CONTEXT_HINTS[f]
+    matched: set[int] = set()
+
+    for i, raw in enumerate(lines):
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("[CHUNK "):
+            continue
+        if _LIST_PREFIX_RE.match(line):
+            matched.add(i)
+        if any(h in line for h in hints):
+            matched.add(i)
+            if i - 1 >= 0:
+                matched.add(i - 1)
+            if i + 1 < len(lines):
+                matched.add(i + 1)
+
+    if not matched:
+        return context
+
+    kept = [lines[i] for i in sorted(matched)]
+    reduced = "\n".join(kept).strip()
+    if not reduced:
+        return context
+
+    max_chars = int(CONFIG.get("target_field_max_context_chars", 2200) or 2200)
+    return reduced[:max_chars]
+
+
+def _extract_contract_type(text: str) -> Optional[str]:
+    s = str(text or "")
+    patterns = [
+        ("제한경쟁입찰", r"제한\s*경쟁\s*입찰"),
+        ("일반경쟁입찰", r"일반\s*경쟁\s*입찰"),
+        ("협상에 의한 계약", r"협상\s*에\s*의한\s*계약"),
+        ("수의계약", r"수의\s*계약"),
+    ]
+    found: List[str] = []
+    for label, pat in patterns:
+        if re.search(pat, s):
+            found.append(label)
+    if not found:
+        return None
+    return ", ".join(found)
+
+
+def _extract_purpose_from_context(context: str) -> Optional[str]:
+    for raw in str(context or "").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("[CHUNK "):
+            continue
+        m = re.search(r"(?:목적|배경|추진)\s*[:：]\s*(.+)$", line)
+        if m:
+            v = m.group(1).strip(" -|")
+            if v:
+                return v[:160]
+        if any(tok in line for tok in ["사업목적", "추진배경", "추진 목적"]):
+            return line[:160]
+    return None
+
+
+def _extract_list_like_from_context(field: str, context: str, max_items: int = 5) -> Optional[str]:
+    field_hints = _FIELD_CONTEXT_HINTS.get(field, [])
+    items: List[str] = []
+    for raw in str(context or "").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("[CHUNK "):
+            continue
+        if "|" in line:
+            continue
+        is_list = bool(_LIST_PREFIX_RE.match(line))
+        has_hint = any(h in line for h in field_hints)
+        if not is_list and not has_hint:
+            continue
+        line = re.sub(r"^\s*(?:[\-\*\•·▪◦□■◆▶▷☞]+|\(?\d+\)?[.)]?|[가-힣A-Za-z][.)])\s*", "", line)
+        line = line.strip(" -:;")
+        if len(line) < 3:
+            continue
+        if len(line) > 120:
+            line = line[:120]
+        if line not in items:
+            items.append(line)
+        if len(items) >= max_items:
+            break
+    if not items:
+        return None
+    return "; ".join(items)
+
+
+def _postprocess_target_field_pred(field: Optional[str], pred: str, context: str) -> str:
+    f = str(field or "").strip().lower()
+    p = _clean_pred_text(pred)
+
+    if f == "contract_type":
+        ct = _extract_contract_type(p) or _extract_contract_type(context)
+        return ct if ct else (p if p else "NOT_FOUND")
+
+    if f == "purpose":
+        if _is_not_found(p) or _is_noisy_pred(p):
+            alt = _extract_purpose_from_context(context)
+            return alt if alt else ("NOT_FOUND" if _is_not_found(p) else p)
+        return p[:180]
+
+    if f in {"requirements_must", "eligibility", "eval_items"}:
+        if _is_not_found(p) or _is_noisy_pred(p):
+            alt = _extract_list_like_from_context(f, context, max_items=5)
+            return alt if alt else ("NOT_FOUND" if _is_not_found(p) else p)
+        return p
+
+    return p if p else "NOT_FOUND"
 
 
 def build_gold_anchor_map(gold_evidence_df: pd.DataFrame) -> Dict[str, List[str]]:
@@ -753,47 +926,90 @@ class RAGExperiment:
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
 
+        retrieve_k = int(CONFIG.get("retrieve_k", top_k) or top_k)
+        retrieve_k = max(1, retrieve_k)
+        context_k = int(CONFIG.get("context_k", min(8, retrieve_k)) or min(8, retrieve_k))
+        context_k = max(1, min(context_k, retrieve_k))
+
         pred_map: Dict[str, str] = {}
         g_list: List[Dict[str, float]] = []
         r_list: List[Dict[str, float]] = []
+        hit_ranks: List[float] = []
+        field_rows: List[Dict[str, Any]] = []
 
         for field, question in queries:
-            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
+            idxs_full = self.retriever.retrieve(index, [question], top_k=retrieve_k)
+            idxs_ctx = idxs_full[:context_k]
             max_ctx = (
                 CONFIG.get("max_context_chars_per_question")
                 or CONFIG.get("max_context_chars")
             )
-            context = _build_context_from_indices(chunks, idxs, max_chars=max_ctx)
+            context = _build_context_from_indices(chunks, idxs_ctx, max_chars=max_ctx)
+            gen_context = _filter_context_for_field(field, context) if _is_target_tuned_field(field) else context
 
             # 요구사항 n번째/개수 질문은 리스트 라인 규칙 기반으로 우선 처리
-            rule_pred = _rule_based_list_answer(question, context)
+            rule_pred = _rule_based_list_answer(question, gen_context)
             if rule_pred is not None:
                 pred = str(rule_pred).strip()
             else:
-                one_pred = self.generator.generate([(field, question)], context)
+                one_pred = self.generator.generate([(field, question)], gen_context)
                 pred = (one_pred.get(field) or "").strip()
+            if _is_target_tuned_field(field):
+                pred = _postprocess_target_field_pred(field, pred, gen_context)
             pred_map[field] = pred
 
             gold_row = qdf[qdf["field"].astype(str) == str(field)]
             gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
-            g_list.append(eval_gen(pred, gold, threshold=sim_threshold, field=field))
+            g = eval_gen(pred, gold, threshold=sim_threshold, field=field)
+            g_list.append(g)
 
             for _, row in qdf[qdf["field"].astype(str) == str(field)].iterrows():
                 iid = str(row["instance_id"])
                 anchors = GOLD_ANCHOR.get(iid, [])
                 if anchors:
-                    r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
+                    ret = eval_retrieval_by_anchor(chunks, idxs_full, anchors)
+                    r_list.append(ret)
+                    hr = find_hit_rank(chunks, idxs_full, anchors)
+                    hit_ranks.append(float(hr) if hr is not None else np.nan)
                 else:
                     r_list.append({"recall": np.nan, "mrr": np.nan})
+                    hit_ranks.append(np.nan)
+
+            field_rows.append(
+                {
+                    "field": str(field),
+                    "question": str(question),
+                    "pred": pred,
+                    "gold": (str(gold) if gold is not None else ""),
+                    "match": float(g["match"]) if np.isfinite(g["match"]) else np.nan,
+                    "sim": float(g["sim"]) if np.isfinite(g["sim"]) else np.nan,
+                    "strict_match": float(g["strict_match"]) if np.isfinite(g["strict_match"]) else np.nan,
+                    "strict_applied": float(g["strict_applied"]),
+                    "retrieve_k": int(retrieve_k),
+                    "context_k": int(context_k),
+                }
+            )
+
+        hit_arr = np.array(hit_ranks, dtype=float) if hit_ranks else np.array([], dtype=float)
+        hit_r1 = float(np.nanmean((hit_arr == 1).astype(float))) if hit_arr.size else float(np.nan)
+        hit_r2 = float(np.nanmean((hit_arr == 2).astype(float))) if hit_arr.size else float(np.nan)
+        hit_r1_r2 = float(np.nanmean(((hit_arr == 1) | (hit_arr == 2)).astype(float))) if hit_arr.size else float(np.nan)
 
         metrics: Dict[str, Any] = {
             "doc_id": doc_name,
             "n_questions": int(len(qdf)),
             "chunk_count": int(len(chunks)),
+            "retrieve_k": int(retrieve_k),
+            "context_k": int(context_k),
             "pred_map": pred_map,
+            "field_rows": field_rows,
 
             "ret_recall": _nanmean_safe([x["recall"] for x in r_list]),
             "ret_mrr": _nanmean_safe([x["mrr"] for x in r_list]),
+            "hit_rank_mean": _nanmean_safe(hit_ranks),
+            "hit_r1_ratio": hit_r1,
+            "hit_r2_ratio": hit_r2,
+            "hit_r1_r2_ratio": hit_r1_r2,
 
             "gen_fill": _nanmean_safe([x["fill"] for x in g_list]),
             "gen_match": _nanmean_safe([x["match"] for x in g_list]),
@@ -802,7 +1018,7 @@ class RAGExperiment:
             "gen_strict_coverage": _nanmean_safe([x["strict_applied"] for x in g_list]),
         }
 
-        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
+        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map, field_rows
         gc.collect()
         return metrics
 
@@ -823,15 +1039,20 @@ class RAGExperiment:
         queries = get_queries_for_doc(doc_name, self.questions_df)
         q_texts = [q for _t, q in queries]
         type_keys = [t for t, _q in queries]
+        retrieve_k = int(CONFIG.get("retrieve_k", top_k) or top_k)
+        retrieve_k = max(1, retrieve_k)
+        context_k = int(CONFIG.get("context_k", min(8, retrieve_k)) or min(8, retrieve_k))
+        context_k = max(1, min(context_k, retrieve_k))
 
         # 2) chunk -> index -> retrieve
         chunks = self.chunker.chunk(doc_path)
         index = self.retriever.build_index(chunks)
-        idxs = self.retriever.retrieve(index, q_texts, top_k=top_k)
+        idxs_full = self.retriever.retrieve(index, q_texts, top_k=retrieve_k)
+        idxs_ctx = idxs_full[:context_k]
 
         # 3) context
         max_ctx = CONFIG.get("max_context_chars")
-        context = _build_context_from_indices(chunks, idxs, max_chars=max_ctx)
+        context = _build_context_from_indices(chunks, idxs_ctx, max_chars=max_ctx)
 
         # 4) generate: returns dict {type: answer}
         pred_map = self.generator.generate(queries, context)
@@ -869,10 +1090,13 @@ class RAGExperiment:
             gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
 
             pred = answers[i] if i < len(answers) else ""
-            rule_pred = _rule_based_list_answer(question, context)
+            field_ctx = _filter_context_for_field(field, context) if _is_target_tuned_field(field) else context
+            rule_pred = _rule_based_list_answer(question, field_ctx)
             if rule_pred is not None:
                 pred = rule_pred
             pred_s = (pred or "").strip()
+            if _is_target_tuned_field(field):
+                pred_s = _postprocess_target_field_pred(field, pred_s, field_ctx)
             preds.append(pred_s)
             pred_map[field] = pred_s
 
@@ -885,13 +1109,23 @@ class RAGExperiment:
 
         # 6) retrieval eval
         r_list: List[Dict[str, float]] = []
+        hit_ranks: List[float] = []
         for _, row in qdf.iterrows():
             iid = str(row["instance_id"])
             anchors = GOLD_ANCHOR.get(iid, [])
             if anchors:
-                r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
+                ret = eval_retrieval_by_anchor(chunks, idxs_full, anchors)
+                r_list.append(ret)
+                hr = find_hit_rank(chunks, idxs_full, anchors)
+                hit_ranks.append(float(hr) if hr is not None else np.nan)
             else:
                 r_list.append({"recall": np.nan, "mrr": np.nan})
+                hit_ranks.append(np.nan)
+
+        hit_arr = np.array(hit_ranks, dtype=float) if hit_ranks else np.array([], dtype=float)
+        hit_r1 = float(np.nanmean((hit_arr == 1).astype(float))) if hit_arr.size else float(np.nan)
+        hit_r2 = float(np.nanmean((hit_arr == 2).astype(float))) if hit_arr.size else float(np.nan)
+        hit_r1_r2 = float(np.nanmean(((hit_arr == 1) | (hit_arr == 2)).astype(float))) if hit_arr.size else float(np.nan)
 
         metrics: Dict[str, Any] = {
             "doc_id": doc_name,
@@ -903,6 +1137,8 @@ class RAGExperiment:
             "n_questions": int(len(qdf)),
             "chunk_count": int(len(chunks)),
             "context_length": int(len(context)),
+            "retrieve_k": int(retrieve_k),
+            "context_k": int(context_k),
 
             # generator debug
             "raw_text_len": raw_text_len,
@@ -919,6 +1155,10 @@ class RAGExperiment:
 
             "ret_recall": _nanmean_safe([x["recall"] for x in r_list]),
             "ret_mrr": _nanmean_safe([x["mrr"] for x in r_list]),
+            "hit_rank_mean": _nanmean_safe(hit_ranks),
+            "hit_r1_ratio": hit_r1,
+            "hit_r2_ratio": hit_r2,
+            "hit_r1_r2_ratio": hit_r1_r2,
 
             "gen_fill": _nanmean_safe([x["fill"] for x in g_list]),
             "gen_match": _nanmean_safe([x["match"] for x in g_list]),
@@ -928,7 +1168,7 @@ class RAGExperiment:
         }
 
         # cleanup
-        del chunks, index, context, answers, qdf, r_list, g_list, idxs, queries, q_texts, GOLD_ANCHOR, preds, pred_map
+        del chunks, index, context, answers, qdf, r_list, g_list, idxs_full, idxs_ctx, queries, q_texts, GOLD_ANCHOR, preds, pred_map
         gc.collect()
 
         return metrics

@@ -240,7 +240,7 @@ def _tag_failure(
 
 def analyze_exp(
     exp_id: int,
-    top_k: int,
+    retrieve_k: int,
     sim_threshold: int,
     base_dir: Path,
     out_dir: Path,
@@ -283,14 +283,14 @@ def analyze_exp(
             if q_texts:
                 q_embs = retriever.embed_model.encode(q_texts, convert_to_numpy=True, show_progress_bar=False)
                 for (field, question), q_emb in zip(queries, q_embs):
-                    _, I = index.search(q_emb.reshape(1, -1).astype("float32"), top_k)
+                    _, I = index.search(q_emb.reshape(1, -1).astype("float32"), retrieve_k)
                     idx_cache[(field, question)] = [int(i) for i in I[0]]
 
         for field, question in queries:
             if (field, question) in idx_cache:
                 idxs = idx_cache[(field, question)]
             else:
-                idxs = retriever.retrieve(index, [question], top_k=top_k)
+                idxs = retriever.retrieve(index, [question], top_k=retrieve_k)
             pred = str(pmap.get(field, "") or "").strip()
             gold_row = qdf[qdf["field"].astype(str) == str(field)]
             gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
@@ -348,16 +348,12 @@ def analyze_exp(
     field_df = (
         detail_df[fmask]
         .groupby("field", dropna=False)
-        .apply(
-            lambda d: pd.Series(
-                {
-                    "n": int(len(d)),
-                    "match": _nanmean(d["match"]),
-                    "sim": _nanmean(d["sim"]),
-                    "strict_match": _nanmean(d["strict_match"]),
-                    "strict_coverage": _nanmean(d["strict_applied"]),
-                }
-            )
+        .agg(
+            n=("field", "size"),
+            match=("match", _nanmean),
+            sim=("sim", _nanmean),
+            strict_match=("strict_match", _nanmean),
+            strict_coverage=("strict_applied", _nanmean),
         )
         .reset_index()
         .sort_values("field")
@@ -388,13 +384,16 @@ def analyze_exp(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp-ids", nargs="+", type=int, default=[3, 21])
-    parser.add_argument("--top-k", type=int, default=20)
+    parser.add_argument("--retrieve-k", type=int, default=24)
+    parser.add_argument("--top-k", type=int, default=None, help="deprecated alias of --retrieve-k")
     parser.add_argument("--sim-threshold", type=int, default=80)
     parser.add_argument("--embed-model", type=str, default="nlpai-lab/KoE5")
     parser.add_argument("--out-dir", type=str, default="outputs/analysis")
     parser.add_argument("--limit-docs", type=int, default=None)
     parser.add_argument("--md-name", type=str, default="")
     args = parser.parse_args()
+    if args.top_k is not None:
+        args.retrieve_k = args.top_k
 
     base_dir = Path(__file__).resolve().parents[2]
     out_dir = base_dir / args.out_dir
@@ -411,7 +410,7 @@ def main() -> None:
     for exp_id in args.exp_ids:
         detail_df, field_df, hit_dist = analyze_exp(
             exp_id=exp_id,
-            top_k=args.top_k,
+            retrieve_k=args.retrieve_k,
             sim_threshold=args.sim_threshold,
             base_dir=base_dir,
             out_dir=out_dir,
@@ -454,7 +453,7 @@ def main() -> None:
     lines.append("# Failure Analysis Summary")
     lines.append("")
     lines.append(f"- exp_ids: {args.exp_ids}")
-    lines.append(f"- top_k: {args.top_k}")
+    lines.append(f"- retrieve_k: {args.retrieve_k}")
     lines.append(f"- sim_threshold: {args.sim_threshold}")
     if args.limit_docs:
         lines.append(f"- limit_docs: {args.limit_docs}")
