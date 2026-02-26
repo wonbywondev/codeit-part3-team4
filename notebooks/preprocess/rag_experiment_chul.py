@@ -208,19 +208,6 @@ class C2PageChunker(BaseChunker):
         return chunks
 
 
-class C1OverlapChunker(BaseChunker):
-    """Fixed chunker with overlap"""
-    def __init__(self, size: int = 800, overlap: int = 200):
-        self.size = size
-        self.overlap = overlap
-
-    def chunk(self, doc_path: Path) -> List[str]:
-        text = clean_text(extract_text(doc_path))
-        text = squash_repeated_chars(text)
-        step = self.size - self.overlap
-        return [text[i:i+self.size] for i in range(0, len(text), step)]
-    
-
 class C3SectionChunker(BaseChunker):
     def chunk(self, doc_path: Path) -> List[str]:
         chunks = _chunk_for_index(doc_path.name, size=CONFIG["chunk_length"])
@@ -438,8 +425,6 @@ class ExperimentSpec:
 def make_components(spec: ExperimentSpec, embed_model: SentenceTransformer, client: OpenAI):
     if spec.chunker == "C1":
         chunker = C1FixedChunker(size=CONFIG["chunk_length"])
-    elif spec.chunker == "C1O":  # ← 이 줄 추가
-        chunker = C1OverlapChunker(size=CONFIG["chunk_length"], overlap=200)
     elif spec.chunker == "C2":
         chunker = C2PageChunker()
     elif spec.chunker == "C3":
