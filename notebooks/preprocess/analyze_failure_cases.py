@@ -138,8 +138,8 @@ def _load_gold_evidence_jsonl(path: Path) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _load_pred_maps(exp_id: int, base_dir: Path) -> Dict[str, Dict[str, str]]:
-    pred_dir = base_dir / "outputs" / f"exp{exp_id:02d}_pred_maps"
+def _load_pred_maps(exp_id: int, pred_maps_root: Path) -> Dict[str, Dict[str, str]]:
+    pred_dir = pred_maps_root / f"exp{exp_id:02d}_pred_maps"
     out: Dict[str, Dict[str, str]] = {}
     for fp in sorted(pred_dir.glob("*.json")):
         with open(fp, "r", encoding="utf-8") as f:
@@ -249,6 +249,7 @@ def analyze_exp(
     gold_fields_df: pd.DataFrame,
     gold_evidence_df: pd.DataFrame,
     limit_docs: Optional[int] = None,
+    pred_maps_root: Optional[Path] = None,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     if exp_id not in SPECS:
         raise ValueError(f"Unknown exp_id: {exp_id}")
@@ -256,7 +257,8 @@ def analyze_exp(
     chunk_code, retr_code, _gen_code = SPECS[exp_id]
     chunker = _make_chunker(chunk_code)
     retriever = _make_retriever(retr_code, embed_model)
-    pred_maps = _load_pred_maps(exp_id, base_dir)
+    pred_root = pred_maps_root or (base_dir / "outputs")
+    pred_maps = _load_pred_maps(exp_id, pred_root)
 
     gold_doc_keys = set(_name_key(x) for x in gold_fields_df["doc_id"].astype(str).unique())
     eval_docs = [p for p in docs if _name_key(p.name) in gold_doc_keys]

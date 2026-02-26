@@ -15,13 +15,33 @@ from openai import OpenAI
 from sentence_transformers import SentenceTransformer
 
 # 같은 CONFIG/spec/component을 그대로 재사용
-from notebooks.preprocess.rag_experiment_backup import (
-    CONFIG,
-    ExperimentSpec,
-    load_questions_df,
-    make_components,
-    get_queries_for_doc,
-)
+try:
+    from preprocess.rag_experiment import (
+        CONFIG,
+        ExperimentSpec,
+        load_questions_df,
+        make_components,
+        get_queries_for_doc,
+        _build_context_from_indices,
+        _filter_context_for_field,
+        _is_target_tuned_field,
+        _postprocess_target_field_pred,
+        _rule_based_list_answer,
+    )
+except ModuleNotFoundError:
+    # allow execution from project root with notebooks path semantics
+    from notebooks.preprocess.rag_experiment import (
+        CONFIG,
+        ExperimentSpec,
+        load_questions_df,
+        make_components,
+        get_queries_for_doc,
+        _build_context_from_indices,
+        _filter_context_for_field,
+        _is_target_tuned_field,
+        _postprocess_target_field_pred,
+        _rule_based_list_answer,
+    )
 
 # ------------------------------------------------------------
 # Gold loader (fields.jsonl -> long df)
@@ -86,26 +106,47 @@ def build_ragas_rows_for_doc(
     """
     doc_name = unicodedata.normalize("NFC", doc_path.name)
     queries: List[Tuple[str, str]] = get_queries_for_doc(doc_name, questions_df)
-    q_texts = [q for _t, q in queries]
 
     chunks: List[str] = chunker.chunk(doc_path)
     index = retriever.build_index(chunks)
-    idxs: List[int] = retriever.retrieve(index, q_texts, top_k=top_k)
-
-    # contexts는 list[str] 유지 (RAGAS 입력)
-    contexts: List[str] = [chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks)]
-
-    # generator는 내부에서 CONFIG["max_context_chars"]로 자름 (동일 조건 보장)
-    pred_map: Dict[str, str] = generator.generate(queries, "".join(contexts))
+    retrieve_k = int(CONFIG.get("retrieve_k", top_k) or top_k)
+    retrieve_k = max(1, retrieve_k)
+    context_k = int(CONFIG.get("context_k", min(8, retrieve_k)) or min(8, retrieve_k))
+    context_k = max(1, min(context_k, retrieve_k))
+    max_ctx = int(
+        CONFIG.get("max_context_chars_per_question")
+        or CONFIG.get("max_context_chars")
+        or 4000
+    )
 
     gold_map = _gold_map_for_doc(gold_fields_df, doc_name)
 
     rows: List[Dict[str, Any]] = []
+    contexts_count = 0
+    contexts_joined_len = 0
     for field, question in queries:
+        idxs_full: List[int] = retriever.retrieve(index, [question], top_k=retrieve_k)
+        idxs_ctx = idxs_full[:context_k]
+        contexts: List[str] = [chunks[int(i)] for i in idxs_ctx if 0 <= int(i) < len(chunks)]
+        contexts_count += len(contexts)
+        contexts_joined_len += sum(len(c) for c in contexts)
+
+        context = _build_context_from_indices(chunks, idxs_ctx, max_chars=max_ctx)
+        gen_context = _filter_context_for_field(field, context) if _is_target_tuned_field(field) else context
+
+        rule_pred = _rule_based_list_answer(question, gen_context)
+        if rule_pred is not None:
+            pred = str(rule_pred).strip()
+        else:
+            one_pred = generator.generate([(field, question)], gen_context)
+            pred = (one_pred.get(field) or "").strip()
+        if _is_target_tuned_field(field):
+            pred = _postprocess_target_field_pred(field, pred, gen_context)
+
         rows.append(
             {
                 "user_input": str(question),
-                "response": (pred_map.get(field, "") or "").strip(),
+                "response": pred,
                 "retrieved_contexts": contexts,  # list[str]
                 "reference": gold_map.get(str(field), None),  # str|None
                 "doc_id": doc_name,
@@ -117,8 +158,10 @@ def build_ragas_rows_for_doc(
         "doc_id": doc_name,
         "chunk_count": int(len(chunks)),
         "top_k": int(top_k),
-        "contexts_count": int(len(contexts)),
-        "contexts_joined_len": int(sum(len(c) for c in contexts)),
+        "retrieve_k": int(retrieve_k),
+        "context_k": int(context_k),
+        "contexts_count": int(contexts_count),
+        "contexts_joined_len": int(contexts_joined_len),
         "n_questions": int(len(queries)),
         "max_context_chars": int(CONFIG.get("max_context_chars", 0)),
     }
@@ -351,12 +394,15 @@ def run_experiment_with_ragas(
         if gold_evidence_df is None:
             raise ValueError("compute_baseline_doc_metrics=True면 gold_evidence_df를 넘겨줘야 함")
 
-        from notebooks.preprocess.rag_experiment_backup import RAGExperiment
+        try:
+            from preprocess.rag_experiment import RAGExperiment
+        except ModuleNotFoundError:
+            from notebooks.preprocess.rag_experiment import RAGExperiment
         rag = RAGExperiment(chunker=chunker, retriever=retriever, generator=generator, questions_df=questions_df)
 
         doc_rows = []
         for dp in tqdm([Path(p) for p in run_docs], desc=f"Baseline doc metrics | exp {spec.exp_id}"):
-            m = rag.run_single_doc_metrics(
+            m = rag.run_single_doc_metrics_singleq(
                 Path(dp),
                 gold_fields_df=gold_fields_df,
                 gold_evidence_df=gold_evidence_df,
