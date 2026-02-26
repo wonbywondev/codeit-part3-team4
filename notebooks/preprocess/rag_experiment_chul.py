@@ -291,15 +291,13 @@ class R3HybridRetriever(BaseRetriever):
 
         union = np.unique(np.concatenate([cand_idxs, vec_idxs]))
         bm = bm25_scores[union]
-        bm_norm = (bm - bm.min()) / (bm.max() - bm.min() + 1e-9)  # ✅ 추가
-
 
         vec_rank_score = np.zeros(len(chunks), dtype=np.float32)
         for rank, idx in enumerate(vec_idxs, start=1):
             vec_rank_score[idx] = 1.0 / rank
 
         vv = vec_rank_score[union]
-        hybrid = CONFIG["alpha"] * vv + (1.0 - CONFIG["alpha"]) * bm_norm  # ✅ bm → bm_norm
+        hybrid = CONFIG["alpha"] * vv + (1.0 - CONFIG["alpha"]) * bm
 
         top = union[np.argsort(hybrid)[::-1][:top_k]]
         return top.astype(int).tolist()

@@ -450,6 +450,67 @@ class RAGExperiment:
         self.generator = generator
         self.questions_df = questions_df
 
+    def run_single_doc_metrics_singleq(
+        self,
+        doc_path: Path,
+        gold_fields_df: pd.DataFrame,
+        gold_evidence_df: pd.DataFrame,
+        top_k: int = 20,
+        sim_threshold: int = 80,
+    ) -> Dict[str, Any]:
+        doc_name = unicodedata.normalize("NFC", doc_path.name)
+
+        queries = get_queries_for_doc(doc_name, self.questions_df)
+        chunks = self.chunker.chunk(doc_path)
+        index = self.retriever.build_index(chunks)
+
+        qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
+        GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
+
+        pred_map: Dict[str, str] = {}
+        g_list: List[Dict[str, float]] = []
+        r_list: List[Dict[str, float]] = []
+
+        for field, question in queries:
+            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
+            context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
+
+            one_pred = self.generator.generate([(field, question)], context)
+            pred = (one_pred.get(field) or "").strip()
+            pred_map[field] = pred
+
+            gold_row = qdf[qdf["field"].astype(str) == str(field)]
+            gold = gold_row["gold"].iloc[0] if not gold_row.empty else None
+            g_list.append(eval_gen(pred, gold, threshold=sim_threshold))
+
+            for _, row in qdf[qdf["field"].astype(str) == str(field)].iterrows():
+                iid = str(row["instance_id"])
+                anchors = GOLD_ANCHOR.get(iid, [])
+                if anchors:
+                    r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
+                else:
+                    r_list.append({"recall": np.nan, "mrr": np.nan})
+
+        metrics: Dict[str, Any] = {
+            "doc_id": doc_name,
+            "n_questions": int(len(qdf)),
+            "chunk_count": int(len(chunks)),
+            "pred_map": pred_map,
+
+            "ret_recall": float(np.nanmean([x["recall"] for x in r_list])) if r_list else np.nan,
+            "ret_mrr": float(np.nanmean([x["mrr"] for x in r_list])) if r_list else np.nan,
+
+            "gen_fill": float(np.nanmean([x["fill"] for x in g_list])) if g_list else np.nan,
+            "gen_match": float(np.nanmean([x["match"] for x in g_list])) if g_list else np.nan,
+            "gen_sim": float(np.nanmean([x["sim"] for x in g_list])) if g_list else np.nan,
+        }
+
+        del chunks, index, qdf, r_list, g_list, queries, GOLD_ANCHOR, pred_map
+        gc.collect()
+        return metrics
+
+
+
     def run_single_doc_metrics(
         self,
         doc_path: Path,
