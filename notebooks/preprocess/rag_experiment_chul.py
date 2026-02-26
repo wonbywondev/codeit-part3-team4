@@ -63,12 +63,17 @@ def squash_repeated_chars(text: str) -> str:
 # -------------------------
 CONFIG = {
     "chunk_length": 800,
-    "top_k": 20,               # ✅ [수정] 15 → 20
+    "top_k": 20,               # ✅ [수정] 15 → 20 (retrieve_k 미설정 시 fallback)
     "max_tokens": 2000,
     "max_completion_tokens": 2000,
     "temperature": 0.1,
     "alpha": 0.7,
     "max_context_chars": 6000, # ✅ [수정] 4000 → 6000
+    # ✅ [추가] 3K 파라미터 (팀원 코드 호환)
+    # retrieve_k: 실제 검색 개수 / context_k: LLM에 넣는 청크 수 / recall_k: recall 평가 기준
+    "retrieve_k": 24,
+    "context_k": 8,
+    "recall_k": 20,
 }
 
 RFP_PROMPT = """역할: 너는 RFP/입찰 공고 문서(CONTEXT 발췌)에서 정보를 추출한다.
@@ -480,13 +485,23 @@ class RAGExperiment:
         qdf = gold_fields_df[gold_fields_df["doc_id"].astype(str) == doc_name].copy()
         GOLD_ANCHOR = build_gold_anchor_map(gold_evidence_df)
 
+        # ✅ [추가] 3K 파라미터 적용 (CONFIG 우선, 없으면 top_k fallback)
+        retrieve_k = CONFIG.get("retrieve_k", top_k)
+        context_k  = CONFIG.get("context_k",  top_k)
+        recall_k   = CONFIG.get("recall_k",   top_k)
+
         pred_map: Dict[str, str] = {}
         g_list: List[Dict[str, float]] = []
         r_list: List[Dict[str, float]] = []
 
         for field, question in queries:
-            idxs = self.retriever.retrieve(index, [question], top_k=top_k)
-            context = "".join(chunks[int(i)] for i in idxs if 0 <= int(i) < len(chunks))
+            idxs = self.retriever.retrieve(index, [question], top_k=retrieve_k)
+            idxs = list(dict.fromkeys(int(i) for i in idxs))  # 중복 제거, 순서 유지
+
+            context_idxs = idxs[:context_k]
+            eval_idxs    = idxs[:recall_k]
+
+            context = "".join(chunks[i] for i in context_idxs if 0 <= i < len(chunks))
 
             one_pred = self.generator.generate([(field, question)], context)
             pred = (one_pred.get(field) or "").strip()
@@ -500,7 +515,7 @@ class RAGExperiment:
                 iid = str(row["instance_id"])
                 anchors = GOLD_ANCHOR.get(iid, [])
                 if anchors:
-                    r_list.append(eval_retrieval_by_anchor(chunks, idxs, anchors))
+                    r_list.append(eval_retrieval_by_anchor(chunks, eval_idxs, anchors))
                 else:
                     r_list.append({"recall": np.nan, "mrr": np.nan})
 
@@ -508,6 +523,9 @@ class RAGExperiment:
             "doc_id": doc_name,
             "n_questions": int(len(qdf)),
             "chunk_count": int(len(chunks)),
+            "retrieve_k": int(retrieve_k),  # ✅ [추가]
+            "context_k": int(context_k),    # ✅ [추가]
+            "recall_k": int(recall_k),      # ✅ [추가]
             "pred_map": pred_map,
 
             "ret_recall": float(np.nanmean([x["recall"] for x in r_list])) if r_list else np.nan,
