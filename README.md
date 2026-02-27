@@ -1,5 +1,7 @@
-## 보고서 링크
-https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=drive_link
+## 보고서·협업일지 링크
+- [보고서](https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=drive_link)
+- [김상엽 협업 일지](https://www.notion.so/Daily-312895ca7098806fae5bd16f08ed9715)
+- [오현석 협업 일지](https://blog.naver.com/ohs3201)
 
 ## 컬럼(지표) 하나씩 설명
 1. doc_id
