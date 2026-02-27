@@ -50,9 +50,9 @@ def _chunk_for_index(doc_name: str, size: int) -> List[str] | None:
 # -------------------------
 CONFIG = {
     "chunk_length": 800,          # C1 baseline
-    "top_k": 15,
-    "retrieve_k": 24,             # retrieval eval candidate size
-    "context_k": 8,               # generation context subset size
+    "retrieve_k": 9,             # retrieval eval candidate size
+    "context_k": 3,               # generation context subset size
+    "recall_k": 5,               # generation context subset size
     "max_tokens": 2000,           # non gpt-5
     "max_completion_tokens": 2000,  # gpt-5
     "temperature": 0.1,           # non gpt-5

@@ -117,16 +117,23 @@ def _build_eval_docs(gold_fields_df: pd.DataFrame, n_docs: Optional[int]) -> Lis
     return eval_docs
 
 
-def _apply_config(args: argparse.Namespace, retrieve_k: int, context_k: int) -> Tuple[int, int]:
+def _apply_config(
+    args: argparse.Namespace,
+    retrieve_k: int,
+    context_k: int,
+    recall_k: int,
+) -> Tuple[int, int, int]:
     rk = int(max(1, retrieve_k))
     ck = int(max(1, min(context_k, rk)))
+    rck = int(max(1, min(recall_k, rk)))
     rexp.CONFIG["retrieve_k"] = rk
     rexp.CONFIG["context_k"] = ck
+    rexp.CONFIG["recall_k"] = rck
     rexp.CONFIG["top_k"] = rk  # backward compatibility
     rexp.CONFIG["max_context_chars"] = int(args.max_context_chars)
     rexp.CONFIG["max_context_chars_per_question"] = int(args.max_context_chars_per_question)
     rexp.CONFIG["target_field_max_context_chars"] = int(args.target_field_max_context_chars)
-    return rk, ck
+    return rk, ck, rck
 
 
 def _to_md_table(headers: List[str], rows: List[List[Any]]) -> str:
@@ -153,6 +160,7 @@ def _write_exp_insight_md(
     insight_path: Path,
     retrieve_k: int,
     context_k: int,
+    recall_k: int,
     analysis_extra: Optional[Dict[str, Any]] = None,
 ) -> None:
     insight_path.parent.mkdir(parents=True, exist_ok=True)
@@ -177,6 +185,7 @@ def _write_exp_insight_md(
     lines.append("")
     lines.append(f"- retrieve_k: {retrieve_k}")
     lines.append(f"- context_k: {context_k}")
+    lines.append(f"- recall_k: {recall_k}")
     lines.append(f"- n_docs: {int(row.get('n_docs', len(doc_df)) or len(doc_df))}")
     lines.append("")
 
@@ -381,13 +390,14 @@ def _run_k_sweep(
 
     print(
         f"SWEEP START | exp_id={args.sweep_exp_id} "
-        f"retrieve_grid={args.retrieve_k_grid} context_grid={args.context_k_grid}"
+        f"retrieve_grid={args.retrieve_k_grid} context_grid={args.context_k_grid} "
+        f"recall_k={args.recall_k}"
     )
     for rk in args.retrieve_k_grid:
         for ck in args.context_k_grid:
             if int(ck) > int(rk):
                 continue
-            rk_now, ck_now = _apply_config(args, int(rk), int(ck))
+            rk_now, ck_now, rck_now = _apply_config(args, int(rk), int(ck), int(args.recall_k))
             exp_df, _, _ = run_one_exp(
                 exp_id=int(args.sweep_exp_id),
                 eval_docs=eval_docs,
@@ -403,10 +413,11 @@ def _run_k_sweep(
             r = exp_df.iloc[0].to_dict()
             r["retrieve_k"] = rk_now
             r["context_k"] = ck_now
+            r["recall_k"] = rck_now
             r["objective_value"] = float(r.get(objective, np.nan)) if objective in r else np.nan
             rows.append(r)
             print(
-                f"SWEEP | retrieve_k={rk_now} context_k={ck_now} "
+                f"SWEEP | retrieve_k={rk_now} context_k={ck_now} recall_k={rck_now} "
                 f"{objective}={r.get(objective, np.nan)}"
             )
 
@@ -428,6 +439,7 @@ def _run_k_sweep(
         json.dump(best, f, ensure_ascii=False, indent=2)
     print(
         f"SWEEP BEST | retrieve_k={int(best['retrieve_k'])} context_k={int(best['context_k'])} "
+        f"recall_k={int(best.get('recall_k', args.recall_k))} "
         f"{objective}={best.get(objective)}"
     )
     print(f"Saved best config: {best_json_path}")
@@ -441,8 +453,9 @@ def main() -> None:
     parser.add_argument("--embed-model", type=str, default="nlpai-lab/KoE5")
     parser.add_argument("--sim-threshold", type=int, default=80)
 
-    parser.add_argument("--retrieve-k", type=int, default=24)
-    parser.add_argument("--context-k", type=int, default=8)
+    parser.add_argument("--retrieve-k", type=int, default=9)
+    parser.add_argument("--context-k", type=int, default=3)
+    parser.add_argument("--recall-k", type=int, default=5)
     parser.add_argument("--max-context-chars", type=int, default=4000)
     parser.add_argument("--max-context-chars-per-question", type=int, default=3000)
     parser.add_argument("--target-field-max-context-chars", type=int, default=2200)
@@ -501,6 +514,7 @@ def main() -> None:
 
     selected_retrieve_k = int(args.retrieve_k)
     selected_context_k = int(args.context_k)
+    selected_recall_k = int(args.recall_k)
 
     if args.sweep_k:
         sweep_df, best = _run_k_sweep(
@@ -519,16 +533,19 @@ def main() -> None:
         if best is not None and not args.no_use_best_k:
             selected_retrieve_k = int(best["retrieve_k"])
             selected_context_k = int(best["context_k"])
-            print(f"APPLY BEST K | retrieve_k={selected_retrieve_k} context_k={selected_context_k}")
+            print(
+                f"APPLY BEST K | retrieve_k={selected_retrieve_k} "
+                f"context_k={selected_context_k} recall_k={selected_recall_k}"
+            )
 
         if args.sweep_only:
             print("Sweep-only mode finished.")
             return
 
-    rk, ck = _apply_config(args, selected_retrieve_k, selected_context_k)
+    rk, ck, rck = _apply_config(args, selected_retrieve_k, selected_context_k, selected_recall_k)
     print(
         f"RUN CONFIG | exp_ids={args.exp_ids} n_docs={len(eval_docs)} "
-        f"retrieve_k={rk} context_k={ck}"
+        f"retrieve_k={rk} context_k={ck} recall_k={rck}"
     )
 
     if args.run_analysis:
@@ -600,6 +617,7 @@ def main() -> None:
                 insight_path=insight_path,
                 retrieve_k=rk,
                 context_k=ck,
+                recall_k=rck,
                 analysis_extra=analysis_extra,
             )
             print(f"Saved per-exp insight: {insight_path}")
@@ -630,6 +648,7 @@ def main() -> None:
         lines.append(f"- exp_ids: {args.exp_ids}")
         lines.append(f"- retrieve_k: {rk}")
         lines.append(f"- context_k: {ck}")
+        lines.append(f"- recall_k: {rck}")
         lines.append(f"- sim_threshold: {args.sim_threshold}")
         if args.n_docs:
             lines.append(f"- n_docs(limit): {args.n_docs}")
