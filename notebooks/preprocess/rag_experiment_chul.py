@@ -63,7 +63,7 @@ def squash_repeated_chars(text: str) -> str:
 # -------------------------
 CONFIG = {
     "chunk_length": 800,
-    "top_k": 20,               # ✅ [수정] 15 → 20
+    "top_k": 10,               # ✅ [수정] 15 → 20
     "max_tokens": 2000,
     "max_completion_tokens": 2000,
     "temperature": 0.1,
