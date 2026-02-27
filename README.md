@@ -1,3 +1,6 @@
+## 보고서 링크
+https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=drive_link
+
 ## 컬럼(지표) 하나씩 설명
 1. doc_id
 - 평가 대상 문서 단위
