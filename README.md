@@ -1,5 +1,6 @@
 ## 보고서·협업일지 링크
 - [보고서](https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=drive_link)
+- [김민우 협업 일지](https://www.notion.so/31845aa312fd8059ade7e04229e08bde?source=copy_link)
 - [김민철 협업 일지](https://mud-cotton-5f0.notion.site/2d1736f39f5081eabc62c172408cea3d?v=2d1736f39f5081ac8685000c4e291aef&source=copy_link)
 - [김상엽 협업 일지](https://www.notion.so/Daily-312895ca7098806fae5bd16f08ed9715)
 - [오현석 협업 일지](https://blog.naver.com/ohs3201)
