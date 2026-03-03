@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "₩1,400,000,000 원",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "2024 년 12 월 31 일까지",
+  "requirements_must": "요구사항 명칭 및 시스템 장비구성 요구사항 포함; 예시로 PSR-004, ECR-003, ECR-004 등 요구사항 및 인증/보안 요건 포함",
+  "eval_items": "기술 평가 및 가격평가",
+  "price_eval": "협상에 의한 계약 시 기술평가(90%), 가격평가(10%)",
+  "eligibility": "NOT_FOUND",
+  "problem": "NOT_FOUND",
+  "metric": "NOT_FOUND",
+  "system": "전원 및 재난 상황 접수를 위한 신규 통신장비 도입 및 중앙상황실-광역상황실 간 전원접수/재난상황접수 처리 시스템",
+  "infrastructure": "도입장비: CTI, 교환기, IP 녹취 및 관련 솔루션; 보안 및 통신장비 구성 요구사항 (ECR-002 등) 포함",
+  "integration": "마이크로 서비스가 아닌 중앙상황실 ⇄ 광역상황실 간 전원 지원 서비스 구현",
+  "data": "응급의료 상황 관리에서 자원 정보 관리 관련 요구사항 및 산출정보 포함",
+  "function": "전원접수 및 재난상황접수 처리, 전원 의뢰/수용/진료 추적 등 주요 기능",
+  "scope": "전국 중증응급질환자 병원 선정, 병원 간 전원 및 재난 조정 업무를 위한 IP 기반 콜센터 구축",
+  "operation": "중앙상황실/광역상황실 간 전원 지원 서비스 구현 및 접수/처리 흐름"
+}

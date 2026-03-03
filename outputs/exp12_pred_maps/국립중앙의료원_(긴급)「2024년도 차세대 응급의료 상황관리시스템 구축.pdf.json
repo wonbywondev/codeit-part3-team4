@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "₩1,400,000,000원, VAT포함",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 2024년 12월 31일까지",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "problem": "전원 업무 수용 병원 결정 및 전원 조정의 반복적 문제",
+  "metric": "평균 9.3개 의료기관에 전원의뢰",
+  "system": "중앙상황실/광역상황실 간 전원지원 서비스 및 IP기반 콜센터 포함 시스템 구축",
+  "infrastructure": "도입장비: CTI, 교환기, IP녹취 및 관련 솔루션",
+  "integration": "중앙과 광역 상황실 간 협업 강화 위한 핵심 서비스 구현",
+  "data": "재난 상황/전원 접수 정보, 의료자원 인력 출동 현황, 환자 집계 연동",
+  "function": "재난-자원 정보 관리, 재난-상황해제, 협진망 연계, 판독 연동",
+  "scope": "전국 중증응급질환자 병원 선정 및 병원 간 전원·재난 조정",
+  "operation": "중앙상황실 및 광역상황실의 전원접수 및 재난상황접수 처리"
+}

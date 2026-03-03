@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "나노종합기술원",
+  "purpose": "나노 반도체 국가 성장 동력 강화를 위한 나노 반도체 생태계 혁신기반 마련 및 글로벌 기술 패권경쟁에 대응하기 위한 혁신주체 R&D 역량 실효적 지원",
+  "budget": "2,349,130,320 원 (VAT포함)",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "로그 분석 및 데이터 확보(장비 로그수집 및 데이터 확보 기능), 운영·감시·보안·비상복구 방법 등 기술이전 및 유지보수 요건",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "설비 온라인화(설비별 온라인화 계획·설계 및 실행계획 수립), 설비 온라인 시스템 구축 및 연계(공정관리시스템 연계 등)",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "계약체결일로부터 18개월(2024년 9월 구축완료되는 공정관리시스템 연계를 고려, 단계별 오픈 필요)",
+  "lot_tracking": "NOT_FOUND",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "하자보수 일반(구체 기간 명시 없음)",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "발주기관 요구사항에 따른 자료 보안방안 및 시스템 운영·감시·보안 포함(구체 암호화 명시 없음)",
+  "interface_method": "현재 추진중인 공정관리시스템 구축 사업자와의 연계 지원(연계 방식 구체 명시 없음)",
+  "maintenance_rate": "유지보수요율은 18% 이내"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역",
+  "agency": "NOT_FOUND",
+  "purpose": "○ 전국장애인체육대회(동계, 학생, 하계) 운영을 위한 시스템 및 홈페이지 안정\n성 확보\n○ 각종 다양한 외부정보 제공 및 자료요구에 대한 대응 능력 강화\n○ 각종 데이터 검색 및 정보조회 등 각종 정보 제공 및 관리의 편의성\n과 편리성 도모\n○ 스포츠지원 포탈 운영을 통해 선수데이터 검색 및 통계자료 조회기능 제\n공 및 일반인들이 접근 가능한 체육회 관련 사이트 접근용이\n○ 신규종합점수체계 적용 설계(안) 마련을 위한 정보 제공 수집 필요",
+  "budget": "220,000,000원",
+  "contract_type": "GEN_FAIL",
+  "deadline": "공고문 참조",
+  "duration": "계약일 ~ 2025년 12월",
+  "requirements_must": "기능 요구사항 / 성능 요구사항 / 인터페이스 요구사항 / 데이터 요구사항 / 테스트 요구사항 / 보안 요구사항 / 품질요구사항 / 제약사항 / 프로젝트 관리 요구사항 / 프로젝트 지원 요구사항",
+  "eval_items": "기술평가:90 / 가격평가:10",
+  "price_eval": "협상에 의한 계약체결",
+  "eligibility": "GEN_FAIL",
+  "authentication": "NICE",
+  "competition_structure": "동계, 학생, 하계",
+  "project_period": "계약일 ~ 2025년 12월",
+  "warranty_period": "검수완료일로부터 12개월로 함",
+  "proposal_page_limit": "120페이지(60장) 이내",
+  "bid_evaluation": "제한경쟁입찰 / 기술평가 90점, 가격평가 10점",
+  "response_time": "3,000ms(3초)",
+  "system_url": "https://total.koreanpc.kr",
+  "participation_restriction": "대기업 및 중견기업인 소프트웨어 사업자",
+  "kakaotalk_service": "상담 서비스 제공"
+}

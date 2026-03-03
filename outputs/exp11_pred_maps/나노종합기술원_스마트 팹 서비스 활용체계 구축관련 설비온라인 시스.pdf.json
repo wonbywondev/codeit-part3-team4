@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비온라인시스템 구축 사업",
+  "agency": "나노종합기술원",
+  "purpose": "공정관리시스템 연계를 고려한 설비 온라인화 및 LoT Tracking 등 스마트 팹 서비스 활용체계 구축",
+  "budget": "NOT_FOUND",
+  "contract_type": "하도급 가능 사업 (하도급 시 관련 법률 준수 및 사전 승인 필요)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "SECS/GEM 통신 지원, Carrier ID 인식 장치 설계·설치·인터페이스·관리, Carrier 정보와 Lot 정보 매칭, 공정관리시스템 연계, 사용자인증 및 개인정보보호, 가용성(무중단 24시간 운영), 변경관리 절차 준수",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "설비 온라인 구현(설비 통신·HMI·PLC·PC 대상 장비 관리), Carrier ID 기반 LoT Tracking, 공정관리시스템 연계 및 데이터 변환, 분석결과 파일 관리 및 뷰어, 인프라 공급·설치",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "1차 오픈(2024.9월까지): SECS/GEM 대상 장비의 기본 온라인화 완료; 2차 오픈(사업종료 전까지): SECS/GEM 대상 장비의 안정화 및 PC-File 대상 장비의 온라인화 완료",
+  "lot_tracking": "Carrier ID 인식 장치 설계·설치·인터페이스·관리, Carrier 정보 표시 및 작업자 인터페이스 제공, Carrier 정보 기반 상위 시스템 인터페이스 및 데이터 변환, Carrier 정보와 Lot 정보 매칭",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "평균 응답시간 요구사항(성능 요구사항 항목 PER-002)",
+  "security_encryption": "암호화 관련 구체적 문구 없음; 보안정책 및 가이드라인 준수, 사용자인증 및 개인정보보호 요구",
+  "interface_method": "공정관리시스템 연계 인터페이스 및 연계 데이터 모니터링/오류 처리 제시",
+  "maintenance_rate": "NOT_FOUND"
+}

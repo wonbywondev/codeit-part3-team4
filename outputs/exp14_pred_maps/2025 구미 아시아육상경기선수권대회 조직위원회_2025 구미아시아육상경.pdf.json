@@ -1,0 +1,23 @@
+{
+  "project_name": "대분류 대회 종합정보시스템 S/W 개발",
+  "agency": "지방자치단체",
+  "purpose": "공고개요 및 협상에 의한 계약으로 낙찰자 결정, 기술능력평가(90) + 가격평가(10) 구조의 평가를 통해 입찰자 선정",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "요구사항 ID PSR-003 요구사항; SW사업정보 저장소 데이터 작성 및 제출; 정기적인 백업 및 보안 대책 수립; SW사업정보 저장소 관련 산출물 일체 제출",
+  "eval_items": "기술능력 평가(정량 20, 정성 70) + 가격 평가(10)",
+  "price_eval": "입찰가격 10점, 산식에 의함",
+  "eligibility": "중소 소프트웨어사업자만 입찰 가능; 대기업 및 중견기업은 입찰 불가 및 하도급/인력 파견 불가",
+  "system_function": "인터페이스관리시스템 개발, SCB 인터페이스, 홈페이지 연동 실시간 출력, 데이터베이스 공유 및 백업/보안 요구사항",
+  "system_interface": "SCB, ASIA 육상 T&S 연동, 방송장비 연동, 현장 전광판 연동, 홈페이지 연동",
+  "NaN": "NOT_FOUND",
+  "operation_staff": "NOT_FOUND",
+  "staffing": "NOT_FOUND",
+  "security": "해킹 및 취약점 대응 보안안, 서버 환경 구성 및 보안 대책 수립",
+  "performance": "NOT_FOUND",
+  "maintenance": "NOT_FOUND",
+  "eligibility_large_company": "대기업 및 중견기업은 입찰에 참여 불가",
+  "subcontracting_policy": "대기업 및 중견기업은 하도급 불가"
+}

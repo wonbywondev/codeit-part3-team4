@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "나노종합기술원",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "2024년 9월 오픈1차 및 사업 종료 전까지 2차 오픈 완료 시점 언급",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "Carrier ID 인식 장치 설계/설치/인터페이스 및 기구설계, 현장 설치 및 하드웨어 검증, 인식장치 인터페이스 및 설치 위치 최적화",
+  "eval_items": "과업심의위원회 및 소프트웨어진흥법에 따른 평가 및 하도급 관련 평가 포함",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "설비온라인시스템 구축 사업으로 스마트 팹 서비스 활용체계 구축 관련 설비온라인시스템 구축, LOt Tracking 포함",
+  "equipment_count": "1차 대상장비 총 80대( SECS 70대, PC-File 10대 )",
+  "milestone": "1차 오픈(2024.9월까지) 및 2차 오픈(사업 종료 전까지) 목표",
+  "lot_tracking": "Carrier ID 인식 장치 BCAR를 통한 LoT Tracking의 주요 기능",
+  "subcontract_limit": "50%",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "NOT_FOUND",
+  "interface_method": "설비 연동 메타 데이터 기준 설정 및 조회; Carrier ID 인식장치 인터페이스",
+  "maintenance_rate": "NOT_FOUND"
+}

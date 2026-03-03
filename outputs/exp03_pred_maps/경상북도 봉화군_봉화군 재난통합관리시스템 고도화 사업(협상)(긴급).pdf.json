@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화 사업",
+  "agency": "봉화군",
+  "purpose": "GEN_FAIL",
+  "budget": "900,000,000원",
+  "contract_type": "제한경쟁입찰",
+  "deadline": "접수마감 : 공고문에 따름",
+  "duration": "착수일로부터 7개월(210일)",
+  "requirements_must": "재난통합관리시스템 / 표준 산출물 생성 및 관리 / 사업수행 일반사항 준수",
+  "eval_items": "정량적 평가:20 / 정성적 평가:70",
+  "price_eval": "협상",
+  "eligibility": "GEN_FAIL",
+  "legal_basis": "｢재난 및 안전관리기본법｣ 제38조의2(재난 예보‧경보체계 구축‧운영 등)",
+  "blind_spot_solution": "사각지역 또는 음영지역의 최소화를 위한 무선방식을 활용한 경보장치 확대 구축 / 재난경보방송 가청 범위 확대를 통한 사각지역 해소 / 유선 및 무선방식(LTE, DMB(EWS))을 지원하는 경보장비를 활용한 경보상황 전파 확대",
+  "security_policy": "사업 행정기관 및 공공기관 정보시스템 구축·운영 지침 및 소프트웨어 개발보안 등을 준용하여 대책 마련",
+  "resource_limit": "❍ CPU 평균 사용률은 어느 조건에서도 90%를 초과하지 말아야 한다. / ❍ 메모리 평균 사용률은 어느 조건 하에서도 80%를 초과하지 말아야 한다.",
+  "function_requirement_count": "20",
+  "subcontracting_policy": "본 사업은 하도급을 불허함",
+  "remote_control_target": "저류지 수문 / 홍수방호벽",
+  "mobile_app_viewable_results": "위험상황 발생 알림 / 경보방송 수행 결과 / 원격제어 결과 / 문자 수신여부 확인 / 강우현황 확인",
+  "task_start_deadline_after_contract": "14일 이내",
+  "required_documents_for_execution": "착수계 / 과업수행계획서 / 과업수행자 명단 / 보안각서"
+}

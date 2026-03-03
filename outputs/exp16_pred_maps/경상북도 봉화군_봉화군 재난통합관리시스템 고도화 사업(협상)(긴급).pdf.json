@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "900,000,000 원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 )",
+  "deadline": "NOT_FOUND",
+  "duration": "착수일로부터 7 개월 (210 일",
+  "requirements_must": "〇 시스템 구성 요구사항 〇 기능 요구사항 〇 성능 요구사항 〇 인터 페 이스 요구사항 〇 데이터 요구사항 〇 테 스 트 요구사항 〇 보안 요구사항 〇 품 질 요구사항 〇 제약사항",
+  "eval_items": "기술평가(90점) 및 가격평가(10점)으로 종합평가",
+  "price_eval": "협상",
+  "eligibility": "경영자 또는 참여를 위한 요건은 제시되어 있으나 구체적 면허/인증/등급은 NOT_FOUND",
+  "legal_basis": "｢지방자치단체를 당사자로 하는 계약에 관한 법률 시행령｣",
+  "blind_spot_solution": "NOT_FOUND",
+  "security_policy": "보안 요구사항",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "〇 기능 요구사항",
+  "subcontracting_policy": "하도급 사항: 본 사업은 하도급을 불허 함",
+  "remote_control_target": "NOT_FOUND",
+  "mobile_app_viewable_results": "NOT_FOUND",
+  "task_start_deadline_after_contract": "NOT_FOUND",
+  "required_documents_for_execution": "과업수행에 필요한 제반서류는 필요하나 구체 항목은 NOT_FOUND"
+}

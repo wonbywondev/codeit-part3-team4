@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제안요청내용에 따라 ‘입찰방식 제한경쟁입찰’ 및 ‘협상에 의한 계약’으로 명시되어 있음",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "○ 통합정보센터 유지보수 및 전국장애인체육대회 홈페이지 전산 유지·보수 관련 요구사항, 시스템 연계, 본인인증(NICE), SSL 관리, 카카오톡 채널 서비스 제공, 원격지원서비스 등 사용자 지원 요구사항\n○ 프로젝트 관리, 인력 구성 및 관리, 품질·일정·자원 관리 요구사항",
+  "eval_items": "기술평가(90%) / 가격평가(10%)",
+  "price_eval": "기술평가 90%, 가격평가 10%에 기반한 평가 방식",
+  "eligibility": "참가 자격 요건은 상세하게 기재되지 않음(참가 자격 요건은 NOT_FOUND으로 추정)",
+  "authentication": "통합정보센터 로그인을 위한 본인인증(NICE) 비용 부담",
+  "competition_structure": "NOT_FOUND",
+  "project_period": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "proposal_page_limit": "NOT_FOUND",
+  "bid_evaluation": "평가 방식: 기술평가(90%) / 가격평가(10%)",
+  "response_time": "NOT_FOUND",
+  "system_url": "NOT_FOUND",
+  "participation_restriction": "대기업 참여 제한 여부 명시: 대기업참여제한여부 대기업 참여 제한 사업",
+  "kakaotalk_service": "카카오채널 서비스 제공(HELP DESK 포함) 및 원격지원서비스 등 사용자 지원 용도"
+}

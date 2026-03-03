@@ -1,0 +1,23 @@
+{
+  "project_name": "호계체육관 배드민턴장 및 탁구장 예약 시스템 구축",
+  "agency": "안양시청 / 안양도시공사",
+  "purpose": "웹 기반 및 키오스크 연계 예약관리시스템 구축으로 이용회원 편의성 및 운영효율성 향상, 무단이용 차단 및 개인정보 안전한 수집·이용(시큐어 코딩 적용)",
+  "budget": "49,500 천원 (부가가치세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약 후 120 (일)",
+  "requirements_must": "반응형 웹 기반 구축, 키오스크 연계, 안양도시공사 홈페이지 환경에서 구축, 본인인증을 통한 회원가입, 시큐어 코딩 적용, 국가정보보안기본지침 준수 및 보안서약서·신원확인 등 보안관리",
+  "eval_items": "기술평가(90%) 및 가격평가(10%)로 종합평가(100점)",
+  "price_eval": "가격평가 10% (가격·기술 종합평가 방식)",
+  "eligibility": "수행실적: 공고일 기준 최근 3년 이내 완료한 문화·체육시설 예약시스템 또는 정보화사업 실적 제출 등 (세부 자격요건은 제출서류로 증빙)",
+  "budget_vat": "부가가치세 포함",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "반응형 웹 기반(안양도시공사 홈페이지 환경 활용), 웹 및 모바일 지원, 키오스크 연계",
+  "smembership_policy": "회원가입(본인인증) 후 이용하도록 함; 회원가입 불가 고객은 관리자를 통해 회원가입 후 이용",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "NOT_FOUND",
+  "failure_response": "NOT_FOUND",
+  "training_target": "발주자의 관리자 및 담당자",
+  "training_cost": "사업자가 교육교재, 기자재 및 출장비 등 교육에 소요되는 제반비용 일체 부담",
+  "log_retention": "NOT_FOUND"
+}

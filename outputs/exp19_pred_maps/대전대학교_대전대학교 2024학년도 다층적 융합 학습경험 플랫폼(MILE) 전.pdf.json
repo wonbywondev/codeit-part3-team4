@@ -1,0 +1,23 @@
+{
+  "project_name": "다층적 융합 학습경험 플랫폼(MILE) 구축",
+  "agency": "대전대학교",
+  "purpose": "학생 맞춤형 학습 경로 제공 및 학업 성취 향상, 유연한 학사 운영을 통한 융합 교육 활성화",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁입찰(낙찰자 결정방식: 협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "본 시스템에 대한 하자보증 기간은 본 사업 최종 검수 완료일로부터 최소 12개월 이상",
+  "eval_items": "기술평가와 가격평가를 실시하여 종합평가 점수로 산출 (기술평가: 소프트웨어 기술성 평가기준 적용, 가격평가: 협상에 의한 계약체결 기준 준용)",
+  "price_eval": "협상에 의한 계약체결 기준에 따라 평가 점수 산출",
+  "eligibility": "소프트웨어사업자(컴퓨터관련서비스사업)로 신고한 자, 국가계약법령상의 입찰참가자격을 갖춘 자, 부정당업자 해당되지 않는 자",
+  "monitoring_components": "NOT_FOUND",
+  "degree_enhancement": "디그리 과정 신청 화면 개선, 디그리과정대상자관리 및 미신청이수가능자조회 화면 고도화, 나노/마이크로디그리 출력 화면 고도화, 학점이수정보에 비교과인증제(비교과포인트) 정보 추가",
+  "response_time": "평균 처리시간 관련 요구사항: 0.1초 미만(전혀 문제 없음), 1초 미만(웹 사용 흐름에 방해되지 않음), 10초 미만(대체로 응답 대기), 10초 이상(이탈)",
+  "warranty_period": "최종 검수 완료일로부터 최소 12개월 이상",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "NOT_FOUND",
+  "faculty_assessment": "교수역량진단 개편(융합교육 추가) 및 역량 기반 교과 인증 관리 시스템 개편",
+  "required_documents": "NOT_FOUND",
+  "act_certification": "ACT 교과 인증 강좌개설 화면 연계 (교수역량진단 개편 및 역량 기반 교과 인증 관리 시스템 고도화와 연계)"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "GKL 그룹웨어 시스템 구축사업",
+  "agency": "NOT_FOUND",
+  "purpose": "정부 정책에 대응 가능한 시스템 구축 필요; 웹기반 그룹웨어 시스템 구축으로 효율적인 업무환경 제공; 노후 시스템 재구축으로 안정성 확보",
+  "budget": "1,515,000 천원 ( 부가세 포함 )",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "웹 기반 그룹웨어 연계, 기록물관리 시스템 구축, 업무용 메신저 시스템 구축, 전자문서 유통 시스템 연계, 내부/외부 메일 연계 및 변환, 보안 강화 및 비표준 제거(ActiveX, IE 종속성 제거) 등",
+  "eval_items": "기술평가(90%)/ 가격평가(10%)",
+  "price_eval": "협상에 의한 계약에 따른 가격 평가 방식 NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "그룹웨어 시스템 구축 및 연계(기록물관리 시스템, 업무용 메신저, 전자결재 시스템 연계 포함)",
+  "migration_scope": "기존 기록물 신 규 시스템으로 마이그레이션 및 이관",
+  "mobile_requirements": "모바일 기능 구현으로 임직원의 사내 소통 강화 및 업무 처리 프로세스 재정립",
+  "approval_system": "결재 처리 기능 요구사항 및 연계문서 관리(결재 경로 지정, 승인부서/담당자 지정 등)",
+  "security_auth": "보안 취약점 제거 및 비표준 정책 적용; ActiveX/IE 종속성 제거",
+  "search_engine": "통합 검색 솔루션 연계 및 검색 가능성 언급",
+  "web_editor": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "cooperation_score": "NOT_FOUND",
+  "web_standard": "웹 표준 및 호환성 준수를 위해 제거해야 할 기술은 ActiveX 및 IE 종속성 등"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "대한장애인체육회 전산실 통합 유지보수 및 관리",
+  "agency": "대한장애인체육회",
+  "purpose": "통합정보시스템의 안정적인 시스템 운영 및 전국장애인체육대회 홈페이지 및 전산시스템과의 원활한 연동, 선수 개인의 실적조회 및 스포츠 등급 변경 이력 관리 등 통합정보센터 운영 및 유지보수",
+  "budget": "20 억 미만",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "공고문 참조",
+  "duration": "NOT_FOUND",
+  "requirements_must": "통합정보센터 로그인을 위한 본인인증 (NICE) 비용 부담; 통합정보센터 원격지원서비스 제공 및 비용 부담; 카카오채널, 원격지원서비스, 전화응대서비스를 통한 사용자 지원; SSL 관리 등 보안 요구사항",
+  "eval_items": "기술평가 90% / 가격평가 10% (기술평가점수 90%, 가격평가점수 10%)",
+  "price_eval": "입찰가격의 적정성 평가 (가격평가 10%)",
+  "eligibility": "조달청 입찰참가자격등록증 소지업체, 직접생산증명서(전산업무 분야 - 정보시스템개발서비스 -8111159901) 보유, 중소기업자만 입찰참가 가능, 대기업 참여 제한, 하도급 불허",
+  "authentication": "본인인증 (NICE) 및 개인 인증(핸드폰, I-PIN)",
+  "competition_structure": "NOT_FOUND",
+  "project_period": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "proposal_page_limit": "제안서 본문 120 페이지 (60 장) 이내; 제안요약서 20 페이지",
+  "bid_evaluation": "제한경쟁입찰 / 협상에 의한 계약, 평가비율 기술(90%) + 가격(10%)",
+  "response_time": "NOT_FOUND",
+  "system_url": "https://help.koreanpc.kr (통합정보센터 관련 URL)",
+  "participation_restriction": "대기업 및 중견 소프트웨어 사업자의 참여 제한, 중소기업자만 입찰참가 가능, 하도급 불허",
+  "kakaotalk_service": "사용자 지원을 위한 카카오채널 서비스를 통한 사용자 지원"
+}

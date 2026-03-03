@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁입찰, 협상에 의한 계약체결",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "성능 요구사항 및 데이터 요구사항 포함; 교수역량진단 개편 및 ACT 교과 인증 강좌연계 화면 고도화 관련 요구사항",
+  "eval_items": "기술평가, 가격평가; 평가항목 구성은 소프트웨어 기술성 평가기준에 따라 가·감 조정",
+  "price_eval": "협상에 의한 계약체결 기준에 의함",
+  "eligibility": "입찰참가자격 요건: 경쟁입찰 참가자격 충족, 소프트웨어사업자 신고자 요건, 대학이 제시하는 제안사항에 동의하는 자",
+  "monitoring_components": "나노/마이크로디그리 관련 화면 고도화, 비교과인증제 정보 추가, 모니터링 기능 주요 구성은 제시되지 않음",
+  "degree_enhancement": "나노/마이크로디그리 관련 화면 고도화 및 비교과인증제 정보 추가",
+  "response_time": "평균 처리시간 요구사항: 0.1초 미만 등으로 제시된 항목 존재",
+  "warranty_period": "NOT_FOUND",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "제안서 기술평가 배점 구성은 기술평가 및 가격평가를 통한 종합점수 산출",
+  "faculty_assessment": "NOT_FOUND",
+  "required_documents": "제안서 제출 시 필수 서류는 제안요청서에 명시되며, 누락 시 수용 불가로 간주",
+  "act_certification": "ACT 교과 인증 강좌개설 화면 연계 내용은 교수역량진단 개편 및 역량 기반 교과 인증 관리 시스템 개편에 포함"
+}

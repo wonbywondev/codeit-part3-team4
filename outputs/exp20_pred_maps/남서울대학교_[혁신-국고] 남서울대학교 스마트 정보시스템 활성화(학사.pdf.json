@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "70000000",
+  "contract_type": "협상에 의한 계약 ( 제한경쟁입찰 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 3 개월",
+  "requirements_must": "파일 암호화 모듈 적용 및 보안 강화, 기존 파일 암호화 및 복호화 모듈 적용, 공통 보안 요구사항 준수, 하자보수 기간 12개월 포함",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "NOT_FOUND",
+  "encryption_target": "NOT_FOUND",
+  "security_requirements": "암호화 관련 기준 및 파일 암호화 적용 필요",
+  "file_encryption_method": "NOT_FOUND",
+  "warranty_period": "12개월",
+  "subcontract_policy": "공동수급 불허, 단 독형태로만 입찰 가능",
+  "joint_bidding": "공동수급 허용 여부는 불허",
+  "deliverables": "제출해야 하는 산출물은 기술서, 제안요약, 개발 및 보안 관련 문서 등",
+  "project_manager_requirement": "PM의 특수 요구사항은 NOT_FOUND",
+  "testing_requirements": "NOT_FOUND"
+}

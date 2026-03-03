@@ -1,0 +1,23 @@
+{
+  "project_name": "다층적 융합 학습경험 플랫폼(MILE) 구축",
+  "agency": "NOT_FOUND",
+  "purpose": "교수역량진단 개편(융합교육 추가) 및 ACT 교과 인증 강좌개설 화면 연계",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "하자보증 기간은 본 사업 최종 검수 완료일로부터 최소 12개월 이상",
+  "requirements_must": "시스템은 정상 상태에서 건별 요청에 대한 처리를 5초 이내 처리; 융합교육 역량 진단 문항 추가에 따른 데이터 관리 화면 변경; 단과대학 개편에 따른 코칭보고서, 분석 보고서 전면 개편",
+  "eval_items": "제안서 기술평가 항목 및 가격 평가(목차에 제시) — 구체적 구성은 문서 내 '제안서 기술평가 항목' 및 '가격 평가' 참조",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "monitoring_components": "융합 교육 운영 현황 모니터링 화면, 융합 교육 교수 모니터링 화면, 융합 교육 코디네이터 모니터링 화면",
+  "degree_enhancement": "디그리 과정 신청(학생) 개선; 디그리과정대상자관리 및 미신청이수가능자조회 고도화; 나노/마이크로디그리 출력 화면 고도화; 졸업자가진단 비교과 인증 추가 및 관련 자료 업로드",
+  "response_time": "건별 요청 처리 5초 이내",
+  "warranty_period": "최종 검수 완료일로부터 최소 12개월 이상",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "NOT_FOUND",
+  "faculty_assessment": "융합교육역량 진단 문항 추가에 따른 데이터 관리 화면 변경; 단과대학 개편에 따른 코칭보고서, 분석 보고서 전면 개편",
+  "required_documents": "입찰 참가등록 및 서류 제출 항목(문서 내 '입찰 참가등록 및 서류 제출' 참조)",
+  "act_certification": "ACT 교과 인증 운영 관련 인증 예외 사항 반영 및 ACT 교과 인증 결과 강좌개설과 연계"
+}

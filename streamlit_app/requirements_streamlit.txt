@@ -1,0 +1,8 @@
+streamlit
+pdfplumber
+pymupdf
+scikit-learn
+numpy
+pandas
+python-dotenv
+openai

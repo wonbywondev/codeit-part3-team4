@@ -1,0 +1,2 @@
+﻿exp_id,chunk,retriever,model,n_docs,ret_recall,ret_mrr,gen_fill,gen_match,gen_sim
+21,C4,R2,G1,20,0.5875661375661375,0.48188271604938276,1.0,0.3201058201058201,48.11670146104239

@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "대전대학교 총장 귀하",
+  "purpose": "유연한 학사 운영을 통한 융합 교육 활성화 및 교수역량진단 개편(융합교육 추가) 및 ACT 교과 인증 강좌개설 화면 연계",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "성능 요구사항: 평균 처리시간 및 응답시간 관련 세부 기준; 시스템의 처리속도·처리량·가용성 등 성능 요구사항; 데이터 요구사항(초 기자료 구축 및 데이터 변환 요구사항) 포함",
+  "eval_items": "기술평가와 가격평가를 실시하여 종합평가 점수로 산출",
+  "price_eval": "협상에 의한 계약체결 기준에 따른 가격평가",
+  "eligibility": "자격조건: 경쟁입찰 참가자격 충족, 소프트웨어사업자 등록 요건, 대학이 제시하는 제안사항에 100% 동의",
+  "monitoring_components": "NOT_FOUND",
+  "degree_enhancement": "나노/마이크로디그리 관련 화면 고도화 내용 포함",
+  "response_time": "평균 처리시간: 0.1초 미만 등 상세 내용 명시; 1초 미만/10초 미만 등 조건 명시",
+  "warranty_period": "NOT_FOUND",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "제안서 기술평가 배점 구성은 기술평가 항목 및 가감 조정에 따라 결정",
+  "faculty_assessment": "교수역량진단 개편에서 추가되는 내용은 융합교육 추가 및 역량 기반 교과 인증 관리 시스템 개편",
+  "required_documents": "제안서 제출 시 필수 서류 목록은 제안요청서에 따라 명시되며, 항목 미작성 시 불가·또는 '해당없음' 표기 필요",
+  "act_certification": "ACT 교과 인증 강좌개설 화면 연계 내용은 교수역량진단 개편 및 역량 기반 교과 인증 관리 시스템 개편과 연계"
+}

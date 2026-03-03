@@ -1,0 +1,23 @@
+{
+  "project_name": "GKL 그룹웨어 시스템 구축사업",
+  "agency": "NOT_FOUND",
+  "purpose": "사업 목적(추진 배경)은 시스템 노후화와 정부권장정책 적용에 따른 실질적 개선 필요 및 웹기반 시스템 구축으로 업무환경 개선을 위한 새로운 비즈니스 적용 기반 마련",
+  "budget": "1,515,000 천원 ( 부가세 포함 )",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "보안 취약점 제거 등 정부 정책에 대응 가능한 웹기반 그룹웨어 시스템 구축 및 기존 시스템과의 연동/연계 개발",
+  "eval_items": "기술평가 (90%)/ 가격평가 (10%)",
+  "price_eval": "협상에 의한 계약 중 기술평가 90%/ 가격평가 10%",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "그룹웨어 시스템 구축, 기록물관리 시스템 구축, 업무용 메신저 시스템 구축, 전자문서 이관 및 데이터 마이그레이션, 연계 시스템 및 커스터마이징, 차세대 전자문서 유통시스템 기관 연계",
+  "migration_scope": "기존 생산된 전자결재 문서를 포함한 대상 문서의 이관 및 데이터 마이그레이션",
+  "mobile_requirements": "모바일 기능 구현으로 임직원의 사내 소통 강화 및 업무 처리 프로세스 재정립",
+  "approval_system": "연계문서의 결재 경로 지정 및 승인부서/담당자 필수 지정, 결재완료문서 팝업 조회 가능",
+  "security_auth": "2차 인증(2FA) 적용 방식 NOT_FOUND",
+  "search_engine": "통합 검색 솔루션, 연계 시스템 간 검색 기능",
+  "web_editor": "웹 에디터 도입 시 기술적 요구사항 NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "cooperation_score": "NOT_FOUND",
+  "web_standard": "웹 표준 및 호환성 준수를 위한 제거 기술 NOT_FOUND"
+}

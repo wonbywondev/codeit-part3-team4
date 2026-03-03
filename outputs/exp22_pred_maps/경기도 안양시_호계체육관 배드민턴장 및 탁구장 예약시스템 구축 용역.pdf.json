@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "고객의 니즈를 시스템에 즉시 반영하기 위한 웹 기반의 지 및 키오스크 예약관리시스템 구축 필요",
+  "budget": "49,500 천원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약 후 120",
+  "requirements_must": "웹 기반 예약 시스템 구축, 키오스크 연계, 반응형 웹 기반 홈페이지 제공, 개인정보보호법에 맞춘 시큐어 코딩 적용, 현장예약 연계 및 운영 지원",
+  "eval_items": "제안사 일반현황, 수행조직 및 업무분장, 추진전략, 적용기술, 표준프레임워크 적용, 시스템 장비구성 요구사항, 기능 요구사항, 보안 요구사항",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "공고일 현재 소프트웨어사업자 등록(업종코드: 1468) 및 지방자치단체를 당사자로 하는 계약에 관한 법률 제31조 및 시행령 제92조에 따른 입찰참가자격제한 규정에 해당하지 않는 업체",
+  "budget_vat": "NOT_FOUND",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "웹 서비스 기반의 반응형 웹; 키오스크 연계; 현장예약은 기존 키오스크 연계 개발",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "NOT_FOUND",
+  "failure_response": "NOT_FOUND",
+  "training_target": "NOT_FOUND",
+  "training_cost": "NOT_FOUND",
+  "log_retention": "NOT_FOUND"
+}

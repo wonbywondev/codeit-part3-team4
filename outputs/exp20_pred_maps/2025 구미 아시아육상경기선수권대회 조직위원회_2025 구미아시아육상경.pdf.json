@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "대회 시작 4일전 ~ 대회 종료일까지 경기장 상주",
+  "requirements_must": "대회 정보화시스템 구축 및 현장 IT 팀 운영 등 종합정보시스템 요구분석, 상세설계, 인터페이스 관리 시스템, 시험운영 및 교육, 현장 IT 팀 상주 및 운영",
+  "eval_items": "정성평가 70점, 정량평가 20점; 기술능력 평가 점수 85% 이상 협상적격자 선정, 제안발표/서면평가 병행",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "system_function": "종합정보시스템(S/W 개발), 대회 정보화시설 구축, 경기 운영 시스템(시스템 구축/운영), 홈페이지 구축",
+  "system_interface": "관계자 교육 및 내부/외부 시스템(계측기, 전광판, 홈페이지 등) 연동 시험",
+  "NaN": "NOT_FOUND",
+  "operation_staff": "경기 시작 4일전 ~ 대회 종결까지 경기장 상주",
+  "staffing": "현장 IT 팀의 최소 인원 구성은 NOT_FOUND",
+  "security": "보안교육 결과서, 보안서약서, 보안확약서 필요; 비밀유지 의무 준수; PC/노트북 반출입 시 보안 확인",
+  "performance": "NOT_FOUND",
+  "maintenance": "하자보수 기간 및 무상하자보수 관련 분류 및 대응 필요",
+  "eligibility_large_company": "NOT_FOUND",
+  "subcontracting_policy": "하도급 수행 가능 여부 NOT_FOUND"
+}

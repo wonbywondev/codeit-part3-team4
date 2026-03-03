@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "NOT_FOUND",
+  "purpose": "FAB 내 공정장비의 실시간 모니터링을 위한 설비 통신 온라인 시스템 구축; SECS/Non-SECS Data 수집 시스템 구축 및 LoT Tracking 환경 구축; 스마트팹 미래 설비자동화 및 데이터 분석 모델 설계",
+  "budget": "2,349,130,320 원 (VAT포함)",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "SECS 통신 지원; Carrier ID 인식 장치 설계·설치·인터페이스·관리; 설비별 통신 온라인 기준정보 관리; 설비별 상태 및 리소스 조회·통신 및 테스트 기능; 로그 분석 및 데이터 확보; 공정관리시스템 연계 통한 Recipe 및 이력 관리",
+  "eval_items": "기술 및 가격 평가(세부비중/항목 명시 없음)",
+  "price_eval": "협상에 의한 계약 방식 포함(가격평가 방식 명시 없음)",
+  "eligibility": "SW 사업정보(SW 사업 수행 및 실적정보) 제출 의무; 기능점수 산정 가능한 전문가 포함 요구(세부 면허/등급 명시 없음)",
+  "scope": "설비 통신 온라인 시스템 구축, SECS/Non-SECS 데이터 수집, Carrier ID 인식 장치 설계·설치·연동, HMI·PLC·SECS 통신 프로토콜 및 데이터 수집 체계, 공정관리시스템 연계로 Recipe/이력 관리, 스마트팹 설비자동화·데이터 분석 모델 제시",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "NOT_FOUND",
+  "lot_tracking": "Carrier ID(BCAR)를 통한 바코드 인식으로 공정간 이동·투입·완료 데이터 수집하여 공정 추적성 확보; 인식정보 발행 시 FAB IN에서 공정 시작으로 처리; 인식정보와 설비 데이터(LotID 등) 매핑 및 MES 연계",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "NOT_FOUND",
+  "interface_method": "공정관리시스템(MES) 연계; Carrier 정보 기반 공정관리시스템 인터페이스 구축; 통신·데이터 수신 확인 및 연동 인터페이스 마련",
+  "maintenance_rate": "NOT_FOUND"
+}

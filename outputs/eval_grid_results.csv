@@ -1,4 +1,4 @@
-﻿doc_id,chunk_strategy,chunk_params,k,n_questions_total,n_questions_with_evidence,retrieval_recall@k,retrieval_mrr@k,n_questions_with_gold_fields,gen_fill_rate,gen_match_rate,gen_avg_similarity
+doc_id,chunk_strategy,chunk_params,k,n_questions_total,n_questions_with_evidence,retrieval_recall@k,retrieval_mrr@k,n_questions_with_gold_fields,gen_fill_rate,gen_match_rate,gen_avg_similarity
 (사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf,page,{},3,21,21,0.6666666666666666,0.5476190476190477,21,1.0,0.09523809523809523,32.330595463390104
 (사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf,page,{},5,21,21,0.7619047619047619,0.5690476190476191,21,1.0,0.14285714285714285,33.771065141680445
 (사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업 .pdf,page,{},10,21,21,0.8571428571428571,0.584920634920635,21,1.0,0.09523809523809523,33.69156099573479

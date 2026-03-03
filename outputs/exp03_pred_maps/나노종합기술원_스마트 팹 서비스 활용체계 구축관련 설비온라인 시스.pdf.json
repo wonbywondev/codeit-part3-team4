@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "나노종합기술원",
+  "purpose": "나노 반도체 국가 성장 동력 강화를 위한 나노 반도체 생태계 혁신기반 마련",
+  "budget": "2,349,130,320원",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 18개월",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "GEN_FAIL",
+  "scope": "기술원 최적화 설비 온라인 시스템 구축 / FAB내 공정장비의 실시간 모니터링을 위한 설비 통신 온라인 시스템 구축 / 설비별 통신 온라인 기준정보 관리 기능 구축 / 설비별 상태 및 리소스 조회, 통신 및 테스트 기능 구축 / 설비별 로그 분석 및 데이터 확보 기능 구축 / 기술원의 新공정관리시스템 연계를 통한 공정 데이터 Recipe 관리 및 이력 관리 환경구축 / SECS/ Non-SECS Data 수집 시스템 구축 및 LoT Tracking 환경 구축 / SECS 통신 지원을 통한 공정 설비 데이트 수집 및 분석 체계 마련 / Carrier ID 인식 장치 설계 및 설치, 연동 인터페이스 마련 / Carrier 정보 표시 및 작업자 인터페이스 화면 구성, Carrier 정보 기반 공정관리시스템 인터페이스 구축 / HMI 장치의 설비통신, SECS통신, PLC통신 프로토콜 마련 및 데이터 수집 체계마련 / 스마트팹 미래 설비자동화 및 데이터 분석 모델 설계",
+  "equipment_count": "70대 / 10대",
+  "milestone": "1차 오픈(2024. 9월 까지): SECS/GEM 대상 장비의 기본 온라인화 완료 / 2차 오픈(사업종료 전까지): SECS/GEM 대상 장비의 안정화 및 PC-File 대상 장비의 온라인화 완료",
+  "lot_tracking": "GEN_FAIL",
+  "subcontract_limit": "100분의 50",
+  "warranty_period": "검수 완료일로 부터 1년 이내",
+  "response_time": "전체 성능관점에서 사용자 응답속도, 데이터 처리속도를 일정 수준 이상으로 보장하는 방안을 제안하고, 상세설계 시 반영하여야 함",
+  "security_encryption": "RSA(PKCS #1), RSAES- OAEP, RSASSA-PSS, 국가기관용 표준 / 키 사이즈는 2,048 비트이상 사용해야 함 / 암호검증은 국가용 암호관리센터에서 발급한 암호검증서(국정원) 적용함 / 사용자 PC부터 웹서버구간 간 암호화방식을 적용하여 구현하여야 함 / SSL, TLS 등 네트워크 구간 암호화 조치 수행하여야 함 / 연계를 통해 전송되는 자료는 서버용 전송자료 암호화를 적용하여 전송하여야 함 / 연계영역 간에는 사전 정해진 데이터 형식만 전달하도록 함 / XML 서명, XML 암호화, WS-Security, SAML을 적용함 / 비공개 암호체계(국정원) 적용함 / 민간겸용 공개암호(ARIA) 사용함",
+  "interface_method": "Kafka 3.x.x (Json)을 위한 Middleware",
+  "maintenance_rate": "18% 이내"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급 사업",
+  "agency": "주관기관(발주기관) BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급 사업",
+  "purpose": "사업개요 및 목표에 따라 BIFF&ACFM 온라인서비스 재개발 및 행사지원시스템 공급을 통해 행사 운영 지원 및 서비스 제공",
+  "budget": "243,000,000",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일 ~ 2025.05.31",
+  "requirements_must": "공식 모바일 앱 4종 공급(영화제 및 마켓 Android, iOS 각 1식), 기능/성능/보안 등 제안요구사항 충족",
+  "eval_items": "제안서 평가항목 및 배점한도 100점 만점 기준; 기술능력평가 및 신용평가 등 포함",
+  "price_eval": "협상적격자의 기술능력평가 점수와 입찰가격평가 점수를 합산하여 고득점 순으로 결정",
+  "eligibility": "실적·신용평가 등 제안요건 충족 필요; 실적 증빙 및 신용평가 관련 제출 요구",
+  "submission_place": "NOT_FOUND",
+  "submission_docs": "제안서 및 디자인 시안 USB 포함 등 제안요건에 따라 제출",
+  "NaN": "NOT_FOUND",
+  "consortium": "NOT_FOUND",
+  "scope": "BIFF 공식 웹사이트와 관련하여 수행해야 하는 주요 과업은 공식 모바일 앱 4종 공급 및 관련 시스템 개발",
+  "deliverables": "공식 모바일 앱 4종 공급(Android/iOS 각 1식), 디자인 시안 및 제안서 파일 USB 제출",
+  "staffing": "제안서에 소요인력 규모 표기, 자체 인력 및 신규 채용 인력 포함 가능",
+  "technical_eval": "기술능력평가 항목 및 배점(상세 p.47) 포함",
+  "negotiation_criteria": "협상적격자 선정 기준: 기술능력평가 점수 85% 이상인 자를 협상적격자로 선정",
+  "security": "보안 요구사항(보안/개인정보 요구사항 포함 ISMS 등) 명시"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 시각예술 정보시스템 운영 유지보수",
+  "agency": "재단법인 예술경영지원센터",
+  "purpose": "미술진흥법 제23조에 의거 통합미술정보시스템 구축‧운영 / 통합미술정보시스템으로의 시스템 개편 및 고도화 전략 수립을 위한 기반 마련 필요성 대두 / 이용자 기반의 통합미술정보시스템 구축 방향 수립을 위한 사전 분석",
+  "budget": "50,000,000",
+  "contract_type": "경쟁입찰 후 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "2024 3 4 5 6 7 8 9 10 11",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "기술평가:90 / 가격평가:10",
+  "price_eval": "기획재정부 계약예규 「협상에 의한 계약체결기준」에 따라 가격평가 실시",
+  "eligibility": "GEN_FAIL",
+  "evaluation_date": "2024.04.25.(목)",
+  "system_url": "http://www.k-artmarket.kr",
+  "bid_inquiry_contact": "경영지원팀 김소진 주임(02-708-2212)",
+  "submission_docs": "GEN_FAIL",
+  "evaluation_committee": "외부 전문평가위원 5인 내외로 구성된 평가위원회에서 평가를 실시하며 위원은 예술경영지원센터에서 선정",
+  "submission_method": "전자제출(조달청 e-발주시스템에 등록)",
+  "result_notification": "선정결과는 최종 선정업체에 한하여 나라장터를 통한 발표 및 개별 통보함",
+  "schedule_structure": "사업자 선정 / 환경 및 현황분석 / 통합미술정보시스템 구축 데이터 분석 및 설계 / 통합정보시스템 벤치마킹 사례 조사 / 비전 및 전략 수립",
+  "report_submission_format": "서술식으로 작성된 연구보고서를 한글(HWP) 형태로 제출한다.",
+  "price_eval_disqualification": "ㅇ 가격제안서(입찰서)의 입찰가격이 사업금액(추정가격에 부가가치세를 더한 금액)을 초과하는 자는 협상적격자에서 제외합니다."
+}

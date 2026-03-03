@@ -1,0 +1,23 @@
+{
+  "project_name": "혁신 - 국고 스마트 정보시스템 활성화 ( 학사행정 암호화 )",
+  "agency": "충청남도 천안시 서북구 성환읍 대학로 91 성 명 : 총장 윤 승 용 ( 인 ) 서울시 서초구 강남대로 327 대륭서초타워 1608 성 명 : 대표 이 상 규 ( 인 )",
+  "purpose": "개인정보 보호 및 파일 암호화를 통한 보안 강화 및 개인정보 유출 사고 최소화",
+  "budget": "70000000",
+  "contract_type": "협상에 의한 계약 ( 제한경쟁입찰 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 3 개월",
+  "requirements_must": "암호화 솔루션 적용 및 파일 암·복호화 모듈 적용, 공통 보안 요구사항 준수, 하도급 불허 및 독형태 입찰, PMR-001 등 프로젝트 관리 요건",
+  "eval_items": "제안요청 내용에 기반한 평가 항목(기술/가격 등) 구성",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope": "파일 암호화 솔루션 적용 대상 시스템 및 각 포털 서비스(학사포털/대학원 포털/평생교육원 학사포털/연구행정 시스템/학생경력관리 플랫폼 등)",
+  "encryption_target": "학사포털 서비스 및 첨부 파일/ 시스템의 파일 암호화",
+  "security_requirements": "개인정보 보호법 및 개인정보안전성 확보조치 기준 준수, 암호화 적용 필요, 보안 강화",
+  "file_encryption_method": "파일 암호화/복호화 모듈 적용",
+  "warranty_period": "NOT_FOUND",
+  "subcontract_policy": "공동 수급 불허, 단 독형태로만입찰 참가 가능",
+  "joint_bidding": "NOT_FOUND",
+  "deliverables": "제출물 산출물의 종류 및 내역, 제출시기 명시",
+  "project_manager_requirement": "PMR-001 등 프로젝트 관리 요건",
+  "testing_requirements": "테스트 및 검증 요구사항 표기"
+}

@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "689,480,000원(VAT 포함)",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약, 기술90%, 가격 10%)",
+  "deadline": "NOT_FOUND",
+  "duration": "8개월",
+  "requirements_must": "디지털트윈 플랫폼 기술요건 분석, 플랫폼 구축 방안 수립, 디지털트윈 데이터 기반 협업 방안 도출, 경영전략 수립 및 로드맵 수립 등 프로젝트 관리 및 컨설팅 요구사항 포함",
+  "eval_items": "CSR-006, CSR-007, CSR-008 등 컨설팅 요구사항에 따른 평가항목",
+  "price_eval": "가격 10% 반영",
+  "eligibility": "공단 내부 시스템(SAP ERP, RAFIS, EPMS, CPMS, 전자조달 등) 운용 현황 분석 및 연계성 도출 가능 여부",
+  "goal": "NOT_FOUND",
+  "scope": "공단 내부 시스템 연계성 분석, BIM 기반 표준정보체계 구축, 디지털트윈 플랫폼 구축 방안 수립, 중장기 로드맵 수립",
+  "standard": "ISO 16739, 19650, 29481 등 BIM 국제표준 동향 파악 및 적용 방안 도출",
+  "integration": "공단 내부 시스템(SAP ERP, RAFIS, EPMS, CPMS, 전자조달 등) 연계성 분석 및 연계성 도출",
+  "design": "플랫폼 구축 방안에서 To-Be 플랫폼 모델 제시 및 디지털트윈 데이터 협업 방안 제시",
+  "planning": "중장기 로드맵 수립, 핵심과제 도출 및 우선순위 결정, 단계별 세부추진계획 수립",
+  "function": "openBIM 기반 디지털트윈 플랫폼 구축 관련 주요 수행과업: 플랫폼 기술요건 분석, 플랫폼 구축 방안 수립, 협업방안 도출 등",
+  "procedure": "컨설팅 요구사항의 ID 부여규칙은 제안요청서 내 CSR-006 ~ CSR-010 등 고유번호로 정의",
+  "security": "보안 관련 구체 항목은 본문에 직접적으로 명시된 구체적 항목은 NOT_FOUND"
+}

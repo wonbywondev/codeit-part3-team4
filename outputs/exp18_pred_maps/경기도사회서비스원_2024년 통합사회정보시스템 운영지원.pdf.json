@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 년 통합사회정보시스템 운영",
+  "agency": "도 경기도사회서비스원",
+  "purpose": "통합데이터 및 표준화된 업무 프로세스 운영기반 마련, 중단 없는 시스템 운영을 통한 안정적 정보서비스 제공, 정보보안 및 개인정보보호 관리 강화, 정보서비스 최적의 활용으로 업무 효율 제고를 위한 지속적 시스템 개선",
+  "budget": "133,812,000",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 24.12.31",
+  "requirements_must": "성능 관리 및 시스템 운영/관리자의 교육 훈련, 보안 관리 체계 및 점검, 데이터 정확도 및 성능 개선, 시스템 중단 최소화 및 장애 대응, 백업/복구 및 보안 대책",
+  "eval_items": "기술능력 평가 90%, 가격평가 10% (소프트웨어 기술성 평가기준 및 정보시스템 구축‧운영 지침 반영)",
+  "price_eval": "최대 평가 구성에서 기술 90%/가격 10%",
+  "eligibility": "관련 요건: 보안 관리 체계, 품질/신뢰성 요건, 인력 및 교육 등 PMR-001, MHR-001~003, SER-002에 따른 요구사항",
+  "contact_department": "발주기관",
+  "maintenance_target": "통합사회정보시스템 유지보수 및 기능개선 대상",
+  "incident_response_policy": "비상연락 체계 동 동가 요구사항 포함",
+  "data_recovery_policy": "비상대응 및 백업/복구 대책 포함",
+  "regular_inspection": "정기 점검 필요 여부/주기 명시 미확인",
+  "performance_management": "성능 개선 분 야 월간보고서 산출 및 성능 관리 방안 이행",
+  "manpower_grade": "유지보수 인력 요구사항에 따른 등급 및 투입인력 관리",
+  "pm_replacement_policy": "총괄관리자(PM) 임의 교체 여부에 대한 명시 없음",
+  "manpower_change": "투입 인력 교체 시 절차 및 요구사항",
+  "emergency_contact": "비상 장애 상황에 대비한 연계 체계"
+}

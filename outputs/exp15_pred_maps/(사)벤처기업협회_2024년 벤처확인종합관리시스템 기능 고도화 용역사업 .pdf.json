@@ -1,0 +1,23 @@
+{
+  "project_name": "2024년 벤처확인종합관리시스템 기능 고도화 용역사업",
+  "agency": "벤처기업확인기관(또는 제출처: 벤처기업확인기관장)",
+  "purpose": "복수의결권주식, 스톡옵션, 성과조건부주식교부 기능 구축 및 고도화",
+  "budget": "352,000,000원(부가가치세 포함)",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 150일",
+  "requirements_must": "사업수행계획서(품질보증계획서, 위험관리계획서 포함), 착수보고서(보안확약서, 보안서약서 포함), 요구사항 정의서, UI 정의서, 인터페이스 설계서 등 제시 및 제출",
+  "eval_items": "기술평가(90%)와 가격평가(10%)를 합산하여 종합평가점수로 산출(배정한도 85% 이상)",
+  "price_eval": "가격평가 10% (기술평가와 합산)",
+  "eligibility": "대기업 참여 제한(「소프트웨어 진흥법」제48조제2항에 따라 상호협의), 공동수급체 관련 소프트웨어진흥법 제51조 준수",
+  "project_start_deadline": "계약일로부터 14일 이내에 프로젝트 세부 사업추진계획서 작성·제출(착수보고는 계약일로부터 10일 이내)",
+  "post_contract_submission_docs": "계약일로부터 10일 이내 사업수행계획서(1부), 착수보고서 등(보안확약서·보안서약서 포함)",
+  "joint_venture_member_limit": "NOT_FOUND",
+  "joint_venture_min_share_ratio": "대상 비율은 대통령령으로 정하는 사업금액 비율 이상(정확한 수치: NOT_FOUND)",
+  "subcontracting_requirements": "하도급계약은 평가점수 85점 이상인 경우에 한하여 승인(단, 불가피한 사유 시 승인 거절 가능), 소프트웨어사업 하도급 계획서 제출",
+  "web_standard_compliance_items": "NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "보안확약서, 보안서약서(착수보고서 제출 시 포함)",
+  "performance_response_time": "NOT_FOUND"
+}

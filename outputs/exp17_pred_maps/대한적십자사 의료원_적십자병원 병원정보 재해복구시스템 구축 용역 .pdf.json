@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "대한적십자사 의료원",
+  "purpose": "병원 정보의 재해복구 체계 부재로 인한 진료정보 및 중요 데이터 보존과 진료연속성 확보를 위한 재해복구 시스템 구축",
+  "budget": "금 500,000,000 원 (금오억원) (부가가치세 포함)",
+  "contract_type": "제한경쟁, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6 개월 이내",
+  "requirements_must": "신규 도입 하드웨어 및 소프트웨어는 기존 시스템과 호환성 및 안정성 보장; 현행 네트워크 구성 방식 지원; 신규 서버는 검수 완료 후 3년 이내 구성품 단종 시 동일 성능 이상의 신제품 무상 교체; 도입 서버는 서비스 중단 최소화 방안으로 중앙화 구성",
+  "eval_items": "기술 90%, 가격 10%",
+  "price_eval": "가격 10% 포함 (세부 방식: NOT_FOUND)",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "재해복구시스템 구축, 데이터베이스 마이그레이션(주 센터 이관 시 DBMS 버전 업그레이드 및 주/재해복구센터 DB 실시간 복제 구성), 재해복구 절차 교육 및 지원, 통합 대상 DB 관리",
+  "target_hospitals": "적십자병원 (통합 대상 DB에 포함된 병원 관련 언급: 각 병원 DB)",
+  "hw_spec": "데이터베이스 서버 수량: 1 식 (세부 CPU 및 메모리 사양: NOT_FOUND)",
+  "replication_qty": "데이터복제 솔루션 : 12 식",
+  "install_location": "주 센터 및 재해복구센터 (구체적 설치 위치: NOT_FOUND)",
+  "migration_requirement": "주 센터 DB 이관 시 DBMS 버전 업그레이드에 따른 서비스 구성 및 주 센터와 재해복구센터 DB의 실시간 복제 구성, 각 병원에서 주 센터 DB로 업무전환 지원 (업무중단 최소화 방안 명시: 중앙화 구성으로 서비스 중단 최소화)",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "재해복구 절차 교육 및 지원; 실제적 재해복구 훈련 방안 제시 및 교육 지원 (주기 명시: NOT_FOUND)",
+  "availability": "신규 서버에 대해 검수 완료 후 3년 이내 구성품 단종 시 동일 성능 이상의 신제품으로 무상 교체 보장"
+}

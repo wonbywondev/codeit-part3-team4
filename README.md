@@ -1,10 +1,3 @@
-## 보고서·협업일지 링크
-- [보고서](https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=drive_link)
-- [김민우 협업 일지](https://www.notion.so/31845aa312fd8059ade7e04229e08bde?source=copy_link)
-- [김민철 협업 일지](https://mud-cotton-5f0.notion.site/2d1736f39f5081eabc62c172408cea3d?v=2d1736f39f5081ac8685000c4e291aef&source=copy_link)
-- [김상엽 협업 일지](https://www.notion.so/Daily-312895ca7098806fae5bd16f08ed9715)
-- [오현석 협업 일지](https://blog.naver.com/ohs3201)
-
 ## 컬럼(지표) 하나씩 설명
 1. doc_id
 - 평가 대상 문서 단위
@@ -98,3 +91,19 @@
   - 해석
     - 문서 구조가 복잡하거나 정답이 표/서식/여러 페이지에 분산
     - chunk 전략 / Docling / 구조 기반 파싱 필요
+
+
+## 3-K
+retrieve_K ≥ recall_K ≥ context_K
+
+### retrieve_K
+- 실제로 검색기에서 몇 개를 뽑을지
+
+### recall_K
+- 그중 상위 K개 안에 정답이 있었는지 평가
+
+### context_K
+- LLM에게 실제로 넣는 개수
+
+
+[오현석](https://blog.naver.com/ohs3201)

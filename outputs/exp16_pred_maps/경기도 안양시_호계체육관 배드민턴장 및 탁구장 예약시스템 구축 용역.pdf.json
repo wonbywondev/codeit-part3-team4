@@ -1,0 +1,23 @@
+{
+  "project_name": "호계체육관 배드민턴장 및 탁구장 예약 시스템 구축용역",
+  "agency": "NOT_FOUND",
+  "purpose": "호계체육관 배드민턴장 및 탁구장 예약 시스템 구축 필요성 및 목적",
+  "budget": "49,500 천원 ( 부가가치세 포함",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약 후 120",
+  "requirements_must": "반응형 웹 기반 예약시스템 구축, 키오스크 연계, 개인정보보호법에 따른 보안 강화, 서버·네트워크 인프라 활용, 현장예약 키오스크 연계, 보안 코딩 적용",
+  "eval_items": "제안사 일반현황, 추진전략, 적용기술, 표준프레임워크 적용, 시스템 장비구성 요구사항, 기능 요구사항, 보안 요구사항",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "공고일 현재 소프트웨어 진흥법 제 24조에 의거 소프트웨어사업자 등록(업종코드 1468) 및 지방자치단체를 당사자로 하는 계약에 관한 법률 제31조 및 시행령 제92조의 규정에 따라 입찰자격 제한 여부가 아닌 업체",
+  "budget_vat": "NOT_FOUND",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "웹 기반의 반응형 웹 플랫폼, 키오스크 연계",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "NOT_FOUND",
+  "failure_response": "NOT_FOUND",
+  "training_target": "NOT_FOUND",
+  "training_cost": "NOT_FOUND",
+  "log_retention": "NOT_FOUND"
+}

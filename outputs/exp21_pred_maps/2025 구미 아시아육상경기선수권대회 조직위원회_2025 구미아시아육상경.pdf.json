@@ -1,0 +1,23 @@
+{
+  "project_name": "2025 구미아시아육상경기선수권대회 종합정보시스템 및 홈페이지 등 구축 용역",
+  "agency": "2025 구미아시아육상경기선수권대회",
+  "purpose": "ㅇ 성공적인 대회 운영과 개최를 위하여 대회를 널리 알리고자 대회정 보와 행사정보 등을 제공하는 등 대회 전반에 대해 홍보 하고자 함",
+  "budget": "260,000,000원",
+  "contract_type": "협 상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일 ~ 2025 년 6 월",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "정성평가:70점 / 정량평가:20점 / 가격평가:10점",
+  "price_eval": "입찰 가격평가 배점한도 × (최저입찰 가격 / 해당입찰 가격) / 협상에 의한 계약",
+  "eligibility": "GEN_FAIL",
+  "system_function": "조 편성 및 Start List 작성 , 경기 결과 입력 및 처리 , 메달 집계 처리",
+  "system_interface": "계측기 / 전광판 / 홈페이지",
+  "service_method": "국가별 메달 집계 및 랭킹 표시 / 선수별 메달 집계 및 랭킹 표시",
+  "operation_staff": "대회시작 4 일전 ~ 대회 종료일까지",
+  "staffing": "NOT_FOUND",
+  "security": "사업 관련 자료 보유 불 가 / 사업수행으로 취득 한 정보에 대한 외부 유출 ‧누 설 금지 / 비공개 , 대외비 자료 및 비 밀 자료는 전자 우 편으로 수 · 발신 금지 / 인터 넷 이용 시 접 속 제한 사이트 및 파 일공유 사이트 접 속 금지 / 사업수행 기간 중 PC, 노 트 북 및 USB 등 이동식 보조기 억 매 체 반출시 반입 전 후 를 비교하여 변 경 된 데이터는 모 두 삭 제하고 이를 확 인할 수 없 을 때 는 반출 전에 데이터를 완 전 삭 제하 거나 불 용 처리",
+  "performance": "NOT_FOUND",
+  "maintenance": "NOT_FOUND",
+  "eligibility_large_company": "입찰에 참여할 수 없으며 하도급 또는 자사 인력 파견 형태로도 참여할 수 없다",
+  "subcontracting_policy": "가능하나 대기업·중견기업은 하도급 또는 자사 인력 파견 형태로 입찰에 참여할 수 없음"
+}

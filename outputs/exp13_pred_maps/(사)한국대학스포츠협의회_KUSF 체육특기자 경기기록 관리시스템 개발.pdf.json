@@ -1,0 +1,23 @@
+{
+  "project_name": "KUSF 체육특기자 경기기록 관리시스템 개발",
+  "agency": "한국대학스포츠협의회",
+  "purpose": "현행 대입 체육특기자 선발에 경기실적으로만 당락을 결정하는 문제 해결을 위한 가이드라인 및 권고에 따라 대상종목 대회경기기록 및 사용자 확장 가능성을 고려한 신규 시스템 개발, 개인정보 관련 데이터 관리 및 정보보안 지원, 인프라 관리·오류 모니터링 및 시스템 운영 기술지원",
+  "budget": "1억 5천만 원(부가가치세 포함)",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결 후 2024년 12월 31일까지",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "기술평가 90% / 가격평가 10%; 기술평가를 위해 내/외부 위원으로 평가단 구성 및 PT심사 진행; 기술능력평가 점수가 배점한도의 85%이상(90점 만점 기준 76.5점 이상)인 자를 협상 적격자로 선정",
+  "price_eval": "가격평가(10%)는 조달청 나라장터를 통해 실시",
+  "eligibility": "자격기준 미달, 제출 서류를 허위로 작성한 경우, 구비서류 미충족, 제안서 내용 극도로 불성실한 경우 PT심사에서 제외; 제안서 발표자(PM)는 입찰공고일 전부터 제안서 평가일까지 해당 업체에 재직 중인 자로 재직증명서 및 국민연금 가입증명 또는 건강보험자격득실확인서 제출하여 확인된 자만 발표 가능",
+  "presentation": "있음(PT심사 및 제안 발표)",
+  "presentation_time": "약 20분 발표 및 20분 질의응답; 발표자료 40페이지 이내",
+  "NaN": "NOT_FOUND",
+  "performance_evaluation_metrics": "NOT_FOUND",
+  "proposal_writing_guidelines": "제안서의 효력 및 제안서 작성 지침(권고사항) 존재; 발표자료(PPT 작성 후 PDF 변환) 제출, 발표자료 미제출시 제안서로 갈음, 모든 제반자료는 제안서 제출 시 동봉(추가제출 불가)",
+  "working_hours": "NOT_FOUND",
+  "staff_change_policy": "NOT_FOUND",
+  "deliverable_copyright": "NOT_FOUND",
+  "deliverables": "KUSF 체육특기자 경기기록 관리시스템 개발 제안요청서 및 체육특기자 경기기록 관리시스템 사용 및 활용 매뉴얼(업무 사용자 및 시스템 관리자별), 온라인 배포용 홍보물(시스템 로고, 배너 등), 결과물 제출 및 인수·운영",
+  "organization_founding_year": "2010"
+}

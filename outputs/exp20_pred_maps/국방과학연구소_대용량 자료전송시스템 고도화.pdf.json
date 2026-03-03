@@ -1,0 +1,23 @@
+{
+  "project_name": "대용량 자료전송시스템 고도화",
+  "agency": "NOT_FOUND",
+  "purpose": "대용량 자료전송시스템 고도화 및 안전메일 서비스 개선을 통한 연구사업 수행능력 강화",
+  "budget": "입찰공고문 참조",
+  "contract_type": "제한경쟁입찰 , 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 5 개월 이내",
+  "requirements_must": "대용량 자료전송 관리요구사항, 안전메일 일반 및 요청 기능요구사항, 안전메일 수신요구사항, 안전메일 발송, 대용량 자료전송 관리 기능 산출정보",
+  "eval_items": "기술능력평가 및 가격평가",
+  "price_eval": "협상에 의한 계약 체결기준에 따른 가격평가",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "대용량 자료전송시스템 인프라 연동모듈 재개발 및 데이터 이관, 대용량자료 수집을 위한 자료전송(반입) 기능 개발, 안전메일/자료반입/반출 용량 확대 및 전송프로세스 개선, 사용자 편의기능 및 보안기능 개선",
+  "improvement_email": "대용량 메일 및 대용량 자료전송의 안전메일 기능 개선",
+  "response_time": "NOT_FOUND",
+  "security": "보안기능 강화, 감사기록 및 계정관리 등 보안기능 제한 개선",
+  "warranty_duration": "NOT_FOUND",
+  "restriction": "NOT_FOUND",
+  "eval_ratio": "기술평가와 가격평가의 비율은 기술능력평가 85% 이상 협상적격자 선정(점수 산출 방식 참조)",
+  "development_methodology": "제안서 작성 지침에서 개발방법론은 제시되었으나 구체적 명칭은 NOT_FOUND",
+  "max_transfer": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND"
+}

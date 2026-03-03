@@ -1,0 +1,21 @@
+{
+  "project_name": "실시간통합연구비관리시스템 (RCMS) 연계 모듈 변경 사업",
+  "agency": "광주과학기술원",
+  "purpose": "연계 모듈 변경 및 기능 개선으로 업무 편리성 증대 및 행정 효율화",
+  "budget": "54,450,000",
+  "contract_type": "제한경쟁 입찰 ( 협상에 의한 계약 체결",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일로부터 3 개월 이내",
+  "requirements_must": "부가세 연구과제 전송 개선, ZEUS-RCMS 연계 모듈 변경 및 기능 개선, RCMS와의 직접 연계를 통한 사용자 편의성 제고",
+  "eval_items": "평가 부문: 기술/가격 등, 기능 요구사항(FUR) 중심 평가",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "cause": "국가연구개발혁신법 시행에 따라 연구 비목 및 세목 변경으로 전송 오류 발생",
+  "operation": "ZEUS와 RCMS 간 연계 모듈 변경을 통한 행정 절차 간소화 및 연계 전송 개선",
+  "function": "RCMS 전송 관련 세부사항 및 연계전송 개선 기능",
+  "scope": "RCMS 연계 모듈 및 부가세 연구과제 전송 관련 개선",
+  "problem": "RCMS 이체 전송 및 세부집행 데이터 간 연계 문제 및 전송 오류 개선 필요",
+  "effect": "업무 편의성 증대, 행정 절차 간소화, 이체 전송 오류 감소",
+  "impact": "행정 업무상 영향은 NOT_FOUND",
+  "security": "NOT_FOUND"
+}

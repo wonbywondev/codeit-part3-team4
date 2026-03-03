@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "NOT_FOUND",
+  "scope_custom": "NOT_FOUND",
+  "target_hospitals": "NOT_FOUND",
+  "hw_spec": "CPU: NOT_FOUND; MEM: NOT_FOUND; DISK: NOT_FOUND; NVME: NOT_FOUND",
+  "replication_qty": "NOT_FOUND",
+  "install_location": "NOT_FOUND",
+  "migration_requirement": "NOT_FOUND",
+  "defect_threshold": "NOT_FOUND",
+  "onsite_response_time": "NOT_FOUND",
+  "security_training": "NOT_FOUND",
+  "availability": "NOT_FOUND"
+}

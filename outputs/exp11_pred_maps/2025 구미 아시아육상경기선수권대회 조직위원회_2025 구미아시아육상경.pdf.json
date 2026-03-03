@@ -1,0 +1,23 @@
+{
+  "project_name": "대회 종합정보시스템 S/W 개발",
+  "agency": "NOT_FOUND",
+  "purpose": "경기운영시스템과 연동하여 경기기록의 정확성·신뢰성 보장 및 홈페이지에 실시간 경기 결과 제공",
+  "budget": "총 사업 금액 20억 원 미만",
+  "contract_type": "협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "웹 접근성 준수(KCSOT-10.0003/R2), 웹 호환성 준수(W3C 및 전자정부 호환성), 입력 오류 메시지 정보입력 후 3초 이내 표시, 모든 질의 결과 3초 이내 응답, 메모리 최대부하 시 90% 미만 사용, CPU 정상상태에서 백그라운드 작업 시 50% 이하 사용, 시스템 모든 기능은 모든 웹 브라우저에서 정상 운영",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "중소 소프트웨어사업자만 입찰 가능; 상호출자제한기업집단 소속 회사 및 대기업·중견기업 참여 불가; 법인등기부상 본적이 경상북도에 소재해야 함; 공동수급(컨소시엄) 불가",
+  "system_function": "T&S 연동(아시아육상경기 T&S), 실시간 양방향 데이터 송수신, 전광판 연동(Scoreboard Interface), 방송장비 연동, 홈페이지 실시간 연동, DB 공유로 현장 입력 경기결과 실시간 홈페이지 확인, 스타트 리스트·Official Result·Summary PDF 제공, 전체/일자/종목/선수별 경기 일정 및 메달 현황 제공, 대진정보 및 경기결과 조회·출력",
+  "system_interface": "타이머, 전광판, 현장 촬영장비, 믹서기, 주관방송사업자 방송장비, 경기운영시스템(데이터베이스 공유), 홈페이지",
+  "NaN": "NOT_FOUND",
+  "operation_staff": "NOT_FOUND",
+  "staffing": "NOT_FOUND",
+  "security": "중요정보는 노출 금지; 저작권·지적재산권 침해 발생 시 사업수행자가 모든 책임 및 비용 부담; 사업 관련 정보 일체 유출·누설 금지",
+  "performance": "모든 질의는 요청 후 3초 이내 결과 표시; 평균 응답 시간은 동시 사용자의 90% 미만인 경우 적용; 메모리는 최대 부하 시 90% 미만 사용; CPU 백그라운드 작업 시 50% 이하 사용",
+  "maintenance": "NOT_FOUND",
+  "eligibility_large_company": "대기업 및 중견기업은 입찰에 참여할 수 없으며, 하도급 또는 자사 인력 파견 형태로도 참여할 수 없음",
+  "subcontracting_policy": "하도급 또는 자사 인력 파견 형태로도 대기업 및 중견기업의 참여 불가; 공동수급(컨소시엄) 불가"
+}

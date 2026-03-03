@@ -1,0 +1,23 @@
+{
+  "project_name": "적십자병원 병원정보 재해복구시스템 구축",
+  "agency": "대한적십자사 의료원",
+  "purpose": "○ 자연재해, 사이버 공격 등의 재해 요인으로부터 적십자병원이 보유한 진료정보 및 중요 데이터의 보존을 위해 원격지에 재해복구 시스템 구축 필요 ○ 시스템 오류 및 결함 등 불의의 시스템 중단에도 진료연속성 확보를 위한 장애대응 체계 구축 필요",
+  "budget": "500,000,000원",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약 방식",
+  "deadline": "입찰공고서 참조",
+  "duration": "계약일로부터 6개월 이내",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "GEN_FAIL",
+  "price_eval": "「협상에 의한 계약체결 기준」(계약예규)에 의함",
+  "eligibility": "GEN_FAIL",
+  "scope_custom": "GEN_FAIL",
+  "target_hospitals": "서울적십자병원 / 인천적십자병원 / 상주적십자병원 / 통영적십자병원 / 거창적십자병원 / 경인권역재활병원 / 영주적십자병원",
+  "hw_spec": "인텔 제온 2.4GHz 16Core *2EA 이상 제공 / 512GB 이상 제공(최대 1TB 확장 가능)",
+  "replication_qty": "12식",
+  "install_location": "강원도 원주시 대한적십자사 혈액관리본부 4층 서버실 / 경기도 안산시",
+  "migration_requirement": "운영시스템 중단을 최소화하면서 안정적인 데이터 이관을 위해 SW, 부품 및 장비 등이 필요한 경우 제안에 포함하여야",
+  "defect_threshold": "5% 이상",
+  "onsite_response_time": "3시간 이내",
+  "security_training": "사업자는 사업 참여자를 대상으로 1회 이상 자체 보안교육을 실시하여야 하며, 월 1회 이상 보안점검을 실시하여야 함",
+  "availability": "도입 하드웨어 및 소프트웨어는 정상상태에서 매일·24시간 무중단 운영되어야 함"
+}

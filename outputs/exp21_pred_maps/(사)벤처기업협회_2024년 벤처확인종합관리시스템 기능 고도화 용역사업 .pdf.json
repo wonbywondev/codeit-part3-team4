@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 년 벤처확인종합관리시스템 기능 고도화 용역사업",
+  "agency": "벤처기업확인기관",
+  "purpose": "벤처확인 연계를 통한 복수의결권 및 스톡옵션 시스템 고도화",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "기술평가:90 / 가격평가:10",
+  "price_eval": "「 협상에 의한 계약체결 기준 」 제 656호 (기 재 부 계약예 규 )에 따름",
+  "eligibility": "GEN_FAIL",
+  "project_start_deadline": "과업 시작일로부터 10 일 이내 착 수하 여야 함",
+  "post_contract_submission_docs": "착 수계 / 책 임기술자 선임계 / 책 임기술자 이력서 및 기술자격 증 사본 / 참 여기술자 이력서 및 기술자격 증 사본 / 보안 각 서 및 보안대 책 / 과업수행계 획 서 / 기타 필 요사항",
+  "joint_venture_member_limit": "5개 이하",
+  "joint_venture_min_share_ratio": "10% 이상",
+  "subcontracting_requirements": "-하도 급 사업수행 계 획 서 ( 하도 급 금액 산출내역서 및 사업추진 일정표 포함 ) 각 1 부",
+  "web_standard_compliance_items": "웹 표준을 적용하여 IE(10, 11, 그 이상 ), Firefox, Safari, Opera, Chrome 등 3 개 이상의 브 라우 저 에서 웹 사이트가 정상 동작하도록 범 용성 및 호환 성이 확보되도록 적용해야 함 / 웹 사이트에 비표준기술 (Acitve X, EXE, Java Applet 등 ) 이 포함되지 않 도록 개발하여야 함",
+  "web_accessibility_standard": "인터 넷 웹 콘텐츠 접근성 지침 / 웹 접근성 향상을 위한 국가표준기술 가이 드 라인 / ' 한국 형 웹 컨텐츠 접근성 지침 (KCS.OT-10.0003/R3)' 적용 / 웹 접근성 평가도구 (KADAO-WAH) 로 점검시 항목별 95% 이상 준수",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "중소기업확인서",
+  "performance_response_time": "NOT_FOUND"
+}

@@ -1,0 +1,22 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "689,480,000 원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약 , 기술 90%, 가격 10%)",
+  "deadline": "NOT_FOUND",
+  "duration": "8",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "협상에 의한 계약",
+  "eligibility": "NOT_FOUND",
+  "goal": "철도인프라 디지털트윈 구축으로 철도산업 생태계 활성화 추진",
+  "scope": "국내 · 외 디지털트윈 현황 및 환경 분석; openBIM 기반 철도인프라 표준정보체계 구축 방안; 공단 레거시 시스템 연계성 도출",
+  "standard": "국내 표준정보체계 동향분석서; BIM 표준개발 방향 도출; 국제표준 동향 분석서 (ISO 19650 도입 방안)",
+  "integration": "공단 내부 시스템 (SAP ERP, RAFIS, EPMS, CPMS, 전자조달 등) 연계성 도출",
+  "design": "디지털트윈 데이터 활용 협업 방식 제시",
+  "planning": "핵심과제 도출 및 우선순위 결정; 단계별 세부추진계획 수립",
+  "function": "openBIM 기반 디지털트윈 플랫폼 구축 관련 주요 수행 과업",
+  "procedure": "CSR-006 ~ CSR-009 등 컨설팅 요구사항의 ID 부여 규칙 포함",
+  "security": "보안 요구사항은 보안 관련 항목으로 구분되어 있음 (SecurityRequirements 섹션 참조)"
+}

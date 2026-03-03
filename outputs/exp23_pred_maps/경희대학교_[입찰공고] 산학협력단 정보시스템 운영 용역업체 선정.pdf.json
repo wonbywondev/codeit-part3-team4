@@ -1,0 +1,23 @@
+{
+  "project_name": "인포21 연구행정시스템 운영/유지관리(연계 및 공통관리 포함)",
+  "agency": "산학협력단",
+  "purpose": "정보시스템의 상시 운영·유지보수 및 연계시스템 개발·연동지원, 시스템 최적화 및 선제적 예방조치 등으로 연구행정시스템과 연계된 회계·인사 등 일반행정시스템의 운영관리",
+  "budget": "사업예산 20억 미만",
+  "contract_type": "NOT_FOUND",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "정보시스템 상시 운영/유지보수, 사용자 요구사항 처리 및 시스템 반영, 연계시스템 연동지원 및 개발, 선제적 예방조치 및 상시 모니터링, 주·월·연 단위 업무보고서 작성 제출 등",
+  "eval_items": "기술 및 가격 평가 포함 (기술/가격 평가 존재 언급)",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "입찰참여 자격 관련 국가를 당사자로 하는 계약에 관한 법률 등 관련 규정 준수 (자세한 자격요건 별도 명시 없음)",
+  "project_phases": "NOT_FOUND",
+  "NaN": "NOT_FOUND",
+  "incident_response": "연계시스템 장애 발생 시 시스템 개발/연동 관련 사항 공동 장애 대응 (구체 대응시간 기준 언급 없음)",
+  "key_personnel_qualification": "참여인력 이력사항 및 과업수행 조직 제출 요구, 분 야 별 책임자 명시 필요 (PM/PL 구체 자격 조건은 명시되지 않음)",
+  "post_contract_security": "계약종료 후 산학협력단의 보안 요청 준수 및 누출금지정보 무단누출 시 제재 (계약목적물 지식재산권은 산학협력단 귀속)",
+  "continuous_operation_requirement": "상시 운영/유지보수 및 상시 모니터링 요구 (24시간 명시 없음)",
+  "bid_invalid_conditions": "제안서 내용이 사실과 다른 경우, 입찰참여 자격이 없는 자가 한 경우, 입찰보증금 미납, 낙찰자가 계약 미체결, 동일인이 2통 이상 제출 등",
+  "work_location": "산학협력단 (과업 수행 장소는 산학협력단과 사업자가 상호 협의하여 부담)",
+  "personal_pc_usage_allowed": "NOT_FOUND",
+  "bid_inquiry_contact": "산학협력단 경영지원팀 조재형 031-201-3529; 조규호 031-201-3560 / khcho@khu.ac.kr"
+}

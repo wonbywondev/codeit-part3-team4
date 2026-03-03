@@ -1,0 +1,23 @@
+{
+  "project_name": "봉화군 재난통합관리시스템 고도화",
+  "agency": "NOT_FOUND",
+  "purpose": "전국적으로 기상이변에 따른 국지성 호우 및 태풍내습에 의한 대 규모 인명 피해 및 재산 피해 발생",
+  "budget": "900,000,000원",
+  "contract_type": "제한경쟁입찰",
+  "deadline": "NOT_FOUND",
+  "duration": "착수일로부터 7 개월 (210 일",
+  "requirements_must": "시스템 구성 요구사항 / 기능 요구사항 / 성능 요구사항 / 인터 페 이스 요구사항 / 데이터 요구사항 / 테 스 트 요구사항 / 보안 요구사항 / 품 질 요구사항 / 제약사항 / 프 로 젝트 관리 요구사항 / 프 로 젝트 지원 요구사항",
+  "eval_items": "GEN_FAIL",
+  "price_eval": "종합평가(기술평가 90점/가격평가 10점) / 협상",
+  "eligibility": "GEN_FAIL",
+  "legal_basis": "｢재난 및 안전관리기본법｣ 제 38 조의 2( 재난 예보‧경보체계 구축‧운영 등 )",
+  "blind_spot_solution": "사각지역 또는 음 영지역의 최소화를 위한 무선방식을 활용한 보장치 확대 구축 / 재난경보방송 가청 범위 확대를 통한 사각지역 해소 / 디지털 데이터방송기술 (DMB EWS) 및 LTE 를 통한 무선방식의 경보방송 구축",
+  "security_policy": "『 정보시스템 구축 운영 지침』 ( 행정안전부고시 제 2023-27 호 ) 제 17",
+  "resource_limit": "NOT_FOUND",
+  "function_requirement_count": "20",
+  "subcontracting_policy": "본 사업 은 하도급을 불허 함",
+  "remote_control_target": "현장 운영시스템",
+  "mobile_app_viewable_results": "모바일 앱 연계 정보 제공 / 홍수모형분석",
+  "task_start_deadline_after_contract": "NOT_FOUND",
+  "required_documents_for_execution": "GEN_FAIL"
+}

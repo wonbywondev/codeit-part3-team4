@@ -1,0 +1,23 @@
+{
+  "project_name": "국립인천해양박물관 해양자료관리시스템 구축 용역(장기계속계약)",
+  "agency": "국립인천해양박물관",
+  "purpose": "해양자료관리시스템 구축 및 초기 데이터 구축 등 해양자료 관리를 위한 시스템 도입(사업개요 및 추진배경·필요성에 근거)",
+  "budget": "금 137,000,000원(부가가치세 포함)",
+  "contract_type": "장기계속계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6개월 (1차: 계약일로부터 4개월, 2차: 1차 완료일로부터 2개월)",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "입찰 참가자격 관련 사항은 제안서에 명시되어 있으나 상세 내용 CONTEXT에 없음",
+  "system": "NOT_FOUND",
+  "security": "NOT_FOUND",
+  "data": "NOT_FOUND",
+  "function": "NOT_FOUND",
+  "access_control": "NOT_FOUND",
+  "audit": "NOT_FOUND",
+  "search": "검색 요구사항 목록에 '등록되지 않은 자료' 관련 항목이 명시되어 있으나 상세 검색 항목은 CONTEXT에 없음",
+  "governance": "사업수행 중 교육훈련·유지관리 계획·보고 등 제안서에 상세 제시(정기보고 형태의 구체적 명칭은 CONTEXT에 없음)",
+  "qa": "무상 하자보수 기간은 검수완료 후 1년으로 명시되어 있으나 최종 검수 기한 관련 규정은 CONTEXT에 없음",
+  "deliverable": "사업수행계획서의 단계별 산출물 리스트 및 제안서에 명시된 산출물(예: SW사업정보 데이터, 단계별 산출물 등)"
+}

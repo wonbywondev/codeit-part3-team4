@@ -1,0 +1,23 @@
+{
+  "project_name": "아태 사이버범죄 역량강화 허브 (APC-HUB) 홈페이지 및 온라인 교육 시스템 고도화 2차",
+  "agency": "대검찰청",
+  "purpose": "홈페이지 업그레이드 및 온라인교육시스템 고도화(최신 웹 표준성·호환성·접근성 적용, TTS 자동변환 시스템 구축, 3D 온라인 홍보관 및 관리자 기능 개선, 보안 취약점 대응 등)",
+  "budget": "NOT_FOUND",
+  "contract_type": "제한경쟁 입찰, 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "최신 웹 표준성·호환성·접근성 적용; 최신 해킹 및 취약점 대응 보안기술 업그레이드; 국가정보자원관리원과 협의하여 취약점 점검; PPT/한쇼/PDF 연동 韓·英 TTS 자동변환; 동영상 해상도 선택 기능; 관리자 페이지 기능 고도화; 동시 사용자 접속 수 및 응용프로그램 검증 요구",
+  "eval_items": "기술평가(90점) 및 가격평가(10점), 제안서 기술평가 항목 및 배점은 협상에 의한 계약 제안서평가 세부기준 준용",
+  "price_eval": "입찰가격평가(10점) - 협상에 의한 계약체결기준에 의해 평가점수 산출",
+  "eligibility": "NOT_FOUND",
+  "tts_function": "PPT·한쇼·PDF 등 강의자료와 연동된 슬라이드노트 내용을 韓·英 TTS로 자동변환하고 관리자 운영 기능 제공",
+  "3d_improvement": "3D 온라인 홍보관 동영상 콘텐츠 관리 기능 추가; 배경화면 변경, 오브젝트 추가 및 오브젝트 클릭 시 인터랙션(설명, 애니메이션 등) 기능 추가",
+  "response_time": "웹페이지 및 온라인교육컨텐츠 디스플레이 평균 응답 시간(요구사항 PER-001)",
+  "concurrent_users": "동시 사용자 접속 수 및 응용프로그램 검증 요구(PER-003)",
+  "warranty_period": "NOT_FOUND",
+  "web_accessibility": "웹 접근성 준수 및 다양한 브라우저(Internet Explorer, Chrome, Firefox, Safari, Opera, Whale 등)·멀티 디바이스 환경 지원; 반응형 웹 기능 개선",
+  "evaluation_ratio": "기술능력평가 90점, 가격평가(입찰가격평가) 10점",
+  "random_play": "온라인교육동영상의 랜덤 재생 가능 기능 개선(코스 내 별개 내용 강의는 랜덤 재생 필요, 수강완료 동영상 전후 이동 제한 해제 등)",
+  "secure_coding": "소프트웨어 개발보안(시큐어코딩) 관련 가이드 준수 요구(COR-005)",
+  "certification_number": "NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 년 통합사회정보시스템 운영",
+  "agency": "경기도사회서비스원",
+  "purpose": "통합데이터 및 표준화된 업무 프로세스 운영기반 마련; 중단 없는 시스템 운영을 통한 안정적 정보서비스; 정보보안 및 개인정보보호 관리 강화를 위한 정보보안 관리체계 수립 및 주기적 점검·보완; 정보서비스 최적의 활용으로 업무 효율 제고를 위한 지속적 시스템 개선",
+  "budget": "금133,812,000원(부가세 포함)",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 ’24. 12. 31.",
+  "requirements_must": "연중 무중단 서비스 제공(24시간, 365일 가용성 보장); 데이터 품질 관리 체계 및 방안 수립; 성능 관리(시스템 과부하 발생 시 분석 후 개선 방안 수립·이행); 보안관리 방안 및 정보보안 준수",
+  "eval_items": "기술능력 90% 및 가격평가 10% 합산; 기술능력 평가는 소프트웨어 기술성 평가기준 및 정보시스템 구축·운영 지침 준용",
+  "price_eval": "가격평가 10% (기술능력 90%와 합산하여 협상 적격자 선정)",
+  "eligibility": "NOT_FOUND",
+  "contact_department": "NOT_FOUND",
+  "maintenance_target": "통합사회정보시스템",
+  "incident_response_policy": "정기 예방점검 및 신속한 장애 대응을 통한 시스템 중단 최소화; 장애 발생 시 분석 후 개선 방안 수립·이행",
+  "data_recovery_policy": "백업/복구 및 장애 대응 대책 제시(비상대책 항목에 포함)",
+  "regular_inspection": "정기 예방점검(주기 명시 없음)",
+  "performance_management": "성능저하 발생 시 분석 후 개선 방안 수립·이행; 성능진단 및 개선과제 수행과 월간보고서 제출",
+  "manpower_grade": "NOT_FOUND",
+  "pm_replacement_policy": "NOT_FOUND",
+  "manpower_change": "사업수행계획서 및 근로자 권리보호 서약서 등 관련 산출자료 제출(투입 인력 관리 관련)",
+  "emergency_contact": "비상연락체계 가동 및 비상연락망 제출(비상연락체계 요구사항 포함)"
+}

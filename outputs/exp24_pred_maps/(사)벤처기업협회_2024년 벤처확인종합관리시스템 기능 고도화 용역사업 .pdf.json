@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "NOT_FOUND",
+  "contract_type": "제안요청 내용 및 입찰 관련 사항에서 '입찰방식: 제한경쟁입찰' 및 '낙찰자 선정방식: 협상에 의한 계약'이 명시되어 있음",
+  "deadline": "NOT_FOUND",
+  "duration": "NOT_FOUND",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "협상에 의한 계약체결 기준 및 가격평가 10% 반영",
+  "eligibility": "NOT_FOUND",
+  "project_start_deadline": "과업 시작일로부터 10일 이내 착수",
+  "post_contract_submission_docs": "착수계, 책임기술자 선임계, 책임기술자 이력서 및 기술자격 증 사본, 참여자 이력서 및 기술자격 증 사본, 보안 각서 및 보안대책, 과업수행계획서, 기타 필요사항",
+  "joint_venture_member_limit": "5개 이하로 구성",
+  "joint_venture_min_share_ratio": "구성원별 계약참여 최소지분율 10% 이상",
+  "subcontracting_requirements": "하도급 전 사전승인, 하도급 비율 제한 등",
+  "web_standard_compliance_items": "NOT_FOUND",
+  "web_accessibility_standard": "NOT_FOUND",
+  "network_protocol_requirements": "NOT_FOUND",
+  "pre_deadline_required_certificates": "NOT_FOUND",
+  "performance_response_time": "NOT_FOUND"
+}

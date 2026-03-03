@@ -1,0 +1,23 @@
+{
+  "project_name": "2024 년 통합사회정보시스템 운영지원",
+  "agency": "NOT_FOUND",
+  "purpose": "경기도사회서비스원 통합데이터 및 표준화된 업무 프로세스 운영기반 마련 / 중단 없는 시스템 운영을 통한 안정적 정보서비스 / 정보보안 및 개인정보보호 관리 강화를 위한 정보보안 관리체계 립 및 주기적 점검‧보완 / 정보서비스 최적의 활용으로 업무 효율 제고를 위한 지속적 시스템 개선",
+  "budget": "133,812,000원",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "2024 년 4 월 ~ 2024 년 12 월",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "기술능력평가:90 / 입찰가격평가:10",
+  "price_eval": "협상에 의한 계약",
+  "eligibility": "GEN_FAIL",
+  "contact_department": "NOT_FOUND",
+  "maintenance_target": "통합사회정보시스템",
+  "incident_response_policy": "1 일 24 시간 , 365 일 상시 운영 가용성을 보장 / 비상연 락 체계 가 동 / 장 애 시 조치 및 재발방지 보고서 , 시스템 장 애 대비 복구 매뉴얼",
+  "data_recovery_policy": "NOT_FOUND",
+  "regular_inspection": "NOT_FOUND",
+  "performance_management": "위탁 인력 교체 또는 품질 제고를 위한 추가인력 투입 요구를 할 수 있으며, 특별한 사유가 없는 한 이에 응하여야 한다 / 요청 시 분석 후 개선 방안 수립·이행 / 복구 불가능 판단될 경우 동종기기 이상의 장비로 임시 대체 운영",
+  "manpower_grade": "기술자 1인당 경력에 따른 계수와 경력 인정 인원을 곱하여 산출",
+  "pm_replacement_policy": "NOT_FOUND",
+  "manpower_change": "NOT_FOUND",
+  "emergency_contact": "비상연 락 체계 가 동 / 비상연 락망"
+}

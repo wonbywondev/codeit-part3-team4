@@ -1,0 +1,23 @@
+{
+  "project_name": "호계체육관 배드민턴장 및 탁구장 예약 시스템 구축",
+  "agency": "안양시청",
+  "purpose": "비대면 및 대면 고객 편의성 향상과 운영 효율성 강화를 위한 예약 시스템 구축",
+  "budget": "49500 천원",
+  "contract_type": "제한경쟁입찰 ( 협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약 후 120",
+  "requirements_must": "웹 기반 예약시스템, 반응형 웹, 키오스크 연계, 개인정보보호법 대응, 시큐어 코딩 적용",
+  "eval_items": "기술평가(90%), 가격평가(10%)",
+  "price_eval": "협상에 의한 계약 시 기술평가와 가격평가를 종합해 결정",
+  "eligibility": "본 건 기술요건 및 개인정보보호 관련 서류 및 보안요구사항 준수 필요; 서류상 서명 및 보안서약 필요",
+  "budget_vat": "부가가치세 포함",
+  "negotiation_threshold": "NOT_FOUND",
+  "system_platform": "웹 기반 반응형 시스템, 키오스크 연계",
+  "smembership_policy": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "test_count": "NOT_FOUND",
+  "failure_response": "NOT_FOUND",
+  "training_target": "발주자의 관리자 및 담당자",
+  "training_cost": "제공 여부 및 비용 부담 주체 미기재",
+  "log_retention": "NOT_FOUND"
+}

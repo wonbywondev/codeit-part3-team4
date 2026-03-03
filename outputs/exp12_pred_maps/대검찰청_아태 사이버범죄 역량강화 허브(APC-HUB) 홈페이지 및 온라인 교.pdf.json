@@ -1,0 +1,23 @@
+{
+  "project_name": "NOT_FOUND",
+  "agency": "NOT_FOUND",
+  "purpose": "NOT_FOUND",
+  "budget": "35375000",
+  "contract_type": "협상에 의한 계약 / 제한경쟁입찰",
+  "deadline": "NOT_FOUND",
+  "duration": "5개월",
+  "requirements_must": "최신 웹 표준성, 접근성, 호환성 적용; 보안 강화; 3D 홍보관 콘텐츠 관리 기능 개선; 온라인 교육시스템 고도화, TTS 자동 변환 시스템 구축 및 관리자 운영 기능 추가; 연동 콘텐츠 관리 기능 고도화; 수강완료 콘텐츠 전후 이동 제한 해제 등 기능 개선; 관리자페이지 기능 고도화; 유지보수",
+  "eval_items": "기술평가 및 가격평가",
+  "price_eval": "협상",
+  "eligibility": "입찰 참가 자격 요건: 소프트웨어사업자 등록, 직접생산확인증명서 보유 등",
+  "tts_function": "韓‧英 TTS 자동 변환 시스템 구축 및 관리 기능 추가",
+  "3d_improvement": "3D 온라인 홍보관 동영상 콘텐츠 관리 기능 개선",
+  "response_time": "NOT_FOUND",
+  "concurrent_users": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "web_accessibility": "최신 웹 표준성/접근성 적용",
+  "evaluation_ratio": "NOT_FOUND",
+  "random_play": "온라인교육동영상의 랜덤 재생 가능 기능 개선",
+  "secure_coding": "보안기술 업그레이드 및 취약점 점검",
+  "certification_number": "직접생산확인증명서 분류번호 8111159901"
+}

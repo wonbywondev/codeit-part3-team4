@@ -1,0 +1,23 @@
+{
+  "project_name": "스마트 팹 서비스 활용체계 구축관련 설비 온라인 시스템 구축 용역",
+  "agency": "NOT_FOUND",
+  "purpose": "나노 반도체 국가 성장 동력 강화를 위한 나노 반도체 생태계 혁신기반 추진",
+  "budget": "2,349,130,320 원",
+  "contract_type": "제한경쟁입찰 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "18개월",
+  "requirements_must": "SECS 통신 지원, Carrier ID 인식 장치 설계 및 설치, Carrier 정보 표시 및 인터페이스 구축, 시스템 통합 및 데이터 수집 체계 마련, 다수의 요구사항(SFR-007 ~ SFR-012) 충족",
+  "eval_items": "기술/성능 평가 및 기능점수 기반 평가 포함(소프트웨어사업 영향 평가 결과 참조)",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "기술원 설비 온라인 시스템 구축 및 SECS/Non-SECS 데이터 수집 경험",
+  "scope": "설비 온라인 시스템 구축, SECS 통신 수집, LoT Tracking 환경 구축, Carrier ID 인식 장치 설계/설치/인터페이스, HMI/데이터 연계, 향후 데이터 분석 모델 설계",
+  "equipment_count": "NOT_FOUND",
+  "milestone": "NOT_FOUND",
+  "lot_tracking": "Carrier ID 인식 장치(BCAR) 통해 LoT Tracking 기능 수행 및 공정/설비 간 인식정보 매핑",
+  "subcontract_limit": "NOT_FOUND",
+  "warranty_period": "NOT_FOUND",
+  "response_time": "NOT_FOUND",
+  "security_encryption": "NOT_FOUND",
+  "interface_method": "공정관리시스템과의 데이터 연계 방식은 인터페이스 구축 및 연동",
+  "maintenance_rate": "NOT_FOUND"
+}

@@ -1,0 +1,23 @@
+{
+  "project_name": "GKL 그룹웨어 시스템 구축사업",
+  "agency": "그랜드코리아레저(주)",
+  "purpose": "시스템 노후화 개선 및 정부권장정책(비표준·ActiveX·IE 종속성 제거) 대응, 웹기반 그룹웨어로 업무환경 개선 및 업무프로세스 재설계",
+  "budget": "1,515,000천원 (부가세 포함)",
+  "contract_type": "제한경쟁입찰(협상에 의한 계약)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 6개월 (안정화 1개월 포함)",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "기술평가(90%)/가격평가(10%)",
+  "price_eval": "가격평가는「협상에 의한 계약체결기준」에 따름",
+  "eligibility": "최근 3년간 유사사업(그룹웨어 구축) 수행실적 단일 건 기준 5억원 이상 1개 이상, 소프트웨어사업자 신고 업체 등(세부사항은 입찰공고문에 의함)",
+  "scope_custom": "그룹웨어 시스템 구축(포털, 전자문서 결재·송수신), 기록물관리 시스템 구축, 시스템 연계 및 커스터마이징, 사내SNS 및 메신저 구축, 기록물 이관 및 마이그레이션, 상용SW 직접구매·설치·안정화",
+  "migration_scope": "기록물이관 및 마이그레이션 (기록물)",
+  "mobile_requirements": "NOT_FOUND",
+  "approval_system": "전자문서 기안문 작성·결재 및 전자문서 송·수신 등 전자결재 기능 포함",
+  "security_auth": "NOT_FOUND",
+  "search_engine": "통합검색 언급 없음/NOT_FOUND",
+  "web_editor": "NOT_FOUND",
+  "warranty_period": "하자보수 기간 관련 세부기간은 문서에 명시되지 않음/NOT_FOUND",
+  "cooperation_score": "상생결제 관련 비율 언급 있으나 제안서 평가 시 배점 수치는 명시되지 않음/NOT_FOUND",
+  "web_standard": "비표준(ActiveX), IE 종속성 및 보안취약점 제거"
+}

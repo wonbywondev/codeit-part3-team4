@@ -1,0 +1,23 @@
+{
+  "project_name": "혁신 - 국고 ] 스마트 정보시스템 활성화 ( 학사행정 암호화 )",
+  "agency": "NOT_FOUND",
+  "purpose": "파일 암호화 솔루션 적용을 통해 보안 강화하여 개인정보 유출 사고에 대한 피해를 최소화하고자 함",
+  "budget": "70,000,000 원 (VAT 포함 )",
+  "contract_type": "협상에 의한 계약 ( 제한경쟁입찰 )",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 3 개월",
+  "requirements_must": "NOT_FOUND",
+  "eval_items": "NOT_FOUND",
+  "price_eval": "NOT_FOUND",
+  "eligibility": "본 사업은 ... 단 독형태 로만입찰에참가할수있음 (공동수급 불허)",
+  "scope": "기존 파일에 대한 암호화; 학부 학사포털 서비스에 파일 암/복호화 모듈; 대학원 학사포털 서비스에 파일 암/복호화 모듈; 평생교육원(학점은행) 학사포털 서비스에 파일 암/복호화 모듈; 연구행정 및 업적관리 시스템에 대한 파일 암/복호화 모듈; 학생경력관리 플랫폼에 대한 파일 암/복호화 모듈",
+  "encryption_target": "개인 사진, 통장 사본 등 민감한 파일 자료; 기존 첨부 파일",
+  "security_requirements": "개인정보보호법 및 「개인정보 안전성 확보조치 기준 고시」 준수; 암호화 등 안전성 확보조치 이행여부",
+  "file_encryption_method": "첨부파일 스토리지를 조회하는 프로그램에 암/복호화 모듈을 적용하여 승인된 시스템에서만 파일을 기록하고 관리",
+  "warranty_period": "검수 완료일로부터 12 개월",
+  "subcontract_policy": "재위탁 금지 및 목적외 이용·제공 및 재위탁 금지 준수여부; 공 동 수급 불허 (단독입찰만 허용)",
+  "joint_bidding": "불허 (공동수급 불허, 단독형태로만 입찰 가능)",
+  "deliverables": "산출물의 종류 및 내역, 제출시기(제출할 산출물의 종류 및 내역 , 제출시기를 기술)",
+  "project_manager_requirement": "NOT_FOUND",
+  "testing_requirements": "기존 파일에 대한 암호화 및 복호화 검증 방안; 구현·검사 단계에서 보고회와 시연 실시"
+}

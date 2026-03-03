@@ -1,0 +1,23 @@
+{
+  "project_name": "산학협력단 정보시스템 운영 용역업체 선정",
+  "agency": "경희대학교 산학협력단",
+  "purpose": "경희대학교 산학협력단 정보시스템 운영 용역사업추진 / 정보시스템 운영 효율화 및 안정적인 서비스 제공을 위한 시스템의 최적상태 유지 / 정보시스템 운영 중 장애 및 사고 발생 시 신속한 대응 조치 / 기능 및 UI 개선 , 성능 , 데이터의 보안성 및 정확성 등 시스템 개선을 통한 사용자 편의성 향상 / 사용자 요구사항에 대한 신속한 지원 및 시스템 반영",
+  "budget": "400,000,000원",
+  "contract_type": "제한경 쟁 / 협상에 의한 계약",
+  "deadline": "NOT_FOUND",
+  "duration": "계약체결일 ~ 2026.04.30.",
+  "requirements_must": "GEN_FAIL",
+  "eval_items": "기술평가:80 / 가격평가:20",
+  "price_eval": "제안가격 상대평가 (최저 입찰제시가격 ÷ 당해 입찰제시가격) × 20",
+  "eligibility": "GEN_FAIL",
+  "project_phases": "1 차년도 : 계약체결일 ~ 2025.04.30. / 2 차년도 : 2025.05.01. ~ 2026.04.30. / 1 차년도 평가에 따라 2 차년도 계속진행 여부 결정",
+  "second_year_task_start_date": "2025.05.01.",
+  "incident_response": "NOT_FOUND",
+  "key_personnel_qualification": "NOT_FOUND",
+  "post_contract_security": "NOT_FOUND",
+  "continuous_operation_requirement": "NOT_FOUND",
+  "bid_invalid_conditions": "GEN_FAIL",
+  "work_location": "경희대학교 산학협력단 정보시스템 ( 인포 21) 운영 용업사업",
+  "personal_pc_usage_allowed": "NOT_FOUND",
+  "bid_inquiry_contact": "산학협력단 경영지원 팀 조재형 선 임 [031-201-3529]"
+}

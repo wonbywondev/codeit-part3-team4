@@ -1,0 +1,23 @@
+{
+  "project_name": "다층적 융합 학습경험 플랫폼(MILE) 구축",
+  "agency": "대전대학교 총장 귀하(입찰참가자: 대전대학교)",
+  "purpose": "다층적 융합 학습경험 플랫폼(MILE) 구축 제안요청서 수요에 따른 교수역량진단 개편 및 ACT 교과 인증 강좌 연계 화면 구현",
+  "budget": "60,000,000원",
+  "contract_type": "제한경쟁입찰 (협상에 의한 계약체결)",
+  "deadline": "NOT_FOUND",
+  "duration": "계약일로부터 2개월 이내(2025년 1월 종료 예정)",
+  "requirements_must": "기술평가 및 가격평가 실시, 제안서 평가 항목에 따른 요구사항 충족, 보안계획 등 유지보수 체계 및 보안 관리계획 제시",
+  "eval_items": "기술제안서 평가항목은 소프트웨어 기술성 평가기준 적용, 가·감 조정, 기술 및 가격 평가 포함",
+  "price_eval": "협상에 의한 계약체결 기준에 따른 가격평가",
+  "eligibility": "입찰참가자격 관련 서류 및 실적증명 필요; 용역실적 증명 서 등",
+  "monitoring_components": "융합교육 전담 모니터링(MILE 모니터링) 기능의 주요 구성은 제시되지 않음",
+  "degree_enhancement": "나노/마이크로디그리 관련 화면 고도화 내용은 제시되지 않음",
+  "response_time": "평균 처리시간 요구사항: 0.1초 미만, 1초 미만 등 다양한 수치 제시",
+  "warranty_period": "NOT_FOUND",
+  "browser_support": "NOT_FOUND",
+  "access_log_retention": "NOT_FOUND",
+  "tech_eval_score": "평가등급(사업예산 대비) 표에 따른 배점 규정 명시",
+  "faculty_assessment": "교수역량진단 개편에서 추가되는 내용은 용역실적 및 교수역량진단 개편 관련 항목으로 제시",
+  "required_documents": "제안서 제출 공문, 입찰참가신청서, 제안서 원본 및 파생본, 사업자등록증 사본, 소프트웨어사업자 등록필증 사본, 법인등기부등본, 가격제안서, 입찰이행보증보험증권, 대표자 위임장, 용역실적 증명서 등의 서류",
+  "act_certification": "ACT 교과 인증 강좌개설 화면 연계 내용은 제안요청서에 포함되어 있음"
+}
