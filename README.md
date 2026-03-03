@@ -1,3 +1,13 @@
+## 주요 문서 링크
+[보고서 링크](https://drive.google.com/file/d/1TTxQyq_kC9cbS1p5LoYN-lqJyVqbnrTP/view?usp=sharing)
+
+[김민우 협업 일지](https://www.notion.so/31845aa312fd8059ade7e04229e08bde?source=copy_link)
+[김민철 협업 일지](https://mud-cotton-5f0.notion.site/2d1736f39f5081eabc62c172408cea3d?v=2d1736f39f5081e6b095000ca2de7849&pvs=143)
+[김상엽 협업 일지](https://www.notion.so/Daily-312895ca7098806fae5bd16f08ed9715)
+[오현석 협업 일지](https://blog.naver.com/ohs3201)
+[원성일 협업 일지](https://www.notion.so/318e4a296d9d81ee8f02eb562abbd6ba?source=copy_link)
+
+---
 ## 컬럼(지표) 하나씩 설명
 1. doc_id
 - 평가 대상 문서 단위
